@@ -1,0 +1,247 @@
+/*******************************************************************************
+* Copyright (c) 2002 [Organization Name], Inc. All rights reserved.
+********************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of module purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+********************************************************************************
+* This file contains trade secrets of [Organization Name]. No part may be 
+* reproduced or transmitted in any form by any means or for any purpose without 
+* the express written permission of [Organization Name].
+*******************************************************************************/
+
+/*******************************************************************************
+    Imports
+*/
+
+using OtherNamespace;
+
+
+namespace ThisNamespace
+    {
+    /**************************************************************************/
+    ///  <summary>
+    ///  One line summary of public class goal.
+    ///  </summary>
+    ///
+    ///  <remarks>
+    ///  Description of class.
+    ///  <br>
+    ///  More description of the class.
+    ///  </remarks>
+    ///
+    public class CSharpClass
+        :
+        BaseClass,
+        SomeInterface, SomeOtherInterface
+        {
+
+        /*======================================================================
+            Use these dividers to split up class defintions.
+        */
+
+        /*======================================================================
+            Constructors
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// Constructor 1 summary.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Constructor 1 description.
+        /// </remarks>
+        ///
+        public CSharpClass()
+            :
+            this( anIntValue )
+            {
+            // Constructor body...
+            }
+
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// Constructor 2 summary.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Constructor 2 description.
+        /// </remarks>
+        ///
+        /// <param name= "anIntParameter"> Parameter description. </param>
+        ///
+        public CSharpClass( int anIntParameter )
+            :
+            base( anIntParameter )
+            {
+            // Constructor body...
+            }
+
+
+        /*======================================================================
+            Public Methods
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// One line summary of function.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Function description.
+        /// </remarks>
+        ///
+        /// <param name= "param1"> Parameter 1 description. </param>
+        /// <param name= "param2"> Parameter 2 description. </param>
+        ///
+        /// <returns> Return description </returns>
+        ///
+        /// <exception> Exception conditions </exception>
+        ///
+        public RETURN_TYPE
+        SomePublicMethod(
+            PARAM1_TYPE param1,
+            PARAM2_TYPE param2
+            )
+            {
+            // Method body...
+            
+            return RETURN_TYPE;
+            }
+
+
+        /*======================================================================
+            Internal Methods
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// One line summary of function.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Function description.
+        /// </remarks>
+        ///
+        /// <exception> Exception conditions. </exception>
+        ///
+        internal void
+        SomeInternalMethod()
+            {
+            // Method body...
+            }
+
+
+        /*======================================================================
+            Protected Methods
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// One-line summary of function.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Function description.
+        /// </remarks>
+        ///
+        /// <exception> Exception conditions. </exception>
+        ///
+        protected void
+        SomeProtectedMethod()
+            {
+            // Method body...
+            }
+
+
+        /*======================================================================
+            Private Methods
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// One-line summary of member function.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Function description.
+        /// </remarks>
+        ///
+        /// <exception> Exception conditions. </exception>
+        ///
+        private void
+        SomePrivateMethod()
+            {
+            // Method body...
+            }
+
+
+        /*======================================================================
+            Protected Internal Methods
+        */
+
+        /*--------------------------------------------------------------------*/
+        /// <summary>
+        /// One-line summary of member function.
+        /// </summary>
+        ///
+        /// <remarks>
+        /// Function description.
+        /// </remarks>
+        ///
+        /// <exception> Exception conditions. </exception>
+        ///
+        protected internal void
+        SomeProtectedInternalMethod()
+            {
+            // Method body...
+            }
+
+        /*======================================================================
+            Public Constants
+        */
+
+        /// <summary>
+        /// Description of public data field.
+        /// </summary>
+        public const int PUBLIC_CONSTANT = 0;
+
+
+        /*======================================================================
+            Protected Fields
+        */
+
+        /// <summary>
+        /// Description of protected data field.
+        /// </summary>
+        protected bool m_aBooleanValue;
+
+
+        /*======================================================================
+            Private Fields
+        */
+
+        /// <summary>
+        /// Description of private data field.
+        /// </summary>
+        private int m_anIntValue;
+
+        }
+
+    }
+
+
+/*******************************************************************************
+CxOne - $Archive$
+*******************************************************************************/

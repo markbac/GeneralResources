@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCDEParams xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CDEParams>
+    <cdsParams>
+      <name>DEOS</name>
+      <partNumber>9214852</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>DSP BOOTLOADER</string>
+        <string>CUSTOMER INFO</string>
+        <string>MAIN APP</string>
+        <string>ALARM CLIPS</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>DEOS</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs>
+        <string>ALARM_CLIPS.cds</string>
+        <string>DSP1_G_BOX.cds</string>
+        <string>DSP_BOOT.cds</string>
+        <string>FPGA_ALTERA_13.cds</string>
+        <string>FPGA_ALTERA_20.cds</string>
+        <string>HMI.cds</string>
+        <string>HMI_BOOT.cds</string>
+        <string>MAIN_APP_NIOS_ITAR.cds</string>
+      </selectedCDSs>
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DEOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>DataXfer</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>AlmMerge</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>dServer</string>
+          <string>AlarmBITSuppression</string>
+        </features>
+        <codecs>
+          <string>G711</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+          <string>CVSD</string>
+          <string>G723</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x20</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G803X"</string>
+          <string>unitName="DEOS"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DEOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>IPoHW</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x20</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G803X"</string>
+          <string>unitName="DEOS"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DEOS</string>
+        </targetVariant>
+        <defFiles>
+          <string>Menu\Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>DOS</name>
+      <partNumber>9214850</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>DOS</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x08</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G801X"</string>
+          <string>unitName="DOS"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>IPoHW</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x08</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G801X"</string>
+          <string>unitName="DOS"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>DOS</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>EOS</name>
+      <partNumber>9214851</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>EOS</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>EOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x10</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G802X"</string>
+          <string>unitName="EOS"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>EOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>IPoHW</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x10</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G802X"</string>
+          <string>unitName="EOS"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>EOS</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>HDI</name>
+      <partNumber>9214856</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>HDI</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>HDI</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>dClient</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>Force10MbpsEthernet</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x100</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="Z165X"</string>
+          <string>unitName="HDI"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>HDI</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>IPoHW</string>
+          <string>dClient</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>Force10MbpsEthernet</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x100</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="Z165X"</string>
+          <string>unitName="HDI"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>HDI</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>IOS</name>
+      <partNumber>9214849</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>IOS</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>IOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x04</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G800X"</string>
+          <string>unitName="IOS"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>IOS</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>IPoHW</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x04</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G800X"</string>
+          <string>unitName="IOS"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>IOS</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>MCC</name>
+      <partNumber>9214848</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>E Box</string>
+      </targetType>
+      <targetVariants>
+        <string>MCC</string>
+      </targetVariants>
+      <processortype>
+        <string>XILINX FX40 PPC405</string>
+      </processortype>
+      <fpgaType>
+        <string>XILINX FX40</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>E Box</string>
+        </targetType>
+        <targetVariant>
+          <string>MCC</string>
+        </targetVariant>
+        <features>
+          <string>ControlConsole</string>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>Gateway</string>
+          <string>VoIP</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>IpRads</string>
+          <string>AlarmBITSuppression</string>
+          <string>SIP</string>
+          <string>H323</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>externalServerIpAddr=10.0.1.1</string>
+          <string>externalIpAddrStart=10.0.1.10</string>
+          <string>externalIpAddrEnd=10.0.1.254</string>
+          <string>externalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x02</string>
+          <string>unitTargetType=0x2</string>
+          <string>unitNomenclature="E855X"</string>
+          <string>unitName="MCC"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>E Box</string>
+        </targetType>
+        <targetVariant>
+          <string>MCC</string>
+        </targetVariant>
+        <features>
+          <string>ControlConsole</string>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>Gateway</string>
+          <string>IPoHW</string>
+          <string>VoIP</string>
+          <string>DataXfer</string>
+          <string>IpRads</string>
+          <string>AlarmBITSuppression</string>
+          <string>SIP</string>
+          <string>H323</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>externalServerIpAddr=10.0.1.1</string>
+          <string>externalIpAddrStart=10.0.1.10</string>
+          <string>externalIpAddrEnd=10.0.1.254</string>
+          <string>externalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x02</string>
+          <string>unitTargetType=0x2</string>
+          <string>unitNomenclature="E855X"</string>
+          <string>unitName="MCC"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>E Box</string>
+        </targetType>
+        <targetVariant>
+          <string>MCC</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>ODI</name>
+      <partNumber>9214854</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>ODI</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>ODI</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>dClient</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>Force10MbpsEthernet</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x80</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G804X"</string>
+          <string>unitName="ODI"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>ODI</string>
+        </targetVariant>
+        <features>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>IPoHW</string>
+          <string>dClient</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>Force10MbpsEthernet</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x80</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G804X"</string>
+          <string>unitName="ODI"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>ODI</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>RIT</name>
+      <partNumber>9214855</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>FPGA</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>G Box</string>
+      </targetType>
+      <targetVariants>
+        <string>RIT</string>
+      </targetVariants>
+      <processortype>
+        <string>ALTERA NIOS2 CIV</string>
+      </processortype>
+      <fpgaType>
+        <string>ALTERA CYCLONE IV</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>RIT</string>
+        </targetVariant>
+        <features>
+          <string>VOXLive</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x40</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G820X"</string>
+          <string>unitName="RIT"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>RIT</string>
+        </targetVariant>
+        <features>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>DHCPServer</string>
+          <string>IPoHW</string>
+          <string>dServer</string>
+          <string>DataXfer</string>
+          <string>AlarmBITSuppression</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>internalServerIpAddr=192.168.0.0</string>
+          <string>internalIpAddrStart=192.168.0.2</string>
+          <string>internalIpAddrEnd=192.168.0.250</string>
+          <string>internalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x40</string>
+          <string>unitTargetType=0x1</string>
+          <string>unitNomenclature="G820X"</string>
+          <string>unitName="RIT"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>G Box</string>
+        </targetType>
+        <targetVariant>
+          <string>RIT</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+  <CDEParams>
+    <cdsParams>
+      <name>TCC</name>
+      <partNumber>9214846</partNumber>
+      <imageModes>
+        <string>AN-VIC3</string>
+        <string>AN-VIC5</string>
+      </imageModes>
+      <imageTypes>
+        <string>ALARM CLIPS</string>
+        <string>CUSTOMER INFO</string>
+        <string>DSP BOOTLOADER</string>
+        <string>DSP1</string>
+        <string>DSP2</string>
+        <string>FPGA</string>
+        <string>HMI</string>
+        <string>HMI BOOTLOADER</string>
+        <string>MAIN APP</string>
+      </imageTypes>
+      <targetType>
+        <string>D Box</string>
+      </targetType>
+      <targetVariants>
+        <string>TCC</string>
+      </targetVariants>
+      <processortype>
+        <string>XILINX FX40 PPC405</string>
+      </processortype>
+      <fpgaType>
+        <string>XILINX FX40</string>
+      </fpgaType>
+      <selectedCDSs />
+      <iTAR>
+        <string>True</string>
+      </iTAR>
+      <buildType>3</buildType>
+    </cdsParams>
+    <custInfoParams>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_13</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+        </imageModes>
+        <targetType>
+          <string>D Box</string>
+        </targetType>
+        <targetVariant>
+          <string>TCC</string>
+        </targetVariant>
+        <features>
+          <string>ControlConsole</string>
+          <string>HMI</string>
+          <string>VOXLive</string>
+          <string>ExtLightsPreset</string>
+          <string>AccSrc</string>
+          <string>Int2</string>
+          <string>ProgGroups</string>
+          <string>DHCPServer</string>
+          <string>Gateway</string>
+          <string>VoIP</string>
+          <string>DataXfer</string>
+          <string>AlmMerge</string>
+          <string>IpRads</string>
+          <string>AlarmBITSuppression</string>
+          <string>SIP</string>
+          <string>H323</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>externalServerIpAddr=10.0.1.1</string>
+          <string>externalIpAddrStart=10.0.1.10</string>
+          <string>externalIpAddrEnd=10.0.1.254</string>
+          <string>externalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x01</string>
+          <string>unitTargetType=0x4</string>
+          <string>unitNomenclature="D800X"</string>
+          <string>unitName="TCC"</string>
+          <string>maxStations=10</string>
+          <string>maxRadios=6</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+      <CustInfoSettings>
+        <name>CUSTOMER_INFO_20</name>
+        <imageModes>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>D Box</string>
+        </targetType>
+        <targetVariant>
+          <string>TCC</string>
+        </targetVariant>
+        <features>
+          <string>ControlConsole</string>
+          <string>HMI</string>
+          <string>CompTs</string>
+          <string>VOXLive</string>
+          <string>AuxStereo</string>
+          <string>ExtLightsPreset</string>
+          <string>DHCPServer</string>
+          <string>Gateway</string>
+          <string>IPoHW</string>
+          <string>VoIP</string>
+          <string>DataXfer</string>
+          <string>IpRads</string>
+          <string>AlarmBITSuppression</string>
+          <string>SIP</string>
+          <string>H323</string>
+          <string>PortFoward</string>
+          <string>CommonFunc</string>
+          <string>DataOverTimeslots</string>
+        </features>
+        <codecs>
+          <string>CVSD</string>
+          <string>G711</string>
+          <string>G723</string>
+          <string>G726</string>
+          <string>G729A</string>
+          <string>MELP</string>
+        </codecs>
+        <languages />
+        <sysvars>
+          <string>externalServerIpAddr=10.0.1.1</string>
+          <string>externalIpAddrStart=10.0.1.10</string>
+          <string>externalIpAddrEnd=10.0.1.254</string>
+          <string>externalNetworkMask=255.255.255.0</string>
+          <string>unitTargetTypeVariant=0x01</string>
+          <string>unitTargetType=0x4</string>
+          <string>unitNomenclature="D800X"</string>
+          <string>unitName="TCC"</string>
+          <string>maxStations=58</string>
+          <string>maxRadios=16</string>
+          <string>ChannelConfig13ch="AN/VIC-3(V)"</string>
+          <string>ChannelConfig20ch="AN/VIC-5(V)"</string>
+          <string>InternalHostName="anvic-5"</string>
+          <string>webPageTitle="AN/VIC-5 Enhanced"</string>
+          <string>productVariant="JLTV"</string>
+          <string>CustomerTelnetPassword="CDCPassW"</string>
+          <string>serConsoleEn=0</string>
+          <string>serLoggerEn=0</string>
+        </sysvars>
+        <textFiles />
+      </CustInfoSettings>
+    </custInfoParams>
+    <definitions>
+      <DefenitionsSettings>
+        <name>DEFINITIONS_1</name>
+        <imageModes>
+          <string>AN-VIC3</string>
+          <string>AN-VIC5</string>
+        </imageModes>
+        <targetType>
+          <string>D Box</string>
+        </targetType>
+        <targetVariant>
+          <string>TCC</string>
+        </targetVariant>
+        <defFiles>
+          <string>Def_01.json</string>
+        </defFiles>
+      </DefenitionsSettings>
+    </definitions>
+  </CDEParams>
+</ArrayOfCDEParams>
