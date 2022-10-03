@@ -1,0 +1,100 @@
+'*****************************************************************************
+' Copyright (c) 2002 [Organization Name], Inc. All rights reserved.
+'*****************************************************************************
+'
+'   $Workfile$
+'
+'   Version Number - $Revision$
+'   Last Updated   - $Date$
+'   Updated By     - $Author$
+'
+'   One-line description of module purpose
+'
+'   Low-level design, physical design discussions, build dependencies, 
+'   assumptions, implementation issues, notes, etc.
+'
+'   This template supports .bas, .frm, and .cls files
+'
+'*****************************************************************************
+' This file contains trade secrets of [Organization Name]. No part
+' may be reproduced or transmitted in any form by any means or for any purpose
+' without the express written permission of [Organization Name].
+'*****************************************************************************
+Option Explicit
+
+
+'*****************************************************************************
+'   Use these dividers to split the module into logical groups 
+'
+
+
+
+'*****************************************************************************
+'   Functions
+
+
+'-----------------------------------------------------------------------------
+'   One-line summary of function 
+'
+'   Description of function
+'
+'   Describe function arguments and return values
+'
+Function VBFunction( _
+    param1 As PARAM1_TYPE, _
+    param2 As PARAM2_TYPE _
+    ) As RETURN_TYPE
+
+    ' Function body
+   
+End Function
+
+
+
+'*****************************************************************************
+'   Classes
+'
+
+
+'=============================================================================
+'   One-line summary of class
+'
+'   Description of class
+' 
+
+    '=========================================================================
+    '   Private Member Variables
+    '
+
+    Private variable As VARIABLE_TYPE
+
+
+    '=========================================================================
+    '   Public Member Functions
+    '
+
+    '-------------------------------------------------------------------------
+    '   One-line summary of function 
+    '
+    '   Description of function's implementation issues
+    '
+    Public Function MemberFunction( _
+        param1 As PARAM1_TYPE, _
+        param2 As PARAM2_TYPE _
+        ) As RETURN_TYPE
+    
+        ' Function body
+        
+    End Function
+
+
+    '==========================================================================
+    '   Private Member Functions
+    '
+
+
+
+
+'*****************************************************************************
+'CxOne - $Archive$
+'*****************************************************************************

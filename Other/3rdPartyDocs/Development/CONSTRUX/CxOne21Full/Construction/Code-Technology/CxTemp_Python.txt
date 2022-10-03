@@ -1,0 +1,87 @@
+#*****************************************************************************
+#  Copyright (c) 2002 [Organization Name]. All rights reserved.
+#*****************************************************************************
+#
+#   $Workfile$
+#
+#   Version Number - $Revision$
+#   Last Updated   - $Date$
+#   Updated By     - $Author$
+#   Python Version - 2.0
+"""
+    One-line description of module goal
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+    this is accessible as a module __doc__ string
+"""
+#*****************************************************************************
+# This file contains trade secrets of [Organization Name]. No part
+# may be reproduced or transmitted in any form by any means or for any purpose
+# without the express written permission of [Organization Name].
+#*****************************************************************************
+
+#*****************************************************************************
+#   Imported Modules
+#
+
+import os
+
+
+
+#*****************************************************************************
+#   Functionality
+#
+
+#=============================================================================
+class ClassName:
+    """One-line summary of class, accessible as __doc__ string
+
+    Detailed description of class accessible as __doc__ string
+    """
+
+    
+    #-------------------------------------------------------------------------
+    def __init__( self, arg1 ):
+        """One-line summary of method, accessible as __doc__ string
+
+        Detailed description of method accessible as __doc__ string
+        """
+
+        # statement comment
+        self.arg1 = arg1
+       
+
+
+#-----------------------------------------------------------------------------
+def TopLevelModuleFunction( arg1 ):
+    'One-line summary, accessible as __doc__ string'
+
+    # statement comment
+    return rv
+
+
+
+#*****************************************************************************
+#   Unit Testing
+#
+
+import unittest
+
+# Make this file executable for unittesting
+if __name__ == '__main__':
+    unittest.main()
+
+
+# Unit test class
+class ClassUnitTest( unittest.TestCase ):
+    'desc of test'
+
+    def runTest( self ):
+        self.failUnless( arg1 )
+        
+        
+
+#*****************************************************************************
+# CxOne - $Archive$
+#*****************************************************************************

@@ -1,0 +1,142 @@
+/*****************************************************************************
+* Copyright (c) 2002 [Organization Name]. All rights reserved.
+******************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of header file purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+******************************************************************************
+* This file contains trade secrets of [Organization Name]. No part
+* may be reproduced or transmitted in any form by any means or for any purpose
+* without the express written permission of [Organization Name].
+*****************************************************************************/
+#ifndef _HEADER_H_
+#define _HEADER_H_
+
+/*****************************************************************************
+    Include Files
+*/
+
+
+/*****************************************************************************
+    <Use these dividers to split the module into logical groups. Always
+    use comments to describe the module sections>
+*/
+
+
+/*****************************************************************************
+    Function Declarations
+*/
+
+/*----------------------------------------------------------------------------
+    One-line summary of function
+
+    Description of how function is to be used and what it does
+
+    Describe function's exceptions and return values
+*/
+RETURN_TYPE
+Function(
+    PARAM1_TYPE param1,     // Description of param1
+    PARAM2_TYPE param2      // Description of param2
+    );
+
+
+
+/*****************************************************************************
+    Class Declarations
+*/
+
+/*============================================================================
+    One-line description of class
+
+    Description of class
+*/
+class CClassName
+    {
+    public:
+
+        /*====================================================================
+            Construction and Destruction
+        */
+
+        /*--------------------------------------------------------------------
+            Constructors
+
+           Description of constructors
+        */
+
+        // Constructor 1
+        CClassName( );
+
+        // Constructor 2
+        CClassName( );
+
+
+        /*--------------------------------------------------------------------
+            Destructor
+
+            Description of destructor
+        */
+        virtual
+        ~CClassName( );
+
+
+        /*====================================================================
+            Public Member Functions
+        */
+
+        /*--------------------------------------------------------------------
+            One-line summary of member function
+
+            Description of function
+
+            Describe function's exceptions and return values
+        */
+        RETURN_TYPE
+        MemberFunction(
+            PARAM1_TYPE param1,     // Description of param1
+            PARAM2_TYPE param2      // Description of param2
+            );
+
+
+    protected:
+
+
+    private:
+
+        /*====================================================================
+            Private Member Functions
+        */
+
+
+        /*====================================================================
+            Private Data Members
+        */
+
+
+        /*====================================================================
+            Explicitly Disabled Methods (declared private and never defined)
+        */
+
+        // Assignment operator
+        CClassName& operator=( const CClassName& rhs );
+
+        // Copy constructor
+        CClassName( const CClassName& rhs  );
+    };
+
+
+
+/*****************************************************************************
+CxOne - $Archive$
+*****************************************************************************/
+#endif

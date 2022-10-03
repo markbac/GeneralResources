@@ -1,0 +1,82 @@
+/*****************************************************************************
+* Copyright (c) 2002 [Organization Name], Inc. All rights reserved.
+******************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of interface purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+******************************************************************************
+* This file contains trade secrets of [Organization Name]. No part
+* may be reproduced or transmitted in any form by any means or for any purpose
+* without the express written permission of [Organization Name].
+*****************************************************************************/
+
+/*****************************************************************************
+    Use these dividers to split the module into logical groups. 
+*/
+
+
+/*****************************************************************************
+    Imports
+*/
+
+
+
+/*****************************************************************************
+    Interface Declarations
+*/
+
+/*============================================================================
+    One-line summary of interface
+
+    Description of interface
+*/
+[
+    object,
+    uuid(XXX),
+    dual,
+    helpstring("ISomeInterface Interface"),
+    pointer_default(unique)
+]
+
+interface ISomeInterface : IDispatch
+    {
+    
+    /*========================================================================
+        Function group description
+    */
+
+    /*------------------------------------------------------------------------
+        One-line summary of method 
+
+         Description of method
+
+         Describe of exceptions and return values
+    */
+    [id(1), helpstring("method SomeMethod")] HRESULT 
+    SomeMethod(
+        [in] long var1, 
+        [in, out] BSTR var2,
+        [out] long var3
+        );
+    };
+
+
+
+/*****************************************************************************
+    Type Library Declarations
+*/
+
+
+
+/*****************************************************************************
+CxOne - $Archive$
+*****************************************************************************/

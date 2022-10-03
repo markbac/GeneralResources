@@ -1,0 +1,35 @@
+@echo off
+rem ***************************************************************************
+rem Copyright (c) 2002 [Organization Name]. All rights reserved.
+rem ***************************************************************************
+rem 
+rem    $Workfile: $
+rem
+rem    Version Number - $Revision: $
+rem    Last Updated   - $Date:     $
+rem    Updated By     - $Author:   $
+rem
+rem    One-line summary of module purpose
+rem
+rem    Low-level design, physical design discussions, build dependencies,
+rem    assumptions, implementation issues, notes, etc.
+rem
+rem ***************************************************************************
+rem This file contains trade secrets of [Organization Name]. No part
+rem may be reproduced or transmitted in any form by any means or for any 
+rem purpose without the express written permission of [Organization Name].
+rem ***************************************************************************
+
+
+rem ***************************************************************************
+rem    File divider, use comments to describe purpose of division
+rem 
+
+
+rem // Comment
+
+
+@echo off
+rem ***************************************************************************
+rem CxOne - $Archive$
+rem ***************************************************************************

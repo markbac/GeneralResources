@@ -1,0 +1,47 @@
+<!--**************************************************************************
+* Copyright(c) 2002 [Organization Name], Inc. All rights reserved.
+******************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of module purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+******************************************************************************
+* This file contains trade secrets of [Organization Name]. No part
+* may be reproduced or transmitted in any form by any means or for any purpose
+* without the express written permission of [Organization Name].
+***************************************************************************-->
+
+<!--**************************************************************************
+    Use these dividers to split the module into logical groups. 
+-->
+
+
+<HTML>
+
+<HEAD>
+    <TITLE>
+    Title
+    </TITLE>
+</HEAD>
+
+<BODY>
+
+    <!-- Comment -->
+    <P>Text</P>
+
+</BODY>
+
+</HTML>
+
+
+<!--**************************************************************************
+CxOne - $Archive$
+***************************************************************************-->

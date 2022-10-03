@@ -1,0 +1,73 @@
+/*****************************************************************************
+* Copyright (c) 2002 [Organization Name], Inc. All rights reserved.
+******************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of source file purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+******************************************************************************
+* This file contains trade secrets of [Organization Name]. No part
+* may be reproduced or transmitted in any form by any means or for any purpose
+* without the express written permission of [Organization Name].
+*****************************************************************************/
+
+/*****************************************************************************
+    Include Files
+*/
+
+
+/*****************************************************************************
+    Use these dividers to split the module into logical groups. 
+*/
+
+
+/*****************************************************************************
+    Function Implementations
+*/
+
+/*----------------------------------------------------------------------------
+   One-line summary of function
+
+   Description of function's implementation issues
+*/
+RETURN_TYPE
+Function(
+    PARAM1_TYPE param1,
+    PARAM2_TYPE param2
+    )
+    {
+    // Function body
+    }
+
+
+/*****************************************************************************
+    Class Member Implementations
+*/
+
+/*----------------------------------------------------------------------------
+    One-line summary of method 
+
+    Description of function's implementation issues
+*/
+RETURN_TYPE
+CClassName::MemberFunction(
+    PARAM1_TYPE param1,
+    PARAM2_TYPE param2
+    )
+    {
+    // Function body
+    }
+
+
+
+/*****************************************************************************
+CxOne - $Archive$
+*****************************************************************************/

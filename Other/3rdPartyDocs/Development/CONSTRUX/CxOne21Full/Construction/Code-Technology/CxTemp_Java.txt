@@ -1,0 +1,207 @@
+/*****************************************************************************
+* Copyright (c) 2002 [Organization Name], Inc. All rights reserved.
+******************************************************************************
+
+    $Workfile$
+
+    Version Number - $Revision$
+    Last Updated   - $Date$
+    Updated By     - $Author$
+
+    One-line summary of module purpose
+
+    Low-level design, physical design discussions, build dependencies,
+    assumptions, implementation issues, notes, etc.
+
+******************************************************************************
+* This file contains trade secrets of [Organization Name]. No part
+* may be reproduced or transmitted in any form by any means or for any purpose
+* without the express written permission of [Organization Name].
+*****************************************************************************/
+
+/*****************************************************************************
+    Package and Imports
+*/
+package com.mycompany.mypackage;
+
+import com.construx.somepackage;
+
+
+
+/****************************************************************************
+    One-line summary of public class goal.
+
+    Description of class
+    <p>
+    Continued description of class
+*/
+public class JavaClass
+    extends SuperClass
+    implements SomeInterface, SomeOtherInterface
+    {
+
+    /*========================================================================
+        Use these dividers to split up class defintions
+    */
+
+    /*========================================================================
+        Constructors
+    */
+
+    /*----------------------------------------------------------------------*/
+    /** Constructor 1 summary.
+
+        Constructor Description
+
+        @see #JavaClass(int)
+    */
+    public JavaClass()
+        {
+        // Constructor body...
+        }
+
+
+    /*----------------------------------------------------------------------*/
+    /** Constructor 2 summary.
+
+        Constructor Description
+
+        @param anIntValue Parameter Description
+
+        @see #JavaClass()
+    */
+    public JavaClass( int anIntValue )
+        {
+        // Constructor body...
+        }
+
+
+    /*========================================================================
+        Public Methods
+    */
+
+    /*----------------------------------------------------------------------*/
+    /** One-line summary of member function.
+
+        Description of function
+
+        @param param1 param1 description
+        @param param2 param2 description
+
+        @return return description
+
+        @throws SomeException When exception is thrown
+    */
+    public RETURN_TYPE
+    SomePublicMethod(
+        PARAM1_TYPE param1,
+        PARAM2_TYPE param2
+        )
+        throws SomeException
+        {
+        // Method body...
+        }
+
+
+    /*========================================================================
+        Package Methods
+    */
+
+    /*----------------------------------------------------------------------*/
+    /** One-line summary of member function. 
+
+        Description of function
+
+        @param param1 param1 description
+
+        @return return description
+
+        @throws SomeException When exception is thrown 
+    */
+    RETURN_TYPE
+    SomePackageMethod(
+        PARAM1_TYPE param1
+        )
+        throws SomeException
+        {
+        // Method body...
+        }
+
+
+    /*========================================================================
+        Protected Methods
+    */
+
+    /*----------------------------------------------------------------------*/
+    /** One-line summary of member function.
+
+        Description of function
+
+        @param param1 param1 description
+
+        @return return description
+
+        @throws SomeException When exception is thrown
+    */
+    protected RETURN_TYPE
+    SomeProtectedMethod(
+        PARAM1_TYPE param1
+        )
+        throws SomeException
+        {
+        // Method body...
+        }
+
+
+    /*========================================================================
+        Private Methods
+    */
+
+    /*----------------------------------------------------------------------*/
+    /** One-line summary of member function.
+
+        Description of function
+    */
+    private void
+    SomePrivateMethod()
+        {
+        // Method body...
+        }
+
+
+    /*========================================================================
+        Public Constants
+    */
+
+    /** Description of public data field */
+    public static final int PUBLIC_CONSTANT = 0;
+
+
+    /*========================================================================
+        Protected Fields
+    */
+
+    /** Description of protected data field */
+    protected boolean m_aBooleanValue;
+
+
+    /*========================================================================
+        Private Fields
+    */
+
+    /** Description of private data field */
+    private int m_anIntValue;
+
+    }
+
+
+
+/*****************************************************************************
+    Private Classes
+*/
+
+
+
+/*****************************************************************************
+CxOne - $Archive$
+*****************************************************************************/
