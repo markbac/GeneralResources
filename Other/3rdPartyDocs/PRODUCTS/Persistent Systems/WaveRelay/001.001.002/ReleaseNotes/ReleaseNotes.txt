@@ -1,0 +1,15 @@
+Version AN_VIC5_Enhancements 001.001.002 (12/06/2013)
+Built from: http://cdc26/svn/engineering/ReleaseBranches/20130424_ANVIC5E
+------------------------------------------------------------------------------------------
+
+Defect Fixes:
+GTWO-4683 Fixed - TELNET/Security password does not work on software version 001.000.004 checked on TCC and EOS
+GTWO-4688 Fixed - Help webpage displays full version number.
+
+Uncaptured Issues:
+GTWO-4638 ????? - Radio Remote Control; MCC allows webpage access to remote control for radios A & B 
+GTWO-4686 ????? - EOS menu does not time-out. 
+GTWO-4687 ????? - Can not Identify radios from control console
+GTWO-4695 ????? - Recovery web page defaulting to RecoveryUpgrade.lsp instead of Recovery.lsp
+GTWO-4623 ????? - BIT TESTING LEVEL3 WEBPAGES - RADIOS ON RITS FAIL WEBPAGE
+GTWO-4685 ????? - Recovery can get into unrecoverable loop if unit is powered down as writing boot sector.
