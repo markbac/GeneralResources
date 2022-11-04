@@ -1,7 +1,10 @@
 winget install JanDeDobbeleer.OhMyPosh -s winget
+ 
+oh-my-posh font install ## as admin  --- https://ohmyposh.dev/docs/installation/fonts
 
-oh-my-posh font install ## as admin
+oh-my-posh init pwsh --config ~/montys.omp.json | Invoke-Expression
 
+#do as an elevated user
 install choclatey -- https://chocolatey.org/
 choco install fd
 choco install dust
@@ -24,8 +27,34 @@ choco install postman
 choco install treesize
 choco install microsoft-windows-terminal
 choco install powershell-core
+choco install winmerge
+choco install tortoisegit
+choco install dia
+choco install openjre
 
-choco install fd dust gitui bottom tokei
+
+https://gitmind.com/ # uml and other diagrams
+https://staruml.io/ # uml diagrams
+
+# add using "code $PROFILE"
+if ($host.Name -eq 'ConsoleHost')
+{
+    function ls_git { & 'C:\Program Files\Git\usr\bin\ls' --color=auto -hF $args }
+    Set-Alias -Name lsc -Value ls_git -Option Private
+}
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Function wthr-func { Invoke-WebRequest https://wttr.in/Man | Select-Object -Expand Content }
+    Set-Alias -Name wthr -Value wthr-func -Option Private
+}
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Function home-wthr-func { Invoke-WebRequest https://wttr.in/Blackburn| Select-Object -Expand Content }
+    Set-Alias -Name hwthr -Value home-wthr-func -Option Private
+}
+
 
 https://code.visualstudio.com/download
 

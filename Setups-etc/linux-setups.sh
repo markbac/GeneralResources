@@ -24,7 +24,8 @@ echo "apt installl"
 echo $ProvidedPasword | sudo -S apt-get -y install build-essential procps curl file git \
     python3 inetutils-traceroute net-tools wireless-tools graphviz python3-pip ctop \
     libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
-    nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find
+    nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find \
+    wkhtmltopdf default-jre exa debget
 
 echo "Install rust"
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -46,6 +47,9 @@ unzip master.zip
 sudo install pfetch-master/pfetch /usr/local/bin/
 rm -rf master.zip pfetch-master
 
+#this is needed in WSL1 for pdfkit to work
+sudo strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+
 # https://github.com/ClementTsang/bottom#debianubuntu
 # https://github.com/Macchina-CLI/macchina/wiki/Installation
 # https://github.com/XAMPPRocky/tokei#package-managers
@@ -63,9 +67,54 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/mbacon/.profile
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/mbacon/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "brew install"
-brew install gcc ctop pstree lazydocker macchina ##tokei bottom gitui exa # doesnt work
+brew install gcc ctop pstree lazydocker macchina xplr rust ##tokei bottom gitui exa # doesnt work
 ##brew tap tgotwig/linux-dust && brew install dust # doesnt work
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
+
+cargo install exa du-dust fd-find tokei bottom gitui webget
+
+
+#tokei
+sudo wget -qO tokei.tar.gz https://github.com/XAMPPRocky/tokei/releases/latest/download/tokei-x86_64-unknown-linux-gnu.tar.gz
+sudo tar xf tokei.tar.gz -C /usr/local/bin
+
+#bottom
+curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
+sudo dpkg -i bottom_0.6.8_amd64.deb
+
+#dust
+#sudo wget https://github.com/bootandy/dust/archive/refs/tags/v0.7.0.tar.gz
+sudo wget https://github.com/bootandy/dust/releases/download/v0.8.3/dust-v0.8.3-x86_64-unknown-linux-gnu.tar.gz
+sudo tar xf dust-*gnu.tar.gz 
+sudo mv  dust-*gnu/dust /usr/local/bin
+sudo rm -rf  dust-*gnu.tar.gz   dust-*gnu
+
+
+
+tar -xvf v0.7.0.tar.gz
+sudo mv dust-0.7.0 /usr/local/bin/
+
+
+#gitui
+sudo wget -qO gitui.tar.gz https://github.com/extrawurst/gitui/releases/download/v0.21.0/gitui-linux-musl.tar.gz
+sudo tar xf gitui.tar.gz -C /usr/local/bin
+
+#webget
+
+
+
+
+
+
+#Get-PoshThemes show themes
+eval "$(oh-my-posh init bash --config ~/montys.omp.json)"
+eval "$(oh-my-posh init bash --config ~/paradox.omp.json)"
+eval "$(oh-my-posh init bash --config ~/thecyberden.omp.json)"
+eval "$(oh-my-posh init bash --config ~/powerlevel10k_rainbow.omp.json)"
+#  powerlevel10k_rainbow
+# poshmon
+
+
 
 #install vscode
 #wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
@@ -87,7 +136,7 @@ npm install -g @asyncapi/generator
 npm install -g @asyncapi/modelina
 npm install -g @asyncapi/parser
 
-pip install erd-from-json-table-schema
+pip install erd-from-json-table-schema pdfkit pywebcopy
 echo $ProvidedPasword | sudo -S npm install -g vtop gtop
  
 #gitupdate https://earthly.dev/blog/command-line-tools/  https://github.com/nikitavoloboev/gitupdate
@@ -140,12 +189,17 @@ find "$fonts_dir" -name '*Windows Compatible*' -delete
 fc-cache -f
 echo "done!"
 
+echo 'eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/Cellar/oh-my-posh/12.10.0/themes/powerlevel10k_rainbow.omp.json)"' >> /home/mbacon/.bashrc
 
 ssh-keygen -t ed25519 -C "mark.bacon@landisgyr.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+# add key to the git server e.g. github gitlabs
+ssh -T git@github.com
 
-
+git config --global user.name "Mark Bacon"
+git config --global user.email "mark.bacon@landisgyr.com"
 
 #git clone https://github.com/ryanoasis/nerd-fonts
 #cd nerd-fonts
@@ -157,7 +211,7 @@ ssh-add ~/.ssh/id_ed25519
 #blackburn weather
 # https://github.com/chubin/wttr.in
 #curl wttr.in/Blackburn
-#https://wttr.in/Man
+#curl https://wttr.in/Man
 
 # snap doesnt work on WSL. can use teh telnet versiomn -- its an ascci map!!
 #sudo snap install mapscii
