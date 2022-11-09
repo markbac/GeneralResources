@@ -21,11 +21,34 @@ echo $ProvidedPasword | sudo -S apt update
 echo "apt upgrade"
 echo $ProvidedPasword | sudo -S apt -y upgrade
 echo "apt installl"
+# for Ubuntu
 echo $ProvidedPasword | sudo -S apt-get -y install build-essential procps curl file git \
     python3 inetutils-traceroute net-tools wireless-tools graphviz python3-pip ctop \
     libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
     nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find \
-    wkhtmltopdf default-jre exa debget
+    wkhtmltopdf default-jre exa debget apt-transport-https ca-certificates gnupg \ 
+    snapd
+    
+
+#for debian -- no bashtop, debget (debian-goodies instead) or ctop
+sudo apt-get -y install build-essential procps curl file git snapd\
+    python3 inetutils-traceroute net-tools wireless-tools graphviz python3-pip  \
+    libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
+    nmon atop nodejs  gpg inxi unzip neofetch screenfetch httrack fd-find \
+    wkhtmltopdf default-jre exa debian-goodies apt-transport-https ca-certificates gnupg
+
+sudo nano /etc/wsl.conf
+#add for win11 only
+[boot]
+systemd=true
+
+sudo snap install core
+sudo snap install bashtop
+
+#install bashtop from source
+git clone https://github.com/aristocratos/bashtop.git
+cd bashtop
+sudo make install
 
 echo "Install rust"
 #curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -67,7 +90,7 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/mbacon/.profile
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/mbacon/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "brew install"
-brew install gcc ctop pstree lazydocker macchina xplr rust ##tokei bottom gitui exa # doesnt work
+brew install gcc ctop pstree lazydocker macchina xplr rust jandedobbeleer/oh-my-posh/oh-my-posh  ##tokei bottom gitui exa # doesnt work
 ##brew tap tgotwig/linux-dust && brew install dust # doesnt work
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
@@ -102,7 +125,10 @@ sudo tar xf gitui.tar.gz -C /usr/local/bin
 #webget
 
 
-
+## install google cloud sdk
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt-get update && sudo apt-get install google-cloud-cli
 
 
 
@@ -189,7 +215,9 @@ find "$fonts_dir" -name '*Windows Compatible*' -delete
 fc-cache -f
 echo "done!"
 
-echo 'eval "$(oh-my-posh init bash --config /home/linuxbrew/.linuxbrew/Cellar/oh-my-posh/12.10.0/themes/powerlevel10k_rainbow.omp.json)"' >> /home/mbacon/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  >> /home/mbacon/.bashrc
+eval "$(oh-my-posh init bash --config ~/.mdb-powerlovel10k_rainbow.omp.json)"
+
 
 ssh-keygen -t ed25519 -C "mark.bacon@landisgyr.com"
 eval "$(ssh-agent -s)"
@@ -200,6 +228,7 @@ ssh -T git@github.com
 
 git config --global user.name "Mark Bacon"
 git config --global user.email "mark.bacon@landisgyr.com"
+git config --global user.email "mark@bacon.me.uk"
 
 #git clone https://github.com/ryanoasis/nerd-fonts
 #cd nerd-fonts
