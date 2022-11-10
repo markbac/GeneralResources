@@ -94,7 +94,12 @@ brew install gcc ctop pstree lazydocker macchina xplr rust jandedobbeleer/oh-my-
 ##brew tap tgotwig/linux-dust && brew install dust # doesnt work
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
+# add teh following to you ~/.bashrc
+PATH=$PATH:/home/mbacon/.cargo/bin
+
+
 cargo install exa du-dust fd-find tokei bottom gitui webget
+
 
 
 #tokei

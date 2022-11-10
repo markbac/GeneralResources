@@ -65,7 +65,7 @@ if ($host.Name -eq 'ConsoleHost')
     Function home-wthr-func { Invoke-WebRequest https://wttr.in/Blackburn| Select-Object -Expand Content }
     Set-Alias -Name hwthr -Value home-wthr-func -Option Private
 }
-~~~~ 
+~~~~
 
 ## vs code install
 

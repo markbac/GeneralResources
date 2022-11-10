@@ -1,6 +1,6 @@
 # Table of Contents
 
-1. [General](#General)
+1. [General](#general-info)
 2. [Blogs](#blogs-etc)
   2.1. [General](#general)
   2.2. [Architecture](#architecture)
@@ -8,7 +8,7 @@
 3. [Standards](#standards)
 4. [Tools](#tools)
 
-## General
+## General Info
 
 [Markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
@@ -52,6 +52,8 @@
 [ULID spec](https://github.com/ulid/spec)
 [Nationa Grid SEO API](https://www.nationalgrideso.com/document/266096/download)
 [Flexible Power API Documentation](https://flexiblepowerportal.co.uk/docs/public/index.html)
+[Wikipedia - ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+[ISO 8601 2016-02-16 pdf](https://www.loc.gov/standards/datetime/iso-tc154-wg5_n0038_iso_wd_8601-1_2016-02-16.pdf)
 
 ## Tools
 
