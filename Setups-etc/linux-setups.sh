@@ -44,6 +44,13 @@ systemd=true
 
 sudo snap install core
 sudo snap install bashtop
+sudo snap install nutty
+sudo snap install krista 
+sudo snap install standard-notes
+sudo snap install wekan onefetch 
+sudo snap install fast 
+sudo snap install snap-store
+sudo snap install imagenes
 
 #install bashtop from source
 git clone https://github.com/aristocratos/bashtop.git
