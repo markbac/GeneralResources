@@ -45,7 +45,7 @@ systemd=true
 sudo snap install core
 sudo snap install bashtop
 sudo snap install nutty
-sudo snap install krista 
+sudo snap install krita 
 sudo snap install standard-notes
 sudo snap install wekan onefetch 
 sudo snap install fast 
