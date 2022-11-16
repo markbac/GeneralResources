@@ -37,6 +37,12 @@ sudo apt-get -y install build-essential procps curl file git snapd\
     nmon atop nodejs  gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debian-goodies apt-transport-https ca-certificates gnupg
 
+##
+## snapd
+##
+## snapd needs WSL2 from the Windows store AND Windows 11
+
+
 sudo nano /etc/wsl.conf
 #add for win11 only
 [boot]
@@ -90,7 +96,7 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/mbacon/.profile
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/mbacon/.profile
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 echo "brew install"
-brew install gcc ctop pstree lazydocker macchina xplr rust jandedobbeleer/oh-my-posh/oh-my-posh  ##tokei bottom gitui exa # doesnt work
+brew install git gcc ctop pstree lazydocker macchina xplr rust jandedobbeleer/oh-my-posh/oh-my-posh  ##tokei bottom gitui exa # doesnt work
 ##brew tap tgotwig/linux-dust && brew install dust # doesnt work
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
@@ -221,7 +227,7 @@ fc-cache -f
 echo "done!"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  >> /home/mbacon/.bashrc
-eval "$(oh-my-posh init bash --config ~/.mdb-powerlovel10k_rainbow.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.mdb-powerlovel10k_rainbow.omp.json)" 
 
 
 ssh-keygen -t ed25519 -C "mark.bacon@landisgyr.com"
@@ -251,9 +257,16 @@ git config --global user.email "mark@bacon.me.uk"
 #sudo snap install mapscii
 #telnet mapscii.me
 
-#suse
+############
+#
+#   suse
+#
+#########
 #sudo zypper update
-#sudo zypper install git
+sudo zypper install git nano clang graphviz htop exa bat tree nmon atop \
+    inxi python3-pip httrack screenfetch neofetch gcc glances traceroute \
+    net-tools-deprecated wireless-tools java-17-openjdk fd make
+
 #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 #echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/baconm/.profile
 #echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/baconm/.profile
@@ -265,3 +278,8 @@ git config --global user.email "mark@bacon.me.uk"
 #sudo zypper addrepo https://packages.microsoft.com/yumrepos/vscode vscode
 #sudo zypper refresh
 #sudo zypper install code
+
+zypper addrepo https://download.opensuse.org/repositories/SUSE:SLE-15:Update/pool/SUSE:SLE-15:Update.repo
+zypper refresh
+zypper install procps
+
