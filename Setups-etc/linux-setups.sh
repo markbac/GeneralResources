@@ -27,7 +27,7 @@ echo $ProvidedPasword | sudo -S apt-get -y install build-essential procps curl f
     libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
     nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debget apt-transport-https ca-certificates gnupg \ 
-    snapd libssl-dev
+    snapd libssl-dev nedit gimp emacs dolphin  gnome-system-monitor
     
 
 #for debian -- no bashtop, debget (debian-goodies instead) or ctop
@@ -53,10 +53,16 @@ sudo snap install bashtop
 sudo snap install nutty
 sudo snap install krita 
 sudo snap install standard-notes
-sudo snap install wekan onefetch 
+sudo snap install wekan 
+sudo snap install onefetch 
 sudo snap install fast 
 sudo snap install snap-store
 sudo snap install imagenes
+sudo snap install sublime-text
+sudo snap install pycharm-community --classic
+sudo snap install sublime-text --classic
+sudo snap install notepadqq
+sudo snap install bottom
 
 #install bashtop from source
 git clone https://github.com/aristocratos/bashtop.git
@@ -186,6 +192,8 @@ npm install -g @asyncapi/cli
 npm install -g @asyncapi/generator
 npm install -g @asyncapi/modelina
 npm install -g @asyncapi/parser
+
+npm install -g ungit
 
 pip install erd-from-json-table-schema pdfkit pywebcopy
 echo $ProvidedPasword | sudo -S npm install -g vtop gtop
