@@ -27,7 +27,7 @@ echo $ProvidedPasword | sudo -S apt-get -y install build-essential procps curl f
     libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
     nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debget apt-transport-https ca-certificates gnupg \ 
-    snapd libssl-dev nedit gimp emacs dolphin  gnome-system-monitor
+    snapd libssl-dev nedit gimp emacs dolphin  gnome-system-monitor flatpak
     
 
 #for debian -- no bashtop, debget (debian-goodies instead) or ctop
@@ -94,6 +94,9 @@ rm -rf master.zip pfetch-master
 
 #this is needed in WSL1 for pdfkit to work
 sudo strip --remove-section=.note.ABI-tag /usr/lib/x86_64-linux-gnu/libQt5Core.so.5
+
+
+flatpak install --user com.jetpackduba.Gitnuro
 
 # https://github.com/ClementTsang/bottom#debianubuntu
 # https://github.com/Macchina-CLI/macchina/wiki/Installation
