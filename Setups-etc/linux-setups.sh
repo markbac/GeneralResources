@@ -27,7 +27,7 @@ echo $ProvidedPasword | sudo -S apt-get -y install build-essential procps curl f
     libgraphviz-dev x11-apps x11-apps neofetch wget htop glances bat tree gccgo-go \
     nmon atop nodejs bashtop gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debget apt-transport-https ca-certificates gnupg \ 
-    snapd
+    snapd libssl-dev
     
 
 #for debian -- no bashtop, debget (debian-goodies instead) or ctop
@@ -68,7 +68,10 @@ wget https://sh.rustup.rs
 #cargo install fd-find #fd
 #cargo install tokei
 #cargo install bottom #btm
-#cargo install macchina exa du-dust fd-find tokei bottom gitui rnote webget
+#cargo install macchina exa du-dust fd-find tokei bottom gitui rnote webget trippy bandwhich 
+
+cargo install cargo-update
+cargo install-update -a
 
 echo "install pfetch"
 wget https://github.com/dylanaraps/pfetch/archive/master.zip
@@ -99,6 +102,10 @@ echo "brew install"
 brew install git gcc ctop pstree lazydocker macchina xplr rust jandedobbeleer/oh-my-posh/oh-my-posh  ##tokei bottom gitui exa # doesnt work
 ##brew tap tgotwig/linux-dust && brew install dust # doesnt work
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
+
+brew upgrade
+
+brew install helix
 
 # add teh following to you ~/.bashrc
 PATH=$PATH:/home/mbacon/.cargo/bin
