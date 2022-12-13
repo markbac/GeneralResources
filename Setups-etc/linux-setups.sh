@@ -2,6 +2,7 @@
 #ubuntu
 #export HISTIGNORE='*sudo -S*'
 
+
 export HISTIGNORE='*sudo -S*'
 
 echo "Please supply password to script"
@@ -195,6 +196,7 @@ npm install -g @asyncapi/cli
 npm install -g @asyncapi/generator
 npm install -g @asyncapi/modelina
 npm install -g @asyncapi/parser
+npm install --global mock-to-openapi
 
 npm install -g ungit
 
