@@ -64,6 +64,10 @@ sudo snap install pycharm-community --classic
 sudo snap install sublime-text --classic
 sudo snap install notepadqq
 sudo snap install bottom
+sudo snap install mqtt-explorer
+sudo snap install mosquitto
+sudo snap install redis
+
 
 #install bashtop from source
 git clone https://github.com/aristocratos/bashtop.git
