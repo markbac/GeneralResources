@@ -38,6 +38,7 @@ sudo apt-get -y install build-essential procps curl file git snapd\
     nmon atop nodejs  gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debian-goodies apt-transport-https ca-certificates gnupg
 
+
 ##
 ## snapd
 ##
@@ -203,6 +204,13 @@ npm install -g @asyncapi/parser
 npm install --global mock-to-openapi
 
 npm install -g ungit
+
+
+## open api editor https://github.com/swagger-api/swagger-editor 
+git clone git@github.com:swagger-api/swagger-editor.git
+cd swagger-editor
+npm install
+
 
 pip install erd-from-json-table-schema pdfkit pywebcopy
 echo $ProvidedPasword | sudo -S npm install -g vtop gtop
