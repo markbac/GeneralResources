@@ -106,12 +106,12 @@ flatpak install --user com.jetpackduba.Gitnuro
     #eval "$(oh-my-posh init bash --config ~/montys.omp.json)"
     #eval "$(oh-my-posh init bash --config ~/paradox.omp.json)"
     #eval "$(oh-my-posh init bash --config ~/thecyberden.omp.json)"
-    eval "$(oh-my-posh init bash --config ~/powerlevel10k_rainbow.omp.json)"
+#    eval "$(oh-my-posh init bash --config ~/powerlevel10k_rainbow.omp.json)"
 #    brew install pstree 
 #    brew install helix
 #    brew install lazydocker 
 #  brew install ctop 
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  >> /home/mbacon/.bashrc
+#    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  >> /home/mbacon/.bashrc
     #eval "$(oh-my-posh init bash --config ~/.mdb-powerlovel10k_rainbow.omp.json)" 
 #else
 #    echo "install oh-my-posh"
