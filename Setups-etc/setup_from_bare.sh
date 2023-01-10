@@ -33,6 +33,8 @@ if [ "${MACH}" = "raspberrypi" ]; then
     echo $ProvidedPasword | sudo -S apt -y install scratch3 realvnc-vnc-viewer
 fi
 
+echo "export PAGER=\"most\"" >> ~/.bashrc
+
 echo "set up ssh"
 ssh-keygen -t ed25519 -C "mark.bacon@landisgyr.com"
 eval "$(ssh-agent -s)"
