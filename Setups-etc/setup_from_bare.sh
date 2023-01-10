@@ -205,6 +205,27 @@ find "$fonts_dir" -name '*Windows Compatible*' -delete
 
 fc-cache -f
 echo "done!"
+ 
+echo "alias ll='ls -alF'" >> ~/.bashrc
+echo "alias la='ls -A'" >> ~/.bashrc
+echo "alias l='ls -CF'" >> ~/.bashrc
+echo "alias lls='ls -la --sort=size'" >> ~/.bashrc
+echo "alias llt='ls -la --sort=time'" >> ~/.bashrc
+echo "alias cls='clear'" >> ~/.bashrc
+echo "alias h='history'" >> ~/.bashrc
+echo "alias wthr='curl https://wttr.in/Manchester'" >> ~/.bashrc
+echo "alias hwthr='curl https://wttr.in/Blackburn'" >> ~/.bashrc
+
+
+echo "alias ll='ls -alF'" >> ~/.zshrc
+echo "alias la='ls -A'" >> ~/.zshrc
+echo "alias l='ls -CF'" >> ~/.zshrc
+echo "alias lls='ls -la --sort=size'" >> ~/.zshrc
+echo "alias llt='ls -la --sort=time'" >> ~/.zshrc
+echo "alias cls='clear'" >> ~/.zshrc
+echo "alias h='history'" >> ~/.zshrc
+echo "alias wthr='curl https://wttr.in/Manchester'" >> ~/.zshrc
+echo "alias hwthr='curl https://wttr.in/Blackburn'" >> ~/.zshrc
 
 
 echo "###################"
