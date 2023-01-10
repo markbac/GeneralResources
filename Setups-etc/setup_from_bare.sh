@@ -24,11 +24,14 @@ echo $ProvidedPasword | sudo -S apt -y install build-essential procps curl file 
     nmon atop nodejs  gpg inxi unzip neofetch screenfetch httrack fd-find \
     wkhtmltopdf default-jre exa debian-goodies apt-transport-https ca-certificates gnupg \
     snapd libssl-dev nedit gimp emacs dolphin  gnome-system-monitor flatpak  \
-    scratch3 python3-sense-emu sense-emu-tools geany wireshark \
-    realvnc-vnc-viewer vlc gimp python3-tk thonny psmisc bpytop  \
+    python3-sense-emu sense-emu-tools geany wireshark \
+     vlc gimp python3-tk thonny psmisc bpytop  \
     software-properties-common \
     cmatrix cowsay sl figlet libaa-bin lolcat aewan jp2a cbonsai
     
+if [ "${MACH}" = "raspberrypi" ]; then
+    echo $ProvidedPasword | sudo -S apt -y install scratch3 realvnc-vnc-viewer
+fi
 
 echo "set up ssh"
 ssh-keygen -t ed25519 -C "mark.bacon@landisgyr.com"
