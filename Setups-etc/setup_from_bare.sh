@@ -26,7 +26,8 @@ echo $ProvidedPasword | sudo -S apt -y install build-essential procps curl file 
     snapd libssl-dev nedit gimp emacs dolphin  gnome-system-monitor flatpak  \
     scratch3 python3-sense-emu sense-emu-tools geany wireshark \
     realvnc-vnc-viewer vlc gimp python3-tk thonny psmisc bpytop  \
-    software-properties-common
+    software-properties-common \
+    cmatrix cowsay sl figlet libaa-bin lolcat aewan jp2a cbonsai
     
 
 echo "set up ssh"
