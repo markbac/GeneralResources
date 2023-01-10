@@ -194,6 +194,11 @@ for font in "${fonts[@]}"; do
     rm "$zip_file"
 done
 
+if [ "${MACH}" = "WSL" ]; then
+    echo SH_THEME="[boot]" /etc/wsl.conf
+    echo SH_THEME="systemd=true" >> /etc/wsl.conf
+fi
+
 find "$fonts_dir" -name '*Windows Compatible*' -delete
 
 fc-cache -f
