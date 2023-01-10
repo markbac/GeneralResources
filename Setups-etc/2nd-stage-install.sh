@@ -26,6 +26,7 @@ sudo snap install bottom
 sudo snap install mqtt-explorer
 sudo snap install mosquitto
 sudo snap install redis
+sudo snap install mapscii
 
 
 echo "npm installs"
