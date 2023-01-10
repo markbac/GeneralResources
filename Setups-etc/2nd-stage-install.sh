@@ -8,25 +8,25 @@ echo "Please supply password to script"
 read ProvidedPasword
 
 echo "snap installs"
-sudo snap install core
-sudo snap install bashtop
-sudo snap install nutty
-sudo snap install krita 
-sudo snap install standard-notes
-sudo snap install wekan 
-sudo snap install onefetch 
-sudo snap install fast 
-sudo snap install snap-store
-sudo snap install imagenes
-sudo snap install sublime-text
-sudo snap install pycharm-community --classic
-sudo snap install sublime-text --classic
-sudo snap install notepadqq
-sudo snap install bottom
-sudo snap install mqtt-explorer
-sudo snap install mosquitto
-sudo snap install redis
-sudo snap install mapscii
+echo $ProvidedPasword | sudo -S  snap install core
+echo $ProvidedPasword | sudo -S  snap install bashtop
+echo $ProvidedPasword | sudo -S  snap install nutty
+echo $ProvidedPasword | sudo -S  snap install krita 
+echo $ProvidedPasword | sudo -S  snap install standard-notes
+echo $ProvidedPasword | sudo -S  snap install wekan 
+echo $ProvidedPasword | sudo -S  snap install onefetch 
+echo $ProvidedPasword | sudo -S  snap install fast 
+echo $ProvidedPasword | sudo -S  snap install snap-store
+echo $ProvidedPasword | sudo -S  snap install imagenes
+echo $ProvidedPasword | sudo -S  snap install sublime-text
+echo $ProvidedPasword | sudo -S  snap install pycharm-community --classic
+echo $ProvidedPasword | sudo -S  snap install sublime-text --classic
+echo $ProvidedPasword | sudo -S  snap install notepadqq
+echo $ProvidedPasword | sudo -S  snap install bottom
+echo $ProvidedPasword | sudo -S  snap install mqtt-explorer
+echo $ProvidedPasword | sudo -S  snap install mosquitto
+echo $ProvidedPasword | sudo -S  snap install redis
+echo $ProvidedPasword | sudo -S  snap install mapscii
 
 
 echo "npm installs"
