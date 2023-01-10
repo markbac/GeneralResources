@@ -86,17 +86,17 @@ flatpak install --user com.jetpackduba.Gitnuro
 
 #brew onyly for non ARM (i.e not raspberry pi)
 
-if [ "${MACH}" = "x86_64" ]; then
-    echo "Install Brew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/mbacon/.profile
-    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/mbacon/.profile
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    echo "brew install"
-    brew install git 
-    brew install gcc 
-    brew install jandedobbeleer/oh-my-posh/oh-my-posh
-    brew upgrade
+#if [ "${MACH}" = "x86_64" ]; then
+#    echo "Install Brew"
+#    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+#    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /home/mbacon/.profile
+#    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/mbacon/.profile
+#    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+#    echo "brew install"
+#    brew install git 
+#    brew install gcc 
+#    brew install jandedobbeleer/oh-my-posh/oh-my-posh
+#    brew upgrade
 
     #Get-PoshThemes show themes
     #eval "$(oh-my-posh init bash --config ~/montys.omp.json)"
@@ -109,7 +109,7 @@ if [ "${MACH}" = "x86_64" ]; then
 #  brew install ctop 
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"  >> /home/mbacon/.bashrc
     #eval "$(oh-my-posh init bash --config ~/.mdb-powerlovel10k_rainbow.omp.json)" 
-else
+#else
 #    echo "install oh-my-posh"
 #    echo $ProvidedPasword | sudo -S   wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-arm -O /usr/local/bin/oh-my-posh
 #    echo $ProvidedPasword | sudo -S   chmod +x /usr/local/bin/oh-my-posh
@@ -124,8 +124,9 @@ else
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
     #Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
+    echo SH_THEME="powerlevel10k/powerlevel10k" >> ~/.zshrc.
 #    chsh -s /bin/zsh
-fi
+#fi
 
 
 echo "install ctop"
