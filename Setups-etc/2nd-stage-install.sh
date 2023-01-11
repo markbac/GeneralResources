@@ -27,6 +27,8 @@ echo $ProvidedPasword | sudo -S  snap install mqtt-explorer
 echo $ProvidedPasword | sudo -S  snap install mosquitto
 echo $ProvidedPasword | sudo -S  snap install redis
 echo $ProvidedPasword | sudo -S  snap install mapscii
+echo $ProvidedPasword | sudo -S  snap install asciiquarium
+
 
 
 echo "npm installs"
