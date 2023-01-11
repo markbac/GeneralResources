@@ -27,7 +27,8 @@ echo $ProvidedPasword | sudo -S apt -y install build-essential procps curl file 
     python3-sense-emu sense-emu-tools geany wireshark \
      vlc gimp python3-tk thonny psmisc bpytop  \
     software-properties-common \
-    cmatrix cowsay sl figlet libaa-bin lolcat aewan jp2a cbonsai most
+    cmatrix cowsay sl figlet libaa-bin lolcat aewan jp2a cbonsai most \
+    aview mc wordgrinder chafa googler
     
 if [ "${MACH}" = "raspberrypi" ]; then
     echo $ProvidedPasword | sudo -S apt -y install scratch3 realvnc-vnc-viewer
@@ -87,6 +88,11 @@ wget https://github.com/dylanaraps/pfetch/archive/master.zip
 unzip master.zip
 echo $ProvidedPasword | sudo -S install pfetch-master/pfetch /usr/local/bin/
 rm -rf master.zip pfetch-master
+
+wget https://github.com/browsh-org/browsh/releases/download/v1.8.0/browsh_1.8.0_linux_amd64.deb
+echo $ProvidedPasword | sudo -S  apt install ./browsh_1.8.0_linux_amd64.deb
+rm ./browsh_1.8.0_linux_amd64.deb
+
 
 flatpak install --user com.jetpackduba.Gitnuro
 
@@ -215,6 +221,7 @@ echo "alias cls='clear'" >> ~/.bashrc
 echo "alias h='history'" >> ~/.bashrc
 echo "alias wthr='curl https://wttr.in/Manchester'" >> ~/.bashrc
 echo "alias hwthr='curl https://wttr.in/Blackburn'" >> ~/.bashrc
+echo "alias starwars=' telnet towel.blinkenlights.nl'" >> ~/.bashrc
 
 
 echo "alias ll='ls -alF'" >> ~/.zshrc
@@ -226,6 +233,7 @@ echo "alias cls='clear'" >> ~/.zshrc
 echo "alias h='history'" >> ~/.zshrc
 echo "alias wthr='curl https://wttr.in/Manchester'" >> ~/.zshrc
 echo "alias hwthr='curl https://wttr.in/Blackburn'" >> ~/.zshrc
+echo "alias starwars=' telnet towel.blinkenlights.nl'" >> ~/.zshrc
 
 
 echo "###################"
