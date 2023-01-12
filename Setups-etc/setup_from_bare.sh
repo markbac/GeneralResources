@@ -28,7 +28,7 @@ echo $ProvidedPasword | sudo -S apt -y install build-essential procps curl file 
      vlc gimp python3-tk thonny psmisc bpytop  \
     software-properties-common \
     cmatrix cowsay sl figlet libaa-bin lolcat aewan jp2a cbonsai most \
-    aview mc wordgrinder chafa googler
+    aview mc wordgrinder chafa googler ncdu
     
 if [ "${MACH}" = "raspberrypi" ]; then
     echo $ProvidedPasword | sudo -S apt -y install scratch3 realvnc-vnc-viewer
