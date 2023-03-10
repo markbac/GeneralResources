@@ -1,0 +1,11 @@
+{
+    "subscription": "projects/my-project/subscriptions/my-sub",
+    "message": {
+      "attributes": {
+        "attr1":"attr1-value"
+      },
+      "data": "aGVsbG8gd29ybGQ=",
+      "messageId": "2070443601311540",
+      "publishTime":"2021-02-26T19:13:55.749Z"
+    }
+  }

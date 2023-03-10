@@ -1,0 +1,684 @@
+openapi: 3.0.0
+info:
+  description: |
+    You can find out more about Royal Mail Integration on
+    [https://docs.google.com/document/d/1dME2YVyodgHOv2JdQfU-1VKR2qjv4FRSXfoQ-Oe-odQ/edit?usp=sharing).
+  version: '1.0'
+  title: Royal Mail Integration
+  contact:
+    email: cesar@poshmark.com
+
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ceneri/royal_mail_integration/1.0
+    
+paths:
+  /users/{user_id}/orders/sales/{order_id}:
+    get:
+      operationId: getSaleDetails
+      summary: Sale order details including shipping collection details.
+      description: Get sale order details, including current shipping method details (Not all parameters are shown).
+      parameters:
+        - $ref: '#/components/parameters/UserID'
+        - $ref: '#/components/parameters/OrderID'
+      responses:
+        '200':
+          description: Sale details returned successfully. **PARTIAL RESPONSE.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      shipping_method_info:
+                        $ref: '#/components/schemas/OrderShippingMethodInfoWithAddress'
+                  meta:
+                    $ref: '#/components/schemas/OrderMetaDetails'
+                      
+              examples:
+                Home Collection:
+                  value:
+                    data:
+                      shipping_method_info:
+                        shipping_carrier_info:
+                          id: royal_mail
+                          display_name: Royal Mail
+                          # logo_img_url: somedummyurl.com/muchwow
+                        delivery_info:
+                          delivery_type: home_delivery
+                        collection_info:
+                          is_pickup: true
+                          pickup_time: '2022-10-10T10:00:00Z' # TBD
+                          pickup_date_offset: 1
+                          bring_my_label: true
+                      package_info:
+                        package_type_id: small_parcel
+                    meta:
+                      supported_collection_data:
+                        collection_timeslots:
+                          - start_time: '2022-10-11T10:00:00Z'
+                            end_time: '2022-10-11T12:00:00Z'
+                            date_offset: 1
+                          - start_time: '2022-10-12T10:00:00Z'
+                            end_time: '2022-10-12T12:00:00Z'
+                            date_offset: 2
+                      supported_package_data:
+                        package_types:
+                          - id: small_parcel
+                            display_name: 'Small Parcel'
+                            shipping_fee: 0
+                            weight_limit: 2 # In KG
+                            max_dimensions:
+                              width: 45.0
+                              height: 35.0
+                              length: 16.0
+                          - id: medium_parcel
+                            display_name: 'Medium Parcel'
+                            shipping_fee: 252
+                            weight_limit: 2 # In KG
+                            max_dimensions:
+                              width: 61.0
+                              height: 46.0
+                              length: 46.0
+                          - id: medium_parcel_over_2kg
+                            display_name: 'Medium Parcel'
+                            shipping_fee: 581
+                            weight_limit: 5 # In KG
+                            max_dimensions:
+                              width: 61.0
+                              height: 46.0
+                              length: 46.0
+                Drop-Off:
+                  value:
+                    data:
+                      shipping_method_info:
+                        shipping_carrier_info:
+                          id: royal_mail
+                          display_name: Royal Mail
+                          # logo_img_url: somedummyurl.com/muchwow
+                        delivery_info:
+                          delivery_type: home_delivery
+                        collection_info:
+                          is_pickup: false
+                          pickup_time: null
+                          pickup_date_offset: null
+                          bring_my_label: false
+                      package_info:
+                        package_type_id: small_parcel
+                    meta:
+                      supported_collection_data:
+                        collection_timeslots:
+                          - start_time: '2022-10-11T10:00:00Z'
+                            end_time: '2022-10-11T12:00:00Z'
+                            date_offset: 1
+                          - start_time: '2022-10-12T10:00:00Z'
+                            end_time: '2022-10-12T12:00:00Z'
+                            date_offset: 2
+                      supported_package_data:
+                        package_types:
+                          - id: small_parcel
+                            display_name: 'Small Parcel'
+                            shipping_fee: 0
+                            weight_limit: 2 # In KG
+                            max_dimensions:
+                              width: 45.0
+                              height: 35.0
+                              length: 16.0
+                          - id: medium_parcel
+                            display_name: 'Medium Parcel'
+                            shipping_fee: 252
+                            weight_limit: 2 # In KG
+                            max_dimensions:
+                              width: 61.0
+                              height: 46.0
+                              length: 46.0
+                          - id: medium_parcel_over_2kg
+                            display_name: 'Medium Parcel'
+                            shipping_fee: 581
+                            weight_limit: 5 # In KG
+                            max_dimensions:
+                              width: 61.0
+                              height: 46.0
+                              length: 46.0
+                
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/MissingRequiredFieldErrorResponse'
+                  - $ref: '#/components/schemas/InvalidInputErrorResponse'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  
+  /users/{user_id}/orders/sales/{order_id}/shipments/shipment_collection_info:
+    post:
+      operationId: setCollectionInfo
+      summary: Update order collection info.
+      description: Update order collection info prior to label generation.
+      parameters:
+        - $ref: '#/components/parameters/UserID'
+        - $ref: '#/components/parameters/OrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateCollectionInfo'
+      responses:
+        '200':
+          description: Collection info updated.
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/MissingRequiredFieldErrorResponse'
+                  - $ref: '#/components/schemas/InvalidInputErrorResponse'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /users/{user_id}/orders/sales/{order_id}/package_infos:
+    post:
+      operationId: setPackageInfo
+      summary: Update order package info.
+      description: Update order package info prior to label generation.
+      parameters:
+        - $ref: '#/components/parameters/UserID'
+        - $ref: '#/components/parameters/OrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdatePackageInfo'
+      responses:
+        '200':
+          description: Collection info updated.
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/MissingRequiredFieldErrorResponse'
+                  - $ref: '#/components/schemas/InvalidInputErrorResponse'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /users/{user_id}/orders/sales/{order_id}/shipping_labels:
+    post:
+      operationId: sellerShippingLabel
+      summary: New label request.
+      description: Request seller label (Not all parameters are shown).
+      parameters:
+        - $ref: '#/components/parameters/UserID'
+        - $ref: '#/components/parameters/OrderID'
+      requestBody:
+        $ref: '#/components/requestBodies/NewLabelRequest'
+      responses:
+        '200':
+          description: Label queued.
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/MissingRequiredFieldErrorResponse'
+                  - $ref: '#/components/schemas/InvalidInputErrorResponse'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  
+components:
+  parameters:
+    PostID:  
+      name: post_id
+      in: path
+      description: Post ID.
+      required: true
+      schema:
+        type: string
+      example: 603f1f77bcf86cd799229011
+    UserID:  
+      name: user_id
+      in: path
+      description: User ID.
+      required: true
+      schema:
+        type: string
+      example: 507f1f77bcf86cd799439011
+    ObjectType:  
+      name: object_type
+      in: path
+      description: Object Type.
+      required: true
+      schema:
+        type: string
+      example: post
+    OrderID:  
+      name: order_id
+      in: path
+      description: Order ID.
+      required: true
+      schema:
+        type: string
+      example: 857f1f77bcf86cd799439010
+    OfferID:  
+      name: offer_id
+      in: path
+      description: Offer ID.
+      required: true
+      schema:
+        type: string
+      example: 568f1f77bcf86cd799439022
+    OriginDomain:
+      name: origin_domain
+      in: query
+      description: Only return shipping carriers from specified domain.
+      required: false
+      schema:
+        type: string
+      example: au
+    FlowType:  
+      name: flow_type
+      in: query
+      description: Context flow where call to endpoint is being made from (Purolator integration restricted to account_settings only). 
+      required: true
+      schema:
+        type: string
+      example: 
+        account_settings
+    PathShippingCarrierID:
+      name: shipping_carrier_id
+      in: path
+      description: Shipping Carrier ID.
+      required: true
+      schema:
+        type: string
+      example: 
+        purolator
+    ShippingCarrierID:
+      name: shipping_carrier_id
+      in: query
+      description: Shipping Carrier ID.
+      required: true
+      schema:
+        type: string
+      example: 
+        purolator
+    PostalCode:
+      name: postal_code
+      in: query
+      description: Postal code filter.
+      schema:
+        type: string
+      example: 
+        J0K 3K0
+  
+  schemas:
+    Money:
+      type: object
+      required:
+        - val
+        - currency_code
+        - currency_symbol
+      properties:
+        val:
+          type: string
+        currency_code:
+          type: string
+        currency_symbol:
+          type: string
+    ChargeDetails:
+      type: object
+      description: Contains base shipping_amount, discounted_shipping_amount present if applicable.
+      required:
+        - shipping_amount
+      properties:
+        shipping_amount:
+          $ref: '#/components/schemas/Money'
+        discounted_shipping_amount:
+          $ref: '#/components/schemas/Money'
+    Dimension:
+      type: object
+      required:
+        - value
+        - uom
+      properties:
+        value:
+          type: number
+          description: Dimension value.
+        uom:
+          type: string
+          description: Units of Measurement.
+    AddressV2:
+      type: object
+      properties:
+        name:
+          type: string
+        street:
+          type: string
+        street2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        phone:
+          type: string
+        country:
+          type: string
+    PMAddress:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 61142d8c6058869a3d320d0b
+        name:
+          type: string
+        street:
+          type: string
+        street2:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        zip:
+          type: string
+        country:
+          type: string
+    ShippingCarrierLocation:
+      type: object
+      properties:
+        external_location_id:
+          type: string
+          example: '325412'
+        shipping_carrier_id:
+          type: string
+          example: 'purolator'
+        description:
+          type: string
+        address:
+          $ref: '#/components/schemas/AddressV2'
+    ShippingMethodInfo:
+      type: object
+      required:
+        - shipping_carrier_info
+        - delivery_info
+        - charge_details
+      properties:
+        is_active:
+          type: boolean
+        shipping_carrier_info:
+          $ref: '#/components/schemas/ShippingCarrierInfo'
+        delivery_info:
+          $ref: '#/components/schemas/DeliveryInfoSM'
+        charge_details:
+          $ref: '#/components/schemas/ChargeDetails'
+    DeliveryInfoSM:
+      type: object
+      required:
+        - delivery_type
+        - display_name
+      properties:
+        delivery_type:
+          type: string
+        display_name:
+          type: string
+        eco_friendly_img_url:
+          type: string
+        pickup_location:
+          $ref: '#/components/schemas/ShippingCarrierLocation'
+        shipping_address:
+          $ref: '#/components/schemas/PMAddress'
+    DeliveryInfo:
+      type: object
+      required:
+        - delivery_type
+      properties:
+        delivery_type:
+          type: string
+    ShippingCarrierInfo:
+      type: object
+      required:
+        - id
+        - display_name
+      properties:
+        id:
+          type: string
+        display_name:
+          type: string
+        logo_img_url:
+          type: string
+    CollectionTimeslot:
+      type: object
+      required:
+        - start_time
+        - end_time
+        - date_offset
+      properties:
+        start_time:
+          type: string
+          description: Datetime string.
+        end_time:
+          type: string
+          description: Datetime string.
+        date_offset:
+          type: integer
+          description: Day offset.
+    SupportedCollectionMethod:
+      type: object
+      properties:
+        collection_timeslots:
+          type: array
+          items:
+            $ref: '#/components/schemas/CollectionTimeslot'
+    PackageType:
+      type: object
+      required:
+        - id
+        - display_name
+        - shipping_fee
+        - weight_limit
+        - max_dimensions
+      properties:
+        id:
+          type: string
+        display_name:
+          type: string
+        shipping_fee:
+          type: integer
+        weight_limit:
+          type: integer
+        max_dimensions:
+          type: object
+          required:
+            - width
+            - height
+            - length
+          properties:
+            width:
+              type: integer
+            height:
+              type: integer
+            length:
+              type: integer
+    SupportedPackageData:
+      type: object
+      properties:
+        package_types:
+          type: array
+          items:
+            $ref: '#/components/schemas/PackageType'
+    OrderMetaDetails:
+      type: object
+      properties:
+        supported_collection_data:
+          $ref: '#/components/schemas/SupportedCollectionMethod'
+        supported_package_data:
+          $ref: '#/components/schemas/SupportedPackageData'
+    OrderShippingMethodInfoWithAddress:
+      type: object
+      required:
+        - shipping_carrier_info
+        - delivery_info
+      properties:
+        shipping_carrier_info:
+          $ref: '#/components/schemas/ShippingCarrierInfo'
+        delivery_info:
+          $ref: '#/components/schemas/DeliveryInfo'
+    APIErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          description: Contains error details.
+          type: object
+          required: 
+            - error_type
+          properties:
+            error_type:
+              type: string
+            user_message:
+              type: string
+    MissingRequiredFieldErrorResponse:
+      allOf:
+        - $ref: '#/components/schemas/APIErrorResponse'
+        - type: object
+          description: One of the required fields is missing from the request.
+          example:
+            error: 
+              error_type: MissingRequiredFieldError
+    InvalidInputErrorResponse:
+      allOf:
+        - $ref: '#/components/schemas/APIErrorResponse'
+        - type: object
+          description: Invalid input parameter was passed.
+          example:
+            error: 
+              error_type: InvalidInputError
+  
+    InternalErrorResponse:
+      allOf:
+        - $ref: '#/components/schemas/APIErrorResponse'
+        - type: object
+          description: Internal Server Error occurred.
+          example:
+            error: 
+              error_type: InternalError
+              user_message: There was an error please try again later.
+
+  requestBodies:
+    UpdateCollectionInfo:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - is_pickup
+            properties:
+              is_pickup:
+                type: boolean
+                description: true for Home collection.
+                example: true
+              pickup_date:
+                type: string
+                description: Collection start datetime (ISO String) [REQUIRED for home collection].
+                example: 2022-10-12T10:00:00Z
+              pickup_date_offset:
+                type: string
+                description: Collection date offset [REQUIRED for home collection].
+                example: 1
+              bring_my_label:
+                type: boolean
+                description: true for 'Bring My Label' collection.
+                example: true
+          examples:
+            UpdateCollection:
+              value:
+                is_pickup: true
+                pickup_date: 2022-10-12T10:00:00Z
+                pickup_date_offset: 2
+                bring_my_label: true
+            DropOff:
+              value:
+                is_pickup: false
+    UpdatePackageInfo:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - package_type_id
+            properties:
+              package_type_id:
+                type: string
+                description: Supported package type ID.
+                example: medium_parcel
+    NewLabelRequest:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - label_reason
+              - label_quantity
+            properties:
+              label_reason:
+                type: string
+                description: Label Reason.
+                example: complete_order
+              label_quantity:
+                type: integer
+                description: Quantity.
+                example: 1
+              label_weight_oz:
+                type: integer
+                description: Label weight (Not applicable to Royal Mail).
+              package_type_id:
+                type: string
+                description: Package type ID (Only required for upgrade label flow).
+                example: medium_parcel
+          example:
+            label_reason: complete_order
+            label_quantity: 1
+    PlaceOrderConfirmation:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              shipping_carrier_id:
+                type: string
+                description: Shipping carrier ID. (Required for CA domain.)
+                example: purolator
+              shipping_method:
+                type: string
+                description: Shipping method type. (Required for CA domain.)
+                example: pickup_location
+              pickup_location_id:
+                type: string
+                description: Shipping carrier pickup location ID. (Required for CA domain.)
+                example: '324545'
+    UpdatePickupLocationPreference:
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - external_location_id
+            properties:
+              external_location_id:
+                type: string
+                description: Pickup location ID.
+                example: '324542'
+  
+  responses:
+    ServerError:
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalErrorResponse'

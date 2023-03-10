@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome1",
+    "definitions": {
+        "Welcome1": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "coffee": {
+                    "$ref": "#/definitions/Brewing"
+                },
+                "brewing": {
+                    "$ref": "#/definitions/Brewing"
+                }
+            },
+            "required": [
+                "brewing",
+                "coffee"
+            ],
+            "title": "Welcome1"
+        },
+        "Brewing": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "region": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Region"
+                    }
+                },
+                "country": {
+                    "$ref": "#/definitions/Country"
+                }
+            },
+            "required": [
+                "country",
+                "region"
+            ],
+            "title": "Brewing"
+        },
+        "Country": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "company": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "company",
+                "id"
+            ],
+            "title": "Country"
+        },
+        "Region": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name"
+            ],
+            "title": "Region"
+        }
+    }
+}

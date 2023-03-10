@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<coffee>
+		<region>
+			<id>1</id>
+			<name>John Doe</name>
+		</region>
+		<region>
+			<id>2</id>
+			<name>Don Joeh</name>
+		</region>
+		<country>
+			<id>2</id>
+			<company>ACME</company>
+		</country>
+	</coffee>
+	<brewing>
+		<region>
+			<id>1</id>
+			<name>John Doe</name>
+		</region>
+		<region>
+			<id>2</id>
+			<name>Don Joeh</name>
+		</region>
+		<country>
+			<id>2</id>
+			<company>ACME</company>
+		</country>
+	</brewing>
+</root>
