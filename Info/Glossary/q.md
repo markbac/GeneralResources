@@ -1,6 +1,6 @@
 # Q
 
-##  Q.931
+## Q.931
 
 ITU-T Recommendation Q.931 is the ITU standard ISDN connection control
 signalling protocol, forming part of Digital Subscriber Signalling
@@ -23,30 +23,30 @@ and in ATM.
 
 A Q.931 frame contains the following elements:
 
--   Protocol discriminator (PD) -- Specifies which signaling protocol is
+- Protocol discriminator (PD) -- Specifies which signaling protocol is
     used for the connection (e.g. PD=8 for DSS1)
 
--   Call reference value (CR) -- Addresses different connections which
+- Call reference value (CR) -- Addresses different connections which
     can exist simultaneously. The value is valid only during the actual
     time period of the connection
 
--   Message type (MT) -- Specifies the type of a layer 3 message out of
+- Message type (MT) -- Specifies the type of a layer 3 message out of
     the Q.931-defined Message type set for call control (e.g. SETUP).
     There are messages defined for the call setup, the call release and
     the control of call features.
 
--   Information elements (IE) -- Specify further information which is
+- Information elements (IE) -- Specify further information which is
     associated to the actual message. An IE contains the IE name
     (e.g. bearer capability), their length and a variable field of
     contents.
 
-##  QA Lead
+## QA Lead
 
 QAL
 
 Responsible for a project's process and product quality.
 
-##  QAM
+## QAM
 
 Quadrature Amplitude Modulation
 
@@ -79,7 +79,7 @@ and linearity of the communications channel.  QAM is being used in
 optical fiber systems as bit rates increase; QAM16 and QAM64 can be
 optically emulated with a 3-path interferometer.
 
-##  QoS
+## QoS
 
 Quality of Service
 
@@ -105,7 +105,7 @@ as useful as telephone networks for audio conversations, as well as
 supporting new applications with even stricter network performance
 requirements.
 
-##  QSIG
+## QSIG
 
 QSIG is an ISDN based signaling protocol for signaling between private
 branch exchanges (PBXs) in a private integrated services network (PISN).
@@ -127,34 +127,34 @@ requires multiple PBXs, users can receive the same services across the
 network and be unaware of the switch that their telephone is connected
 to. This greatly eases the problems of management of large networks.
 
-##  Quality
+## Quality
 
 Software quality CKA. Covers activities designed to ensure that a system
 and related artifacts have the desired characteristics and conformance
 to requirements and standards. See *CxStand\_Quality* for more
 information.
 
-##  Quality Assurance
+## Quality Assurance
 
 QA
 
 Often used as synonym for the *quality* CKA. Also a subset of
 the *quality* CKA covering prevention of *defects*.
 
-##  Quality Assurance Plan
+## Quality Assurance Plan
 
 QAP
 
 See *quality plan.*
 
-##  Quality Control
+## Quality Control
 
 QC
 
 A subset of the quality CKA covering detection of *defects*. Usually
 consists of *reviews* and *testing*.
 
-##  Quality Plan
+## Quality Plan
 
 QP
 
@@ -162,7 +162,7 @@ Documents the quality methods and practices that will be used on a
 project to support QA and QC, along with coverage plans for project
 artifacts. Often delegates testing details to the *test plan*.
 
-##  Quick Design Session
+## Quick Design Session
 
 When "simple design" choices have far-reaching consequences, two or more
 developers meet for a quick design session at a whiteboard.

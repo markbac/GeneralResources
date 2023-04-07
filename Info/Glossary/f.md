@@ -71,7 +71,7 @@ service coverage indoors or at the cell edge, especially where access
 would otherwise be limited or unavailable. Although much attention is
 focused on WCDMA, the concept is applicable to all standards, including
 GSM, CDMA2000, TD-SCDMA, WiMAX and LTE solutions.\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008172.png?width=480)
+![](./images/F/15008172.png?width=480)
 
 ##  FIPS
 
@@ -196,8 +196,8 @@ host-based firewalls. Network firewalls filter traffic between two or
 more networks and run on network hardware. Host-based firewalls run on
 host computers and control network traffic in and out of those
 machines.\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008180.png?width=480)\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008186.png?width=529)
+![](./images/F/15008180.png?width=480)\
+![](./images/F/15008186.png?width=529)
 
 ##  FNA
 
@@ -265,7 +265,7 @@ In contrast to a domain name that is fully specified, a domain name that
 does not include the full path of labels up to the DNS root is often
 called a partially qualified domain name.
 
-![](https://markbac.github.io/Glossary/attachments/15008173/15008192.png?width=480)
+![](./images/F/15008192.png?width=480)
 
 ##  Frame Relay
 
@@ -286,7 +286,7 @@ leased lines and that is one reason for its popularity. The extreme
 simplicity of configuring user equipment in a Frame Relay network offers
 another reason for Frame Relay's popularity.
 
-![](https://markbac.github.io/Glossary/attachments/15008173/15008198.png?width=389)
+![](./images/F/15008198.png?width=389)
 
 ##  Frequent Releases
 
@@ -308,7 +308,7 @@ as amateur radio, caller ID and emergency broadcasts. The simplest FSK
 is binary FSK (BFSK). BFSK uses a pair of discrete frequencies to
 transmit binary (0s and 1s) information. With this scheme, the "1" is
 called the mark frequency and the "0" is called the space frequency.\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008204.png?width=480)
+![](./images/F/15008204.png?width=480)
 
 ##  FTP
 
@@ -386,7 +386,7 @@ FXS (Foreign Exchange Station) means the wall jack or the interface to
 the telephone system which FXO devices can be connected to. Using these
 interfaces a call can be established. The port provides the necessary
 electricity as well as the dialtone and the call signal.\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008210.png?width=481)
+![](./images/F/15008210.png?width=481)
 
 ##  FXS
 
@@ -396,4 +396,4 @@ FXO (Foreign Exchange Office) is the port that receives the analog line
 on the telephone or fax machine. It establishes the connection to the
 analog line (FXS). FXS devices connected to phone system are referred to
 as endpoints (e.g. a phone).\
-![](https://markbac.github.io/Glossary/attachments/15008173/15008210.png?width=483)
+![](./images/F/15008210.png?width=483)

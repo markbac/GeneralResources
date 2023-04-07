@@ -56,7 +56,7 @@ overhead of such processing in the protocol stack. Time-sensitive
 applications often use UDP because dropping packets is preferable to
 waiting for packets delayed due to retransmission, which may not be an
 option in a real-time system.\
-![](https://markbac.github.io/Glossary/attachments/15009085/15009084.png?width=480)
+![](./images/U/15009084.png?width=480)
 
 ##  UER
 
@@ -103,10 +103,10 @@ diagram, including elements such as:
     documentation (as listed above),and been found useful in many
     contexts.
 
-    ![](https://markbac.github.io/Glossary/attachments/15009085/15009092.png?width=698)\
-    ![](https://markbac.github.io/Glossary/attachments/15009085/15009098.png?width=578)
+    ![](./images/U/15009092.png?width=698)\
+    ![](./images/U/15009098.png?width=578)
 
-    ![](https://markbac.github.io/Glossary/attachments/15009085/15009104.png?width=468)
+    ![](./images/U/15009104.png?width=468)
 
 ##  UMTS
 
@@ -147,7 +147,7 @@ provider networks.\
 In computer networking, unicast refers to a one-to-one transmission from
 one point in the network to another point; that is, one sender and one
 receiver, each identified by a network address.\
-![](https://markbac.github.io/Glossary/attachments/15009085/15009110.png?width=225)
+![](./images/U/15009110.png?width=225)
 
 ##  Unicode
 
@@ -267,7 +267,7 @@ operating systems that comply with the Single UNIX Specification (SUS).
 As of 2014, the Unix version with the largest installed base is Apple's
 macOS.
 
-![](https://markbac.github.io/Glossary/attachments/15009085/15009116.png?width=513)
+![](./images/U/15009116.png?width=513)
 
 ##  Update
 
@@ -325,7 +325,7 @@ view-source:
 
 . A URC is another type of URI that is neither URL nor URN.
 
-![](https://markbac.github.io/Glossary/attachments/15009085/15009122.png?width=200)
+![](./images/U/15009122.png?width=200)
 
 ##  URL
 
@@ -533,5 +533,5 @@ B. And at last there is the Iur interface which is an internal interface
 most of the time, but can, exceptionally be an external interface too
 for some network architectures. The Iur connects two RNCs with each
 other.\
-![](https://markbac.github.io/Glossary/attachments/15009085/15009128.png?width=480)\
-![](https://markbac.github.io/Glossary/attachments/15009085/15009134.png?width=453)
+![](./images/U/15009128.png?width=480)\
+![](./images/U/15009134.png?width=453)

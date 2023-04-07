@@ -11,7 +11,7 @@ and manage applications without the complexity of building and
 maintaining the infrastructure typically associated with developing and
 launching an app
 
-![](https://markbac.github.io/Glossary/attachments/15008751/14909529.png)
+![](./images/P/14909529.png)
 
 ##  packet sniffing
 
@@ -82,7 +82,7 @@ to its destination where the payload is extracted and used by
 application software. Packet switching is the primary basis for data
 communications in computer networks worldwide.
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008750.png?width=480)
+![](./images/P/15008750.png?width=480)
 
 ##  PAF
 
@@ -112,7 +112,7 @@ deficiencies is the fact that it transmits unencrypted passwords over
 the network. PAP is therefore used only as a last resort when the remote
 server does not support a stronger scheme such as CHAP or EAP
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008758.png?width=480)
+![](./images/P/15008758.png?width=480)
 
 ##  Parametric Estimation
 
@@ -180,7 +180,7 @@ street cabinet in which cables extending out to local distribution
 points are aggregated and connected to larger copper and fibre optic
 cables to move the voice and data signals to and from the local exchange
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008764.png?width=488)
+![](./images/P/15008764.png?width=488)
 
 ##  PCRF
 
@@ -281,7 +281,7 @@ the User Datagram Protocol (UDP) uses datagrams as protocol data unit
 for connection-less transfer. A layer lower in the Internet Protocol
 Suite, at the Internet Layer, the PDU is called a packet, irrespective
 of its payload type.\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008770.png?width=480)
+![](./images/P/15008770.png?width=480)
 
 ##  PEAP
 
@@ -307,7 +307,7 @@ versions beginning with draft-josefsson-pppext-eap-tls-eap-06.
 The protocol only specifies chaining multiple EAP mechanisms and not any
 specific method. However, use of the EAP-MSCHAPv2 and EAP-GTC methods
 are the most commonly supported\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008776.png?width=602)
+![](./images/P/15008776.png?width=602)
 
 ##  peer review
 
@@ -442,7 +442,7 @@ completing a given project.
 First developed by the United States Navy in the 1950s, it is commonly
 used in conjunction with the critical path method (CPM).
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008782.png?width=309)
+![](./images/P/15008782.png?width=309)
 
 ##  PGP
 
@@ -457,7 +457,7 @@ e-mail communications. Phil Zimmermann developed PGP in 1991.
 PGP and similar software follow the OpenPGP standard (RFC
 4880) for encrypting and decrypting data.
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008788.png?width=480)
+![](./images/P/15008788.png?width=480)
 
 ##  PGW
 
@@ -472,7 +472,7 @@ packet screening. Another key role of the PGW is to act as the anchor
 for mobility between 3GPP and non-3GPP technologies such as WiMAX and
 3GPP2 (CDMA 1X and EvDO).
 
-![](https://markbac.github.io/Glossary/attachments/15008751/14876769.png?width=170)
+![](./images/P/14876769.png?width=170)
 
 ##  Phase
 
@@ -601,7 +601,7 @@ Point Of Presence
 
 A point of presence (PoP) is an artificial demarcation point or
 interface point between communicating entities.\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008794.png?width=485)
+![](./images/P/15008794.png?width=485)
 
 ##  portability
 
@@ -634,7 +634,7 @@ POTS is a retronym for voice-grade telephone service employing analog
 signal transmission over copper loops\
 See FXO & FXS
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008800.png?width=477)
+![](./images/P/15008800.png?width=477)
 
 ##  PPP
 
@@ -690,7 +690,7 @@ implements various levels of authentication and encryption natively as
 standard features of the Windows PPTP stack. The intended use of this
 protocol is to provide security levels and remote access levels
 comparable with typical VPN products.\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008806.png?width=474)
+![](./images/P/15008806.png?width=474)
 
 ##  Preemption
 
@@ -747,9 +747,9 @@ A programming language is a formal language which comprises a set of
 instructions used to produce various kinds of output. Programming
 languages are used to create programs that implement specific
 algorithms.\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008812.png?width=547)
+![](./images/P/15008812.png?width=547)
 
-![](https://markbac.github.io/Glossary/attachments/15008751/15008818.png?width=558)
+![](./images/P/15008818.png?width=558)
 
 ##  Programming paradigm
 
@@ -802,7 +802,7 @@ Common programming paradigms include:
     operations are free to execute and chooses the order on its own.
     More at Comparison of multi-paradigm programming languages.
 
-    ![](https://markbac.github.io/Glossary/attachments/15008751/15008824.png?width=278)
+    ![](./images/P/15008824.png?width=278)
 
 ##  Progressive Elaboration
 
@@ -942,7 +942,7 @@ allowing most telephones to communicate with each other.\
 Originally a network of fixed-line analog telephone systems, the PSTN is
 now almost entirely digital in its core network and includes mobile and
 other networks, as well as fixed telephones\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008830.png?width=480)
+![](./images/P/15008830.png?width=480)
 
 ##  PTP
 
@@ -991,7 +991,7 @@ PseudoWire
 
 A pseudowire (or pseudo-wire) is an emulation of a point-to-point
 connection over a packet-switching network\
-![](https://markbac.github.io/Glossary/attachments/15008751/15008836.png?width=491)
+![](./images/P/15008836.png?width=491)
 
 ##  PWFQ
 

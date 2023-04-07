@@ -36,7 +36,7 @@ Related terms for other types of networks are personal area networks
 (PANs), local area networks (LANs), campus area networks (CANs), or
 metropolitan area networks (MANs) which are usually limited to a room,
 building, campus or specific metropolitan area respectively.\
-![](https://markbac.github.io/Glossary/attachments/15009200/15009199.png?width=480)
+![](./images/W/15009199.png?width=480)
 
 ##  WANET
 
@@ -93,7 +93,7 @@ invites failure. A US Department of Defense standard was published in
 1985 with a methodology based on the 1970 paper and it then became
 widespread.
 
-![](https://markbac.github.io/Glossary/attachments/15009200/15009207.png?width=445)
+![](./images/W/15009207.png?width=445)
 
 ##  Waterfall Lifecycle
 
@@ -112,7 +112,7 @@ install equipment ("have presence") at BT's WBC Aggregation Points
 are the same as the Core nodes discussed on the 21CN overview. One
 aggregation point will cover a region of the country, so an ISP would
 need to have presence at all twenty to cover the entire of the UK.\
-![](https://markbac.github.io/Glossary/attachments/15009200/15009213.png?width=481)
+![](./images/W/15009213.png?width=481)
 
 ##  WBCC
 
@@ -328,12 +328,12 @@ enables soldiers to:
     network, without the need to stop and set up communications, making
     them vulnerable to attack.
 
-    ![](https://markbac.github.io/Glossary/attachments/15009200/15009219.png?width=480)
+    ![](./images/W/15009219.png?width=480)
 
 ##  Wireless Mesh Network
 
 \
-![](https://markbac.github.io/Glossary/attachments/15009200/15009225.png?width=479)\
+![](./images/W/15009225.png?width=479)\
 A wireless mesh network (WMN) is a communications network made up of
 radio nodes organized in a mesh topology. It is also a form of wireless
 ad hoc network.
@@ -386,7 +386,7 @@ Wireshark is a free and open source packet analyzer. It is used for
 network troubleshooting, analysis, software and communications protocol
 development, and education. Originally named Ethereal, the project was
 renamed Wireshark in May 2006 due to trademark issues.\
-![](https://markbac.github.io/Glossary/attachments/15009200/15009231.png?width=477)
+![](./images/W/15009231.png?width=477)
 
 ##  WISP
 
@@ -398,7 +398,7 @@ include commonplace Wi-Fi wireless mesh networking, or proprietary
 equipment designed to operate over open 900 MHz, 2.4 GHz, 4.9, 5, 24,
 and 60 GHz bands or licensed frequencies in the UHF band (including the
 MMDS frequency band), LMDS, and other bands from 6Ghz to 80Ghz.\
-![](https://markbac.github.io/Glossary/attachments/15009200/15009237.png?width=480)
+![](./images/W/15009237.png?width=480)
 
 ##  WLR
 
@@ -526,7 +526,7 @@ a programming language.
 The current version of WSDL is WSDL 2.0. The meaning of the acronym has
 changed from version 1.1 where the "D" stood for "Definition".
 
-![](https://markbac.github.io/Glossary/attachments/15009200/15009243.png?width=480)
+![](./images/W/15009243.png?width=480)
 
 ```{=html}
 <?xml version="1.0" encoding="UTF-8"?>

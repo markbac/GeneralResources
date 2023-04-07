@@ -142,8 +142,8 @@ operational data store and may require data cleansing for additional
 operations to ensure data quality before it is used in the DW for
 reporting.
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15007957.png?width=480)\
-![](https://markbac.github.io/Glossary/attachments/15007958/15007965.png?width=434)
+![](./images/D/15007957.png?width=480)\
+![](./images/D/15007965.png?width=434)
 
 ##  DCE
 
@@ -154,7 +154,7 @@ the data terminal equipment (DTE) and a data transmission circuit. It is
 also called data communication(s) equipment and data carrier equipment.
 Usually, the DTE device is the terminal (or computer), and the DCE is a
 modem.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15007971.png?width=480)
+![](./images/D/15007971.png?width=480)
 
 ##  DDK
 
@@ -185,7 +185,7 @@ A DoS or DDoS attack is analogous to a group of people crowding the
 entry door of a shop, making it hard for legitimate customers to enter,
 disrupting trade.
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15007977.png?width=442)
+![](./images/D/15007977.png?width=442)
 
 ##  Decomposition Estimation
 
@@ -323,7 +323,7 @@ practically secure in the form of Triple DES, although there are
 theoretical attacks. This cipher has been superseded by the Advanced
 Encryption Standard (AES). Furthermore, DES has been withdrawn as a
 standard by the National Institute of Standards and Technology.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15007983.png?width=375)
+![](./images/D/15007983.png?width=375)
 
 ##  Design
 
@@ -440,9 +440,9 @@ A graphical representation of a system, process, or other information.
 
 Digital Local Exchange
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15007989.png?width=481)
+![](./images/D/15007989.png?width=481)
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15007995.png?width=495)
+![](./images/D/15007995.png?width=495)
 
 ##  DLP
 
@@ -468,7 +468,7 @@ isolated network positioned between the Internet and the private network
 and, if its design is effective, allows the organization extra time to
 detect and address breaches before they would further penetrate into the
 internal networks.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008001.png?width=344)
+![](./images/D/15008001.png?width=344)
 
 ##  DN
 
@@ -621,7 +621,7 @@ specified with all labels in the hierarchy of the DNS, having no parts
 omitted. Labels in the Domain Name System are case-insensitive, and may
 therefore be written in any desired capitalization method, but most
 commonly domain names are written in lowercase in technical contexts.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008007.png?width=350)
+![](./images/D/15008007.png?width=350)
 
 Domain name space\
 Today, the Internet Corporation for Assigned Names and Numbers (ICANN)
@@ -634,7 +634,7 @@ by domain name servers.\
 The domain name space consists of a tree of domain names. Each node in
 the tree holds information associated with the domain name. The tree
 sub-divides into zones beginning at the DNS root zone.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008013.png?width=481)
+![](./images/D/15008013.png?width=481)
 
 ##  Dot1Q
 
@@ -661,16 +661,16 @@ A simple view for dot1q (802.1q) trunking:\
 For ease of understanding the Dot1q (802.1q) trunking between switches
 can be seen as pipes (VLANs) inside a main pipe (Trunk) to connect VLANs
 that are being distributed on different switches.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008019.png?width=448)\
+![](./images/D/15008019.png?width=448)\
 So if that makes sense then a better representation is that packets are
 tagged as they go into the trunk link, like below.\
 The packets are tagged with the VLAN ID, that the port they are received
 on is configured with. When they are received on the other end they are
 then sent to the appropriate VLAN ports.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008025.png?width=448)\
+![](./images/D/15008025.png?width=448)\
 So how does the switch know which ports to send the packet to, the
 switches are assigned with the VLAN number.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008031.png?width=477)
+![](./images/D/15008031.png?width=477)
 
 ##  Downstream
 
@@ -709,7 +709,7 @@ exchange and the customer premise, utilized as a junction point.\
 In FTTC - A piece of equipment that separates out a fibre into smaller
 pieces
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15008037.png?width=483)
+![](./images/D/15008037.png?width=483)
 
 ##  DPI
 
@@ -800,7 +800,7 @@ family of technologies that are used to transmit digital data over
 telephone lines. In telecommunications marketing, the term DSL is widely
 understood to mean asymmetric digital subscriber line (ADSL), the most
 commonly installed DSL technology, for Internet access.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008043.png?width=485)
+![](./images/D/15008043.png?width=485)
 
 ##  DSLAM
 
@@ -810,7 +810,7 @@ Allows telephone lines to make faster connections to the Internet. It is
 a network device, located near the customer's premises and connects
 multiple customers Digital Subscriber Lines (DSL) to a high-speed
 Internet backbone line using multiplexing techniques.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008049.png?width=485)
+![](./images/D/15008049.png?width=485)
 
 ##  DTE
 
@@ -821,7 +821,7 @@ information into signals or reconverts received signals. These can also
 be called tail circuits. A DTE device communicates with the data
 circuit-terminating equipment (DCE). The DTE/DCE classification was
 introduced by IBM.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15007971.png?width=491)
+![](./images/D/15007971.png?width=491)
 
 ##  DTMF
 
@@ -840,7 +840,7 @@ The Touch-Tone system using a telephone keypad gradually replaced the
 use of rotary dial and has become the industry standard for landline and
 mobile service. Other multi-frequency systems are used for internal
 signalling within the telephone network.\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008055.png?width=398)
+![](./images/D/15008055.png?width=398)
 
 ##  DTT
 
@@ -892,15 +892,15 @@ the monitoring and remote adjustment of equipment in the field. There
 are two types of duplex communication systems: full-duplex (FDX) and
 half-duplex (HDX).
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15008061.png?width=373)
+![](./images/D/15008061.png?width=373)
 
-![](https://markbac.github.io/Glossary/attachments/15007958/15008067.png?width=442)
+![](./images/D/15008067.png?width=442)
 
 Full Duplex\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008073.png?width=220)
+![](./images/D/15008073.png?width=220)
 
 Half Duplex\
-![](https://markbac.github.io/Glossary/attachments/15007958/15008079.png?width=220)
+![](./images/D/15008079.png?width=220)
 
 ##  DVSR
 

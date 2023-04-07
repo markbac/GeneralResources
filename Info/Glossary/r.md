@@ -21,7 +21,7 @@ various roles in completing tasks or deliverables for a project or
 business process. It is especially useful in clarifying roles and
 responsibilities in cross-functional/departmental projects and
 processes.\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008851.png?width=457)
+![](./images/R/15008851.png?width=457)
 
 ##  RAD
 
@@ -63,7 +63,7 @@ Remote Authentication Dial In User Service
 
 -   TTT use FreeRADIUS Implementation
 
-        ![](https://markbac.github.io/Glossary/attachments/15008852/15008859.png?width=453)
+        ![](./images/R/15008859.png?width=453)
 
 ##  Rainbow
 
@@ -102,7 +102,7 @@ Examples of radio access network types are:
     access technologies. Such devices seamlessly transfer an ongoing
     call between different radio access networks without the user
     noticing any disruption in service.\
-    ![](https://markbac.github.io/Glossary/attachments/15008852/15008865.png?width=480)
+    ![](./images/R/15008865.png?width=480)
 
 ##  RANAP
 
@@ -221,7 +221,7 @@ database management systems in the 1990s. However, due to the expanse of
 technologies, such as horizontal scaling of computer clusters, NoSQL
 databases have recently become popular as an alternative to RDBMS
 databases\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008871.png?width=402)
+![](./images/R/15008871.png?width=402)
 
 ##  RDP
 
@@ -351,7 +351,7 @@ aim for fast performance, reliability, and the ability to grow, by
 re-using components that can be managed and updated without affecting
 the system as a whole, even while it is running.
 
-![](https://markbac.github.io/Glossary/attachments/15008852/15008877.png?width=480)
+![](./images/R/15008877.png?width=480)
 
 ##  Review
 
@@ -502,7 +502,7 @@ It can be applied at any level, for example:
     along the other. In the diagram below I've divided the template into
     four sections to show you how to interpret the information.
 
-    ![](https://markbac.github.io/Glossary/attachments/15008852/15008883.png?width=215)\
+    ![](./images/R/15008883.png?width=215)\
     The four categories from the diagram above are as follows:
 
     Equal Low: where risk and reward are both proportional and low.\
@@ -521,7 +521,7 @@ It can be applied at any level, for example:
     lines, invest in new products, or investing to move into new
     markets. Once you have all the options and their potential reward,
     they should be plotted on the risk-reward chart:\
-    ![](https://markbac.github.io/Glossary/attachments/15008852/15008889.png?width=262)\
+    ![](./images/R/15008889.png?width=262)\
     At this stage some options will appear to have a more favourable
     risk-reward profile than others, such as outsourcing in the above
     example, but it is work taking the time to investigate whether any
@@ -535,7 +535,7 @@ It can be applied at any level, for example:
     decision making, we can add resources to the risk-reward template.
     In the diagram below, the bigger the bubble the more resources are
     required to execute that option.\
-    ![](https://markbac.github.io/Glossary/attachments/15008852/15008895.png?width=267)\
+    ![](./images/R/15008895.png?width=267)\
     With risk, reward, and resources all plotted, we are able to trade
     them against one another to find the best option for us. From the
     diagram above you can see that outsourcing is probably the most
@@ -569,7 +569,7 @@ network). Iu interfaces carry user traffic (such as voice or data) as
 well as control information (see Protocols), and Iur interface is mainly
 needed for soft handovers involving 2 RNCs though not required as the
 absence of Iur will cause these handovers to become hard handovers.\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008901.png?width=480)
+![](./images/R/15008901.png?width=480)
 
 Protocols\
 Iub, Iu and Iur protocols all carry both user data and signalling (that
@@ -666,7 +666,7 @@ computer networks. It is an operating system concept.
 The name of the algorithm comes from the round-robin principle known
 from other fields, where each person takes an equal share of something
 in turn.\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008907.png?width=545)
+![](./images/R/15008907.png?width=545)
 
 ##  Router
 
@@ -751,7 +751,7 @@ we should study the architecture of the third generation mobile cellular
 system, the Universal Mobile Telecommunications System (UMTS). The UMTS
 is composed by two subsystems, the UTRAN (Umts Terrestrial Radio Access
 Network) and CN (core network) :\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008913.png?width=491)
+![](./images/R/15008913.png?width=491)
 
 The RNC is responsible for the packet scheduling, radio resource control
 and handover control.\
@@ -780,7 +780,7 @@ to establish it against the 2.5s delay if the UE is on the IDLE state.\
 Below is a diagram that represents the six most common states --
 CELL\_DCH, CELL\_FACH, CELL\_PCH, URA\_PCH, IDLE, DISCONNECT -- and some
 of the possible transitions.\
-![](https://markbac.github.io/Glossary/attachments/15008852/15008919.png?width=486)
+![](./images/R/15008919.png?width=486)
 
 ##  RSTP
 

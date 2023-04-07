@@ -11,7 +11,7 @@ each phase of the development life cycle and its associated phase of
 testing. The horizontal and vertical axes represents time or project
 completeness (left-to-right) and level of abstraction (coarsest-grain
 abstraction uppermost), respectively.\
-![](https://markbac.github.io/Glossary/attachments/15009152/15009151.png?width=446)
+![](./images/V/15009151.png?width=446)
 
 ##  V.90
 
@@ -149,7 +149,7 @@ with other data being sent across the network.
 Virtual Circuit/Channel ID
 
 \
-![](https://markbac.github.io/Glossary/attachments/15009152/15009159.png?width=483)
+![](./images/V/15009159.png?width=483)
 
 ##  VDSL
 
@@ -326,7 +326,7 @@ can keep network applications separate despite being connected to the
 same physical network, and without requiring multiple sets of cabling
 and networking devices to be deployed.
 
-![](https://markbac.github.io/Glossary/attachments/15009152/15009165.png?width=478)
+![](./images/V/15009165.png?width=478)
 
 ##  VLR
 
@@ -467,7 +467,7 @@ include:
 -   Skype protocol, proprietary Internet telephony protocol suite based
     on peer-to-peer architecture
 
-    ![](https://markbac.github.io/Glossary/attachments/15009152/15009171.png?width=251)
+    ![](./images/V/15009171.png?width=251)
 
 ##  VoLTE
 
@@ -524,7 +524,7 @@ bridged LAN.
 
 VPLS is designed for applications that require multipoint or broadcast
 access.\
-![](https://markbac.github.io/Glossary/attachments/15009152/15009177.png?width=480)
+![](./images/V/15009177.png?width=480)
 
 ##  VPN
 
@@ -537,7 +537,7 @@ to the private network. Applications running across a VPN may therefore
 benefit from the functionality, security, and management of the private
 network.
 
-![](https://markbac.github.io/Glossary/attachments/15009152/15009183.png?width=330)
+![](./images/V/15009183.png?width=330)
 
 ##  VPWS
 
@@ -570,4 +570,4 @@ be segmented without requiring multiple routers.
 Cisco implementation - VPN routing and forwarding, the key element in
 the Cisco MPLS VPN technology
 
-![](https://markbac.github.io/Glossary/attachments/15009152/15009189.png?width=481)
+![](./images/V/15009189.png?width=481)

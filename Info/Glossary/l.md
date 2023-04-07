@@ -24,7 +24,7 @@ procedural interface to the transmission medium. The shapes and
 properties of the electrical connectors, the frequencies to broadcast
 on, the line code to use and similar low-level parameters, are specified
 here.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008464.png?width=480)
+![](./images/L/15008464.png?width=480)
 
 ##  L2
 
@@ -56,7 +56,7 @@ Examples of data link protocols are Ethernet for local area networks
 point-to-point (dual-node) connections. In the Internet Protocol Suite
 (TCP/IP), the data link layer functionality is contained within the link
 layer, the lowest layer of the descriptive model.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008464.png?width=480)
+![](./images/L/15008464.png?width=480)
 
 ##  L2F
 
@@ -72,7 +72,7 @@ specifically designed to tunnel Point-to-Point Protocol (PPP) traffic.
 
 Local Layer 2 Primary Switch Local Exchange (EX4200)
 
-![](https://markbac.github.io/Glossary/attachments/15008465/15008472.png?width=480)
+![](./images/L/15008472.png?width=480)
 
 ##  L2TP
 
@@ -149,7 +149,7 @@ higher-level protocol such as PPP. Either the LAC or LNS may initiate
 sessions. The traffic for each session is isolated by L2TP, so it is
 possible to set up multiple virtual networks across a single tunnel. MTU
 should be considered when implementing L2TP.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008478.png?width=475)
+![](./images/L/15008478.png?width=475)
 
 ##  LACP
 
@@ -202,7 +202,7 @@ together to make a single high-bandwidth data path, so as to implement
 the traffic load sharing among the member ports in the group and to
 enhance the connection reliability.
 
-![](https://markbac.github.io/Glossary/attachments/15008465/15008484.png?width=333)
+![](./images/L/15008484.png?width=333)
 
 ##  LAN
 
@@ -213,7 +213,7 @@ computers within a limited area such as a residence, school, laboratory,
 university campus or office building. By contrast, a wide area network
 (WAN) not only covers a larger geographic distance, but also generally
 involves leased telecommunication circuits.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008490.png?width=200)
+![](./images/L/15008490.png?width=200)
 
 ##  LANE
 
@@ -289,7 +289,7 @@ reduced to analogue PSTN/POTS levels. Latency is a larger consideration
 in these systems when an echo is present therefore popular VoIP codecs
 such as G.729 perform complex voice detection and noise suppression.
 
-![](https://markbac.github.io/Glossary/attachments/15008465/15008496.png?width=480)
+![](./images/L/15008496.png?width=480)
 
 ##  Lawful intercept
 
@@ -447,7 +447,7 @@ to emphasize that most Linux distributions are not just the Linux
 kernel, and that they have in common not only the kernel, but also
 numerous utilities and libraries, a large proportion of which are from
 the GNU project.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008502.png?width=531)
+![](./images/L/15008502.png?width=531)
 
 Widely used distributions
 
@@ -550,7 +550,7 @@ Widely used distributions
     among the earliest still maintained, committed to remain highly
     Unix-like and easily modifiable by end users
 
-    ![](https://markbac.github.io/Glossary/attachments/15008465/14647331.svg?width=158)
+    ![](./images/L/14647331.svg?width=158)
 
 ##  lisp
 
@@ -594,7 +594,7 @@ CxOne concept, see *CxOneOverview* for description.
 
 Local Loop
 
-![](https://markbac.github.io/Glossary/attachments/15008465/15008514.png?width=481)
+![](./images/L/15008514.png?width=481)
 
 ##  LNS
 
@@ -604,7 +604,7 @@ The two endpoints of an L2TP tunnel are called the LAC (L2TP Access
 Concentrator) and the LNS (L2TP Network Server). The LNS waits for new
 tunnels. Once a tunnel is established, the network traffic between the
 peers is bidirectional.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008478.png?width=483)
+![](./images/L/15008478.png?width=483)
 
 ##  Local Build
 
@@ -763,7 +763,7 @@ either NB-IoT or LTE-M networks.
 
 ##  LTE and Mobile Internet
 
-![](https://markbac.github.io/Glossary/attachments/15008465/15008520.png?width=278)
+![](./images/L/15008520.png?width=278)
 
 ##  LTS
 
@@ -779,7 +779,7 @@ configured on the LTS, the LTS can forward or redirect the packets
 through a different tunnel to a different LNS beyond the LTS. The
 logical termination point of the original L2TP session is switched to a
 different endpoint.\
-![](https://markbac.github.io/Glossary/attachments/15008465/15008526.png?width=485)
+![](./images/L/15008526.png?width=485)
 
 ##  Lua
 

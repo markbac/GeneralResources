@@ -85,9 +85,9 @@ flicker, affect the performance of processors in personal computers,
 introduce clicks or other undesired effects in audio signals, and cause
 loss of transmitted data between network devices. The amount of
 tolerable jitter depends on the affected application.\
-![](https://markbac.github.io/Glossary/attachments/15008431/15008430.png?width=468)
+![](./images/J/15008430.png?width=468)
 
-![](https://markbac.github.io/Glossary/attachments/15008431/15008438.png?width=480)
+![](./images/J/15008438.png?width=480)
 
 ##  Jitter buffer
 
@@ -134,7 +134,7 @@ transmitted. This MBS can be derived from or used to derive the maximum
 variation between the arrival time of traffic in the bursts from the
 time it would arrive at the SCR, i.e. a jitter about that SCR.
 
-![](https://markbac.github.io/Glossary/attachments/15008431/15008430.png?width=468)
+![](./images/J/15008430.png?width=468)
 
 ##  Joint Application Development
 

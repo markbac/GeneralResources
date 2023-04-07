@@ -1,6 +1,6 @@
 # H
 
-##  H.248
+## H.248
 
 The Gateway Control Protocol (Megaco, H.248) is an implementation of the
 media gateway control protocol architecture for providing
@@ -37,9 +37,9 @@ published three versions of H.248, the most recent in September 2005.
 H.248 encompasses not only the base protocol specification in H.248.1,
 but many extensions defined throughout the H.248 sub-series.
 
-![](https://markbac.github.io/Glossary/attachments/15008305/15008304.png?width=480)
+![](./images/H/15008304.png?width=480)
 
-##  H.323
+## H.323
 
 H.323 is a recommendation from the ITU Telecommunication Standardization
 Sector (ITU-T) that defines the protocols to provide audio-visual
@@ -71,9 +71,9 @@ videophones. Such a device may provide or facilitate both basic services
 and supplementary services, such as call transfer, park, pick-up, and
 hold.
 
-![](https://markbac.github.io/Glossary/attachments/15008305/15008312.png?width=480)
+![](./images/H/15008312.png?width=480)
 
-##  Half Duplex
+## Half Duplex
 
 In a half-duplex system, both parties can communicate with each other,
 but not simultaneously; the communication is one direction at a time. An
@@ -82,16 +82,13 @@ has a "push-to-talk" button; when the local user wants to speak to the
 remote person they push this button, which turns on the transmitter but
 turns off the receiver, so they cannot hear the remote person. To listen
 to the other person they release the button, which turns on the receiver
-but turns off the transmitter.\
-![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav6eec9e01ef48b0d165deffb489ab71cd.png")\
-![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav00a123590ffe05d9b1c53043cff05252.png")\
-![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav76f220a2b231d33cc7a33cb273be3eab.png")
+but turns off the transmitter.
 
-##  Happy Path
+## Happy Path
 
 See *nominal path*.
 
-##  Hash Function
+## Hash Function
 
 hash function is any function that can be used to map data of arbitrary
 size to data of a fixed size. The values returned by a hash function are
@@ -115,17 +112,17 @@ some extent, each one has its own uses and requirements and is designed
 and optimized differently. The HashKeeper database maintained by the
 American National Drug Intelligence Center, for instance, is more aptly
 described as a catalogue of file fingerprints than of hash values.\
-![](https://markbac.github.io/Glossary/attachments/15008305/15008318.png?width=300)
+![](./images/H/15008318.png?width=300)
 
-##  HDF
+## HDF
 
 Handover Distribution Frame
 
 Used to terminate the cable from the exchange and to make the pairs
 available to the operator.\
-![](https://markbac.github.io/Glossary/attachments/15008305/15008324.png?width=469)
+![](./images/H/15008324.png?width=469)
 
-##  HDLC
+## HDLC
 
 High-Level Datalink Control
 
@@ -149,9 +146,9 @@ Mode (ARM), but they are now rarely used; is now used almost exclusively
 to connect one device to another, using Asynchronous Balanced Mode
 (ABM).
 
-![](https://markbac.github.io/Glossary/attachments/15008305/15008330.png?width=480)
+![](./images/H/15008330.png?width=480)
 
-##  HDSL
+## HDSL
 
 High Speed Digital Subscriber Line (also known as High-speed Digital
 Subscriber Loop)
@@ -160,22 +157,22 @@ A copper delivered service on Copper Wideband Serving Section (CWSS). It
 is subject to reach limitations and is used primarily to provide 2 Mbit
 service to singleton sites.
 
-##  Heartbeat Retrospective
+## Heartbeat Retrospective
 
 The team meets regularly to reflect on the most significant events that
 occurred since the previous such meeting, and identify opportunities for
 improvement.
 
-##  HiFi Prototype
+## HiFi Prototype
 
 See *high fidelity prototype.*
 
-##  High Fidelity Prototype
+## High Fidelity Prototype
 
 Mockup of a system using a software or technology based tool, usually
 one with a *RAD environment*, e.g., Visual Basic or Delphi.
 
-##  High Level Design
+## High Level Design
 
 HLD
 
@@ -183,7 +180,7 @@ Design level between *architecture* and *low level design*. Focuses
 defining the details of the software solution at levels abstracted from
 their construction. See *CxStand\_Design* for more information.
 
-##  HLR
+## HLR
 
 Home Location Register
 
@@ -208,35 +205,35 @@ for as long as a subscriber remains with the mobile phone operator.
 
 Examples of other data stored in the HLR against an IMSI record is:
 
--   GSM services that the subscriber has requested or been given.
+- GSM services that the subscriber has requested or been given.
 
--   General Packet Radio Service (GPRS) settings to allow the subscriber
+- General Packet Radio Service (GPRS) settings to allow the subscriber
     to access packet services.
 
--   Current location of subscriber (VLR and serving GPRS support
+- Current location of subscriber (VLR and serving GPRS support
     node/SGSN).
 
--   Call divert settings applicable for each associated MSISDN.
+- Call divert settings applicable for each associated MSISDN.
 
     The HLR is a system which directly receives and processes MAP
     transactions and messages from elements in the GSM network, for
     example, the location update messages received as mobile phones roam
     around.
 
-##  Hotfix
+## Hotfix
 
 code (sometimes called a patch) that fixes a bug in a product.
 
-##  How Requirement
+## How Requirement
 
 Often a synonym for *non-functional requirement*. Sometimes used to
 refer to design issues.
 
-##  How Well Requirement
+## How Well Requirement
 
 Synonym for *non-functional requirement*.
 
-##  HSRP
+## HSRP
 
 Hot Standby Router Protocol
 
@@ -250,9 +247,9 @@ achieve default gateway failover if the primary gateway becomes
 inaccessible. HSRP gateways send multicast hello messages to other
 gateways to notify them of their priorities (which gateway is preferred)
 and current status (active or standby).\
-![](https://markbac.github.io/Glossary/attachments/15008305/15008336.png?width=298)
+![](./images/H/15008336.png?width=298)
 
-##  HSS
+## HSS
 
 Home subscriber server
 
@@ -266,7 +263,7 @@ location register (HLR) and Authentication centre (AuC).\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddavdbd23573d6dff5163d9993faa7fb6ca5.png")\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddave29b71bb267aef894ab1e2f80badf6d9.png")
 
-##  HTTP
+## HTTP
 
 Hypertext Transfer Protocol
 
@@ -315,36 +312,51 @@ Connection: close
 ```{=html}
 <html>
 ```
+
 \
+
 ```{=html}
 <head>
 ```
+
 \
+
 ```{=html}
 <title>
 ```
+
 An Example Page
+
 ```{=html}
 </title>
 ```
+
 \
+
 ```{=html}
 </head>
 ```
+
 \
+
 ```{=html}
 <body>
 ```
+
 \
 Hello World, this is a very simple HTML document.\
+
 ```{=html}
 </body>
 ```
+
 \
+
 ```{=html}
 </html>
 ```
-##  HTTPS
+
+## HTTPS
 
 HTTP Secure (HTTPS) is an extension of the Hypertext Transfer Protocol
 (HTTP) for secure communication over a computer network, and is widely
@@ -369,7 +381,7 @@ more often by webusers than the original non-secure HTTP, primarily to
 protect page authenticity on all types of websites; secure accounts; and
 keep user communications, identity, and web browsing private.
 
-##  Hub
+## Hub
 
 An Ethernet hub, active hub, network hub, repeater hub, multiport
 repeater, or simply hub is a network hardware device for connecting
@@ -388,14 +400,14 @@ except in very old installations or specialized applications. As of
 2011, connecting network segments by repeaters or hubs is deprecated by
 IEEE 802.3.
 
-![](https://markbac.github.io/Glossary/attachments/15008305/15008342.png?width=355)
+![](./images/H/15008342.png?width=355)
 
-##  human factors
+## human factors
 
 the study of how humans behave physically and psychologically in
 relation to particular environments, products, or services.
 
-##  Hungarian notation
+## Hungarian notation
 
 Hungarian notation is an identifier naming convention in computer
 programming, in which the name of a variable or function indicates its
@@ -408,34 +420,34 @@ actual data type for naming, and this convention became widely spread
 through the Windows API; this is sometimes called Systems Hungarian
 notation.
 
--   bBusy : boolean
+- bBusy : boolean
 
--   chInitial : char
+- chInitial : char
 
--   cApples : count of items
+- cApples : count of items
 
--   dwLightYears : double word (Systems)
+- dwLightYears : double word (Systems)
 
--   fBusy : flag (or float)
+- fBusy : flag (or float)
 
--   nSize : integer (Systems) or count (Apps)
+- nSize : integer (Systems) or count (Apps)
 
--   iSize : integer (Systems) or index (Apps)
+- iSize : integer (Systems) or index (Apps)
 
--   fpPrice: floating-point
+- fpPrice: floating-point
 
--   dbPi : double (Systems)
+- dbPi : double (Systems)
 
--   pFoo : pointer
+- pFoo : pointer
 
--   rgStudents : array, or range
+- rgStudents : array, or range
 
--   szLastName : zero-terminated string
+- szLastName : zero-terminated string
 
--   u16Identifier : unsigned 16-bit integer (Systems)
+- u16Identifier : unsigned 16-bit integer (Systems)
 
--   u32Identifier : unsigned 32-bit integer (Systems)
+- u32Identifier : unsigned 32-bit integer (Systems)
 
--   stTime : clock time structure
+- stTime : clock time structure
 
--   fnFunction : function name
+- fnFunction : function name

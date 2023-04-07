@@ -35,7 +35,7 @@ encoder will create a 64 kbit/s bitstream for a signal sampled at 8 kHz.
 
 G.711 μ-law tends to give more resolution to higher range signals while
 G.711 A-law provides more quantization levels at lower signal levels.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008219.png?width=480)
+![](./images/G/15008219.png?width=480)
 
 ##  G.711.1
 
@@ -120,7 +120,7 @@ compressions as the network topography mutates. In the latter case,
 bandwidth is automatically conserved when network congestion is high.
 When congestion returns to a normal level, a lower-compression,
 higher-quality bitrate is restored.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008219.png?width=480)
+![](./images/G/15008219.png?width=480)
 
 ##  G.723.1
 
@@ -179,16 +179,16 @@ fast is an acronym for fast access to subscriber terminals. Limited
 demonstration hardware was demonstrated in mid-2013. The first chipsets
 were introduced in October 2014, with commercial hardware introduced in
 2015, and first deployments started in 2016.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008227.png?width=480)\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008233.png?width=509)\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008239.png?width=473)
+![](./images/G/15008227.png?width=480)\
+![](./images/G/15008233.png?width=509)\
+![](./images/G/15008239.png?width=473)
 
 ##  Gantt chart
 
 a horizontal bar chart frequently used in project management that
 provides a graphical illustration of a schedule that helps to plan,
 coordinate, and track specific tasks in a project.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008245.png?width=487)
+![](./images/G/15008245.png?width=487)
 
 ##  gap analysis
 
@@ -243,7 +243,7 @@ Geocast refers to the delivery of information to a group of destinations
 in a network identified by their geographical locations. It is a
 specialized form of multicast addressing used by some routing protocols
 for mobile ad hoc networks.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008251.png?width=195)
+![](./images/G/15008251.png?width=195)
 
 ##  GERAN
 
@@ -263,7 +263,7 @@ UTRANs in the case of a UMTS/GSM network.
 A GERAN without EDGE is a GRAN, but is otherwise identical in concept.
 
 A GERAN without GSM is an ERAN.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008257.png?width=364)
+![](./images/G/15008257.png?width=364)
 
 ##  GGSN
 
@@ -543,7 +543,7 @@ between the second (2G) and third (3G) generations of mobile telephony.
 It provides moderate-speed data transfer, by using unused time division
 multiple access (TDMA) channels in, for example, the GSM system. GPRS is
 integrated into GSM Release 97 and newer releases.\
-![](https://markbac.github.io/Glossary/attachments/15008220/15008263.png?width=480)
+![](./images/G/15008263.png?width=480)
 
 ##  GSM
 

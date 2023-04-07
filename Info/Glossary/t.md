@@ -9,7 +9,7 @@ An atomic unit of work on a project. See *activity*.
 The most basic form of a task board is divided into three columns
 labeled "To Do," "In Progress," and "Done." Cards are placed in the
 columns to reflect the current status of that task.\
-![](https://markbac.github.io/Glossary/attachments/15009043/15009042.png?width=353)
+![](./images/T/15009042.png?width=353)
 
 ##  Task Estimate
 
@@ -71,7 +71,7 @@ Applications that do not require reliable data stream service may use
 the User Datagram Protocol (UDP), which provides a connectionless
 datagram service that emphasizes reduced latency over reliability.
 
-![](https://markbac.github.io/Glossary/attachments/15009043/15009050.png?width=480)
+![](./images/T/15009050.png?width=480)
 
 ##  Tcsh
 
@@ -112,7 +112,7 @@ that of the signal to be transmitted. This form of signal multiplexing
 was developed in telecommunications for telegraphy systems in the late
 19th century, but found its most common application in digital telephony
 in the second half of the 20th century.\
-![](https://markbac.github.io/Glossary/attachments/15009043/15009056.png?width=480)
+![](./images/T/15009056.png?width=480)
 
 ##  Team
 
@@ -305,7 +305,7 @@ TLS, connections between a client (e.g., a web browser) and a server
     prevent undetected loss or alteration of the data during
     transmission.
 
--   ![](https://markbac.github.io/Glossary/attachments/15009043/15009062.png?width=451)
+-   ![](./images/T/15009062.png?width=451)
 
 ##  TLV
 
@@ -327,7 +327,7 @@ Value\
 Variable-sized series of bytes which contains data for this part of the
 message.
 
-![](https://markbac.github.io/Glossary/attachments/15009043/15009068.png?width=480)
+![](./images/T/15009068.png?width=480)
 
 ##  Token Ring
 
@@ -341,7 +341,7 @@ contention-based access methods.
 Introduced by IBM in 1984, it was then standardized with protocol IEEE
 802.5 and was fairly successful, particularly in corporate environments,
 but gradually eclipsed by the later versions of Ethernet.\
-![](https://markbac.github.io/Glossary/attachments/15009043/15009074.png?width=220)
+![](./images/T/15009074.png?width=220)
 
 ##  Top Level Schedule
 

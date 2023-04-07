@@ -18,7 +18,7 @@ machines. However, most uses have moved to internet protocol (IP)
 systems instead. X.25 is still used (e.g., as of 2012 in the credit card
 payment industry) and available in niche applications.
 
-![](https://markbac.github.io/Glossary/attachments/15009254/15009253.png?width=480)
+![](./images/X/15009253.png?width=480)
 
 ##  X.509
 

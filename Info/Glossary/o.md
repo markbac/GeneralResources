@@ -30,7 +30,7 @@ connectors mechanically couple and align the cores of fibers so light
 can pass. Better connectors lose very little light due to reflection or
 misalignment of the fibers. In all, about 100 different types of fiber
 optic connectors have been introduced to the market.\
-![](https://markbac.github.io/Glossary/attachments/15008721/15008720.png?width=220)
+![](./images/O/15008720.png?width=220)
 
 ##  Ofcom
 
@@ -149,7 +149,7 @@ maintenance levels.
 It works by enabling CPs to operate their own network electronics on top
 of a managed connection which Openreach can monitor 24/7 and provide
 rapid response and repair times over.\
-![](https://markbac.github.io/Glossary/attachments/15008721/15008728.png?width=485)
+![](./images/O/15008728.png?width=485)
 
 ##  OSPF
 
@@ -198,7 +198,7 @@ least the following five functions:
 -   Service assurance
 
 -   Customer care\
-    ![](https://markbac.github.io/Glossary/attachments/15008721/15008734.png?width=300)
+    ![](./images/O/15008734.png?width=300)
 
 ##  OTN
 
@@ -220,7 +220,7 @@ are not designed to ensure that packet ordering is preserved. One of the
 functions of TCP is to prevent the out-of-order delivery of data, either
 by reassembling packets into order or forcing retries of out-of-order
 packets.\
-![](https://markbac.github.io/Glossary/attachments/15008721/15008740.png?width=480)
+![](./images/O/15008740.png?width=480)
 
 ##  Overlap Dialling
 

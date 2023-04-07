@@ -16,7 +16,7 @@ a Radio Network Controller (RNC). However, with an eNB, there is no
 separate controller element. This simplifies the architecture and allows
 lower response times.
 
-![](https://markbac.github.io/Glossary/attachments/15008089/14614584.png?width=340)
+![](./images/E/14614584.png?width=340)
 
 ##  E.164
 
@@ -47,7 +47,7 @@ develop new infrastructure, and meet low-capacity backhaul requirements
 Direct). EAD supports a range of requirements including cloud computing,
 simultaneous online pupil access in classrooms and storage area network
 connectivity.\
-![](https://markbac.github.io/Glossary/attachments/15008089/15008088.png?width=481)
+![](./images/E/15008088.png?width=481)
 
 ##  EAP
 
@@ -68,7 +68,7 @@ encapsulate EAP messages within that protocol's messages.
 EAP is in wide use. For example, in IEEE 802.11 (WiFi) the WPA and WPA2
 standards have adopted IEEE 802.1X with one hundred EAP Types as the
 official authentication mechanisms\
-![](https://markbac.github.io/Glossary/attachments/15008089/15008096.png?width=480)
+![](./images/E/15008096.png?width=480)
 
 ##  Earned Value
 
@@ -264,7 +264,7 @@ network. For example, an email message that is considered egress traffic
 will travel from a user's workstation and pass through the enterprise's
 LAN routers before it is delivered to the Internet to travel to its
 final destination.\
-![](https://markbac.github.io/Glossary/attachments/15008089/15008102.png?width=350)
+![](./images/E/15008102.png?width=350)
 
 ##  EIA
 
@@ -338,7 +338,7 @@ travels across a shared fibre optic circuit to the exchange. The extra
 distance doesn't lead to ongoing degradation of performance, which
 allows access to up to 20Mbps symmetrical speed with the additional
 boost downstream making a total of 76Mbps downstream bandwidth.\
-![](https://markbac.github.io/Glossary/attachments/15008089/15008108.png?width=481)
+![](./images/E/15008108.png?width=481)
 
 ##  EoS
 
@@ -424,7 +424,7 @@ The primary duties of an ESB are:
     exception handling, protocol conversion and enforcing proper quality
     of communication service
 
-    ![](https://markbac.github.io/Glossary/attachments/15008089/15008114.png?width=142)
+    ![](./images/E/15008114.png?width=142)
 
 ##  Estimate
 
@@ -468,7 +468,7 @@ electrical noise is present. 10BASE-T1L is a long-distance Ethernet,
 supporting connections up to 1 km in length. Both of these standards are
 finding applications implementing the Internet of things.
 
-![](https://markbac.github.io/Glossary/attachments/15008089/15138870.png)![](https://markbac.github.io/Glossary/attachments/15008089/14614590.png)
+![](./images/E/15138870.png)![](./images/E/14614590.png)
 
 ##  Ethical Hacking
 
@@ -507,7 +507,7 @@ into another database.
     but is a process that is also used to large convert (transform)
     databases from one format or type to another.
 
-    ![](https://markbac.github.io/Glossary/attachments/15008089/15008126.png)
+    ![](./images/E/15008126.png)
 
 ##  ETSI
 
@@ -558,7 +558,7 @@ E-UTRA is an entirely new air interface system, unrelated to and
 incompatible with W-CDMA. It provides higher data rates, lower latency
 and is optimized for packet data. It uses OFDMA radio-access for the
 downlink and SC-FDMA on the uplink.\
-![](https://markbac.github.io/Glossary/attachments/15008089/15008132.png?width=480)
+![](./images/E/15008132.png?width=480)
 
 ##  Evaluation
 

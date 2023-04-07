@@ -65,7 +65,7 @@ Network Access Server
 
 A system that provides access to a network. In some cases also known as
 a Terminal Server or Remote Access Server (RAS).\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008661.png?width=480)
+![](./images/N/15008661.png?width=480)
 
 ##  NAT
 
@@ -96,7 +96,7 @@ implementation. NAT implementations vary widely in their specific
 behavior in various addressing cases and their effect on network
 traffic. The specifics of NAT behavior are not commonly documented by
 vendors of equipment containing NAT implementations.\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008669.png?width=480)
+![](./images/N/15008669.png?width=480)
 
 ##  Native Risk Management
 
@@ -190,7 +190,7 @@ determines the logical topology of the network. In comparison,
 Controller Area Networks, common in vehicles, are primarily distributed
 control system networks of one or more controllers interconnected with
 sensors and actuators over, invariably, a physical bus topology.\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008675.png?width=488)
+![](./images/N/15008675.png?width=488)
 
 ##  NFS
 
@@ -323,14 +323,14 @@ capacity will be given.
 Weighted fair queuing is also known as packet-by-packet GPS (PGPS or
 P-GPS) since it approximates generalized processor sharing "to within
 one packet transmission time, regardless of the arrival patterns."\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008681.png?width=480)
+![](./images/N/15008681.png?width=480)
 
 ##  Niko-niko Calendar
 
 A Niko-niko Calendar is updated daily with each team member's mood for
 that day. Over time the calendar reveals patterns of change in the moods
 of the team, or of individual members.\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008687.png?width=461)
+![](./images/N/15008687.png?width=461)
 
 ##  NIST
 
@@ -365,7 +365,7 @@ NNI circuit. In the case of eBGP NNI interconnection, P routers are
 taught how to dynamically exchange VRF records without VLAN creation.
 NNI also can be used for interconnection of two VoIP nodes. In cases of
 mixed or full-mesh scenarios, other NNI types are possible.\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008693.png?width=399)
+![](./images/N/15008693.png?width=399)
 
 ##  NNTP
 
@@ -491,7 +491,7 @@ A Provider Edge router (PE router) is a router between one network
 service provider's area and areas administered by other network
 providers. A network provider is usually an Internet service provider as
 well (or only that).\#\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008699.png?width=485)
+![](./images/N/15008699.png?width=485)
 
 ##  NSS
 
@@ -512,7 +512,7 @@ switched data calls. It was extended with an overlay architecture to
 provide packet-switched data services known as the GPRS core network.
 This allows mobile phones to have access to services such as WAP, MMS
 and the Internet.\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008705.png?width=449)
+![](./images/N/15008705.png?width=449)
 
 ##  NTP
 
@@ -553,7 +553,7 @@ of making money and now most phone companies charge the caller more for
 Network Termination Unit
 
 Point between user and operator network\
-![](https://markbac.github.io/Glossary/attachments/15008662/15008711.png?width=480)
+![](./images/N/15008711.png?width=480)
 
 ##  NTU
 

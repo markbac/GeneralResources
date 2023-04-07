@@ -11,9 +11,9 @@ traffic already tagged as VLANs by service provider customers.
 In this double tagging, the S-Tag comes first followed by the C-Tag
 (customer tag). The standard 802.1ad specifies a TPID of 0x88a8 for the
 outer S-Tag.\
-![](https://markbac.github.io/Glossary/attachments/15008935/15008934.png?width=481)
+![](./images/S/15008934.png?width=481)
 
-![](https://markbac.github.io/Glossary/attachments/15008935/14123086.png?width=210)
+![](./images/S/14123086.png?width=210)
 
 ##  SAAL
 
@@ -33,9 +33,9 @@ which software is licensed on a subscription basis and is centrally
 hosted. It is sometimes referred to as "on-demand software". SaaS is
 typically accessed by users using a thin client, e.g. via a web browser.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008942.png?width=549)
+![](./images/S/15008942.png?width=549)
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008948.png?width=537)
+![](./images/S/15008948.png?width=537)
 
 ##  SaaS
 
@@ -94,7 +94,7 @@ Voice over Internet Protocol (VoIP) networks to exert control over the
 signalling and usually also the media streams involved in setting up,
 conducting, and tearing down telephone calls or other interactive media
 communications.\
-![](https://markbac.github.io/Glossary/attachments/15008935/15008954.png?width=491)
+![](./images/S/15008954.png?width=491)
 
 ##  Scala
 
@@ -491,7 +491,7 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as
 extensions to the MAJOR.MINOR.PATCH format.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/56033307.png?width=226)
+![](./images/S/56033307.png?width=226)
 
 `<valid semver>`{=html} ::= `<version core>`{=html}
 `<version core>`{=html} "-" `<pre-release>`{=html}
@@ -735,7 +735,7 @@ stores location information (e.g., current cell, current VLR) and user
 profiles (e.g., IMSI, address(es) used in the packet data network) of
 all GPRS users registered with it.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15302771.png?width=170)
+![](./images/S/15302771.png?width=170)
 
 ##  SGW
 
@@ -747,7 +747,7 @@ Protocol (SCTP, an IP protocol) into Message Transfer Part (MTP, an
 Signalling System 7 (SS7) protocol), to pass ISDN User Part (ISUP) from
 the MGCF to the CS network.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15138956.png)
+![](./images/S/15138956.png)
 
 ##  S-GW
 
@@ -763,7 +763,7 @@ and stores UE contexts, e.g. parameters of the IP bearer service,
 network internal routing information. It also performs replication of
 the user traffic in case of lawful interception.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15237222.png)
+![](./images/S/15237222.png)
 
 ##  Sh
 
@@ -871,9 +871,9 @@ SIM cards have been made smaller over the years; functionality is
 independent of format. Full-size SIM were followed by mini-SIM,
 micro-SIM, and nano-SIM. SIM cards are also made to embed in devices.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008960.png?width=480)
+![](./images/S/15008960.png?width=480)
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008966.png?width=480)
+![](./images/S/15008966.png?width=480)
 
 ##  SIMPLE
 
@@ -903,7 +903,7 @@ reversible; this is termed half duplex in other contexts. A duplex
 communication channel requires two simplex channels operating in
 opposite directions.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008972.png?width=480)\
+![](./images/S/15008972.png?width=480)\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "UNKNOWN_ATTACHMENT")
 
 ##  Single Step Test
@@ -941,8 +941,8 @@ Transport Protocol (RTP) or the Secure Real-time Transport Protocol
 (SRTP). For secure transmissions of SIP messages over insecure network
 links, the protocol may be encrypted with Transport Layer Security
 (TLS)\
-![](https://markbac.github.io/Glossary/attachments/15008935/15008978.png?width=389)\
-![](https://markbac.github.io/Glossary/attachments/15008935/15008984.png?width=480)
+![](./images/S/15008978.png?width=389)\
+![](./images/S/15008984.png?width=480)
 
 ##  SIP Trunk
 
@@ -1057,7 +1057,7 @@ data, has the capability of sharing common resources (memory, I/O
 device, interrupt system and so on) that are connected using a system
 bus or a crossbar.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008990.png?width=480)
+![](./images/S/15008990.png?width=480)
 
 ##  SMPF
 
@@ -1127,7 +1127,7 @@ Internet Engineering Task Force (IETF). It consists of a set of
 standards for network management, including an application layer
 protocol, a database schema, and a set of data objects.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15008996.png?width=480)
+![](./images/S/15008996.png?width=480)
 
 ##  SNTP
 
@@ -1188,7 +1188,7 @@ Windows and Linux) to communicate using Extensible Markup Language
 (XML). Since Web protocols like HTTP are installed and running on all
 operating systems, SOAP allows clients to invoke web services and
 receive responses independent of language and platforms.\
-![](https://markbac.github.io/Glossary/attachments/15008935/15009002.png?width=433)
+![](./images/S/15009002.png?width=433)
 
 ##  Softswitch
 
@@ -1321,9 +1321,9 @@ Single Order Generic Ethernet Access
     single order.\
 -   No voice service services provided on copper bearer.
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15009008.png?width=487)
+![](./images/S/15009008.png?width=487)
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15009014.png?width=485)
+![](./images/S/15009014.png?width=485)
 
 ##  SONET
 
@@ -1418,7 +1418,7 @@ The spiral model is a risk-driven process model generator for software
 projects. Based on the unique risk patterns of a given project, the
 spiral model guides a team to adopt elements of one or more process
 models, such as incremental, waterfall, or evolutionary prototyping.\
-![](https://markbac.github.io/Glossary/attachments/15008935/15009020.png?width=457)
+![](./images/S/15009020.png?width=457)
 
 ##  Sprint Planning
 
@@ -1503,7 +1503,7 @@ RANAP. TCAP provides transaction capabilities to its Users (TC-Users),
 such as the Mobile Application Part, the Intelligent Network Application
 Part and the CAMEL Application Part.\[citation needed\]
 
-![](https://markbac.github.io/Glossary/attachments/15008935/15009026.png?width=480)
+![](./images/S/15009026.png?width=480)
 
 The Message Transfer Part (MTP) covers a portion of the functions of the
 OSI network layer including: network interface, information transfer,
@@ -1589,7 +1589,7 @@ protocol always deals with low-level interaction with the communications
 hardware. Every higher layer adds more features and capability. User
 applications usually deal only with the topmost layers (see also OSI
 model)\
-![](https://markbac.github.io/Glossary/attachments/15008935/15009032.png?width=274)
+![](./images/S/15009032.png?width=274)
 
 ##  Staff Days
 

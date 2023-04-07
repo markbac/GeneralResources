@@ -123,7 +123,7 @@ certificates used in HTTPS, the secure browsing protocol for the World
 Wide Web. Another common use is in issuing identity cards by national
 governments for use in electronically signing documents.
 
-![](https://markbac.github.io/Glossary/attachments/15007881/15007880.png?width=480)
+![](./images/C/15007880.png?width=480)
 
 # Cacti
 
@@ -453,7 +453,7 @@ peers with the Provider Edge (PE) and exchanges routes with the
 corresponding VRF inside the PE. The routing protocol used could be
 static or dynamic (an interior gateway protocol like OSPF or an exterior
 gateway protocol like BGP).\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007888.png?width=480)
+![](./images/C/15007888.png?width=480)
 
 # CER
 
@@ -604,7 +604,7 @@ The circuit guarantees the full bandwidth of the channel and remains
 connected for the duration of the communication session. The circuit
 functions as if the nodes were physically connected as with an
 electrical circuit.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007894.png?width=480)
+![](./images/C/15007894.png?width=480)
 
 # Class 4 Softswitch
 
@@ -762,7 +762,7 @@ A codec encodes a data stream or a signal for transmission and storage,
 possibly in encrypted form, and the decoder function reverses the
 encoding for playback or editing. Codecs are used in videoconferencing,
 streaming media, and video editing applications.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007900.png?width=485)
+![](./images/C/15007900.png?width=485)
 
 # Coding
 
@@ -934,7 +934,7 @@ Program faults caused by incorrect compiler behavior can be very
 difficult to track down and work around; therefore, compiler
 implementers invest significant effort to ensure compiler correctness.
 
-![](https://markbac.github.io/Glossary/attachments/15007881/15007906.png?width=698)
+![](./images/C/15007906.png?width=698)
 
 # Component
 
@@ -959,7 +959,7 @@ estimatescan also diminish. This phenomenon is known as the "Cone of
 Uncertainty" which is illustrated in the following figure. As the figure
 suggests, significant narrowing of the Cone occur during the first
 20-30% of the total calendar time for the project.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007912.png?width=448)
+![](./images/C/15007912.png?width=448)
 
 # Cone of Uncertainty
 
@@ -1069,7 +1069,7 @@ Depending on the specific router implementation, there may be a separate
 forwarding information base that is populated (i.e., loaded) by the
 control plane, but used by the forwarding plane to look up packets, at
 very high speed, and decide how to handle them.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007918.png?width=480)
+![](./images/C/15007918.png?width=480)
 
 # Copyleft
 
@@ -1103,7 +1103,7 @@ area. Creative Commons, a non-profit organization founded by Lawrence
 Lessig, provides a similar license provision condition called
 share-alike.
 
-![](https://markbac.github.io/Glossary/attachments/15007881/15007924.png?width=79)
+![](./images/C/15007924.png?width=79)
 
 # Corrective Activity Management
 
@@ -1164,7 +1164,7 @@ Customer-premises equipment or customer-provided equipment (CPE) is any
 terminal and associated equipment located at a subscriber's premises and
 connected with a carrier's telecommunication circuit at the demarcation
 point\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007930.png?width=481)
+![](./images/C/15007930.png?width=481)
 
 # CPM
 
@@ -1263,7 +1263,7 @@ packets in the IMS.
     reasons and is not changed). All necessary subscriber profile
     information is loaded from the HSS.
 
-    ![](https://markbac.github.io/Glossary/attachments/15007881/56360965)
+    ![](./images/C/56360965)
 
 # csh
 
@@ -1293,7 +1293,7 @@ carrier's network with equipment or facilities not belonging to that
 network. The term may refer to a connection between a carrier's
 facilities and the equipment belonging to its customer, or to a
 connection between two (or more) carriers.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007936.png?width=481)
+![](./images/C/15007936.png?width=481)
 
 # CSMA
 
@@ -1359,9 +1359,9 @@ traffic already tagged as VLANs by service provider customers.
 
 In this double tagging, the C-Tag (customer tag) is the inner tag set by
 the customer. The S-Tag is the outer tag next to the MAC address.\
-![](https://markbac.github.io/Glossary/attachments/15007881/15007942.png?width=485)
+![](./images/C/15007942.png?width=485)
 
-![](https://markbac.github.io/Glossary/attachments/15007881/15007948.png?width=416)
+![](./images/C/15007948.png?width=416)
 
 # Customer Development
 

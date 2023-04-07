@@ -39,10 +39,6 @@ it was used mainly to refer to online retailers, as well as other
 companies that sold products and services to consumers through the
 internet.
 
-Read more: Business To Consumer (B To
-C) <https://www.investopedia.com/terms/b/btoc.asp#ixzz5MjtnxcKz>\
-Follow us: Investopedia on Facebook
-
 ## Backhaul
 
 In a hierarchical telecommunications network the backhaul portion of the
@@ -213,7 +209,7 @@ A Breakout Gateway Control Function (BGCF) is a SIP proxy which
 processes requests for routing from an S-CSCF when the S-CSCF has
 determined that the session cannot be routed using DNS or ENUM/DNS. It
 includes routing functionality based on telephone numbers.\
-![](https://markbac.github.io/Glossary/attachments/15007814/15007813.png?width=480)
+![](./images/B/15007813.png?width=480)
 
 ##  BGP
 
@@ -366,7 +362,7 @@ organizations merged in 2005. Version 2.0 of BPMN was released in
 January 2011,\[1\] at which point the name was adapted to Business
 Process Model and Notation as execution semantics were also introduced
 alongside the notational and diagramming elements.\
-![](https://markbac.github.io/Glossary/attachments/15007814/15007821.png?width=698)
+![](./images/B/15007821.png?width=698)
 
 ##  BRAS
 
@@ -379,9 +375,9 @@ network
 
 BRAS can also be referred to as a Broadband Network Gateway (BNG)
 
-![](https://markbac.github.io/Glossary/attachments/15007814/15007827.png?width=485)
+![](./images/B/15007827.png?width=485)
 
-![](https://markbac.github.io/Glossary/attachments/15007814/15007833.png?width=440)
+![](./images/B/15007833.png?width=440)
 
 ##  Broadcast
 
@@ -397,7 +393,7 @@ each sender transmits messages to all receivers within a group. This
 contrasts with the point-to-point method in which each sender
 communicates with one receiver.
 
-![](https://markbac.github.io/Glossary/attachments/15007814/15007839.png?width=227)
+![](./images/B/15007839.png?width=227)
 
 ##  BSC
 
@@ -427,7 +423,7 @@ redundancy applied to critical functional units to ensure availability
 in the event of fault conditions. Redundancy often extends beyond the
 BSC equipment itself and is commonly used in the power supplies and in
 the transmission equipment providing the A-ter interface to PCU.\
-![](https://markbac.github.io/Glossary/attachments/15007814/15007845.png?width=399)
+![](./images/B/15007845.png?width=399)
 
 ##  BSS
 
@@ -479,7 +475,7 @@ BSS interfaces
 
     -   Connects the BSS to the SGSN in the GPRS core network.
 
-            ![](https://markbac.github.io/Glossary/attachments/15007814/15007851.png?width=251)
+            ![](./images/B/15007851.png?width=251)
 
 ##  BSS
 
@@ -517,9 +513,9 @@ As well as faster speeds the new equipment will also allow BT more
 configuration options and allow them to offer products with QoS (Quality
 of Service) availability.
 
-![](https://markbac.github.io/Glossary/attachments/15007814/15007857.png?width=485)
+![](./images/B/15007857.png?width=485)
 
-![](https://markbac.github.io/Glossary/attachments/15007814/15007863.png?width=480)
+![](./images/B/15007863.png?width=480)
 
 ##  BTNUP
 
@@ -570,7 +566,7 @@ program.
 Burndown charts and burnup charts track the amount of output (in terms
 of hours, story points, or backlog items) a team has completed across an
 iteration or a project.\
-![](https://markbac.github.io/Glossary/attachments/15007814/15007869.png?width=480)
+![](./images/B/15007869.png?width=480)
 
 ##  Burst
 

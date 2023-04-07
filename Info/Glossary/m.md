@@ -91,7 +91,7 @@ the Institute of Electrical and Electronics Engineers (IEEE): MAC-48,
 EUI-48, and EUI-64.\[1\]\[2\] EUI is an abbreviation for Extended Unique
 Identifier.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008537.png?width=475)
+![](./images/M/15008537.png?width=475)
 
 ##  MAC Flooding
 
@@ -185,7 +185,7 @@ a wide area network.It is also used to mean the interconnection of
 several local area networks in a metropolitan area through the use of
 point-to-point connections between them. The latter usage is also
 sometimes referred to as a campus network.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008545.png?width=485)
+![](./images/M/15008545.png?width=485)
 
 ##  Management by Walking Around
 
@@ -212,7 +212,7 @@ dimensions as overlapping the network stack, separated by a dimension
 that delineates the power plane, data plane, control plane and
 management plane.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15138919.png?width=226)
+![](./images/M/15138919.png?width=226)
 
 ##  MANET
 
@@ -237,9 +237,9 @@ routable networking environment on top of a Link Layer ad hoc network.
 MANETs consist of a peer-to-peer, self-forming, self-healing network.
 MANETs circa 2000--2015 typically communicate at radio frequencies (30
 MHz -- 5 GHz).\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008551.png?width=480)
+![](./images/M/15008551.png?width=480)
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008557.png?width=462)
+![](./images/M/15008557.png?width=462)
 
 ##  Manual Testing
 
@@ -344,7 +344,7 @@ Main Distribution Frame
 A point in a telephone exchange where cables from outside can be
 connected to the exchange equipment.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15237176.png?width=226)
+![](./images/M/15237176.png?width=226)
 
 ##  Mediation
 
@@ -465,7 +465,7 @@ Typically a mediation platform is used for the following tasks:
     dependent but can come very handy when there is a crisis in the
     other system.
 
-    ![](https://markbac.github.io/Glossary/attachments/15008538/15008563.png?width=115)![](https://markbac.github.io/Glossary/attachments/15008538/15008569.png?width=278)
+    ![](./images/M/15008563.png?width=115)![](./images/M/15008569.png?width=278)
 
 ##  MELP
 
@@ -482,7 +482,7 @@ sampled at 8 kHz, the MELPe codec yields the following compression
 ratios over a 64 kbit/s μ-Law G.711 datastream, discounting the effects
 of protocol overhead:
 
-![](https://markbac.github.io/Glossary/attachments/15008538/14909510.png)\
+![](./images/M/14909510.png)\
 Generally, speech coding involves a trade-off of different aspects
 including bit-rate, speech quality, delay (frame size and lookahead),
 computational complexity, robustness to different speakers and
@@ -507,7 +507,7 @@ call control protocol conversion between SIP and ISUP/BICC and
 interfaces with the SGW over SCTP. It also controls the resources in a
 Media Gateway (MGW) across an H.248 interface.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/14123073.png)
+![](./images/M/14123073.png)
 
 ##  MGCP
 
@@ -534,7 +534,7 @@ MGCP is a text-based protocol consisting of commands and responses. It
 uses the Session Description Protocol (SDP) for specifying and
 negotiating the media streams to be transmitted in a call session and
 the Real-time Transport Protocol (RTP) for framing the media streams.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008575.png?width=480)
+![](./images/M/15008575.png?width=480)
 
 ##  MGW
 
@@ -544,7 +544,7 @@ A media gateway (MGW) interfaces with the media plane of the CS network,
 by converting between RTP and PCM. It can also transcode when the codecs
 don't match (e.g., IMS might use AMR, PSTN might use G.711).
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15302756.png)
+![](./images/M/15302756.png)
 
 ##  MIB
 
@@ -570,7 +570,7 @@ Management Information for TCP/IP based internets", and its two
 companions, RFC 1213, "Management Information Base for Network
 Management of TCP/IP-based internets", and RFC 1157, "A Simple Network
 Management Protocol".\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008581.png?width=480)
+![](./images/M/15008581.png?width=480)
 
 ##  Micro Estimation
 
@@ -595,9 +595,9 @@ services that are
     delivery/deployment of large, complex applications. It also enables
     an organization to evolve its technology stack.
 
-    ![](https://markbac.github.io/Glossary/attachments/15008538/15008587.png)
+    ![](./images/M/15008587.png)
 
-    ![](https://markbac.github.io/Glossary/attachments/15008538/15008593.png)
+    ![](./images/M/15008593.png)
 
 ##  Microstone
 
@@ -646,7 +646,7 @@ more than one data signal simultaneously over the same radio channel by
 exploiting multipath propagation. MIMO is fundamentally different from
 smart antenna techniques developed to enhance the performance of a
 single data signal, such as beamforming and diversity.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008599.png?width=480)
+![](./images/M/15008599.png?width=480)
 
 ##  Miniature Milestone
 
@@ -745,11 +745,11 @@ the digital standard followed a very different path in Europe and the
 US.\[11\] As a consequence, multiple digital standards surfaced in the
 US, while Europe and many countries converged towards the GSM standard.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008605.png?width=480)
+![](./images/M/15008605.png?width=480)
 
 ##  Mobile Networks 2G/3G
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008611.png)
+![](./images/M/15008611.png)
 
 ##  Mock Objects
 
@@ -787,9 +787,9 @@ evaluation, but not restricted to those modalities. ITU-T has defined
 several ways of referring to a MOS in Recommendation P.800.1, depending
 on whether the score was obtained from audiovisual, conversational,
 listening, talking, or video quality tests.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008617.png?width=307)
+![](./images/M/15008617.png?width=307)
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15237186.png?width=283)
+![](./images/M/15237186.png?width=283)
 
 ##  MP3
 
@@ -857,7 +857,7 @@ Metallic Path Facility
 
 Pair of copper wires (unshielded twisted pair) that run from a Main
 Distribution Frame (MDF) at a exchange to the end user.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008623.png?width=582)
+![](./images/M/15008623.png?width=582)
 
 ##  MPS
 
@@ -866,7 +866,7 @@ Metro Primary Switch
 Metro Primary Switch (M2F) - Location: Metro\
 Formally known as NGM
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008629.png?width=485)
+![](./images/M/15008629.png?width=485)
 
 ##  MQTT
 
@@ -902,7 +902,7 @@ The Media Resource Function (MRF) provides media related functions such
 as media manipulation (e.g. voice stream mixing) and playing of tones
 and announcements.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/14123067.png?width=226)
+![](./images/M/14123067.png?width=226)
 
 ##  MRS
 
@@ -923,7 +923,7 @@ gateway (MSAG), is a device typically installed in a telephone exchange
 (although sometimes in a roadside serving area interface cabinet) which
 connects customers' telephone lines to the core network, to provide
 telephone, ISDN, and broadband such as DSL all from a single platform.\
-![](https://markbac.github.io/Glossary/attachments/15008538/15008635.png?width=479)
+![](./images/M/15008635.png?width=479)
 
 ##  MSC
 
@@ -969,7 +969,7 @@ target MSC is the MSC toward which a handover should take place. A
 mobile switching center server is a part of the redesigned MSC concept
 starting from 3GPP Release 4.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15138931.png?width=226)
+![](./images/M/15138931.png?width=226)
 
 ##  MTP
 
@@ -997,7 +997,7 @@ of layer 3 in the OSI model. The part of layer 3 of the OSI model that
 MTP does not provide, is provided by SCCP or other Level 4 parts (MTP
 users).
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008641.png?width=480)
+![](./images/M/15008641.png?width=480)
 
 ##  MTR
 
@@ -1049,7 +1049,7 @@ sent to a multicast destination address.
 Multicast is often employed in Internet Protocol (IP) applications of
 streaming media, such as IPTV and multipoint videoconferencing.
 
-![](https://markbac.github.io/Glossary/attachments/15008538/15008647.png?width=208)
+![](./images/M/15008647.png?width=208)
 
 ##  Multiplex
 

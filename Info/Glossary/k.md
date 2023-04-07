@@ -69,7 +69,7 @@ evolutionary change.
 
 A Kanban Board is a visual workflow tool consisting of multiple columns.
 Each column represents a different stage in the workflow process.\
-![](https://markbac.github.io/Glossary/attachments/15008448/15008447.png?width=480)
+![](./images/K/15008447.png?width=480)
 
 ##  Kerberos
 
@@ -114,7 +114,7 @@ differ in how they manage these system calls and resources. A monolithic
 kernel runs all the operating system instructions in the same address
 space for speed. A microkernel runs most processes in user
 space, for modularity.\
-![](https://markbac.github.io/Glossary/attachments/15008448/15008455.png?width=379)
+![](./images/K/15008455.png?width=379)
 
 ##  KISS Principle
 

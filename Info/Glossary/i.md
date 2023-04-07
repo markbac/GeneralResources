@@ -26,7 +26,7 @@ Infrastructure as a service (IaaS) is a form of cloud computing that
 provides virtualized computing resources over the internet. IaaS is one
 of the three main categories of cloud computing services, alongside
 software as a service (SaaS) and platform as a service (PaaS).\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008352.png?width=480)
+![](./images/I/15008352.png?width=480)
 
 ##  ICE
 
@@ -226,7 +226,7 @@ when supporting these types of applications.
 IGMP is used on IPv4 networks. Multicast management on IPv6 networks is
 handled by Multicast Listener Discovery (MLD) which is a part of ICMPv6
 in contrast to IGMP's bare IP encapsulation.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008360.png?width=480)
+![](./images/I/15008360.png?width=480)
 
 ##  IGP
 
@@ -287,7 +287,7 @@ either pre-shared or distributed using DNS (preferably with DNSSEC) and
 a Diffie--Hellman key exchange ‒ to set up a shared session secret from
 which cryptographic keys are derived. In addition, a security policy for
 every peer which will connect must be manually maintained.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008366.png?width=480)
+![](./images/I/15008366.png?width=480)
 
 ##  iLBC
 
@@ -388,7 +388,7 @@ not have their own control functions, as the control layer is a common
 horizontal layer. However, in implementation this does not necessarily
 map into greater reduced cost and complexity.
 
-![](https://markbac.github.io/Glossary/attachments/15008353/15204369.png?width=226)
+![](./images/I/15204369.png?width=226)
 
 ##  IMSI
 
@@ -491,7 +491,7 @@ information planning stages.
 "Information radiator" is the term for any of a number of visual
 displays which a team places in a highly visible location, so that all
 team members can see the latest information at a glance.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008372.png?width=260)
+![](./images/I/15008372.png?width=260)
 
 ##  Ingress
 
@@ -502,7 +502,7 @@ traffic will originate somewhere outside of a enterprise's LAN, pass
 over the Internet and enter the company's LAN before it is delivered to
 the recipient.
 
-![](https://markbac.github.io/Glossary/attachments/15008353/15302712.png)
+![](./images/I/15302712.png)
 
 ##  Inspection
 
@@ -577,7 +577,7 @@ Technical standards specifying the Internet protocol suite and many of
 its constituent protocols are maintained by the Internet Engineering
 Task Force (IETF). The Internet protocol suite predates the OSI model, a
 more comprehensive reference framework for general networking systems.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008378.png?width=480)
+![](./images/I/15008378.png?width=480)
 
 ##  Interpreted Language
 
@@ -666,7 +666,7 @@ system.
 
 IP Stream Connect
 
-![](https://markbac.github.io/Glossary/attachments/15008353/15008384.png?width=480)
+![](./images/I/15008384.png?width=480)
 
 ##  IPSec
 
@@ -748,7 +748,7 @@ guarantee delivery, nor does it assure proper sequencing or avoidance of
 duplicate delivery. These aspects, including data integrity, are
 addressed by an upper layer transport protocol, such as the Transmission
 Control Protocol (TCP).\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008390.png?width=480)
+![](./images/I/15008390.png?width=480)
 
 ##  IPv6
 
@@ -792,9 +792,9 @@ IPv6 addresses are represented as eight groups of four hexadecimal
 digits with the groups being separated by colons, for example
 2001:0db8:0000:0042:0000:8a2e:0370:7334, but methods to abbreviate this
 full notation exist.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008396.png?width=380)
+![](./images/I/15008396.png?width=380)
 
-![](https://markbac.github.io/Glossary/attachments/15008353/15008402.png?width=480)
+![](./images/I/15008402.png?width=480)
 
 ##  ISDN
 
@@ -823,7 +823,7 @@ Internet access, in which ISDN typically provides a maximum of 128
 kbit/s bandwidth in both upstream and downstream directions. Channel
 bonding can achieve a greater data rate; typically the ISDN B-channels
 of three or four BRIs (six to eight 64 kbit/s channels) are bonded.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008408.png?width=480)
+![](./images/I/15008408.png?width=480)
 
 ##  ISDN2
 
@@ -892,7 +892,7 @@ commercial, community-owned, non-profit, or otherwise privately owned.
 Internet services typically provided by ISPs include Internet access,
 Internet transit, domain name registration, web hosting, Usenet service,
 and colocation.\
-![](https://markbac.github.io/Glossary/attachments/15008353/15008414.png?width=480)
+![](./images/I/15008414.png?width=480)
 
 ##  Issue
 
@@ -963,7 +963,7 @@ circuits. In the case of no outbound circuit being available on a
 particular exchange, a release message is sent back to the preceding
 switches in the chain.
 
-![](https://markbac.github.io/Glossary/attachments/15008353/15008420.png?width=480)
+![](./images/I/15008420.png?width=480)
 
 ##  Item
 
