@@ -1,31 +1,69 @@
 import os
-import argparse
-import markdown_toc
+import re
 
-# Create an argument parser to get the directory, output file name, and heading level
-parser = argparse.ArgumentParser(description='Generate an index of markdown files')
-parser.add_argument('directory', metavar='DIRECTORY', help='the directory containing the markdown files')
-parser.add_argument('-o', '--output', metavar='OUTPUT', default='index.md', help='the name of the output file (default: index.md)')
-parser.add_argument('-l', '--level', metavar='LEVEL', type=int, default=6, help='the maximum heading level to include in the table of contents (default: 6)')
-args = parser.parse_args()
+# Define the directory containing the Markdown files to index
+dir_path = "."
 
-# Get the directory, output file name, and maximum heading level from the command-line arguments
-md_directory = args.directory
-index_file = args.output
-max_level = args.level
+# Define the output file for the table of contents
+toc_file = "index.md"
 
-# Get a list of all markdown files in the directory
-md_files = [f for f in os.listdir(md_directory) if f.endswith('.md')]
+# Define the number of heading levels to include in the table of contents
+max_heading_level = 3
 
-# Loop through the markdown files and generate a table of contents for each
-toc_dict = {}
-for file in md_files:
-    with open(os.path.join(md_directory, file), 'r') as f:
-        md_content = f.read()
-    toc = markdown_toc.markdown_to_toc(md_content, options={'heading_levels': ''.join(str(i) for i in range(1, max_level+1))})
-    toc_dict[file] = toc
+# Define the regular expression pattern for matching headings in the Markdown files
+heading_pattern = re.compile(r"^(#+)\s*(.*)$")
 
-# Write the table of contents for each file to the index file
-with open(os.path.join(md_directory, index_file), 'w') as f:
-    for file, toc in toc_dict.items():
-        f.write(f'# {file}\n{toc}\n\n')
+# Define the regular expression pattern for matching code blocks in the Markdown files
+code_block_pattern = re.compile(r"^```.*$")
+
+# Define a function to generate a table of contents from a single Markdown file
+def generate_toc(file_path, max_level, file_links):
+    with open(file_path, "r") as f:
+        content = f.read()
+    
+    toc = ""
+    current_level = 0
+    inside_code_block = False
+    for line in content.split("\n"):
+        if code_block_pattern.match(line):
+            inside_code_block = not inside_code_block
+        
+        if not inside_code_block:
+            match = heading_pattern.match(line)
+            if match:
+                heading_text = match.group(2)
+                heading_level = len(match.group(1))
+                if heading_level <= max_level:
+                    link_text = heading_text.lower().replace(" ", "-")
+                    if file_path in file_links:
+                        link_path = file_links[file_path] + "#" + link_text
+                    else:
+                        link_path = "#" + link_text
+                    if heading_level > current_level:
+                        toc += " " * (4 * (heading_level - 1)) + "- [" + heading_text + "](" + link_path + ")\n"
+                    elif heading_level == current_level:
+                        toc += " " * (4 * (heading_level - 1)) + "- [" + heading_text + "](" + link_path + ")\n"
+                    else:
+                        toc += " " * (4 * (heading_level - 1)) + "- [" + heading_text + "](" + link_path + ")\n"
+                        toc += " " * (4 * (heading_level - 1) - 4) + "  " + "- " + "\n" * (current_level - heading_level)
+                    current_level = heading_level
+    
+    return toc
+
+# Generate a dictionary of links to other Markdown files
+file_links = {}
+for file_name in os.listdir(dir_path):
+    if file_name.endswith(".md"):
+        file_path = os.path.join(dir_path, file_name)
+        file_links[file_path] = file_name
+
+# Generate the table of contents for all Markdown files in the directory
+toc = ""
+for file_name in os.listdir(dir_path):
+    if file_name.endswith(".md"):
+        file_path = os.path.join(dir_path, file_name)
+        toc += generate_toc(file_path, max_heading_level, file_links)
+
+# Write the table of contents to the output file
+with open(toc_file, "w") as f:
+    f.write(toc)
