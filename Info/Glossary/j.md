@@ -1,6 +1,6 @@
 # J
 
-##  Java
+## Java
 
 Java is a general-purpose computer-programming language that is
 concurrent, class-based, object-oriented, and specifically designed to
@@ -27,7 +27,7 @@ developed alternative implementations of these Sun technologies, such as
 the GNU Compiler for Java (bytecode compiler), GNU Classpath (standard
 libraries), and IcedTea-Web (browser plugin for applets).
 
-##  Javascript
+## Javascript
 
 JavaScript, often abbreviated as JS, is a high-level, interpreted
 programming language. It is a language which is also characterized as
@@ -60,7 +60,7 @@ libraries, the two languages are distinct and differ greatly in design;
 JavaScript was influenced by programming languages such as Self and
 Scheme.
 
-##  Jitter
+## Jitter
 
 In electronics and telecommunications, jitter is the deviation from true
 periodicity of a presumably periodic signal, often in relation to a
@@ -89,7 +89,7 @@ tolerable jitter depends on the affected application.\
 
 ![](./images/J/15008438.png?width=480)
 
-##  Jitter buffer
+## Jitter buffer
 
 Jitter buffers or de-jitter buffers are used to counter jitter
 introduced by queuing in packet switched networks so that a continuous
@@ -136,14 +136,14 @@ time it would arrive at the SCR, i.e. a jitter about that SCR.
 
 ![](./images/J/15008430.png?width=468)
 
-##  Joint Application Development
+## Joint Application Development
 
 JAD
 
 A facilitated workshop that produces a draft set of requirements. JAD
 sessions must involve customer representatives.
 
-##  JSON
+## JSON
 
 JavaScript Object Notation
 
@@ -191,7 +191,7 @@ type for JSON is application/json. JSON filenames use the extension
 }
 ```
 
-##  JSON-RPC
+## JSON-RPC
 
 JSON-RPC is a remote procedure call protocol encoded in JSON. It is a
 very simple protocol (and very similar to XML-RPC), defining only a few

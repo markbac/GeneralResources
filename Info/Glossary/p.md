@@ -1,6 +1,6 @@
 # P
 
-##  PaaS
+## PaaS
 
 Platform As A Service
 
@@ -13,7 +13,7 @@ launching an app
 
 ![](./images/P/14909529.png)
 
-##  packet sniffing
+## packet sniffing
 
 A packet analyzer (also known as a packet sniffer) is a computer program
 or piece of computer hardware (such as a packet capture appliance) that
@@ -73,7 +73,7 @@ record packets (or a slice of the packet) to a disk array. This allows
 historical forensic analysis of packets without users having to recreate
 any fault.
 
-##  Packet Switched
+## Packet Switched
 
 Packet switching is a method of grouping data which is transmitted over
 a digital network into packets which are made of a header and a payload.
@@ -84,18 +84,18 @@ communications in computer networks worldwide.
 
 ![](./images/P/15008750.png?width=480)
 
-##  PAF
+## PAF
 
 Postal Address File
 
 Royal Mail Postal Address File data
 
-##  Pair Programming
+## Pair Programming
 
 Pair programming consists of two programmers sharing a single
 workstation (one screen, keyboard and mouse among the pair).
 
-##  PAP
+## PAP
 
 Password Authentication Protocol
 
@@ -114,13 +114,13 @@ server does not support a stronger scheme such as CHAP or EAP
 
 ![](./images/P/15008758.png?width=480)
 
-##  Parametric Estimation
+## Parametric Estimation
 
 Estimation using an algorithmic model, normally as part of a software
 tool. Models work by taking input factors and calculating outputs with
 algorithms based on historical data.
 
-##  Pascal
+## Pascal
 
 Pascal is an imperative and procedural programming language, which
 Niklaus Wirth designed in 1968--69 and published in 1970, as a small,
@@ -137,7 +137,7 @@ used by Apple Computer and Borland in the late 1980s and later developed
 into Delphi on the Microsoft Windows platform. Extensions to the Pascal
 concepts led to the Pascal-like languages Modula-2 and Oberon
 
-##  Pattern
+## Pattern
 
 CxPattern
 
@@ -145,7 +145,7 @@ CxOne pattern material type. A predefined model or template used to
 create an artifact or accomplish a goal. See *CxOneOverview* for
 description.
 
-##  PCM
+## PCM
 
 Pulse-code modulation
 
@@ -168,7 +168,7 @@ number of times per second that samples are taken; and the bit depth,
 which determines the number of possible digital values that can be used
 to represent each sample.
 
-##  PCP
+## PCP
 
 Primary Connection Point
 
@@ -182,7 +182,7 @@ cables to move the voice and data signals to and from the local exchange
 
 ![](./images/P/15008764.png?width=488)
 
-##  PCRF
+## PCRF
 
 Policy and Charging Rules Function
 
@@ -215,7 +215,7 @@ the IP Multimedia Systems network for establishing the calls and
 allocating the requested bandwidth to the call bearer with configured
 attributes.
 
-##  PCS
+## PCS
 
 Physical Coding Sub-layer
 
@@ -228,7 +228,7 @@ and decoding, scrambling and descrambling, alignment marker insertion
 and removal, block and symbol redistribution, and lane block
 synchronization and deskew.
 
-##  PDCP
+## PDCP
 
 Packet Data Convergence Protocol
 
@@ -240,7 +240,7 @@ Protocol Stack in the UMTS/LTE/5G Air interface on top of the RLC layer.
 PDCP provides its services to the RRC and user plane upper layers,
 e.g. IP at the UE or to the relay at the base station.
 
-##  PDH
+## PDH
 
 plesiochronous digital hierarchy
 
@@ -265,7 +265,7 @@ rate, clocking up 60 seconds every minute. However, there is no link
 between watches to guarantee that they run at exactly the same rate, and
 it is highly likely that one is running slightly faster than the other.
 
-##  PDU
+## PDU
 
 Protocol Data Unit
 
@@ -283,7 +283,7 @@ Suite, at the Internet Layer, the PDU is called a packet, irrespective
 of its payload type.\
 ![](./images/P/15008770.png?width=480)
 
-##  PEAP
+## PEAP
 
 Protected Extensible Authentication Protocol
 
@@ -309,12 +309,12 @@ specific method. However, use of the EAP-MSCHAPv2 and EAP-GTC methods
 are the most commonly supported\
 ![](./images/P/15008776.png?width=602)
 
-##  peer review
+## peer review
 
 a process used for checking the work performed by one's equals (peers)
 to ensure it meets specific criteria.
 
-##  Pen testing
+## Pen testing
 
 Penetration Testing
 
@@ -357,7 +357,7 @@ actually exists, and on the ease of exploiting it to the extent of
 control or compromise. The prioritized list is used to direct the actual
 testing of the system.
 
-##  PER
+## PER
 
 Packed Encoding Rules
 
@@ -383,7 +383,7 @@ data structures are aligned on octet boundaries, meaning there may be
 some number of wasted padding bits. Unaligned encoding uses the least
 number of bits, but presumably at some cost in processing time.
 
-##  Performance
+## Performance
 
 May be used to describe the combination
 of *feature* and *quality* a *system* has (or that
@@ -392,7 +392,7 @@ Also used in relation to the level of support for various non-functional
 system requirements such as speed, resource usage, reliability,
 availability, etc.
 
-##  Perl
+## Perl
 
 Perl is a family of two high-level, general-purpose, interpreted,
 dynamic programming languages, Perl 5 and Perl 6.
@@ -421,18 +421,18 @@ use warnings;
 print("Hello, World!\n");
 ```
 
-##  Personas
+## Personas
 
 Personas are synthetic biographies of fictitious users of the future
 product.
 
-##  Perspective
+## Perspective
 
 During an *inspection*, an assigned focus used to increase the
 likelihood that each inspector will find unique issues or to focus
 attention an particular aspects of an artifact.
 
-##  PERT chart
+## PERT chart
 
 The program (or project) evaluation and review technique, commonly
 abbreviated PERT, is a statistical tool, used in project management,
@@ -444,7 +444,7 @@ used in conjunction with the critical path method (CPM).
 
 ![](./images/P/15008782.png?width=309)
 
-##  PGP
+## PGP
 
 Pretty Good Privacy
 
@@ -459,7 +459,7 @@ PGP and similar software follow the OpenPGP standard (RFC
 
 ![](./images/P/15008788.png?width=480)
 
-##  PGW
+## PGW
 
 Packet Data Network Gateway
 
@@ -474,7 +474,7 @@ for mobility between 3GPP and non-3GPP technologies such as WiMAX and
 
 ![](./images/P/14876769.png?width=170)
 
-##  Phase
+## Phase
 
 A translation of a group of *activities* onto a portion of
 a *lifecycle* or a period of time defined by a *schedule*. Often used in
@@ -483,13 +483,13 @@ lifecycle processes.\
 Sometimes used as a synonym for *stage*. Sometimes used (incorrectly) as
 a synonym for *milestone*.
 
-##  Phased Estimation
+## Phased Estimation
 
 The practice of creating *estimates* throughout a project's lifecycle,
 utilizing groups of estimation techniques optimized for each lifecycle
 phase.
 
-##  PHP
+## PHP
 
 PHP: Hypertext Preprocessor (or simply PHP) is a server-side scripting
 language designed for Web development, but also used as a
@@ -532,7 +532,7 @@ work has gone on to create a formal PHP specification.
 </html>
 ```
 
-##  Planning and Tracking Lead
+## Planning and Tracking Lead
 
 PTL
 
@@ -540,13 +540,13 @@ Directs overall flow of technical work on the project. Directly
 responsible for project planning and overseeing the execution of work
 breakdown, estimation, scheduling, and tracking.
 
-##  Planning Poker
+## Planning Poker
 
 An approach to estimation used by Agile teams. Each team member "plays"
 a card bearing a numerical value corresponding to a point estimation for
 a user story.
 
-##  PLL
+## PLL
 
 Phase Locked Loop
 
@@ -576,26 +576,26 @@ integrated circuit can provide a complete phase-locked-loop building
 block, the technique is widely used in modern electronic devices, with
 output frequencies from a fraction of a hertz up to many gigahertz.
 
-##  PNT
+## PNT
 
 Pointer data
 
 OSNI Pointer data
 
-##  Points
+## Points
 
 (estimates in) Agile teams generally prefer to express estimates in
 units other than the time-honored "man-hours." Possibly the most
 widespread unit is "story points."
 
-##  polymorphism
+## polymorphism
 
 from the Greek meaning "having multiple forms," the characteristic of
 being able to assign a different meaning or usage to something in
 different contexts - specifically, to allow an entity such as a
 variable, a function, or an object to have more than one form.
 
-##  POP
+## POP
 
 Point Of Presence
 
@@ -603,13 +603,13 @@ A point of presence (PoP) is an artificial demarcation point or
 interface point between communicating entities.\
 ![](./images/P/15008794.png?width=485)
 
-##  portability
+## portability
 
 a characteristic attributed to a computer program if it can be used in
 an operating systems other than the one in which it was created without
 requiring major rework.
 
-##  POSIX
+## POSIX
 
 The Portable Operating System Interface (POSIX) is a family of standards
 specified by the IEEE Computer Society for maintaining compatibility
@@ -618,14 +618,14 @@ interface (API), along with command line shells and utility
 interfaces, for software compatibility with variants of Unix and other
 operating systems.
 
-##  Postmortem
+## Postmortem
 
 A phase at the end of a software project during which project team
 members evaluate the project and learn lessons that can be applied to
 the next project. "Postmortem" also refers to the report created during
 the postmortem phase.
 
-##  POTS
+## POTS
 
 Plain Old Telephone Service or\
 Plain Ordinary Telephone Service
@@ -636,7 +636,7 @@ See FXO & FXS
 
 ![](./images/P/15008800.png?width=477)
 
-##  PPP
+## PPP
 
 Point-to-Point Protocol
 
@@ -659,7 +659,7 @@ and Point-to-Point Protocol over ATM (PPPoA), are used most commonly by
 Internet Service Providers (ISPs) to establish a Digital Subscriber Line
 (DSL) Internet service connection with customers.
 
-##  PPPoE
+## PPPoE
 
 PPP over Ethernet
 
@@ -673,7 +673,7 @@ compression." Typical use of PPPoE involves leveraging the PPP
 facilities for authenticating the user with a username and password,
 predominately via the PAP protocol and less often via CHAP.
 
-##  PPTP
+## PPTP
 
 Point-to-Point Tunneling Protocol
 
@@ -692,7 +692,7 @@ protocol is to provide security levels and remote access levels
 comparable with typical VPN products.\
 ![](./images/P/15008806.png?width=474)
 
-##  Preemption
+## Preemption
 
 In computing, preemption is the act of temporarily interrupting a task
 being carried out by a computer system, without requiring its
@@ -702,7 +702,7 @@ It is normally carried out by a privileged task or part of the system
 known as a preemptive scheduler, which has the power to preempt, or
 interrupt, and later resume, other tasks in the system.
 
-##  Preview
+## Preview
 
 An *engineering discussion* where materials have been prepared ahead of
 time for review and discussion in a meeting. The goal is to probe
@@ -710,13 +710,13 @@ proposed solution to detect *defects* and suggest alternatives.\
 *Previews* differ from *reviews* in that they are solution oriented
 rather than detection oriented.
 
-##  PRINCE2
+## PRINCE2
 
 a project management methodology developed by the government of the
 United Kingdom that makes use of the best proven practices from a
 variety of industries and backgrounds.
 
-##  Process
+## Process
 
 A standard method for performing an *activity* or *task*.\
 Processes may or may not be documented; a defined process implies that
@@ -725,23 +725,23 @@ conventions, and other infrastructure. The terms process may also refer
 to the execution of the activities and tasks that make up the process,
 e.g., "the outcome of the build process".
 
-##  Process Flow
+## Process Flow
 
 A process model which defines the materials, structure, techniques,
 actions, events, and other elements necessary to implement a lifecycle,
 workflow, or methodology.
 
-##  Product Owner
+## Product Owner
 
 The product owner is a role created by the Scrum Framework responsible
 for making sure the team delivers the desired outcome.
 
-##  Product Release
+## Product Release
 
 A *release* that is produced for distribution and/or deployment to end
 users.
 
-##  programming language
+## programming language
 
 A programming language is a formal language which comprises a set of
 instructions used to produce various kinds of output. Programming
@@ -751,7 +751,7 @@ algorithms.\
 
 ![](./images/P/15008818.png?width=558)
 
-##  Programming paradigm
+## Programming paradigm
 
 Programming paradigms are a way to classify programming languages based
 on their features. Languages can be classified into multiple paradigms.
@@ -766,22 +766,22 @@ grammar.
 
 Common programming paradigms include:
 
--   imperative which allows side effects,
+- imperative which allows side effects,
 
-    -   object-oriented which groups code together with the state the
+  - object-oriented which groups code together with the state the
         code modifies,
 
-    -   procedural which groups code into functions,
+  - procedural which groups code into functions,
 
--   declarative which does not state the order in which operations
+- declarative which does not state the order in which operations
     execute,
 
-    -   functional which disallows side effects,
+  - functional which disallows side effects,
 
-    -   logic which has a particular style of execution model coupled to
+  - logic which has a particular style of execution model coupled to
         a particular style of syntax and grammar, and
 
--   symbolic programming which has a particular style of syntax and
+- symbolic programming which has a particular style of syntax and
     grammar.
 
     For example, languages that fall into the imperative paradigm have
@@ -804,7 +804,7 @@ Common programming paradigms include:
 
     ![](./images/P/15008824.png?width=278)
 
-##  Progressive Elaboration
+## Progressive Elaboration
 
 PMBOK term for iteratively defining a project's requirements, moving
 from the general to the specific as the project is underway. Most
@@ -812,20 +812,20 @@ software lifecycles and projects employ some degree of progressive
 elaboration. Relates to *project headlights* and *rolling wave
 planning*.
 
-##  Project
+## Project
 
 A temporary endeavor undertaken to create a unique product or service.
 Normally used with CxOne to refer to a project creating a
 software *system*.
 
-##  Project Build
+## Project Build
 
 PB
 
 *Build* performed as part of a shared project build process, usually in
 a dedicated *build environment*. Compare to *local build*.
 
-##  Project Business Manager
+## Project Business Manager
 
 PBM
 
@@ -835,55 +835,55 @@ top-level work assignments, and client interaction. Is the top decision
 maker on the project, but normally defers technical decisions to the
 appropriate technical lead.
 
-##  Project Charter
+## Project Charter
 
 Used to incept and define a project. Documents the objectives, business
 case, risks and assets, resources, and constraints of a project.
 
-##  Project Chartering
+## Project Chartering
 
 A high-level summary of the project's key success factors displayed on
 one wall of the team room as a flipchart-sized sheet of paper.
 
-##  Project Estimate
+## Project Estimate
 
 An *estimate* that characterizes work on an entire project or large
 portion of a project. Project estimates are often the result of
 significant effort to predict a large phase of a project, and utilize
 several different techniques. Compare to *task estimate*.
 
-##  Project Headlights
+## Project Headlights
 
 The concept that there is a sliding window of time that a project's plan
 can be clearly defined with confidence. Beyond this "lighted" area,
 project planning is less precise and entails more uncertainty. Derives
 from the phrase "don't drive beyond your headlights".
 
-##  Project History
+## Project History
 
 Summarizes the significant information and statistics about an entire
 project.
 
-##  Project Log
+## Project Log
 
 Describes significant information and statistics about each phase of a
 project.
 
-##  Project Management
+## Project Management
 
 PM
 
 The act of managing a project, including planning, tracking, control,
 and reporting activities.
 
-##  Project Management Body of Knowledge
+## Project Management Body of Knowledge
 
 PMBOK
 
 PMI developed definition of the essential knowledge related to the
 science and discipline of project management.
 
-##  Project Management Institute
+## Project Management Institute
 
 PMI
 
@@ -891,7 +891,7 @@ Professional organization for project managers. Developers of the
 PMBOK.\
 [www.pmi.org](http://www.pmi.org/)
 
-##  Project Manager
+## Project Manager
 
 PM
 
@@ -900,20 +900,20 @@ one person is playing both *project business manager* and *planning and
 tracking lead* roles. Also used to refer generically to an individual
 playing a management role on a project.
 
-##  Project Plan
+## Project Plan
 
 PP
 
 The controlling document for a project that defines how the project will
 be executed.
 
-##  Project Reviewer
+## Project Reviewer
 
 Performs reviews and audits on projects using personnel who are not
 participating on the project. Ensures processes are being followed and
 risks are being identified and managed.
 
-##  Project Sponsor
+## Project Sponsor
 
 Individual or entity responsible for sponsoring a *project*. Synonym
 for *authority* in a *project charter*. Initiates and staffs a project,
@@ -921,13 +921,13 @@ directly oversees the *project business manager*. Ensures that the
 project is meeting the technical and business needs of external and
 internal *stakeholders*.
 
-##  pseudocode
+## pseudocode
 
 a detailed yet readable description of what a computer program or
 algorithm must do, expressed in a formally-styled natural language
 rather than in a programming language.
 
-##  PSTN
+## PSTN
 
 Public Switched Telephone Network
 
@@ -944,7 +944,7 @@ now almost entirely digital in its core network and includes mobile and
 other networks, as well as fixed telephones\
 ![](./images/P/15008830.png?width=480)
 
-##  PTP
+## PTP
 
 Precision Time Protocol
 
@@ -966,7 +966,7 @@ systems requiring accuracies beyond those attainable using NTP. It is
 also designed for applications that cannot bear the cost of a GPS
 receiver at each node, or for which GPS signals are inaccessible."
 
-##  PTT
+## PTT
 
 Push-to-talk
 
@@ -975,7 +975,7 @@ having conversations or talking on half-duplex communication lines,
 including two-way radio, using a momentary button to switch from voice
 reception mode to transmit mode.
 
-##  PVC
+## PVC
 
 Permanent Virtual Circuit
 
@@ -985,7 +985,7 @@ association is identical to the data transfer phase of a virtual call.
 Permanent virtual circuits eliminate the need for repeated call set-up
 and clearing. Frame relay is typically used to provide PVCs.
 
-##  PW
+## PW
 
 PseudoWire
 
@@ -993,13 +993,13 @@ A pseudowire (or pseudo-wire) is an emulation of a point-to-point
 connection over a packet-switching network\
 ![](./images/P/15008836.png?width=491)
 
-##  PWFQ
+## PWFQ
 
 Priority-based Weighted Fair Queueing
 
 See WFQ
 
-##  Python (2.x & 3.x)
+## Python (2.x & 3.x)
 
 Python is an interpreted high-level programming
 language for general-purpose programming. Created by Guido van Rossum

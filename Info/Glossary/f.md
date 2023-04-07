@@ -1,11 +1,11 @@
 # F
 
-##  Facilitation
+## Facilitation
 
 A facilitator is a person who chooses or is given the explicit role of
 conducting a meeting.
 
-##  FCS
+## FCS
 
 Frame Check Sequence
 
@@ -20,7 +20,7 @@ does not specify any action to cause the frame to be retransmitted.
 Other protocols, notably the Transmission Control Protocol (TCP), can
 notice the data loss and initiate error recovery.
 
-##  FDDI
+## FDDI
 
 Fiber Distributed Data Interface
 
@@ -37,26 +37,26 @@ which offered the same 100 Mbit/s speeds, but at a much lower cost and,
 since 1998, by Gigabit Ethernet due to its speed, and even lower cost,
 and ubiquity.
 
-##  Feature
+## Feature
 
 Used in CxOne as an abstract measure or description of system
 functionality, i.e., the feature scope for a project.\
 Is also used to discuss a discrete piece of system behavior, e.g.,
 "feature X".
 
-##  feature creep
+## feature creep
 
 a tendency for product or project requirements to increase during
 development beyond those originally foreseen, leading to features that
 weren't originally planned and resulting risk to product quality or
 schedule.
 
-##  Feature Test
+## Feature Test
 
 Testing a specific subset of *system* functionality after construction
 of the functionality is completed.
 
-##  FemtoCell
+## FemtoCell
 
 In telecommunications, a femtocell is a small, low-power cellular base
 station, typically designed for use in a home or small business. A
@@ -73,7 +73,7 @@ focused on WCDMA, the concept is applicable to all standards, including
 GSM, CDMA2000, TD-SCDMA, WiMAX and LTE solutions.\
 ![](./images/F/15008172.png?width=480)
 
-##  FIPS
+## FIPS
 
 Federal Information Processing Standards (FIPS) are publicly announced
 standards developed by the United States federal government for use in
@@ -88,7 +88,7 @@ in the technical communities, such as the American National Standards
 Institute (ANSI), the Institute of Electrical and Electronics Engineers
 (IEEE), and the International Organization for Standardization (ISO).
 
-##  FIPS 140-2
+## FIPS 140-2
 
 The Federal Information Processing Standard (FIPS) Publication 140-2,
 (FIPS PUB 140-2), is a U.S. government computer security standard used
@@ -183,7 +183,7 @@ module will not be affected by fluctuations outside of the normal
 operating range in a manner that can compromise the security of the
 module.
 
-##  Firewall
+## Firewall
 
 n computing, a firewall is a network security system that monitors and
 controls incoming and outgoing network traffic based on predetermined
@@ -199,7 +199,7 @@ machines.\
 ![](./images/F/15008180.png?width=480)\
 ![](./images/F/15008186.png?width=529)
 
-##  FNA
+## FNA
 
 Full Network Authentication
 
@@ -207,12 +207,12 @@ This is where your line is assigned a NetworkID and the authentication
 is done on that. If the line connected matches the NetworkID records on
 the RADIUS servers it creates an auth session.
 
-##  Formal Testing
+## Formal Testing
 
 Execution of testing using documented *test cases*. Compare to *informal
 testing.*
 
-##  Fortran
+## Fortran
 
 Fortran is a general-purpose, compiled imperative programming language
 that is especially suited to numeric computation and scientific
@@ -240,11 +240,11 @@ Among the better known is BASIC, which is a based on FORTRAN II with a
 number of syntax cleanups, notably better logical structures, and other
 changes to more easily work in an interactive environment.
 
-##  Forwarding plane
+## Forwarding plane
 
 See User Plane
 
-##  FQDN
+## FQDN
 
 Fully Qualified Domain Name
 
@@ -267,7 +267,7 @@ called a partially qualified domain name.
 
 ![](./images/F/15008192.png?width=480)
 
-##  Frame Relay
+## Frame Relay
 
 Frame Relay is a standardized wide area network technology that
 specifies the physical and data link layers of digital
@@ -288,18 +288,18 @@ another reason for Frame Relay's popularity.
 
 ![](./images/F/15008198.png?width=389)
 
-##  Frequent Releases
+## Frequent Releases
 
 An Agile team frequently releases its product into the hands of end
 users, listening to feedback, whether critical or appreciative.
 
-##  Frequently Asked Question
+## Frequently Asked Question
 
 FAQ
 
 Documents commonly asked questions and their answers.
 
-##  FSK
+## FSK
 
 Frequency-shift keying (FSK) is a frequency modulation scheme in which
 digital information is transmitted through discrete frequency changes of
@@ -310,7 +310,7 @@ transmit binary (0s and 1s) information. With this scheme, the "1" is
 called the mark frequency and the "0" is called the space frequency.\
 ![](./images/F/15008204.png?width=480)
 
-##  FTP
+## FTP
 
 File Transfer Protocol
 
@@ -321,7 +321,7 @@ network.
 FTP is built on a client-server model architecture and uses separate
 control and data connections between the client and the server.
 
-##  FTPS
+## FTPS
 
 File Transfer Protocol Secure
 
@@ -335,7 +335,7 @@ a secure file transfer subsystem for the Secure Shell (SSH) protocol it
 is not compatible with. It is also different from FTP over SSH, the
 practice of tunneling FTP through an SSH connection.
 
-##  Full duplex
+## Full duplex
 
 In a full-duplex system, both parties can communicate with each other
 simultaneously. An example of a full-duplex device is a telephone; the
@@ -345,22 +345,22 @@ as the microphone transmits the speech of the local party, because there
 is a two-way communication channel between them, or more strictly
 speaking, because there are two communication channels between them.
 
-##  Function Point
+## Function Point
 
 Size measure for a software system based on abstracted measure of system
 functionality.
 
-##  Functional Requirement
+## Functional Requirement
 
 Functionality that must be built into the system to satisfy the business
 requirements. Also known as a *what requirement.*
 
-##  Functional Testing
+## Functional Testing
 
 Comparing a system's behavior against expected behavior, without concern
 for the internal workings of the system.
 
-##  Fuzzy Front End
+## Fuzzy Front End
 
 Term coined by Steve McConnell to describes the initial inception phases
 of a project. CxOne defines the start of the fuzzy front end as the
@@ -368,7 +368,7 @@ point someone starts thinking about a project and working on chartering
 it, and the end as the point at which the charter is approved and the
 project begins.
 
-##  Fuzzy Logic
+## Fuzzy Logic
 
 A relative ranking technique for describing characteristics. Often used
 in conjunction with items that contain uncertainty, like estimates. A
@@ -378,7 +378,7 @@ used as stand-ins for a possible range of quantitative values. One
 common characteristic of fuzzy logic buckets is that the high end value
 from one bucket overlaps the low end value of the next bucket.
 
-##  FXO
+## FXO
 
 Foreign Exchange Office
 
@@ -388,7 +388,7 @@ interfaces a call can be established. The port provides the necessary
 electricity as well as the dialtone and the call signal.\
 ![](./images/F/15008210.png?width=481)
 
-##  FXS
+## FXS
 
 Foreign Exchange Station
 

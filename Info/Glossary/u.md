@@ -1,6 +1,6 @@
 # U
 
-##  UA
+## UA
 
 User Agent
 
@@ -20,14 +20,14 @@ is not operated by a user. The Session Initiation Protocol (SIP)
 protocol (based on HTTP) followed this usage. In the SIP, the term user
 agent refers to both end points of a communications session.
 
-##  Ubiquitous Language
+## Ubiquitous Language
 
 Striving to use the vocabulary of a given business domain, not only in
 discussions about the requirements for a software product, but in
 discussions of design as well and all the way into "the product's source
 code itself."
 
-##  UDP
+## UDP
 
 User Datagram Protocol
 
@@ -58,13 +58,13 @@ waiting for packets delayed due to retransmission, which may not be an
 option in a real-time system.\
 ![](./images/U/15009084.png?width=480)
 
-##  UER
+## UER
 
 Universal Edge Router
 
 What Juniper call their BRASs.
 
-##  UML
+## UML
 
 The Unified Modeling Language (UML) is a general-purpose, developmental,
 modeling language in the field of software engineering, that is intended
@@ -86,17 +86,17 @@ Design\
 UML offers a way to visualize a system's architectural blueprints in a
 diagram, including elements such as:
 
--   any activities (jobs);
+- any activities (jobs);
 
--   individual components of the system;
+- individual components of the system;
 
--   and how they can interact with other software components;
+- and how they can interact with other software components;
 
--   how the system will run;
+- how the system will run;
 
--   how entities interact with others (components and interfaces);
+- how entities interact with others (components and interfaces);
 
--   external user interface.
+- external user interface.
 
     Although originally intended for object-oriented design
     documentation, UML has been extended to a larger set of design
@@ -108,7 +108,7 @@ diagram, including elements such as:
 
     ![](./images/U/15009104.png?width=468)
 
-##  UMTS
+## UMTS
 
 Universal Mobile Telecommunications System
 
@@ -130,7 +130,7 @@ users via SIM (subscriber identity module) cards.
 The technology described in UMTS is sometimes also referred to as
 Freedom of Mobile Multimedia Access (FOMA) or 3GSM.
 
-##  UNI
+## UNI
 
 User--network interface
 
@@ -142,14 +142,14 @@ Network Interface (NNI) that defines a similar interface between
 provider networks.\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav6ec16911e07f56964e252bfe104cabec.png")
 
-##  unicast
+## unicast
 
 In computer networking, unicast refers to a one-to-one transmission from
 one point in the network to another point; that is, one sender and one
 receiver, each identified by a network address.\
 ![](./images/U/15009110.png?width=225)
 
-##  Unicode
+## Unicode
 
 Unicode is a computing industry standard for the consistent encoding,
 representation, and handling of text expressed in most of the world's
@@ -201,7 +201,7 @@ Unicode code points. However, because each character uses four bytes,
 UTF-32 takes significantly more space than other encodings, and is not
 widely used.
 
-##  Unified Communications
+## Unified Communications
 
 Unified communications (UC) is a business and marketing concept
 describing the integration of enterprise communication services such as
@@ -231,24 +231,24 @@ currently accepts calls, the response can be sent immediately through
 text chat or a video call. Otherwise, it may be sent as a non-real-time
 message that can be accessed through a variety of media.
 
-##  Unified Modeling Language
+## Unified Modeling Language
 
 UML
 
 A defined set of rules, concepts, and notations used to specify
 object-oriented systems
 
-##  Unit Test
+## Unit Test
 
 Lowest level *component test* for a *system*.
 
-##  Unit Testing
+## Unit Testing
 
 A unit test is a short program fragment written and maintained by the
 developers on the product team, which exercises some narrow part of the
 product's source code and checks the results.
 
-##  Unix
+## Unix
 
 Unix is a family of multitasking, multiuser computer operating systems
 that derive from the original AT&T Unix, development starting in the
@@ -269,12 +269,12 @@ macOS.
 
 ![](./images/U/15009116.png?width=513)
 
-##  Update
+## Update
 
 Any foreseen or planned activity necessary to bring an artifact up to
 date with current project needs. Compare to *rework*.
 
-##  Upstream
+## Upstream
 
 In computer networking, upstream refers to the direction in which data
 can be transferred from the client to the server (uploading). This
@@ -297,7 +297,7 @@ upstream providers. An upstream provider is usually a large ISP that
 provides Internet access to a local ISP. Hence, the word upstream also
 refers to the data connection between two ISPs
 
-##  Upstream
+## Upstream
 
 Used to refer to project activities and artifacts that occur early in a
 project lifecycle. Includes chartering, planning, defining scope and
@@ -305,7 +305,7 @@ requirements, architecture and high level design, and any other
 activities that occur to some extent before significant construction
 begins. See *downstream*.
 
-##  URI
+## URI
 
 Uniform Resource Identifier
 
@@ -327,24 +327,24 @@ view-source:
 
 ![](./images/U/15009122.png?width=200)
 
-##  URL
+## URL
 
 Universal (or Uniform) Resource Locator
 
 Contains information about how to fetch a resource from its location.
 For example:
 
--   <http://example.com/mypage.html>
+- <http://example.com/mypage.html>
 
--   <ftp://example.com/download.zip>
+- <ftp://example.com/download.zip>
 
--   [mailto:user\@example.com](mailto:user@example.com){.uri}
+- [mailto:user\@example.com](mailto:user@example.com){.uri}
 
--   {+}file:///home/user/file.txt+ (file:////home//user//file.txt)
+- {+}file:///home/user/file.txt+ (file:////home//user//file.txt)
 
--   <http://example.com/resource?foo=bar#fragment>
+- <http://example.com/resource?foo=bar#fragment>
 
--   /other/link.html (A relative URL, only useful in the context of
+- /other/link.html (A relative URL, only useful in the context of
     another URL)
 
     URLs always start with a protocol (http) and usually contain
@@ -352,46 +352,46 @@ For example:
     document path (/foo/mypage.html). URLs may have query parameters and
     fragment identifiers.
 
-##  URN
+## URN
 
 Uniform Resource
 
 Identifies a resource by name. It always starts with the prefix urn: For
 example:
 
--   urn:isbn:0451450523 to identify a book by its ISBN number.
+- urn:isbn:0451450523 to identify a book by its ISBN number.
 
--   urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66 a globally unique
+- urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66 a globally unique
     identifier
 
--   urn:publishing:book - An XML namespace that identifies the document
+- urn:publishing:book - An XML namespace that identifies the document
     as a type of book.\
     URNs can identify ideas and concepts. They are not restricted to
     identifying documents. When a URN does represent a document, it can
     be translated into a URL by a "resolver". The document can then be
     downloaded from the URL.
 
-##  Usability Testing
+## Usability Testing
 
 Usability testing is an empirical, exploratory technique to answer
 questions such as "how would an end user respond to our software under
 realistic conditions?"
 
-##  Use Case
+## Use Case
 
 A single use of the system depicted as an interaction between the user
 and the system.
 
-##  Use Case Model
+## Use Case Model
 
 An external view of the system used to describe the dialog between the
 users of the system and the system.
 
-##  Use Case Specification
+## Use Case Specification
 
 The documentation required to capture a use case.
 
-##  User Experience
+## User Experience
 
 UX
 
@@ -399,24 +399,24 @@ Describes the total experience of human-machine interface. Includes user
 interface and aesthetic issues that may not normally be considered as
 part of user interface design.
 
-##  User Interface
+## User Interface
 
 UI
 
 The interface between a system and its external users. Normally used to
 describe interaction of the system with human operators.
 
-##  User Interface Design
+## User Interface Design
 
 Design issues specific to human-machine interfaces.
 See *CxStand\_Design* for more information.
 
-##  User Interface Prototype
+## User Interface Prototype
 
 A prototype created to explore the user interface functionality or look
 and feel.
 
-##  User Plane
+## User Plane
 
 In routing, the forwarding plane, sometimes called the data plane or
 user plane, defines the part of the router architecture that decides
@@ -430,12 +430,12 @@ transport plane to describe a function roughly equivalent to the routing
 control plane.\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav86f16cd7edd818110d9b570d036ef91f.png")
 
-##  User Stories
+## User Stories
 
 In consultation with the customer or product owner, the team divides up
 the work to be done into functional increments called "user stories."
 
-##  UTC
+## UTC
 
 Coordinated Universal Time
 
@@ -446,7 +446,7 @@ longitude, and does not observe daylight saving time. For most purposes,
 UTC is considered interchangeable with Greenwich Mean Time (GMT), but
 GMT is no longer precisely defined by the scientific community.
 
-##  UTF-16
+## UTF-16
 
 UTF-32 stands for Unicode Transformation Format in 32 bits. It is a
 protocol to encode Unicode code points that uses exactly 32 bits per
@@ -472,7 +472,7 @@ makes UTF-32 close to twice the size of UTF-16. It can be up to four
 times the size of UTF-8 depending on how many of the characters are in
 the ASCII subset.
 
-##  UTF-8
+## UTF-8
 
 UTF-8 is a variable width character encoding capable of encoding all
 1,112,064 valid code points in Unicode using one to four 8-bit bytes.
@@ -501,7 +501,7 @@ recommended that all e-mail programs be able to display and create mail
 using UTF-8,and the W3C recommends UTF-8 as the default encoding in XML
 and HTML.
 
-##  UTRAN
+## UTRAN
 
 Universal Terrestrial Radio Access Network
 

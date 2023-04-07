@@ -1,6 +1,6 @@
 # O
 
-##  Objective C
+## Objective C
 
 Objective-C is a general-purpose, object-oriented programming language
 that adds Smalltalk-style messaging to the C programming language. It
@@ -9,18 +9,18 @@ operating systems, and their respective application programming
 interfaces (APIs) Cocoa and Cocoa Touch prior to the introduction of
 Swift.
 
-##  Objectives
+## Objectives
 
 Synonym for *goals*.
 
-##  ODF
+## ODF
 
 Optical Distribution Frame
 
 In telecommunications, a distribution frame is a passive device which
 terminates cables, allowing arbitrary interconnections to be made.
 
-##  OFC
+## OFC
 
 Optical fiber connector
 
@@ -32,7 +32,7 @@ misalignment of the fibers. In all, about 100 different types of fiber
 optic connectors have been introduced to the market.\
 ![](./images/O/15008720.png?width=220)
 
-##  Ofcom
+## Ofcom
 
 The Office of Communications, commonly known as Ofcom, is the UK
 government-approved regulatory and competition authority for the
@@ -52,7 +52,7 @@ The regulator was initially established by the Office of Communications
 Act 2002 and received its full authority from the Communications Act
 2003.
 
-##  OFDMA
+## OFDMA
 
 Orthogonal frequency-division multiple access
 
@@ -62,7 +62,7 @@ digital modulation scheme. Multiple access is achieved in OFDMA by
 assigning subsets of subcarriers to individual users. This allows
 simultaneous low-data-rate transmission from several users
 
-##  OO
+## OO
 
 Object-oriented
 
@@ -86,13 +86,13 @@ Significant object-oriented languages include Java, C+, C\#, Python,
 PHP, Ruby, Perl, Object Pascal, Objective-C, Dart, Swift, Scala, Common
 Lisp, and Smalltalk.
 
-##  Operations Plan
+## Operations Plan
 
 A plan specifying how a system will be utilized after deployment along
 with other information such as roles, responsibilities, maintenance
 schedules, etc.
 
-##  OPUS
+## OPUS
 
 Opus is a lossy audio coding format developed by the Xiph.Org Foundation
 and standardized by the Internet Engineering Task Force, designed to
@@ -116,7 +116,7 @@ down to 5 ms. Its delay is exceptionally low compared to competing
 codecs, which require well over 100 ms, yet Opus performs very
 competitively with these formats in terms of quality per bitrate
 
-##  OS X
+## OS X
 
 macOS (previously Mac OS X and later OS X) is a series of graphical
 operating systems developed and marketed by Apple Inc. since 2001. It is
@@ -137,7 +137,7 @@ were using for their other operating systems, iOS, watchOS, and tvOS.
 The latest version is macOS High Sierra, which was publicly released in
 September 2017.
 
-##  OSA-FC
+## OSA-FC
 
 Optical Spectrum Access Filter Connect
 
@@ -151,7 +151,7 @@ of a managed connection which Openreach can monitor 24/7 and provide
 rapid response and repair times over.\
 ![](./images/O/15008728.png?width=485)
 
-##  OSPF
+## OSPF
 
 Open Shortest Path First
 
@@ -166,7 +166,7 @@ Routing (CIDR) addressing model.
 OSPF is a widely used IGP in large enterprise networks. IS-IS, another
 LSR-based protocol, is more common in large service provider networks.
 
-##  OSS
+## OSS
 
 Operations support systems
 
@@ -188,19 +188,19 @@ Different subdivisions of OSS have been proposed by the TM Forum,
 industrial research labs or OSS vendors. In general, an OSS covers at
 least the following five functions:
 
--   Network management systems
+- Network management systems
 
--   Service delivery
+- Service delivery
 
--   Service fulfillment, including the network inventory, activation and
+- Service fulfillment, including the network inventory, activation and
     provisioning
 
--   Service assurance
+- Service assurance
 
--   Customer care\
+- Customer care\
     ![](./images/O/15008734.png?width=300)
 
-##  OTN
+## OTN
 
 Optical Transport Network
 
@@ -210,7 +210,7 @@ functionality of transport, multiplexing, switching, management,
 supervision and survivability of optical channels carrying client
 signals.
 
-##  Out-of-order delivery
+## Out-of-order delivery
 
 In computer networking, out-of-order delivery is the delivery of data
 packets in a different order from which they were sent. Out-of-order
@@ -222,7 +222,7 @@ by reassembling packets into order or forcing retries of out-of-order
 packets.\
 ![](./images/O/15008740.png?width=480)
 
-##  Overlap Dialling
+## Overlap Dialling
 
 Overlap dialing is required by CAS signaled lines. Overlap dial provides
 for a longer time-out period between digits, also called the inter-digit

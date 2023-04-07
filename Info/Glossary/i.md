@@ -1,6 +1,6 @@
 # I
 
-##  IA
+## IA
 
 Information Assurance
 
@@ -18,7 +18,7 @@ types of physical and electronic storage facilities. Information
 assurance as a field has grown from the practice of information
 security.
 
-##  IaaS
+## IaaS
 
 Infrastructure as a Service
 
@@ -28,7 +28,7 @@ of the three main categories of cloud computing services, alongside
 software as a service (SaaS) and platform as a service (PaaS).\
 ![](./images/I/15008352.png?width=480)
 
-##  ICE
+## ICE
 
 Interactive Connectivity Establishment
 
@@ -46,7 +46,7 @@ network barriers.
 ICE is developed by the Internet Engineering Task Force MMUSIC working
 group and is published as RFC 5245, which has obsoleted RFC 4091
 
-##  ICMP
+## ICMP
 
 Internet Control Message Protocol
 
@@ -59,7 +59,7 @@ as TCP and UDP in that it is not typically used to exchange data between
 systems, nor is it regularly employed by end-user network applications
 (with the exception of some diagnostic tools like ping and traceroute).
 
-##  ICMPv6
+## ICMPv6
 
 Internet Control Message Protocol version 6 (for IPv6)
 
@@ -80,7 +80,7 @@ listeners on a directly attached link, much like Internet Group
 Management Protocol (IGMP) is used in IPv4. Multicast Router Discovery
 (MRD) allows discovery of multicast routers.
 
-##  IDE
+## IDE
 
 integrated development environment
 
@@ -88,14 +88,14 @@ a programming environment that has been packaged as an application
 program, typically consisting of a code editor, a compiler, a debugger,
 and a GUI
 
-##  IDQ
+## IDQ
 
 Informatica Data Quality
 
 A tool that can be used by business analysts & developers to analyse,
 profile, cleanse, standardize & scorecard data in an enterprise.
 
-##  IEC
+## IEC
 
 International Electrotechnical Commission
 
@@ -119,7 +119,7 @@ Committee on Electromagnetic Compatibility, ACEC), measurement and
 performance, dependability, design and development, safety and the
 environment.
 
-##  IEEE
+## IEEE
 
 Institute of Electrical and Electronics Engineers
 
@@ -134,7 +134,7 @@ the educational and technical advancement of electrical and electronic
 engineering, telecommunications, computer engineering and allied
 disciplines.
 
-##  IEEE 802.1ah
+## IEEE 802.1ah
 
 Provider Backbone Bridges (PBB; known as "mac-in-mac") is a set of
 architecture and protocols for routing over a provider's network
@@ -149,38 +149,38 @@ domains. For this purpose, a new Ethernet header has been defined. This
 header may take multiple different forms, but the main components of the
 header are:
 
--   Backbone component, that has:
+- Backbone component, that has:
 
--   Backbone destination address (B-DA) (six bytes)
+- Backbone destination address (B-DA) (six bytes)
 
--   Backbone source address (B-SA) (six bytes)
+- Backbone source address (B-SA) (six bytes)
 
--   EtherType 0x88A8 (two bytes)
+- EtherType 0x88A8 (two bytes)
 
--   B-TAG/B-VID (two bytes), this is the backbone VLAN indicator
+- B-TAG/B-VID (two bytes), this is the backbone VLAN indicator
 
--   Service encapsulation, that has:
+- Service encapsulation, that has:
 
--   EtherType 0x88E7 (two bytes)
+- EtherType 0x88E7 (two bytes)
 
--   Flags that contain priority, Drop Eligible Indicator (DEI) and No
+- Flags that contain priority, Drop Eligible Indicator (DEI) and No
     Customer Address (NCA) indication (e.g. OAM frames).
 
--   I-SID, the service identifier (three bytes)
+- I-SID, the service identifier (three bytes)
 
--   Original customer frame
+- Original customer frame
 
--   Customer destination address (six bytes)
+- Customer destination address (six bytes)
 
--   Customer source address (six bytes)
+- Customer source address (six bytes)
 
--   EtherType 0x8100 (two bytes)
+- EtherType 0x8100 (two bytes)
 
--   Customer VLAN identifier (two bytes)
+- Customer VLAN identifier (two bytes)
 
--   EtherType (e.g. 0x0800)
+- EtherType (e.g. 0x0800)
 
--   Customer payload
+- Customer payload
 
     PBB defines a 48 bit B-DA and 48 bit B-SA to indicate the backbone
     source and destination MAC addresses. It also defines a 12 bit B-VID
@@ -196,7 +196,7 @@ header are:
 
     PBB is sometimes referred to as Mac-in-Mac.
 
-##  IETF
+## IETF
 
 Internet Engineering Task Force
 
@@ -212,7 +212,7 @@ government, but since 1993 it has operated as a standards development
 function under the auspices of the Internet Society, an international
 membership-based non-profit organization.
 
-##  IGMP
+## IGMP
 
 The Internet Group Management Protocol (IGMP) is a communications
 protocol used by hosts and adjacent routers on IPv4 networks to
@@ -228,7 +228,7 @@ handled by Multicast Listener Discovery (MLD) which is a part of ICMPv6
 in contrast to IGMP's bare IP encapsulation.\
 ![](./images/I/15008360.png?width=480)
 
-##  IGP
+## IGP
 
 Interior Gateway Protocol
 
@@ -244,7 +244,7 @@ Specific examples of IGPs include Open Shortest Path First (OSPF),
 Routing Information Protocol (RIP), Intermediate System to Intermediate
 System (IS-IS) and Enhanced Interior Gateway Routing Protocol (EIGRP).
 
-##  IGRP
+## IGRP
 
 Interior Gateway Routing Protocol
 
@@ -264,7 +264,7 @@ count of IGRP-routed packets is 255 (default 100), and routing updates
 are broadcast every 90 seconds (by default). IGRP uses protocol number 9
 for communication.
 
-##  IIS
+## IIS
 
 Internet Information Services
 
@@ -275,7 +275,7 @@ and NNTP. It has been an integral part of the Windows NT family since
 Windows NT 4.0, though it may be absent from some editions (e.g. Windows
 XP Home edition), and is not active by default.
 
-##  IKE
+## IKE
 
 Internet Key Exchange
 
@@ -289,7 +289,7 @@ which cryptographic keys are derived. In addition, a security policy for
 every peer which will connect must be manually maintained.\
 ![](./images/I/15008366.png?width=480)
 
-##  iLBC
+## iLBC
 
 Internet Low Bitrate Codec
 
@@ -312,11 +312,11 @@ which cause errors to propagate when packets are lost or delayed. In
 contrast, iLBC-encoded speech frames are independent and so this problem
 will not occur.
 
-##  iManager
+## iManager
 
 Huawei MSAN and DSLAM management tool
 
-##  IMAP
+## IMAP
 
 Internet Message Access Protocol
 
@@ -336,27 +336,27 @@ standard protocols for email retrieval, with many webmail service
 providers such as Gmail, Outlook.com and Yahoo! Mail also providing
 support for either IMAP or POP3.
 
-##  Implementation
+## Implementation
 
 Used as a synonym for both *construction* and *deployment*.
 
-##  Implementation Lead
+## Implementation Lead
 
 Sometimes used as a synonym for *construction lead* and/or *deployment
 lead*.
 
-##  Implicit Change Control
+## Implicit Change Control
 
 Artifacts under implicit change control are not managed directly by the
 CCB, but changes to the artifacts are controlled by upstream artifacts
 that are directly managed by the CCB. Source code is often under
 implicit change control. Compare to *explicit change control.*
 
-##  Implicit Risk Management
+## Implicit Risk Management
 
 Synonym for *intrinsic risk management*.
 
-##  IMS
+## IMS
 
 IP Multimedia Core Network Subsystem
 
@@ -390,7 +390,7 @@ map into greater reduced cost and complexity.
 
 ![](./images/I/15204369.png?width=226)
 
-##  IMSI
+## IMSI
 
 International Mobile Subscriber Identity
 
@@ -422,7 +422,7 @@ depending on the MNC length).
 
 The IMSI conforms to the ITU E.212 numbering standard.
 
-##  IN
+## IN
 
 Intelligent Network
 
@@ -443,7 +443,7 @@ IN is supported by the Signaling System \#7 (SS7) protocol between
 network switching centers and other network nodes owned by network
 operators.
 
-##  INAP
+## INAP
 
 INAP stands for Intelligent Network Application Protocol or Intelligent
 Network Application Part. It is the signalling protocol used in
@@ -453,47 +453,47 @@ Capabilities Application Part (TCAP). It can also be termed as logic for
 controlling telecommunication services migrated from traditional
 switching points to computer based service independent platform.
 
-##  Inch-Pebble
+## Inch-Pebble
 
 Synonym for *miniature milestone*.
 
-##  Incremental Development
+## Incremental Development
 
 In an Agile context, Incremental Development is when each successive
 version of a product is usable, and each builds upon the previous
 version by adding user-visible functionality.
 
-##  Informal Review
+## Informal Review
 
 Any form of review, e.g. *walkthrough* or *desk check*, other than
 an *inspection*.
 
-##  Informal Testing
+## Informal Testing
 
 Expert judgment testing that is conducted without the use of documented
 test cases. Compare to *formal testing*.
 
-##  information architecture
+## information architecture
 
 the set of ideas about how all information in a given context should be
 treated philosophically and, in a general way, how it should be
 organized; this is expressed in an information architecture document .
 
-##  information design
+## information design
 
 the detailed planning of specific information that is to be provided to
 a particular audience to meet specific objectives. In one hierarchical
 model, the information design follows the information architecture and
 information planning stages.
 
-##  Information Radiators
+## Information Radiators
 
 "Information radiator" is the term for any of a number of visual
 displays which a team places in a highly visible location, so that all
 team members can see the latest information at a glance.\
 ![](./images/I/15008372.png?width=260)
 
-##  Ingress
+## Ingress
 
 Ingress traffic is network traffic that originates from outside of the
 network's routers and proceeds toward a destination inside of the
@@ -504,15 +504,15 @@ the recipient.
 
 ![](./images/I/15302712.png)
 
-##  Inspection
+## Inspection
 
 A formally defined review process.
 
-##  Inspector
+## Inspector
 
 A reviewer in the inspection process
 
-##  Institute of Electrical and Electronics Engineers
+## Institute of Electrical and Electronics Engineers
 
 IEEE
 
@@ -521,7 +521,7 @@ world's largest professional organization for computer and software
 engineers. Developers of the SWEBOK\
 [www.ieee.org](http://www.ieee.org/)
 
-##  Integrated Development Environment
+## Integrated Development Environment
 
 IDE
 
@@ -529,30 +529,30 @@ Refers to a software tool that combines one or more programming
 languages with editing and debugging tools. Often IDEs will also include
 reusable software components.
 
-##  Integration
+## Integration
 
 "Integration" (or "integrating") refers to any efforts still required
 for a project team to deliver a product suitable for release as a
 functional whole.
 
-##  Integration
+## Integration
 
 The activity of combining multiple software components and making them
 work together.
 
-##  Integration Test
+## Integration Test
 
 Test focused on verifying functionality and stability of a software
 system or component after changes or additions.
 
-##  International Organization for Standardization
+## International Organization for Standardization
 
 ISO
 
 An international organization established to promote the development of
 standards.
 
-##  Internet Protocol Suite
+## Internet Protocol Suite
 
 The Internet protocol suite is the conceptual model and set of
 communications protocols used on the Internet and similar computer
@@ -579,7 +579,7 @@ Task Force (IETF). The Internet protocol suite predates the OSI model, a
 more comprehensive reference framework for general networking systems.\
 ![](./images/I/15008378.png?width=480)
 
-##  Interpreted Language
+## Interpreted Language
 
 An interpreted language is a type of programming language for which most
 of its implementations execute instructions directly and freely, without
@@ -612,20 +612,20 @@ are compiled into bytecode, the virtual-machine-friendly interpreted
 language. Lisp implementations can freely mix interpreted and compiled
 code.
 
-##  Intrinsic Risk Management
+## Intrinsic Risk Management
 
 Performing risk management as part of all project and organizational
 processes. Intrinsic risk management includes activities like
 risk-focused project and issue management and selecting lifecycles and
 processes that create environments which naturally manage risks.
 
-##  INVEST
+## INVEST
 
 The acronym INVEST stands for a set of criteria used to assess the
 quality of a user story. If the story fails to meet one of these
 criteria, the team may want to reword it.
 
-##  IOS cisco OS
+## IOS cisco OS
 
 Cisco IOS (originally Internetwork Operating System) is a family of
 software used on most Cisco Systems routers and current Cisco network
@@ -636,7 +636,7 @@ includes a cooperative multitasking kernel, most IOS features have been
 ported to other kernels such as QNX and Linux for use in Cisco products
 or simulators such as Cisco VIRL.
 
-##  IPS
+## IPS
 
 Intrusion Prevention Services
 
@@ -662,13 +662,13 @@ ability to respond to detected intrusions. Systems with response
 capabilities are typically referred to as an intrusion prevention
 system.
 
-##  IPSC
+## IPSC
 
 IP Stream Connect
 
 ![](./images/I/15008384.png?width=480)
 
-##  IPSec
+## IPSec
 
 IP Security
 
@@ -697,7 +697,7 @@ Security (TLS) and Secure Shell (SSH), operate in the upper layers at
 the Transport Layer (TLS) and the Application layer (SSH). IPsec can
 automatically secure applications at the IP layer.
 
-##  IPTV
+## IPTV
 
 Internet Protocol television
 
@@ -720,17 +720,17 @@ Telecommunications Standards Institute).
 
 IPTV services may be classified into three main groups:
 
--   Live television and live media, with or without related
+- Live television and live media, with or without related
     interactivity;
 
--   Time-shifted media: e.g. catch-up TV (replays a TV show that was
+- Time-shifted media: e.g. catch-up TV (replays a TV show that was
     broadcast hours or days ago), start-over TV (replays the current TV
     show from its beginning);
 
--   Video on demand (VOD): browse and view items in a stored media
+- Video on demand (VOD): browse and view items in a stored media
     catalogue.
 
-##  IPv4
+## IPv4
 
 Internet Protocol version 6
 
@@ -750,7 +750,7 @@ addressed by an upper layer transport protocol, such as the Transmission
 Control Protocol (TCP).\
 ![](./images/I/15008390.png?width=480)
 
-##  IPv6
+## IPv6
 
 Internet Protocol version 4
 
@@ -796,7 +796,7 @@ full notation exist.\
 
 ![](./images/I/15008402.png?width=480)
 
-##  ISDN
+## ISDN
 
 Integrated Services Digital Network
 
@@ -825,9 +825,9 @@ bonding can achieve a greater data rate; typically the ISDN B-channels
 of three or four BRIs (six to eight 64 kbit/s channels) are bonded.\
 ![](./images/I/15008408.png?width=480)
 
-##  ISDN2
+## ISDN2
 
-##  BRI
+### BRI
 
 Basic Rate Interface
 
@@ -849,9 +849,9 @@ in many countries.
 In contrast to the BRI, the Primary Rate Interface (PRI) configuration
 provides more B channels and operates at a higher bit rate.
 
-##  ISDN30
+## ISDN30
 
-##  PRI
+### PRI
 
 Primary Rate Interface
 
@@ -872,7 +872,7 @@ D-channel. The D-channel typically uses timeslot 16 on an E1, while it
 is timeslot 24 for a T1. Fewer active bearer channels, sometimes called
 user channels, may be used in fractional T1 or E1 services.
 
-##  ISO
+## ISO
 
 International Organization for Standardization
 
@@ -880,7 +880,7 @@ The International Organization for Standardization (ISO) is an
 international standard-setting body composed of representatives from
 various national standards organizations.
 
-##  ISP
+## ISP
 
 Internet Service Provider
 
@@ -894,7 +894,7 @@ Internet transit, domain name registration, web hosting, Usenet service,
 and colocation.\
 ![](./images/I/15008414.png?width=480)
 
-##  Issue
+## Issue
 
 Something that needs to be resolved.\
 An *issue* is a catch-all term for a unit of work that will impact the
@@ -903,12 +903,12 @@ project if not addressed, and which is not captured by project planning
 defect, or risk. Issues are a type of *corrective activity
 management* item.
 
-##  Issue Management
+## Issue Management
 
 The management of *issues* on a project. Part of *corrective activity
 management*.
 
-##  Issue tracker
+## Issue tracker
 
 An issue tracking system (also ITS, trouble ticket system, support
 ticket, request management or incident ticket system) is a computer
@@ -933,7 +933,7 @@ always have a unique reference number, also known as a case, issue or
 call log number which is used to allow the user or help staff to quickly
 locate, add to or communicate the status of the user's issue or request.
 
-##  ISUP
+## ISUP
 
 The ISDN (Integrated Services Digital Network) User Part or ISUP is part
 of Signaling System No. 7 (SS7), which is used to set up telephone calls
@@ -965,24 +965,24 @@ switches in the chain.
 
 ![](./images/I/15008420.png?width=480)
 
-##  Item
+## Item
 
 Sometimes used as a synonym for *CAM item*; representing a *change
 request*, *defect*, *risk*, or *issue*.
 
-##  Iteration
+## Iteration
 
 An iteration is a timebox during which development takes place. The
 duration may vary from project to project and is usually fixed.
 
-##  Iterative Development
+## Iterative Development
 
 Agile projects are iterative insofar as they intentionally allow for
 "repeating" software development activities, and for potentially
 "revisiting" the same work products (the phrase "planned rework" is
 sometimes used; refactoring is a good example).
 
-##  ITIL
+## ITIL
 
 TIL (formerly an acronym for Information Technology Infrastructure
 Library) is a set of detailed practices for IT service management (ITSM)
@@ -1002,7 +1002,7 @@ competency. It allows the organization to establish a baseline from
 which it can plan, implement, and measure. It is used to demonstrate
 compliance and to measure improvement.
 
-##  ITU
+## ITU
 
 International Telecommunication Union
 
@@ -1026,7 +1026,7 @@ regional exhibitions and forums, such as ITU Telecom World, bringing
 together representatives of government and the telecommunications and
 ICT industry to exchange ideas, knowledge and technology.
 
-##  ITU-T
+## ITU-T
 
 ITU Telecommunication Standardization Sector
 
@@ -1042,7 +1042,7 @@ Telephone Consultative Committee (CCITT, from French: Comité Consultatif
 International Téléphonique et Télégraphique) was created in 1956, and
 was renamed ITU-T in 1993.
 
-##  IUP
+## IUP
 
 Interconnect User Part
 
@@ -1050,7 +1050,7 @@ Interconnect User Part (IUP) is a national specific Signaling System 7
 protocol for interconnect between public telephone networks in the
 United Kingdom. This protocol was formerly known as BTNUP.
 
-##  IVR
+## IVR
 
 Interactive voice response (IVR) is a technology that allows a computer
 to interact with humans through the use of voice and DTMF tones input

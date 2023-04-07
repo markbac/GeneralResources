@@ -1,24 +1,34 @@
 # T
 
-##  Task
+## Task
 
 An atomic unit of work on a project. See *activity*.
 
-##  Task Board
+## T-Shirt Sizing
+
+T-shirt sizing is a way to practice relative sizing. By comparing
+stories, you can break them into buckets of extra-small, small, medium,
+large, and extra-large.
+
+Estimating in relative buckets is more important than estimating
+absolute time or effort. We want to understand how things compare to
+each other in a rough sense, and not waste time on false precision.
+
+## Task Board
 
 The most basic form of a task board is divided into three columns
 labeled "To Do," "In Progress," and "Done." Cards are placed in the
 columns to reflect the current status of that task.\
 ![](./images/T/15009042.png?width=353)
 
-##  Task Estimate
+## Task Estimate
 
 An *estimate* for a particular task. Depending on purpose and formality
 these *estimates* are often created and captured as part of ongoing
 planning and tracking and incorporated in *work plans* and *detailed
 schedules.*
 
-##  TCAP
+## TCAP
 
 Transaction Capabilities Application Part
 
@@ -33,7 +43,7 @@ Internet.
 TCAP uses ASN.1 BER encoding, as well as the protocols it encapsulates,
 namely MAP in mobile phone networks or INAP in Intelligent Networks.
 
-##  Tcl/tk
+## Tcl/tk
 
 Tk is a free and open-source, cross-platform widget toolkit that
 provides a library of basic elements of GUI widgets for building a
@@ -55,7 +65,7 @@ given platform). Highlights of version 8.5 include a new theming engine,
 originally called Tk Tile, but now generally referred to as "themed Tk",
 as well as improved font rendering.
 
-##  TCP
+## TCP
 
 Transmission Control Protocol
 
@@ -73,7 +83,7 @@ datagram service that emphasizes reduced latency over reliability.
 
 ![](./images/T/15009050.png?width=480)
 
-##  Tcsh
+## Tcsh
 
 tcsh is a Unix shell based on and compatible with the C shell (csh). It
 is essentially the C shell with programmable command-line completion,
@@ -91,7 +101,7 @@ tcsh is now the main branch for ongoing development. tcsh is very stable
 but new releases continue to appear roughly once a year, consisting
 mostly of minor bug fixes.
 
-##  TDD
+## TDD
 
 Test Driven Development
 
@@ -99,7 +109,7 @@ Test-driven development is a style of programming in which three
 activities are tightly interwoven: coding, testing (in the form of
 writing unit tests) and design (in the form of refactoring).
 
-##  TDM
+## TDM
 
 Time Division Multiplexing
 
@@ -114,18 +124,18 @@ was developed in telecommunications for telegraphy systems in the late
 in the second half of the 20th century.\
 ![](./images/T/15009056.png?width=480)
 
-##  Team
+## Team
 
 A "team" in the Agile sense is a small group of people, assigned to the
 same project or effort, nearly all of them on a full-time basis.
 
-##  Team Room
+## Team Room
 
 The team (ideally the whole team, including the product owner or domain
 expert) has the use of a dedicated space for the duration of the
 project, set apart from other groups' activities.
 
-##  Technical Debt
+## Technical Debt
 
 Technical debt (also known as design debt or code debt) is a concept in
 software development that reflects the implied cost of additional rework
@@ -141,7 +151,7 @@ On the other hand, some experts claim that the "technical debt" metaphor
 tends to minimize the impact, which results in insufficient
 prioritization of the necessary work to correct it
 
-##  Template
+## Template
 
 CxTemp
 
@@ -149,16 +159,16 @@ CxOne template material type. Provides an outline, framework, or
 container for creating an *artifact*. See *CxOneOverview* for
 description.
 
-##  Test
+## Test
 
 See *Testing*. May also be used to describe an individual *test case*.
 
-##  Test Activity
+## Test Activity
 
 A specific test procedure created by combining one or more *test
 techniques* and *test types*.
 
-##  Test Case
+## Test Case
 
 TC
 
@@ -167,14 +177,14 @@ which are created for the purpose of determining whether a specific
 software feature works correctly or a specific *requirement* has been
 satisfied.
 
-##  Test Case Specification
+## Test Case Specification
 
 TCS
 
 Documents the set of *test cases* needed to verify one or more product
 features.
 
-##  Test Design
+## Test Design
 
 Provides a bridge between the *test cases* and the
 product's *requirements* and *design*. Test design is analogous to
@@ -183,55 +193,55 @@ amount of analysis and defined structure.\
 Test design is not software design necessary to support testing (e.g.,
 design of an automated test framework).
 
-##  Test Design Specification
+## Test Design Specification
 
 TDS
 
 Documents the *test design* for a group of *test cases*.
 
-##  Test Level
+## Test Level
 
 Synonym for *test type*.
 
-##  Test Plan
+## Test Plan
 
 TP
 
 Documents the scope, approach, resources, test items, and schedule of
 the testing activities.
 
-##  Test Technique
+## Test Technique
 
 Strategy and approach to a *test activity*.
 
-##  Test Type
+## Test Type
 
 Standard definitions capturing the what, how, why, and when of a *test
 activity*.
 
-##  Testing
+## Testing
 
 Software testing CKA. Dynamic execution of software to detect *defects*.
 See *CxStand\_Testing* for more information.
 
-##  Three Amigos
+## Three Amigos
 
 Three amigos refers to the primary perspectives to examine an increment
 of work before, during, and after development. Those perspectives are
 Business, Development, and Testing.
 
-##  Three C's
+## Three C's
 
 "Card, Conversation, Confirmation" is a formula that captures the
 components of a User Story.
 
-##  Three Questions
+## Three Questions
 
 The daily meeting is structured around some variant of the following
 three questions: What have you completed? What will you do next? What is
 getting in your way?
 
-##  TIA
+## TIA
 
 Telecommunications Industry Association
 
@@ -247,12 +257,12 @@ data centers, mobile device communications, multimedia multicast,
 vehicular telematics, healthcare ICT, machine to machine communications,
 and smart utility networks.
 
-##  Timebox
+## Timebox
 
 A timebox is a previously agreed period of time during which a person or
 a team works steadily towards completion of some goal.
 
-##  TKIP
+## TKIP
 
 Temporal Key Integrity Protocol
 
@@ -266,7 +276,7 @@ for already deployed hardware. However, TKIP itself is no longer
 considered secure, and was deprecated in the 2012 revision of the 802.11
 standard.
 
-##  TLS
+## TLS
 
 Transport Layer Security
 
@@ -283,7 +293,7 @@ between two or more communicating computer applications. When secured by
 TLS, connections between a client (e.g., a web browser) and a server
 (e.g., wikipedia.org) have one or more of the following properties:
 
--   The connection is private (or secure) because symmetric cryptography
+- The connection is private (or secure) because symmetric cryptography
     is used to encrypt the data transmitted. The keys for this symmetric
     encryption are generated uniquely for each connection and are based
     on a shared secret negotiated at the start of the session. The
@@ -295,19 +305,19 @@ TLS, connections between a client (e.g., a web browser) and a server
     middle of the connection) and reliable (no attacker can modify the
     communications during the negotiation without being detected).
 
--   The identity of the communicating parties can be authenticated using
+- The identity of the communicating parties can be authenticated using
     public-key cryptography. This authentication can be made optional,
     but is generally required for at least one of the parties (typically
     the server).
 
--   The connection is reliable because each message transmitted includes
+- The connection is reliable because each message transmitted includes
     a message integrity check using a message authentication code to
     prevent undetected loss or alteration of the data during
     transmission.
 
--   ![](./images/T/15009062.png?width=451)
+- ![](./images/T/15009062.png?width=451)
 
-##  TLV
+## TLV
 
 Type(Tag), Length and Value
 
@@ -329,7 +339,7 @@ message.
 
 ![](./images/T/15009068.png?width=480)
 
-##  Token Ring
+## Token Ring
 
 Token Ring local area network (LAN) technology is a communications
 protocol for local area networks. It uses a special three-byte frame
@@ -343,16 +353,16 @@ Introduced by IBM in 1984, it was then standardized with protocol IEEE
 but gradually eclipsed by the later versions of Ethernet.\
 ![](./images/T/15009074.png?width=220)
 
-##  Top Level Schedule
+## Top Level Schedule
 
 See *Business Schedule*.
 
-##  Top-Down Estimation
+## Top-Down Estimation
 
 Estimating a system by deriving values for the entire system, and then
 splitting the total values among decomposed pieces of the system.
 
-##  Triple DES
+## Triple DES
 
 In cryptography, Triple DES (3DES), officially the Triple Data
 Encryption Algorithm (TDEA or Triple DEA), is a symmetric-key block
@@ -365,17 +375,7 @@ RFC 1851 called it 3DES from the time it first promulgated the idea, and
 this namesake has since come into wide use by most vendors, users, and
 cryptographers.
 
-##  T-Shirt Sizing
-
-T-shirt sizing is a way to practice relative sizing. By comparing
-stories, you can break them into buckets of extra-small, small, medium,
-large, and extra-large.
-
-Estimating in relative buckets is more important than estimating
-absolute time or effort. We want to understand how things compare to
-each other in a rough sense, and not waste time on false precision.
-
-##  TTY
+## TTY
 
 A terminal emulator, terminal application, or term, is a program that
 emulates a video terminal within some other display architecture. Though
@@ -391,7 +391,7 @@ machine or on a different one via telnet, ssh, or dial-up. On Unix-like
 operating systems, it is common to have one or more terminal windows
 connected to the local machine.
 
-##  TUP
+## TUP
 
 Telephone User Part
 
@@ -409,7 +409,7 @@ SS7.
 Various national variants of TUP have evolved, some of which provide
 varying degrees of support for ISDN.
 
-##  Twisted pair
+## Twisted pair
 
 Twisted pair cabling is a type of wiring in which two conductors of a
 single circuit are twisted together for the purposes of improving

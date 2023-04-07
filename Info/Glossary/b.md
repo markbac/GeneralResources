@@ -82,7 +82,7 @@ of the team refine the backlog on a regular basis to ensure the backlog
 contains the appropriate items, that they are prioritized, and that the
 items at the top of the backlog are ready for delivery.
 
-##  Bandwidth
+## Bandwidth
 
 Bandwidth is the maximum rate of data transfer across a given path.
 Bandwidth may be characterized as network bandwidth, data bandwidth, or
@@ -98,13 +98,13 @@ while meeting a well-defined impairment level in signal power.
 However, the actual bit rate that can be achieved depends not only on
 the signal bandwidth, but also on the noise on the channel.
 
-##  Baseline
+## Baseline
 
 The original version of an *artifact* that serves as the basis for all
 future development work. Baselined artifacts are normally placed
 under *change control*.
 
-##  Bash
+## Bash
 
 Bash is a Unix shell and command language written by Brian Fox for the
 GNU Project as a free software replacement for the Bourne shell. First
@@ -126,7 +126,7 @@ POSIX-compliant shell, but with a number of extensions.
 The shell's name is an acronym for Bourne-again shell, a pun on the name
 of the Bourne shell that it replaces.
 
-##  BASIC
+## BASIC
 
 BASIC (an acronym for Beginner's All-purpose Symbolic Instruction Code)
 is a family of general-purpose, high-level programming languages whose
@@ -137,7 +137,7 @@ other than science and mathematics to use computers. At the time, nearly
 all use of computers required writing custom software, which was
 something only scientists and mathematicians tended to learn.
 
-##  BAU
+## BAU
 
 Business as Usual
 
@@ -148,7 +148,7 @@ BAU may also stand in contradistinction to external events which may
 have the effect of unsettling or distracting those inside an
 organisation
 
-##  BDD
+## BDD
 
 Behavior Driven Development (BDD)
 
@@ -156,12 +156,12 @@ BDD is a practice where members of the team discuss the expected
 behavior of a system in order to build a shared understanding of
 expected functionality.
 
-##  Bench Test
+## Bench Test
 
 A *test* that is performed in the *development environment* and focuses
 on the part of the system being worked on.
 
-##  BER
+## BER
 
 Bit Error Rate
 
@@ -176,7 +176,7 @@ total number of transferred bits during a studied time interval. Bit
 error ratio is a unitless performance measure, often expressed as a
 percentage.
 
-##  BER
+## BER
 
 Basic Encoding Rules
 
@@ -189,19 +189,19 @@ encodings. This format allows a receiver to decode the ASN.1 information
 from an incomplete stream, without requiring any pre-knowledge of the
 size, content, or semantic meaning of the data.
 
-##  Best Practice
+## Best Practice
 
 A practice, technique, process, or idiom that has been proven effective
 and/or efficient for completing a goal or addressing common risks.
 See *CxOne Best Practice* material type.
 
-##  Best Practice Description
+## Best Practice Description
 
 CxBest
 
 CxOne best practice material type, see *CxOneOverview* for description.
 
-##  BGCF
+## BGCF
 
 Breakout Gateway Control Function
 
@@ -211,7 +211,7 @@ determined that the session cannot be routed using DNS or ENUM/DNS. It
 includes routing functionality based on telephone numbers.\
 ![](./images/B/15007813.png?width=480)
 
-##  BGP
+## BGP
 
 Border Gateway Protocol
 
@@ -222,17 +222,17 @@ path vector protocol. The Border Gateway Protocol makes routing
 decisions based on paths, network policies, or rule-sets configured by a
 network administrator and is involved in making core routing decisions.
 
-##  Bjarne Stroustrup
+## Bjarne Stroustrup
 
 Bjarne Stroustrup is a Danish computer scientist, who is most notable
 for the creation and development of the widely used C++ programming
 language.
 
-##  Black-Box Testing
+## Black-Box Testing
 
 Synonym for *functional testing*.
 
-##  Bluetooth
+## Bluetooth
 
 Bluetooth is a wireless technology standard for exchanging data over
 short distances (using short-wavelength UHF radio waves in the ISM band
@@ -247,7 +247,7 @@ telecommunication, computing, networking, and consumer electronics. The
 IEEE standardized Bluetooth as IEEE 802.15.1, but no longer maintains
 the standard.
 
-##  BNF
+## BNF
 
 Backus--Naur form
 
@@ -275,7 +275,7 @@ used; some are exactly defined, including extended Backus--Naur form
 "Jr." `<roman-numeral>`{=html} \"\" `<opt-apt-num>`{=html} ::=
 `<apt-num>`{=html} \"\"
 
-##  BNG
+## BNG
 
 Broadband Network Gateway
 
@@ -285,7 +285,7 @@ subscriber sessions, aggregating traffic from various subscriber
 sessions from an access network, and routing it to the network of the
 Internet Service Provider (ISP) or Network Service Provider (NSP).
 
-##  BOOTP
+## BOOTP
 
 Dynamic IP Address Allocation -- Bootstrap protocol
 
@@ -311,7 +311,7 @@ addition to the IP address assignment. Enterprises used it to roll out a
 pre-configured client (e.g., Windows) installation to newly installed
 PCs.
 
-##  Boston Matrix
+## Boston Matrix
 
 The growth--share matrix (aka the product portfolio matrix,\[ Boston
 Box, BCG-matrix, Boston matrix, Boston Consulting Group analysis,
@@ -322,13 +322,13 @@ product management, strategic management, and portfolio analysis. Some
 analysis of market performance by firms using its principles has called
 its usefulness into question.
 
-##  Bottom-Up Estimation
+## Bottom-Up Estimation
 
 Estimating a system by decomposing it and then estimating each
 decomposed piece individually, rolling up the total to get an entire
 system estimate.
 
-##  BPEL
+## BPEL
 
 Business Process Execution Language
 
@@ -349,7 +349,7 @@ and developers transform the visualizations to BPEL for execution.
 BPEL was standardized by OASIS in 2004 after collaborative efforts to
 create the language by Microsoft, IBM and other companies.
 
-##  BPMN
+## BPMN
 
 Business Process Model and Notation
 
@@ -364,7 +364,7 @@ Process Model and Notation as execution semantics were also introduced
 alongside the notational and diagramming elements.\
 ![](./images/B/15007821.png?width=698)
 
-##  BRAS
+## BRAS
 
 Broadband Remote Access Server
 
@@ -379,7 +379,7 @@ BRAS can also be referred to as a Broadband Network Gateway (BNG)
 
 ![](./images/B/15007833.png?width=440)
 
-##  Broadcast
+## Broadcast
 
 In computer networking, telecommunication and information theory,
 broadcasting is a method of transferring a message to all recipients
@@ -395,7 +395,7 @@ communicates with one receiver.
 
 ![](./images/B/15007839.png?width=227)
 
-##  BSC
+## BSC
 
 The base station controller (BSC) provides, classically, the
 intelligence behind the BTSs. Typically a BSC has tens or even hundreds
@@ -425,7 +425,7 @@ BSC equipment itself and is commonly used in the power supplies and in
 the transmission equipment providing the A-ter interface to PCU.\
 ![](./images/B/15007845.png?width=399)
 
-##  BSS
+## BSS
 
 Base station subsystem
 
@@ -438,25 +438,25 @@ air interface and many other tasks related to the radio network.
 
 BSS interfaces
 
--   Um
+- Um
 
-    -   The air interface between the mobile station (MS) and the BTS.
+  - The air interface between the mobile station (MS) and the BTS.
         This interface uses LAPDm protocol for signaling, to conduct
         call control, measurement reporting, handover, power control,
         authentication, authorization, location update and so on.
         Traffic and signaling are sent in bursts of 0.577 ms at
         intervals of 4.615 ms, to form data blocks each 20 ms.
 
--   Abis
+- Abis
 
-    -   The interface between the BTS and BSC. Generally carried by a
+  - The interface between the BTS and BSC. Generally carried by a
         DS-1, ES-1, or E1 TDM circuit. Uses TDM subchannels for traffic
         (TCH), LAPD protocol for BTS supervision and telecom signaling,
         and carries synchronization from the BSC to the BTS and MS.
 
--   A
+- A
 
-    -   The interface between the BSC and MSC. It is used for carrying
+  - The interface between the BSC and MSC. It is used for carrying
         traffic channels and the BSSAP user part of the SS7 stack.
         Although there are usually transcoding units between BSC and
         MSC, the signaling communication takes place between these two
@@ -464,20 +464,20 @@ BSS interfaces
         information, only the voice or CS data are transcoded or rate
         adapted.
 
--   Ater
+- Ater
 
-    -   The interface between the BSC and transcoder. It is a
+  - The interface between the BSC and transcoder. It is a
         proprietary interface whose name depends on the vendor (for
         example Ater by Nokia), it carries the A interface information
         from the BSC leaving it untouched.
 
--   Gb
+- Gb
 
-    -   Connects the BSS to the SGSN in the GPRS core network.
+  - Connects the BSS to the SGSN in the GPRS core network.
 
             ![](./images/B/15007851.png?width=251)
 
-##  BSS
+## BSS
 
 Business support systems
 
@@ -494,7 +494,7 @@ simply B/OSS.
 The acronym BSS is also used in a singular form to refer to all the
 business support systems viewed as a whole system.
 
-##  BT 21CN
+## BT 21CN
 
 BT 21st Century Network
 
@@ -517,11 +517,11 @@ of Service) availability.
 
 ![](./images/B/15007863.png?width=480)
 
-##  BTNUP
+## BTNUP
 
 See IUP
 
-##  BTS
+## BTS
 
 Base Transceiver Station
 
@@ -537,62 +537,62 @@ BTS is also referred to as the node B (in 3G Networks) or, simply, the
 Base Station (BS). For discussion of the LTE standard the abbreviation
 eNB for evolved node B is widely used
 
-##  bug
+## bug
 
 a coding error in a computer program.
 
-##  Build
+## Build
 
 The process of executing a software build, which is normally largely
 automated. Also refers to the resulting output, which is a built version
 of a system, ready for testing.
 
-##  Build Environment
+## Build Environment
 
 A *development environment* that is isolated and dedicated to the create
 of *builds*. Normally one or more dedicate *build machines*.
 
-##  Build Machine
+## Build Machine
 
 A computer dedicated to the create of software *builds*.
 
-##  build tool
+## build tool
 
 a programming utility that is used when building a new version of a
 program.
 
-##  Burndown Chart
+## Burndown Chart
 
 Burndown charts and burnup charts track the amount of output (in terms
 of hours, story points, or backlog items) a team has completed across an
 iteration or a project.\
 ![](./images/B/15007869.png?width=480)
 
-##  Burst
+## Burst
 
 In telecommunication, a burst transmission or data burst is the
 broadcast of a relatively high-bandwidth transmission over a short
 period.
 
-##  Business Agility Ownership
+## Business Agility Ownership
 
 Business agility is the ability of an organization to sense changes
 internally or externally and respond accordingly in order to deliver
 value to its customers.
 
-##  Business Requirement
+## Business Requirement
 
 High level objectives of the organization or customer requesting a
 system or product. Also known as the *Why Requirements*.
 
-##  Business Schedule
+## Business Schedule
 
 High level project schedule containing top level milestones and their
 associated business goals for the entire project. A business schedule
 often defines a set of top-down schedule constraints that will be
 managed to. Compare to *detailed schedule*.
 
-##  BYOD
+## BYOD
 
 Bring your own device
 

@@ -1,6 +1,6 @@
 # R
 
-##  R
+## R Language
 
 R is a programming language and free software
 environment for statistical computing and graphics that is supported by
@@ -11,7 +11,7 @@ of scholarly literature databases show that R's popularity has increased
 substantially in recent years. As of June 2018, R ranks 10th in the
 TIOBE index, a measure of popularity of programming languages.
 
-##  RACI
+## RACI
 
 Responsible, Accountable, Consulted, and Informed
 
@@ -23,7 +23,7 @@ responsibilities in cross-functional/departmental projects and
 processes.\
 ![](./images/R/15008851.png?width=457)
 
-##  RAD
+## RAD
 
 rapid application development
 
@@ -33,43 +33,36 @@ focus groups; prototyping and early, reiterative user testing of
 designs; reusing software components; and using less formality in
 communication documents, such as reviews.
 
-##  RAD
-
-rapid application development
-
-agile development method; enables developers to build solutions quickly
-by talking directly to end users to meet business requirement.
-
-##  RAD Environment
+## RAD Environment
 
 Refers to a software tool the combines one or more programming languages
 with an *IDE* and a toolbox of modular software user interface
 components.
 
-##  Radius
+## Radius
 
 Remote Authentication Dial In User Service
 
--   -   Protocol described by RFC 2865
+  - -   Protocol described by RFC 2865
         (<http://www.ietf.org/rfc/rfc2865.txt>)
 
--   Provides
+- Provides
 
-    -   Authentication
+  - Authentication
 
-    -   Authorisation
+  - Authorisation
 
-    -   Accounting
+  - Accounting
 
--   TTT use FreeRADIUS Implementation
+- TTT use FreeRADIUS Implementation
 
         ![](./images/R/15008859.png?width=453)
 
-##  Rainbow
+## Rainbow
 
 Opal business solutions, gata does into Remedy 7.6 (Service inventory)
 
-##  RAN
+## RAN
 
 radio access network
 
@@ -85,14 +78,14 @@ as well as the user equipment.
 
 Examples of radio access network types are:
 
--   GRAN: GSM radio access network
+- GRAN: GSM radio access network
 
--   GERAN: essentially the same as GRAN but specifying the inclusion of
+- GERAN: essentially the same as GRAN but specifying the inclusion of
     EDGE packet radio services
 
--   UTRAN: UMTS radio access network
+- UTRAN: UMTS radio access network
 
--   E-UTRAN: The Long Term Evolution (LTE) high speed and low latency
+- E-UTRAN: The Long Term Evolution (LTE) high speed and low latency
     radio access network
 
     It is also possible for a single handset/phone to be simultaneously
@@ -104,7 +97,7 @@ Examples of radio access network types are:
     noticing any disruption in service.\
     ![](./images/R/15008865.png?width=480)
 
-##  RANAP
+## RANAP
 
 Radio Access Network Application Part
 
@@ -125,7 +118,7 @@ pass messages between the User Equipment (UE) and the CN.
 
 In LTE, RANAP has been replaced by S1AP.
 
-##  RANCID
+## RANCID
 
 Really Awesome New Cisco config Differ
 
@@ -133,7 +126,7 @@ A network management application released under a BSD-style license.
 RANCID uses Expect to connect to the routers, send some commands and put
 the results in files.
 
-##  Rapid Application Development
+## Rapid Application Development
 
 RAD
 
@@ -141,7 +134,7 @@ A collection of software development techniques that focuses on user
 interface prototyping techniques and tools to create applications in an
 incremental fashion.
 
-##  RARP
+## RARP
 
 Dynamic IP Address Allocation -- Reverse Address Resolution protocol
 
@@ -177,7 +170,7 @@ Cisco's Overlay Transport Virtualization (OTV). RARP is used to update
 the layer 2 forwarding tables when a MAC address moves between data
 centers.
 
-##  RAS
+## RAS
 
 Remote Access Server
 
@@ -185,7 +178,7 @@ Refers to any combination of hardware and software that enable the
 remote access to a network; often used in dial-up networking scenarios.
 These devices typically use a RADIUS service.
 
-##  RAS
+## RAS
 
 Registration, Admission, and Status
 
@@ -198,7 +191,7 @@ communications networks, designed to support multimedia bandwidths. RAS
 is an important signalling component in networks using voice over IP
 (VoIP).
 
-##  RDBMS
+## RDBMS
 
 relational database management system
 
@@ -223,7 +216,7 @@ databases have recently become popular as an alternative to RDBMS
 databases\
 ![](./images/R/15008871.png?width=402)
 
-##  RDP
+## RDP
 
 Remote Desktop Protocol
 
@@ -245,33 +238,33 @@ Remote Desktop Connection, formerly "Terminal Services Client".
 The protocol is an extension of the ITU-T T.128 application sharing
 protocol.
 
-##  Reading Inspection
+## Reading Inspection
 
 An inspection in which all components of the full inspection process are
 done except the inspection meeting.
 
-##  refactoring
+## refactoring
 
 a process that improves the internal structure of a software system
 without changing its external behaviour.
 
-##  Refactoring
+## Refactoring
 
 Refactoring consists of improving the internal structure of an existing
 program's source code, while preserving its external behavior.
 
-##  Reference
+## Reference
 
 CxRef
 
 CxOne reference material type, see *CxOneOverview* for description.
 
-##  regression testing
+## regression testing
 
 the process of testing changes to computer programs to make sure that
 the older programming still works with the new changes.
 
-##  Regular expression
+## Regular expression
 
 A regular expression, regex or regexp (sometimes called a rational
 expression) is, in theoretical computer science and formal language
@@ -279,48 +272,48 @@ theory, a sequence of characters that define a search pattern. Usually
 this pattern is then used by string searching algorithms for "find" or
 "find and replace" operations on strings, or for input validation.
 
-##  Relative Estimation
+## Relative Estimation
 
 Relative estimation consists of estimating tasks or user stories by
 comparison or by grouping of items of equivalent difficulty.
 
-##  Release
+## Release
 
 A software release. Providing a deployable version of a
 software *system* to a customer, e.g., test group, client, customer,
 etc.
 
-##  Release Management
+## Release Management
 
 The identification, packaging, and delivery of the elements of the
 product to an external or internal customer.
 
-##  Release Test
+## Release Test
 
 Test to ensure software is ready for a *release*.
 
-##  Requirement
+## Requirement
 
 A detailed description of what the software is supposed to do
 
-##  Requirements
+## Requirements
 
 are written as 'stories' that are collated into a prioritised list
 called the 'Backlog'.
 
-##  Requirements
+## Requirements
 
 Software requirements. Determining and capturing what a software system
 should do. Also denotes the requirements CKA.
 See *CxStand\_Requirements* for more information.
 
-##  Requirements Lead
+## Requirements Lead
 
 Responsible for defining, maintaining, and tracing product requirements.
 Ensures proper end-user documentation is developed from the
 requirements.
 
-##  REST
+## REST
 
 Representational State Transfer
 
@@ -353,22 +346,22 @@ the system as a whole, even while it is running.
 
 ![](./images/R/15008877.png?width=480)
 
-##  Review
+## Review
 
 A defined process in which people who are not the author of an artifact
 look over it with the intent of finding issues. Reviews range in
 formality from *desk checks* to *inspections*.
 
-##  Reviewer
+## Reviewer
 
 A person who participates in a review to identify issues in an artifact
 
-##  Revision
+## Revision
 
 An instance of a specific artifact, generally as noted by an automated
 system.
 
-##  Revision Control
+## Revision Control
 
 RC
 
@@ -376,12 +369,12 @@ The identification, storage, and management of projects artifacts and
 the revisions over time of those artifacts. Usually performed to
 artifacts stored in electronic form, through an automated system.
 
-##  Rework
+## Rework
 
 Any unforeseen or unplanned activity necessary to bring
 an *artifact* into conformance with project needs. Compare to *update*.
 
-##  RFC
+## RFC
 
 RF connector
 
@@ -406,7 +399,7 @@ response to the enormous market demand for inexpensive, high-data-rate
 wireless
 transceivers. ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "worddav5ace6a75721c51dcca734d64220d0cc9.png")
 
-##  RFC
+## RFC
 
 Request For Comment
 
@@ -415,7 +408,7 @@ Internet Engineering Task Force (IETF) that describes the specifications
 for a particular technology. When an RFC is ratified, it becomes a
 formal standards document.
 
-##  RIP
+## RIP
 
 Routing Information Protocol
 
@@ -444,7 +437,7 @@ does not require any parameters unlike other protocols.
 RIP uses the User Datagram Protocol (UDP) as its transport protocol, and
 is assigned the reserved port number 520.
 
-##  Risk
+## Risk
 
 An undesirable outcome.\
 Risks on projects generally refer to the captured representation of a
@@ -452,21 +445,21 @@ possible future negative impact to a project's feature, budget,
 schedule, or quality. Risks are a type of *corrective activity
 management* item.
 
-##  Risk Analysis
+## Risk Analysis
 
 Assesses *risks* for the likelihood and impact of occurrence.
 
-##  Risk Identification
+## Risk Identification
 
 The elicitation and determination of current *risks*.
 
-##  Risk List
+## Risk List
 
 A technique for *extrinsic risk management* that documents current and
 previous *risks*. Normally includes analysis information and mitigation
 plans.
 
-##  Risk Management
+## Risk Management
 
 A process or activity involving formal or informal means of
 identification, control, and elimination of project risk. Risk
@@ -474,12 +467,12 @@ management may be explicit, or may be implicit in other activities
 (see *intrinsic and extrinsic risk management*). Managing identified
 risks is part of *corrective activity management*.
 
-##  Risk Mitigation
+## Risk Mitigation
 
 The planning or steps taken to minimize either the probability or impact
 of a *risk*.
 
-##  Risk Reward Matric
+## Risk Reward Matric
 
 A risk-reward analysis is a very simple tool which can help you assess
 the risk and reward profile of completely different options. It works in
@@ -487,15 +480,15 @@ the same way as a risk-return analysis which you may already be familiar
 with.\
 It can be applied at any level, for example:
 
--   by a CEO for comparing different strategic directions for the
+- by a CEO for comparing different strategic directions for the
     company.
 
--   by a program manager deciding which projects to keep within the
+- by a program manager deciding which projects to keep within the
     program and which to discard.
 
--   by a project manager deciding how to sequence tasks
+- by a project manager deciding how to sequence tasks
 
--   or simply by an individual team member deciding how best to spend
+- or simply by an individual team member deciding how best to spend
     their day.
 
     The template works by having risk plotted along one axis and reward
@@ -545,7 +538,7 @@ It can be applied at any level, for example:
     investigative work can start on the new product development option
     with some of the spare resource.
 
-##  RNC
+## RNC
 
 Radio Network Controller
 
@@ -575,7 +568,7 @@ Protocols\
 Iub, Iu and Iur protocols all carry both user data and signalling (that
 is, control plane).
 
--   Signalling protocol responsible for the control of the Node B by the
+- Signalling protocol responsible for the control of the Node B by the
     RNC is called NBAP (Node-B Application Part). NBAP is subdivided
     into Common and Dedicated NBAP (C-NBAP and D-NBAP), where Common
     NBAP controls overall Node B functionality and Dedicated NBAP
@@ -585,21 +578,21 @@ is, control plane).
     handles common NBAP procedures and Communication Control Port (CCP)
     which handles dedicated NBAP procedures.
 
--   Control plane protocol for the transport layer is called ALCAP
+- Control plane protocol for the transport layer is called ALCAP
     (Access Link Control Application Protocol). Basic functionality of
     ALCAP is multiplexing of different users onto one AAL2 transmission
     path using channel IDs (CIDs). ALCAP is carried over Iub and Iu-CS
     interfaces.
 
--   Signalling protocol responsible for communication between RNC and
+- Signalling protocol responsible for communication between RNC and
     the core network is called RANAP (Radio Access Network Application
     Part), and is carried over Iu interface.
 
--   Signalling protocol responsible for communications between RNCs is
+- Signalling protocol responsible for communications between RNCs is
     called RNSAP (Radio Network Subsystem Application Part) and is
     carried on the Iur interface.
 
-##  RNSAP
+## RNSAP
 
 Radio Network Subsystem Application Part
 
@@ -640,19 +633,19 @@ Physical links------→→→ Physical links
 
 RNSAP Layer Architecture
 
-##  Role-feature-reason
+## Role-feature-reason
 
 The "role-feature-reason" template is one of the most commonly
 recommended aids to write user stories: As a ... I want ... So that ...
 
-##  Rolling Wave Planning
+## Rolling Wave Planning
 
 Planning a project, often with an iterative lifecycle, with a sliding
 window of visibility. Items closer to the present are planned and
 tracked with greater detail than items further in the future.
 See *project headlights*.
 
-##  Round Robin
+## Round Robin
 
 Round-robin (RR) is one of the algorithms employed by process and
 network schedulers in computing. As the term is generally used, time
@@ -668,7 +661,7 @@ from other fields, where each person takes an equal share of something
 in turn.\
 ![](./images/R/15008907.png?width=545)
 
-##  Router
+## Router
 
 A router is a networking device that forwards data packets between
 computer networks. Routers perform the traffic directing functions on
@@ -693,7 +686,7 @@ data at high speed along the optical fiber lines of the Internet
 backbone. Though routers are typically dedicated hardware devices,
 software-based routers also exist
 
-##  RPC
+## RPC
 
 In distributed computing, a remote procedure call (RPC) is when a
 computer program causes a procedure (subroutine) to execute in a
@@ -719,7 +712,7 @@ address space is the same; while if they are on different hosts, the
 physical address space is different. Many different (often incompatible)
 technologies have been used to implement the concept.
 
-##  RRC
+## RRC
 
 Radio Resource Control
 
@@ -782,7 +775,7 @@ CELL\_DCH, CELL\_FACH, CELL\_PCH, URA\_PCH, IDLE, DISCONNECT -- and some
 of the possible transitions.\
 ![](./images/R/15008919.png?width=486)
 
-##  RSTP
+## RSTP
 
 Rapid Spanning Tree Protocol
 
@@ -802,7 +795,7 @@ interval that is used by RSTP for several purposes; its default value is
 Standard IEEE 802.1D-2004 incorporates RSTP and obsoletes the original
 STP standard.
 
-##  RSVP
+## RSVP
 
 Resource Reservation Protocol
 
@@ -829,7 +822,7 @@ engineering extension of RSVP, or RSVP-TE, is becoming more widely
 accepted nowadays in many QoS-oriented networks. Next Steps in Signaling
 (NSIS) is a proposed replacement for RSVP.
 
-##  RTCP
+## RTCP
 
 Real-Time Control Protocol
 
@@ -848,7 +841,7 @@ streaming multimedia session. An application may use this information to
 control quality of service parameters, perhaps by limiting flow, or
 using a different codec.
 
-##  RTOS
+## RTOS
 
 A real-time operating system (RTOS) is an operating system (OS) intended
 to serve real-time applications that process data as it comes in,
@@ -878,7 +871,7 @@ latency and minimal thread switching latency; a real-time OS is valued
 more for how quickly or how predictably it can respond than for the
 amount of work it can perform in a given period of time.
 
-##  RTP
+## RTP
 
 Real-time Protocol
 
@@ -897,7 +890,7 @@ foundations of Voice over IP and in this context is often used in
 conjunction with a signalling protocol such as the Session Initiation
 Protocol (SIP) which establishes connections across the network.
 
-##  RTSP
+## RTSP
 
 Real Time Streaming Protocol
 
@@ -913,7 +906,7 @@ The transmission of streaming data itself is not a task of RTSP. Most
 RTSP servers use the Real-time Transport Protocol (RTP) in conjunction
 with Real-time Control Protocol (RTCP) for media stream delivery.
 
-##  Ruby
+## Ruby
 
 Ruby is a dynamic, interpreted, reflective, object-oriented,
 general-purpose programming language. It was designed and developed in
@@ -924,7 +917,7 @@ Eiffel, Ada, and Lisp. It supports multiple programming paradigms,
 including functional, object-oriented, and imperative. It also has a
 dynamic type system and automatic memory management.
 
-##  Ruby on rails
+## Ruby on rails
 
 Ruby on Rails, or Rails, is a server-side web application framework
 written in Ruby under the MIT License. Rails is a
@@ -937,12 +930,12 @@ software engineering patterns and paradigms, including convention over
 configuration (CoC), don't repeat yourself (DRY), and the active record
 pattern.
 
-##  Rule of Simplicity
+## Rule of Simplicity
 
 Rules of Simplicity is a set of criteria, in priority order, proposed by
 Kent Beck to judge whether some source code is "simple enough."
 
-##  RUP
+## RUP
 
 Rational Unified Process
 

@@ -1,6 +1,6 @@
 # C
 
-## C
+## C Language
 
 C is a general-purpose, imperative computer programming language,
 supporting structured programming, lexical variable scope and recursion,
@@ -37,31 +37,6 @@ int main() {
    // printf() displays the string inside quotation
    printf("Hello, World!");
    return 0;
-}
-```
-
-## C\#
-
-C\# is a multi-paradigm programming language encompassing strong typing,
-imperative, declarative, functional, generic, object-oriented
-(class-based), and component-oriented programming disciplines. It was
-developed around 2000 by Microsoft within its .NET initiative and later
-approved as a standard by Ecma (ECMA-334) and ISO (ISO/IEC 23270:2006).
-C\# is one of the programming languages designed for the Common Language
-Infrastructure.
-
-C\# is a general-purpose, object-oriented programming language.
-
-``` {.c#}
-// Hello World! program
-namespace HelloWorld
-{
-    class Hello {         
-        static void Main(string[] args)
-        {
-            System.Console.WriteLine("Hello World!");
-        }
-    }
 }
 ```
 
@@ -103,6 +78,45 @@ standard thereafter.
 int main() {
     std::cout << "Hello World!";
     return 0;
+}
+```
+
+## C-Tag
+
+Subscriber VLAN Tag
+
+The IEEE standard 802.1ad provides for double-tagging by service
+providers so that they can use VLANs allocated internally together with
+traffic already tagged as VLANs by service provider customers.
+
+In this double tagging, the C-Tag (customer tag) is the inner tag set by
+the customer. The S-Tag is the outer tag next to the MAC address.\
+![](./images/C/15007942.png?width=485)
+
+![](./images/C/15007948.png?width=416)
+
+## C\#
+
+C\# is a multi-paradigm programming language encompassing strong typing,
+imperative, declarative, functional, generic, object-oriented
+(class-based), and component-oriented programming disciplines. It was
+developed around 2000 by Microsoft within its .NET initiative and later
+approved as a standard by Ecma (ECMA-334) and ISO (ISO/IEC 23270:2006).
+C\# is one of the programming languages designed for the Common Language
+Infrastructure.
+
+C\# is a general-purpose, object-oriented programming language.
+
+``` {.c#}
+// Hello World! program
+namespace HelloWorld
+{
+    class Hello {         
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+    }
 }
 ```
 
@@ -247,29 +261,29 @@ but it can also be applied to other processes.
 Structure\
 The model involves five aspects:
 
--   Maturity Levels: a 5-level process maturity continuum - where the
+- Maturity Levels: a 5-level process maturity continuum - where the
     uppermost (5th) level is a notional ideal state where processes
     would be systematically managed by a combination of process
     optimization and continuous process improvement.
 
--   Key Process Areas: a Key Process Area identifies a cluster of
+- Key Process Areas: a Key Process Area identifies a cluster of
     related activities that, when performed together, achieve a set of
     goals considered important.
 
--   Goals: the goals of a key process area summarize the states that
+- Goals: the goals of a key process area summarize the states that
     must exist for that key process area to have been implemented in an
     effective and lasting way. The extent to which the goals have been
     accomplished is an indicator of how much capability the organization
     has established at that maturity level. The goals signify the scope,
     boundaries, and intent of each key process area.
 
--   Common Features: common features include practices that implement
+- Common Features: common features include practices that implement
     and institutionalize a key process area. There are five types of
     common features: commitment to perform, ability to perform,
     activities performed, measurement and analysis, and verifying
     implementation.
 
--   Key Practices: The key practices describe the elements of
+- Key Practices: The key practices describe the elements of
     infrastructure and practice that contribute most effectively to the
     implementation and institutionalization of the area.
 
@@ -280,19 +294,19 @@ The model involves five aspects:
     organization moves up these five levels. While not rigorous, the
     empirical evidence to date supports this belief".
 
--   Initial (chaotic, ad hoc, individual heroics) - the starting point
+- Initial (chaotic, ad hoc, individual heroics) - the starting point
     for use of a new or undocumented repeat process.
 
--   Repeatable - the process is at least documented sufficiently such
+- Repeatable - the process is at least documented sufficiently such
     that repeating the same steps may be attempted.
 
--   Defined - the process is defined/confirmed as a standard business
+- Defined - the process is defined/confirmed as a standard business
     process
 
--   Capable - the process is quantitatively managed in accordance with
+- Capable - the process is quantitatively managed in accordance with
     agreed-upon metrics.
 
--   Efficient - process management includes deliberate process
+- Efficient - process management includes deliberate process
     optimization/improvement.
 
     Within each of these maturity levels are Key Process Areas which
@@ -374,15 +388,15 @@ which each bearer channel has a signaling channel dedicated to it.
 CCS offers the following advantages over CAS, in the context of the
 PSTN:
 
--   Faster call set-up time
+- Faster call set-up time
 
--   Greater trunking efficiency due to the quicker set up and clearing,
+- Greater trunking efficiency due to the quicker set up and clearing,
     thereby reducing traffic on the network
 
--   Can transfer additional information along with the signaling
+- Can transfer additional information along with the signaling
     traffic, providing features such as caller ID
 
--   Signaling can be performed mid-call
+- Signaling can be performed mid-call
 
     The most common CCS signaling methods in use today are Integrated
     Services Digital Network (ISDN) and Signalling System No. 7 (SS7).
@@ -667,9 +681,9 @@ installations. It holds data relating to a collection of IT assets
 descriptive relationships between such assets. The repository provides a
 means of understanding:
 
--   the composition of critical assets such as information systems
+- the composition of critical assets such as information systems
 
--   the upstream sources or dependencies of assets\
+- the upstream sources or dependencies of assets\
     the downstream targets of assets
 
 ## CNG
@@ -1223,9 +1237,9 @@ CRC cards are usually created from index cards. Members of a
 brainstorming session will write up one CRC card for each relevant
 class/object of their design. The card is partitioned into three areas:
 
--   On top of the card, the class name
+- On top of the card, the class name
 
--   On the left, the responsibilities of the class\
+- On the left, the responsibilities of the class\
     On the right, collaborators (other classes) with which this class
     interacts to fulfill its responsibilities
 
@@ -1237,7 +1251,7 @@ Several roles of SIP servers or proxies, collectively called Call
 Session Control Function (CSCF), are used to process SIP signaling
 packets in the IMS.
 
--   A Proxy-CSCF (P-CSCF) is a SIP proxy that is the first point of
+- A Proxy-CSCF (P-CSCF) is a SIP proxy that is the first point of
     contact for the IMS terminal. It can be located either in the
     visited network (in full IMS networks) or in the home network (when
     the visited network is not IMS compliant yet). Some networks may use
@@ -1251,13 +1265,13 @@ packets in the IMS.
     IMS Management Object (MO)) or in the ISIM or assigned in the PDP
     Context (in General Packet Radio Service (GPRS)).
 
--   An Interrogating-CSCF (I-CSCF) is another SIP function located at
+- An Interrogating-CSCF (I-CSCF) is another SIP function located at
     the edge of an administrative domain. Its IP address is published in
     the Domain Name System (DNS) of the domain (using NAPTR and SRV type
     of DNS records), so that remote servers can find it, and use it as a
     forwarding point (e.g., registering) for SIP packets to this domain.
 
--   A Serving-CSCF (S-CSCF) is the central node of the signaling plane.
+- A Serving-CSCF (S-CSCF) is the central node of the signaling plane.
     It is a SIP server, but performs session control too. It is always
     located in the home network. It uses Diameter Cx and Dx interfaces
     to the HSS to download user profiles and upload user-to-S-CSCF
@@ -1351,20 +1365,6 @@ validation service for CSS documents.
 In addition to HTML, other markup languages support the use of CSS,
 including XHTML, plain XML, SVG, and XUL
 
-## C-Tag
-
-Subscriber VLAN Tag
-
-The IEEE standard 802.1ad provides for double-tagging by service
-providers so that they can use VLANs allocated internally together with
-traffic already tagged as VLANs by service provider customers.
-
-In this double tagging, the C-Tag (customer tag) is the inner tag set by
-the customer. The S-Tag is the outer tag next to the MAC address.\
-![](./images/C/15007942.png?width=485)
-
-![](./images/C/15007948.png?width=416)
-
 ## Customer Development
 
 Customer development is a four-step framework that provides a way to use
@@ -1392,13 +1392,13 @@ also keeps the previous N bits of output (N = 3 or N = 4 are very
 common) to determine adjustments to the step size; if the previous N
 bits are all 1s or 0s, the step size is increased. Otherwise, the step
 size is decreased (usually in an exponential manner, with
-{`\displaystyle `{=tex}`\tau `{=tex}} `\tau `{=tex}being in the range of
+{`\displaystyle`{=tex}`\tau`{=tex}} `\tau`{=tex}being in the range of
 5 ms). The step size is adjusted for every input sample processed.
 
 To allow for bit errors to fade out and to allow (re)synchronization to
 an ongoing bitstream, the output register (which keeps the reference
 sample) is normally realized as a leaky integrator with a time constant
-( {`\displaystyle `{=tex}`\tau `{=tex}} `\tau `{=tex}) of about 1 ms.
+( {`\displaystyle`{=tex}`\tau`{=tex}} `\tau`{=tex}) of about 1 ms.
 
 The decoder reverses this process, starting with the reference sample,
 and adding or subtracting the step size according to the bit stream. The

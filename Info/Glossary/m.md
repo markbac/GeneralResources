@@ -1,6 +1,6 @@
 # M
 
-##  M2M
+## M2M
 
 Machine to machine
 
@@ -22,7 +22,7 @@ IP networks around the world has made machine to machine communication
 quicker and easier while using less power. These networks also allow new
 business opportunities for consumers and suppliers.
 
-##  MAC
+## MAC
 
 Media Access Control
 
@@ -63,7 +63,7 @@ verifying the sender's frame check sequences, and strips off the
 sender's preamble and padding before passing the data up to the higher
 layers.
 
-##  MAC Address
+## MAC Address
 
 Media Access Control Address
 
@@ -93,7 +93,7 @@ Identifier.
 
 ![](./images/M/15008537.png?width=475)
 
-##  MAC Flooding
+## MAC Flooding
 
 In computer networking, a media access control attack or MAC flooding is
 a technique employed to compromise the security of network switches. The
@@ -102,7 +102,7 @@ and forcing a unicast flooding behavior potentially sending sensitive
 information to portions of the network where it is not normally intended
 to go.
 
-##  MAC Spoofing
+## MAC Spoofing
 
 MAC spoofing is a technique for changing a factory-assigned Media Access
 Control (MAC) address of a network interface on a networked device. The
@@ -114,7 +114,7 @@ The process of masking a MAC address is known as MAC spoofing.
 Essentially, MAC spoofing entails changing a computer's identity, for
 any reason, and it is relatively easy.
 
-##  Machine code
+## Machine code
 
 Machine code is a computer program written in machine language
 instructions that can be executed directly by a computer's central
@@ -148,30 +148,30 @@ visible to the programmer, but internally many processors use microcode
 or optimise and transform machine code instructions into sequences of
 micro-ops, this is not generally considered to be a machine code per se
 
-##  Macro Estimation
+## Macro Estimation
 
 Refers to estimating the whole of something. See *top-down estimation*.
 Also a synonym for *project estimate*.
 
-##  MAG
+## MAG
 
 L2/B2B Aggregation Metro (All Legacy L2 Devices for B2B)
 
 L2/B2B Aggregation Metro (All Legacy L2 Devices for B2B) - Location:
 Metro
 
-##  Maintenance
+## Maintenance
 
 Software maintenance. Deploying, updating, correcting, evolving, and
 operating software systems. Also denotes the maintenance CKA.
 See *CxStand\_Maintenance* for more information.
 
-##  Maintenance Plan
+## Maintenance Plan
 
 A plan specifying the method for maintaining the system after its
 initial release.
 
-##  MAN
+## MAN
 
 Metropolitan Area Network
 
@@ -187,7 +187,7 @@ point-to-point connections between them. The latter usage is also
 sometimes referred to as a campus network.\
 ![](./images/M/15008545.png?width=485)
 
-##  Management by Walking Around
+## Management by Walking Around
 
 MBWA
 
@@ -198,7 +198,7 @@ track actual progress to plan, and facilitate quick issue resolution.\
 CxOne encourages *MBWA* by all project leads and others with project
 responsibilities.
 
-##  Management Plane
+## Management Plane
 
 In computer networking, the management plane of a networking device is
 the element of a system that configures, monitors, and provides
@@ -214,7 +214,7 @@ management plane.
 
 ![](./images/M/15138919.png?width=226)
 
-##  MANET
+## MANET
 
 Mobile Adhoc NETwork
 
@@ -241,12 +241,12 @@ MHz -- 5 GHz).\
 
 ![](./images/M/15008557.png?width=462)
 
-##  Manual Testing
+## Manual Testing
 
 Executing of *test cases* by a human operator exercising a *system* and
 noting results.
 
-##  MAP
+## MAP
 
 Mobile Application Part
 
@@ -259,18 +259,18 @@ Visitor Location Register, Mobile Switching Center, Equipment Identity
 Register, Authentication Centre, Short message service center and
 Serving GPRS Support Node (SGSN).
 
-##  MAS
+## MAS
 
 MPLS L2/B2B Aggregation Metro (M2F)
 
 MPLS L2/B2B Aggregation Metro (M2F) - Location: Metro
 
-##  Material
+## Material
 
 Materials support the creation, review, and maintenance of different
 types of artifacts. See *CxOneOverview* for additional information.
 
-##  MBMS
+## MBMS
 
 Multimedia Broadcast Multicast Services
 
@@ -287,7 +287,7 @@ Term Evolution) network. eMBMS is also known as LTE Broadcast.
 Target applications include mobile TV and radio broadcasting, live
 streaming video services, as well as file delivery and emergency alerts.
 
-##  MBORC
+## MBORC
 
 Matter Beyond Our Reasonable Control
 
@@ -296,24 +296,24 @@ which releases Openreach from liability under the relevant product terms
 and conditions in circumstances where the following criteria apply to
 our failure to perform the contract:
 
--   The cause of the incident is beyond our reasonable control and
+- The cause of the incident is beyond our reasonable control and
 
--   The fix to remedy within contractual timescales is also beyond our
+- The fix to remedy within contractual timescales is also beyond our
     reasonable control.
 
     Examples of MBORC situations are:
 
--   Network attacks, i.e. criminal damage to network apparatus
+- Network attacks, i.e. criminal damage to network apparatus
 
--   BT plant damaged by non-BT contractors
+- BT plant damaged by non-BT contractors
 
--   a PCP or pole being knocked over or damaged in a traffic accident
+- a PCP or pole being knocked over or damaged in a traffic accident
 
--   damage caused by exceptionally severe weather, eg floods or storm
+- damage caused by exceptionally severe weather, eg floods or storm
     damage\
     a gas leak preventing access to underground cables/joints
 
-##  MD5
+## MD5
 
 Message Digest 5
 
@@ -337,7 +337,7 @@ having been exploited in the field, most infamously by the Flame malware
 in 2012. The CMU Software Engineering Institute considers MD5
 essentially "cryptographically broken and unsuitable for further use"
 
-##  MDF
+## MDF
 
 Main Distribution Frame
 
@@ -346,7 +346,7 @@ connected to the exchange equipment.
 
 ![](./images/M/15237176.png?width=226)
 
-##  Mediation
+## Mediation
 
 Telecommunications mediation is a process that converts call data to
 pre-defined layouts that can be imported by a specific billing system or
@@ -368,19 +368,19 @@ accept data only in a limited set of formats.\
 Functionality\
 Typically a mediation platform is used for the following tasks:
 
--   Collection and validation of CDRs
+- Collection and validation of CDRs
 
--   Filtering out of non billing-relevant CDRs
+- Filtering out of non billing-relevant CDRs
 
--   Collating
+- Collating
 
--   Correlation of different input sources CDRs
+- Correlation of different input sources CDRs
 
--   Aggregation of partial CDRs related to the same call
+- Aggregation of partial CDRs related to the same call
 
--   Format change and CDRs normalization
+- Format change and CDRs normalization
 
--   Business transformation of data
+- Business transformation of data
 
     In a telecom billing scenario, mediation is the first step after
     receiving a CDR. The mediated CDR is forwarded to a rating engine,
@@ -409,45 +409,45 @@ Typically a mediation platform is used for the following tasks:
 
     Following list provides insight on mediation software activities
 
--   Collection and Archive
+- Collection and Archive
 
--   Decoding/Encoding
+- Decoding/Encoding
 
--   Normalization (Common Format)
+- Normalization (Common Format)
 
--   Filtering
+- Filtering
 
--   Conversion
+- Conversion
 
--   Validation
+- Validation
 
--   Record Enrichment (Using Complex Reference Data)
+- Record Enrichment (Using Complex Reference Data)
 
--   Duplicate Record Detection
+- Duplicate Record Detection
 
--   Aggregation or Correlation
+- Aggregation or Correlation
 
--   Buffering
+- Buffering
 
--   Cloning
+- Cloning
 
--   Sorting
+- Sorting
 
--   Downstream Format Mapping
+- Downstream Format Mapping
 
--   Header and Trailer generation
+- Header and Trailer generation
 
--   Downstream Distribution
+- Downstream Distribution
 
--   Error Messaging and Alarms
+- Error Messaging and Alarms
 
--   Auditing and Reports
+- Auditing and Reports
 
--   Reconciliation
+- Reconciliation
 
--   Reference Data Configuration
+- Reference Data Configuration
 
--   Provisioning services for the subscription.
+- Provisioning services for the subscription.
 
     Complementary to Billing Mediation functions, comprehensive
     mediation platforms also provide functionality dedicated to Service
@@ -467,7 +467,7 @@ Typically a mediation platform is used for the following tasks:
 
     ![](./images/M/15008563.png?width=115)![](./images/M/15008569.png?width=278)
 
-##  MELP
+## MELP
 
 Mixed-excitation linear prediction
 
@@ -493,12 +493,12 @@ Since the MELPe's lower rates (600 and 1200 bit/s) are supersets of the
 same for all rates. The lower rates use increased frames and lookahead,
 as well as codebook size, therefore they require more memory.  
 
-##  Metric
+## Metric
 
 Data collected or derived from a project or organization to determine if
 it posses the desired attributes.
 
-##  MGCF
+## MGCF
 
 media gateway controller function
 
@@ -509,7 +509,7 @@ Media Gateway (MGW) across an H.248 interface.
 
 ![](./images/M/14123073.png)
 
-##  MGCP
+## MGCP
 
 Media Gateway Control Protocol
 
@@ -536,7 +536,7 @@ negotiating the media streams to be transmitted in a call session and
 the Real-time Transport Protocol (RTP) for framing the media streams.\
 ![](./images/M/15008575.png?width=480)
 
-##  MGW
+## MGW
 
 Media Gateway
 
@@ -546,7 +546,7 @@ don't match (e.g., IMS might use AMR, PSTN might use G.711).
 
 ![](./images/M/15302756.png)
 
-##  MIB
+## MIB
 
 management information base
 
@@ -572,24 +572,24 @@ Management of TCP/IP-based internets", and RFC 1157, "A Simple Network
 Management Protocol".\
 ![](./images/M/15008581.png?width=480)
 
-##  Micro Estimation
+## Micro Estimation
 
 Refers to estimating the details of something. See *bottom-up
 estimation*. Also a synonym for task *estimate*.
 
-##  Microservice
+## Microservice
 
 Microservices - also known as the microservice architecture - is an
 architectural style that structures an application as a collection of
 services that are
 
--   Highly maintainable and testable
+- Highly maintainable and testable
 
--   Loosely coupled
+- Loosely coupled
 
--   Independently deployable
+- Independently deployable
 
--   Organized around business capabilities.
+- Organized around business capabilities.
 
     The microservice architecture enables the continuous
     delivery/deployment of large, complex applications. It also enables
@@ -599,34 +599,34 @@ services that are
 
     ![](./images/M/15008593.png)
 
-##  Microstone
+## Microstone
 
 Synonym for *miniature milestone*.
 
-##  Mil-COTS
+## Mil-COTS
 
 See COTS
 
-##  Milestone
+## Milestone
 
 A waypoint in a schedule. Often represents a notable accomplishment or
 date.
 
-##  Milestone Release
+## Milestone Release
 
 A *release* that is produced for a milestone in a project plan.
 
-##  Milestone Retrospective
+## Milestone Retrospective
 
 A Milestone Retrospective is a team's detailed analysis of the project's
 significant events after a set period of time or at the project's end.
 
-##  Milestone Schedule
+## Milestone Schedule
 
 A synonym for a *business schedule* focused on defining formally project
 milestones.
 
-##  MIMO
+## MIMO
 
 multiple-input and multiple-output
 
@@ -648,14 +648,14 @@ smart antenna techniques developed to enhance the performance of a
 single data signal, such as beamforming and diversity.\
 ![](./images/M/15008599.png?width=480)
 
-##  Miniature Milestone
+## Miniature Milestone
 
 A milestone capturing a collection of short, coherent tasks that
 requires a couple of days or less to complete. For project tracking
 purposes completion is binary; a *miniature milestone* is considered to
 be either done or not done, but never partially done.
 
-##  MME
+## MME
 
 Mobility Management Entity
 
@@ -678,14 +678,14 @@ also provides the control plane function for mobility between LTE and
 the SGSN. The MME also terminates the S6a interface towards the home HSS
 for roaming UEs.
 
-##  MMF
+## MMF
 
 Minimum Marketable Feature
 
 A Minimum Marketable Feature is a small, self-contained feature that can
 be developed quickly and that delivers significant value to the user.
 
-##  MNC
+## MNC
 
 Bayonet Neill--Concelman
 
@@ -701,13 +701,13 @@ Ethernet. BNC connectors are made to match the characteristic impedance
 of cable at either 50 ohms or 75 ohms. They are usually applied for
 frequencies below 4 GHz\[ and voltages below 500 volts.
 
-##  Mob Programming
+## Mob Programming
 
 Mob Programming is a software development approach where the whole team
 works on the same thing, at the same time, in the same space, and at the
 same computer.
 
-##  Mobile Cell
+## Mobile Cell
 
 Modern mobile phone networks use cells because radio frequencies are a
 limited, shared resource. Cell-sites and handsets change frequency under
@@ -747,30 +747,30 @@ US, while Europe and many countries converged towards the GSM standard.
 
 ![](./images/M/15008605.png?width=480)
 
-##  Mobile Networks 2G/3G
+## Mobile Networks 2G/3G
 
 ![](./images/M/15008611.png)
 
-##  Mock Objects
+## Mock Objects
 
 Mock Objects (commonly used in the context of crafting automated unit
 tests) consist of instantiating a test-specific version of a software
 component.
 
-##  Model
+## Model
 
 A representation of a system or process that uses *diagrams* and
 abstraction to describe characteristics of the systems.
 
-##  Modeling
+## Modeling
 
 The practice of using models in *requirements* and *design* activities.
 
-##  Moderator
+## Moderator
 
 Leads an *inspection* meeting.
 
-##  MOS
+## MOS
 
 Mean Opinion Score
 
@@ -791,7 +791,7 @@ listening, talking, or video quality tests.\
 
 ![](./images/M/15237186.png?width=283)
 
-##  MP3
+## MP3
 
 MP3 (formally MPEG-1 Audio Layer III or MPEG-2 Audio Layer III) is an
 audio coding format for digital audio. Originally defined as the third
@@ -832,7 +832,7 @@ original CD audio.
 Also designed as a streamable format, segments of a transmission can be
 lost without affecting the ability to decode later segments.
 
-##  MPEG
+## MPEG
 
 Moving Picture Experts Group
 
@@ -840,7 +840,7 @@ The Moving Picture Experts Group (MPEG) is a working group of
 authorities that was formed by ISO and IEC to set standards for audio
 and video compression and transmission. s
 
-##  MPEG4
+## MPEG4
 
 MPEG-4 is a method of defining compression of audio and visual (AV)
 digital data. It was introduced in late 1998 and designated a standard
@@ -851,7 +851,7 @@ audio-visual objects. Uses of MPEG-4 include compression of AV data for
 web (streaming media) and CD distribution, voice (telephone, videophone)
 and broadcast television applications.
 
-##  MPF
+## MPF
 
 Metallic Path Facility
 
@@ -859,7 +859,7 @@ Pair of copper wires (unshielded twisted pair) that run from a Main
 Distribution Frame (MDF) at a exchange to the end user.\
 ![](./images/M/15008623.png?width=582)
 
-##  MPS
+## MPS
 
 Metro Primary Switch
 
@@ -868,7 +868,7 @@ Formally known as NGM
 
 ![](./images/M/15008629.png?width=485)
 
-##  MQTT
+## MQTT
 
 Message Queuing Telemetry Transport
 
@@ -894,7 +894,7 @@ Historically, the "MQ" in "MQTT" came from IBM's MQ Series message
 queuing product line.\[6\] However, queuing itself is not required to be
 supported as a standard feature in all situations.
 
-##  MRF
+## MRF
 
 Media Resource Function
 
@@ -904,17 +904,17 @@ and announcements.
 
 ![](./images/M/14123067.png?width=226)
 
-##  MRS
+## MRS
 
 Multi-Residence data
 
 Royal Mail Multi-Residence data
 
-##  MRTIE
+## MRTIE
 
 Maximum Relative Time Interval Error
 
-##  MSAN
+## MSAN
 
 Multi-Service Access Node
 
@@ -925,7 +925,7 @@ connects customers' telephone lines to the core network, to provide
 telephone, ISDN, and broadband such as DSL all from a single platform.\
 ![](./images/M/15008635.png?width=479)
 
-##  MSC
+## MSC
 
 Mobile switching center
 
@@ -971,7 +971,7 @@ starting from 3GPP Release 4.
 
 ![](./images/M/15138931.png?width=226)
 
-##  MTP
+## MTP
 
 Message Transfer Part
 
@@ -999,7 +999,7 @@ users).
 
 ![](./images/M/15008641.png?width=480)
 
-##  MTR
+## MTR
 
 Mean Time to Repair
 
@@ -1008,7 +1008,7 @@ and repair failed equipment and return it to normal operating
 conditions. It is a basic technical measure of the maintainability of
 equipment and repairable parts.
 
-##  MTU
+## MTU
 
 In computer networking, the maximum transmission unit (MTU) is the size
 of the largest protocol data unit (PDU) that can be communicated in a
@@ -1023,7 +1023,7 @@ as to not exceed these capabilities. MTU parameters may appear in
 association with a communications interface or standard. Some systems
 may decide MTU at connect time.
 
-##  Multicast
+## Multicast
 
 In computer networking, multicast is group communication where data
 transmission is addressed to a group of destination computers
@@ -1051,7 +1051,7 @@ streaming media, such as IPTV and multipoint videoconferencing.
 
 ![](./images/M/15008647.png?width=208)
 
-##  Multiplex
+## Multiplex
 
 In telecommunications and computer networks, multiplexing (sometimes
 contracted to muxing) is a method by which multiple analog or digital
@@ -1072,14 +1072,14 @@ A device that performs the multiplexing is called a multiplexer (MUX),
 and a device that performs the reverse process is called a demultiplexer
 (DEMUX or DMX).
 
-##  Mutex
+## Mutex
 
 In computer science, a lock or mutex (from mutual exclusion) is a
 synchronization mechanism for enforcing limits on access to a resource
 in an environment where there are many threads of execution. A lock is
 designed to enforce a mutual exclusion concurrency control policy.
 
-##  Mutual Exclusion
+## Mutual Exclusion
 
 In computer science, mutual exclusion is a property of concurrency
 control, which is instituted for the purpose of preventing race
@@ -1117,7 +1117,7 @@ writing of a memory address by one thread while the aforementioned
 memory address is being manipulated or read by another thread or other
 threads.
 
-##  MVNE
+## MVNE
 
 mobile virtual network enabler
 
@@ -1129,7 +1129,7 @@ their own customers with their own brands. The MVNE does not have a
 relationship with consumers, but rather is a provider of network
 enablement platforms and services.
 
-##  MVNO
+## MVNO
 
 Mobile Virtual Network Operator
 
@@ -1143,7 +1143,7 @@ retail prices independently. An MVNO may use its own customer service,
 billing support systems, marketing, and sales personnel, or it could
 employ the services of a mobile virtual network enabler (MVNE).
 
-##  MVP
+## MVP
 
 Minimum Viable Product
 

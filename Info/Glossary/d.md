@@ -20,17 +20,17 @@ agile approaches and indicate that DAD, as an example framework, is \"a
 hybrid agile approach to enterprise IT solution delivery that provides a
 solid foundation from which to scale.
 
-##  Daily Meeting
+## Daily Meeting
 
 The daily meeting is one of the most commonly practiced Agile techniques
 and presents opportunity for a team to get together on a regular basis
 to coordinate their activities.
 
-##  Daily Scrum
+## Daily Scrum
 
 Stand-up team meeting. A plan, do, review daily session.
 
-##  Dark Fibre
+## Dark Fibre
 
 A dark fibre or unlit fibre is an unused optical fibre, available for
 use in fibre-optic communication.
@@ -50,7 +50,7 @@ purchasing bandwidth or leased line capacity on an existing network.
 Dark fibre networks may be used for private networking, or as Internet
 access or infrastructure.
 
-##  DASS1
+## DASS1
 
 Digital Access Signalling System 1 (DASS1) is a proprietary protocol
 defined by British Telecom to provide ISDN services in the United
@@ -58,7 +58,7 @@ Kingdom. It is now obsolete, having been replaced by DASS2. This too
 will become obsolete over the coming years as Q.931, a European
 standard, becomes widely adopted in the EU.
 
-##  DASS2
+## DASS2
 
 Digital Access Signalling System 2 (DASS2) is an obsolescent protocol
 defined by British Telecom for digital links to PSTN based on ISDN.
@@ -110,23 +110,23 @@ are a number of additional European documents that cover supplementary
 services. These cover features that may be instigated by exchanges via
 the ISDN and require a higher degree of layer 3 implementation.
 
-##  data modeling
+## data modeling
 
 the analysis of data objects that are used in a business or other
 context and the identification of the relationships among these data
 objects.
 
-##  Data Plane
+## Data Plane
 
 See User Plane
 
-##  Database Lead
+## Database Lead
 
 Projects with large and/or critical database components may assign
 a *database lead* responsible for *design* and *construction* issues
 relating to the database portions of the system.
 
-##  Date Warehouse
+## Date Warehouse
 
 In computing, a data warehouse (DW or DWH), also known as an enterprise
 data warehouse (EDW), is a system used for reporting and data analysis,
@@ -145,7 +145,7 @@ reporting.
 ![](./images/D/15007957.png?width=480)\
 ![](./images/D/15007965.png?width=434)
 
-##  DCE
+## DCE
 
 Data Circuit-terminating Equipment
 
@@ -156,7 +156,7 @@ Usually, the DTE device is the terminal (or computer), and the DCE is a
 modem.\
 ![](./images/D/15007971.png?width=480)
 
-##  DDK
+## DDK
 
 driver development kit
 
@@ -164,7 +164,7 @@ a set of programs and related files that are used to develop a new
 software or hardware driver or to update an existing legacy application
 driver for an operating system.
 
-##  DDOS
+## DDOS
 
 Distributed Denial of Service
 
@@ -187,12 +187,12 @@ disrupting trade.
 
 ![](./images/D/15007977.png?width=442)
 
-##  Decomposition Estimation
+## Decomposition Estimation
 
 See *bottom-up estimation*. Refers specifically to creating estimates
 for the decomposed parts of a system.
 
-##  Defect
+## Defect
 
 A failure of a *system* or *process* to perform as specified, or
 expected.\
@@ -202,57 +202,57 @@ information in an *artifact*. Nonconformance of a *system*, *process*,
 or *artifact* to a standard. Defects are a type of *corrective activity
 management* item.
 
-##  Defect Management
+## Defect Management
 
 The representation of identified defects and the planning, tracking, and
 control related to ensuring all identified defects are managed. Part of
 both *quality* and *corrective activity management*.
 
-##  Defect Report
+## Defect Report
 
 A request to modify an artifact due to lack of conformance to a
 standard, requirement, project need, or a failure/error.
 
-##  Definition of Done
+## Definition of Done
 
 The definition of done is an agreed upon list of the activities deemed
 necessary to get a product increment, usually represented by a user
 story, to a done state by the end of a sprint.
 
-##  Definition of Ready
+## Definition of Ready
 
 involves creating clear criteria that a user story must meet before
 being accepted into an upcoming iteration. This is typically based on
 the INVEST matrix.
 
-##  Deliverable
+## Deliverable
 
 Any artifact or set of artifacts that are delivered as output from
 a *project* or other well defined set of work.
 
-##  Deplhi
+## Deplhi
 
 Object Pascal refers to a branch of object-oriented derivatives of
 Pascal, mostly known as the primary programming language of Delphi.
 
-##  Deployment
+## Deployment
 
 The process and/or act of installing and readying a software system for
 use, including integration and customization that is specific to a
 particular site.
 
-##  Deployment Lead
+## Deployment Lead
 
 Projects with complex deployment needs may assign an individual to plan
 and oversee execution of *deployment* and possibly operational and
 maintenance related issues.
 
-##  Deployment Plan
+## Deployment Plan
 
 A plan specifying the method of releasing a system. Includes items like
 target platforms, configuration to release, etc.
 
-##  DER
+## DER
 
 Distinguished Encoding Rules
 
@@ -271,18 +271,18 @@ values, while in DER there is one way to encode a Boolean value of true.
 
 The most significant DER encoding constraints are:
 
-1.  Length encoding must use the definite form
+1. Length encoding must use the definite form
 
-    1.  Additionally, the shortest possible length encoding must be used
+    1. Additionally, the shortest possible length encoding must be used
 
-2.  Bitstring, octetstring, and restricted character strings must use
+2. Bitstring, octetstring, and restricted character strings must use
     the primitive encoding
 
-3.  Elements of a Set are encoded in sorted order, based on their tag
+3. Elements of a Set are encoded in sorted order, based on their tag
     value\
     DER is widely used for digital certificates such as X.509.
 
-##  DES
+## DES
 
 Data Encryption Standard
 
@@ -325,18 +325,18 @@ Encryption Standard (AES). Furthermore, DES has been withdrawn as a
 standard by the National Institute of Standards and Technology.\
 ![](./images/D/15007983.png?width=375)
 
-##  Design
+## Design
 
 Software design. The creation of abstracted models and plans for
 implementing requirements in software. Also denotes the design CKA.
 See *CxStand\_Design* for more information.
 
-##  Design Lead
+## Design Lead
 
 Responsible for the system architecture and overseeing design
 activities.
 
-##  Design Pattern
+## Design Pattern
 
 In software engineering, a software design pattern is a general,
 reusable solution to a commonly occurring problem within a given context
@@ -360,34 +360,34 @@ Design patterns may be viewed as a structured approach to computer
 programming intermediate between the levels of a programming paradigm
 and a concrete algorithm.
 
-##  Design to Tools
+## Design to Tools
 
 The content of a system is determined by what is directly supported by
 existing software tools
 
-##  Desk Check
+## Desk Check
 
 An *informal* *review* in which the *author* asks one or more people to
 read an *artifact* with the intent of finding *defects*.
 
-##  Detailed Design
+## Detailed Design
 
 Commonly used term that captures parts of *high level design* and *low
 level design*. See *CxStand\_Design* for more information.
 
-##  Detailed Schedule
+## Detailed Schedule
 
 Fine grain project schedule that includes tasks, estimated effort,
 assigned resources, dependencies, etc. Usually created in a bottom-up
 fashion from a *work plan*. Normally implemented as a sliding window
 that covers a *project's headlights*. Compare to *business schedule*.
 
-##  Developer
+## Developer
 
 Synonym for software engineer, usually used when referring to design and
 construction activities.
 
-##  Developer Integration Test
+## Developer Integration Test
 
 DIT
 
@@ -395,31 +395,31 @@ DIT
 test* *environment* after a *project build* as part of releasing
 functionality.
 
-##  development environment
+## development environment
 
 the set of processes and programming tools used to create the program or
 software product.
 
-##  Development Environment
+## Development Environment
 
 DE
 
 The hardware and software environment that *construction* work occurs
 in.
 
-##  development process
+## development process
 
 a set of tasks performed for a given purpose in a software development
 project.
 
-##  DevOps
+## DevOps
 
 development/operations
 
 bridges the gap between agile teams and operational delivery to
 production.
 
-##  DHCP
+## DHCP
 
 Dynamic Host Configuration Protocol
 
@@ -432,11 +432,11 @@ parameters automatically from the Internet service provider (ISP),
 reducing the need for a network administrator or a user to manually
 assign IP addresses to all network devices.
 
-##  Diagram
+## Diagram
 
 A graphical representation of a system, process, or other information.
 
-##  DLE
+## DLE
 
 Digital Local Exchange
 
@@ -444,7 +444,7 @@ Digital Local Exchange
 
 ![](./images/D/15007995.png?width=495)
 
-##  DLP
+## DLP
 
 Data Link Protocol
 
@@ -452,7 +452,7 @@ Protocols that can be utilized at the Data Link layer of the OSI model.
 These protocols include token ring, FDDI, and Ethernet. Ethernet Data
 Link protocols are broken out into addressing and framing standards
 
-##  DMZ
+## DMZ
 
 Demilitarized Zone
 
@@ -470,7 +470,7 @@ detect and address breaches before they would further penetrate into the
 internal networks.\
 ![](./images/D/15008001.png?width=344)
 
-##  DN
+## DN
 
 Directory Number
 
@@ -491,11 +491,11 @@ regional telephone numbering plan to subscribers by telephone service
 operators, which may be commercial entities, state-controlled
 administrations, or other telecommunication industry associations.
 
-##  DNB
+## DNB
 
 Dun and Bradstreet Business File
 
-##  DNS
+## DNS
 
 Domain Name System
 
@@ -510,7 +510,7 @@ a worldwide, distributed directory service, the Domain Name System is an
 essential component of the functionality on the Internet, that has been
 in use since 1985.
 
-##  DNS - A
+## DNS - A
 
 IpV4 A Record
 
@@ -523,34 +523,34 @@ send an email, connect to Twitter or Facebook or do almost anything on
 the Internet, the address you enter is a series of words connected with
 dots.
 
-##  DNS - AAAA
+## DNS - AAAA
 
 IPv6 DNS record
 
 Returns a 128-bit IPv6 address, most commonly used to map hostnames to
 an IP address of the host
 
-##  DNS - CNAME
+## DNS - CNAME
 
 Canonical name record
 
 Alias of one name to another: the DNS lookup will continue by retrying
 the lookup with the new name.
 
-##  DNS - DNAME
+## DNS - DNAME
 
 Alias for a name and all its subnames, unlike CNAME, which is an alias
 for only the exact name. Like a CNAME record, the DNS lookup will
 continue by retrying the lookup with the new name.
 
-##  DNS - SRV
+## DNS - SRV
 
 Service locator
 
 Generalized service location record, used for newer protocols instead of
 creating protocol-specific records such as MX.
 
-##  DNS - TXT
+## DNS - TXT
 
 Txt Record
 
@@ -559,7 +559,7 @@ early 1990s, however, this record more often carries machine-readable
 data, such as specified by RFC 1464, opportunistic encryption, Sender
 Policy Framework, DKIM, DMARC, DNS-SD, etc.
 
-##  DNS Spoofing
+## DNS Spoofing
 
 DNS spoofing, also referred to as DNS cache poisoning, is a form of
 computer security hacking in which corrupt Domain Name System data is
@@ -568,7 +568,7 @@ return an incorrect result record, e.g. an IP address. This results in
 traffic being diverted to the attacker's computer (or any other
 computer).
 
-##  Docker
+## Docker
 
 Docker is a collection of interoperating software-as-a-service and
 platform-as-a-service offerings that employ operating-system-level
@@ -576,7 +576,7 @@ virtualization to cultivate development and delivery of software inside
 standardized software packages called containers.\[The software that
 hosts the containers is called Docker Engine
 
-##  Document Collaboration
+## Document Collaboration
 
 Document and file collaboration are the tools or systems set up to help
 multiple people work together on a single document or file to achieve a
@@ -590,7 +590,7 @@ approach such as for Wikis such as Wikipedia
 Tools such as Confluence & SharePoint can be used for Document
 Collaboration
 
-##  Domain Name
+## Domain Name
 
 A domain name is an identification string that defines a realm of
 administrative autonomy, authority or control within the Internet.
@@ -636,7 +636,7 @@ the tree holds information associated with the domain name. The tree
 sub-divides into zones beginning at the DNS root zone.\
 ![](./images/D/15008013.png?width=481)
 
-##  Dot1Q
+## Dot1Q
 
 IEEE 802.1Q, often referred to as Dot1q
 
@@ -655,7 +655,7 @@ membership.\[a\] Each frame must be distinguishable as being within
 exactly one VLAN. A frame in the VLAN-aware portion of the network that
 does not contain a VLAN tag is assumed to be flowing on the native VLAN.
 
-##  Dot1Q trunking
+## Dot1Q trunking
 
 A simple view for dot1q (802.1q) trunking:\
 For ease of understanding the Dot1q (802.1q) trunking between switches
@@ -672,7 +672,7 @@ So how does the switch know which ports to send the packet to, the
 switches are assigned with the VLAN number.\
 ![](./images/D/15008031.png?width=477)
 
-##  Downstream
+## Downstream
 
 In a telecommunications network or computer network, downstream refers
 to data sent from a network service provider to a customer.
@@ -693,14 +693,14 @@ network between them.
 In the client--server model, downstream can refer to the direction from
 the server to the client.
 
-##  Downstream
+## Downstream
 
 Used to refer to project activities and artifacts that occur later in a
 project lifecycle, often after significant construction has begun.
 Includes coding, low level design, testing, deployment, and system use.
 See *upstream*.
 
-##  DP
+## DP
 
 Distribution Point
 
@@ -711,7 +711,7 @@ pieces
 
 ![](./images/D/15008037.png?width=483)
 
-##  DPI
+## DPI
 
 Deep Packet Inspection
 
@@ -741,7 +741,7 @@ DPI is used in a wide range of applications, at the so-called
 "enterprise" level (corporations and larger institutions), in
 telecommunications service providers, and in governments.
 
-##  DPNSS
+## DPNSS
 
 Digital Private Network Signalling System
 
@@ -753,21 +753,21 @@ DPNSS was originally defined by British Telecom. The specification for
 the protocol is defined in BTNR188. The specification currently comes
 under the Network Interoperability Consultative Committee.
 
-##  DQ
+## DQ
 
 Data Quality
 
-##  Draft
+## Draft
 
 An artifact under revision control but not yet under *change control.*
 
-##  driver
+## driver
 
 a program that interacts with a particular device or special kind of
 software. The driver contains special knowledge of the device or special
 software interface that programs using the driver do not.
 
-##  DSCP
+## DSCP
 
 Diff-Serve Code Point
 
@@ -784,14 +784,14 @@ DiffServ uses a 6-bit differentiated services code point (DSCP) in the
 packet classification purposes. The DS field replaces the outdated IPv4
 TOS field.
 
-##  DSDM
+## DSDM
 
 dynamic systems development method
 
 agile development methodology, now changed to the 'DSDM project
 management framework'.
 
-##  DSL
+## DSL
 
 Digital Subscriber Line
 
@@ -802,7 +802,7 @@ understood to mean asymmetric digital subscriber line (ADSL), the most
 commonly installed DSL technology, for Internet access.\
 ![](./images/D/15008043.png?width=485)
 
-##  DSLAM
+## DSLAM
 
 Digital Subscriber Line Access Multiplexor
 
@@ -812,7 +812,7 @@ multiple customers Digital Subscriber Lines (DSL) to a high-speed
 Internet backbone line using multiplexing techniques.\
 ![](./images/D/15008049.png?width=485)
 
-##  DTE
+## DTE
 
 Data Terminal Equipment
 
@@ -823,7 +823,7 @@ circuit-terminating equipment (DCE). The DTE/DCE classification was
 introduced by IBM.\
 ![](./images/D/15007971.png?width=491)
 
-##  DTMF
+## DTMF
 
 Dual Tone Multi Frequency
 
@@ -842,7 +842,7 @@ mobile service. Other multi-frequency systems are used for internal
 signalling within the telephone network.\
 ![](./images/D/15008055.png?width=398)
 
-##  DTT
+## DTT
 
 Digital Terrestrial TV
 
@@ -862,7 +862,7 @@ television channels than analog, better quality images, and potentially
 lower operating costs for broadcasters (after the initial upgrade
 costs).
 
-##  DTV
+## DTV
 
 Digital TV
 
@@ -881,7 +881,7 @@ changeover, while other countries are in various stages of adaptation.
 Different digital television broadcasting standards have been adopted in
 different parts of the world
 
-##  Duplex
+## Duplex
 
 A duplex communication system is a point-to-point system composed of two
 or more connected parties or devices that can communicate with one
@@ -902,7 +902,7 @@ Full Duplex\
 Half Duplex\
 ![](./images/D/15008079.png?width=220)
 
-##  DVSR
+## DVSR
 
 Dynamically Verified Static Routing
 

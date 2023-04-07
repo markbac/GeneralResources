@@ -1,6 +1,6 @@
 # S
 
-##  S- Tag
+## S- Tag
 
 Service VLAN Tag
 
@@ -15,7 +15,23 @@ outer S-Tag.\
 
 ![](./images/S/14123086.png?width=210)
 
-##  SAAL
+## S-GW
+
+Serving Gateway
+
+The SGW routes and forwards user data packets, while also acting as the
+mobility anchor for the user plane during inter-eNodeB handovers and as
+the anchor for mobility between LTE and other 3GPP technologies
+(terminating S4 interface and relaying the traffic between 2G/3G systems
+and PGW). For idle state UEs, the SGW terminates the downlink data path
+and triggers paging when downlink data arrives for the UE. It manages
+and stores UE contexts, e.g. parameters of the IP bearer service,
+network internal routing information. It also performs replication of
+the user traffic in case of lawful interception.
+
+![](./images/S/15237222.png)
+
+## SAAL
 
 Signalling ATM Adaptation Layer
 
@@ -24,7 +40,7 @@ Signalling) provides reliable transport of signalling messages between
 peer entities. These signalling messages are carried over a PVC
 (Permanent Virtual Circuit).
 
-##  SaaS
+## SaaS
 
 Software As A Service
 
@@ -37,7 +53,7 @@ typically accessed by users using a thin client, e.g. via a web browser.
 
 ![](./images/S/15008948.png?width=537)
 
-##  SaaS
+## SaaS
 
 Software as a Service
 
@@ -57,7 +73,7 @@ management systems, content management (CM), and service desk
 management. SaaS has been incorporated into the strategy of nearly all
 leading enterprise software companies
 
-##  SAE
+## SAE
 
 System Architecture Evolution
 
@@ -66,26 +82,26 @@ System Architecture Evolution (SAE) is the core network architecture of
 
 SAE is the evolution of the GPRS Core Network, with some differences:
 
--   simplified architecture
+- simplified architecture
 
--   all-IP Network (AIPN)
+- all-IP Network (AIPN)
 
--   support for higher throughput and lower latency radio access
+- support for higher throughput and lower latency radio access
     networks (RANs)
 
--   support for, and mobility between, multiple heterogeneous access
+- support for, and mobility between, multiple heterogeneous access
     networks, including E-UTRA (LTE and LTE Advanced air interface),
     3GPP legacy systems (for example GERAN or UTRAN, air interfaces of
     GPRS and UMTS respectively), but also non-3GPP systems (for example
     WiFi, WiMAX or cdma2000)
 
-##  SAFe
+## SAFe
 
 scaled agile framework enterprise
 
 agile methodology used for software development.
 
-##  SBC
+## SBC
 
 Session Border Controller
 
@@ -96,7 +112,25 @@ conducting, and tearing down telephone calls or other interactive media
 communications.\
 ![](./images/S/15008954.png?width=491)
 
-##  Scala
+## SC-FDMA
+
+Single-carrier FDMA
+
+Single-carrier FDMA (SC-FDMA) is a frequency-division multiple access
+scheme. It is also called Linearly precoded OFDMA (LP-OFDMA). Like other
+multiple access schemes (TDMA, FDMA, CDMA, OFDMA), it deals with the
+assignment of multiple users to a shared communication resource. SC-FDMA
+can be interpreted as a linearly precoded OFDMA scheme, in the sense
+that it has an additional DFT processing step preceding the conventional
+OFDMA processing.\
+SC-FDMA has drawn great attention as an attractive alternative to OFDMA,
+especially in the uplink communications where lower peak-to-average
+power ratio (PAPR) greatly benefits the mobile terminal in terms of
+transmit power efficiency and reduced cost of the power amplifier. It
+has been adopted as the uplink multiple access scheme in 3GPP Long Term
+Evolution (LTE), or Evolved UTRA (E-UTRA).
+
+## Scala
 
 Scala is a general-purpose programming language providing
 support for functional programming and a strong static type system.
@@ -119,12 +153,12 @@ overloading, optional parameters, named parameters, and raw strings.
 Conversely, a feature of Java not in Scala is checked exceptions, which
 have proved controversial.
 
-##  Scaled Agile
+## Scaled Agile
 
 agile scaled up to large projects or programmes, for example by having
 multiple sub-projects, creating tranches of projects, etc.
 
-##  SCCP
+## SCCP
 
 Signalling Connection Control Part
 
@@ -133,37 +167,19 @@ flow control, segmentation, connection-orientation, and error correction
 facilities in Signaling System 7 telecommunications networks. SCCP
 relies on the services of MTP for basic routing and error detection.
 
-##  Scenario
+## Scenario
 
 A narrative description of an activity or activities which take the form
 of a story
 
-##  SC-FDMA
-
-Single-carrier FDMA
-
-Single-carrier FDMA (SC-FDMA) is a frequency-division multiple access
-scheme. It is also called Linearly precoded OFDMA (LP-OFDMA). Like other
-multiple access schemes (TDMA, FDMA, CDMA, OFDMA), it deals with the
-assignment of multiple users to a shared communication resource. SC-FDMA
-can be interpreted as a linearly precoded OFDMA scheme, in the sense
-that it has an additional DFT processing step preceding the conventional
-OFDMA processing.\
-SC-FDMA has drawn great attention as an attractive alternative to OFDMA,
-especially in the uplink communications where lower peak-to-average
-power ratio (PAPR) greatly benefits the mobile terminal in terms of
-transmit power efficiency and reduced cost of the power amplifier. It
-has been adopted as the uplink multiple access scheme in 3GPP Long Term
-Evolution (LTE), or Evolved UTRA (E-UTRA).
-
-##  Schedule
+## Schedule
 
 General term for a plan that defines calendar timing, resources,
 dependencies, and other details for *tasks* necessary to complete a
 project or part of a project. CxOne defines two major classes of
 schedules, *business schedules* and *detailed schedules*.
 
-##  Scheduler
+## Scheduler
 
 In computing, scheduling is the method by which work specified by some
 means is assigned to resources that complete the work. The work may be
@@ -199,7 +215,7 @@ ensure that processes can meet deadlines; this is crucial for keeping
 the system stable. Scheduled tasks can also be distributed to remote
 devices across a network and managed through an administrative back end.
 
-##  SCM
+## SCM
 
 software configuration management
 
@@ -211,7 +227,7 @@ establishment of baselines. If something goes wrong, SCM can determine
 what was changed and who changed it. If a configuration is working well,
 SCM can determine how to replicate it across many hosts.
 
-##  Scratch
+## Scratch
 
 Scratch is a visual programming language and online community targeted
 primarily at children. Using Scratch, users can create online projects
@@ -222,27 +238,27 @@ at the MIT Media Lab, the service is designed to help children (ages 8
 and up) learn to utilize their imaginations, practice common sense, and,
 most importantly, to interact with computers.
 
-##  Scribe
+## Scribe
 
 Records issues during an *inspection* or other formal meeting.
 
-##  Scrum
+## Scrum
 
 Scrum is a process framework used to manage product development and
 other knowledge work.
 
-##  Scrum Master
+## Scrum Master
 
 The scrum master is responsible for ensuring the team lives agile values
 and principles and follows the practices that the team agreed they would
 use.
 
-##  Scrum of Scrums
+## Scrum of Scrums
 
 A technique to scale Scrum up to large groups (over a dozen people),
 consisting of dividing the groups into Agile teams of 5-10.
 
-##  SCTP
+## SCTP
 
 Stream Control Transmission Protocol
 
@@ -256,7 +272,7 @@ messages with congestion control like TCP. It differs from those
 protocols by providing multi-homing and redundant paths to increase
 resilience and reliability.
 
-##  SDES
+## SDES
 
 Session Description protocol Security
 
@@ -264,7 +280,7 @@ SDES (Session Description Protocol Security Descriptions) for Media
 Streams is a way to negotiate the key for Secure Real-time Transport
 Protocol.
 
-##  SDH
+## SDH
 
 Synchronous Digital Hierarchy
 
@@ -299,14 +315,14 @@ previously used to transport circuit-oriented connections was removed
 and replaced with a large and concatenated frame (such as STS-3c) into
 which ATM cells, IP packets, or Ethernet frames are placed.
 
-##  SDK
+## SDK
 
 Software Development Kit
 
 a set of programs used by a computer programmer to write application
 programs.
 
-##  SDLC
+## SDLC
 
 Synchronous Data Link Control
 
@@ -320,7 +336,7 @@ platforms from many vendors. The use of SDLC (and SNA) is becoming more
 and more rare, mostly replaced by IP-based protocols or being tunnelled
 through IP (using AnyNet or other technologies)
 
-##  SDLC
+## SDLC
 
 systems development life cycle model
 
@@ -331,7 +347,7 @@ application. Models include the waterfall model; rapid application
 development (RAD); joint application development (JAD); the fountain
 model; the spiral model; build and fix; and synchronize-and-stabilize.
 
-##  SDMA
+## SDMA
 
 Space-division multiple access
 
@@ -366,7 +382,7 @@ networks, especially on the MS, as this ensures a better battery life
 for the MS. This is also why having a BTS close to the user results in
 less exposure to electromagnetic radiation.
 
-##  SDN
+## SDN
 
 Software Defined Network
 
@@ -385,7 +401,7 @@ incorporated. However, the intelligence centralization has its own
 drawbacks when it comes to security, scalability and elasticity and this
 is the main issue of SDN
 
-##  SDP
+## SDP
 
 Session Description Protocol
 
@@ -409,7 +425,7 @@ Protocol (RTP), Real-time Streaming Protocol (RTSP), Session Initiation
 Protocol (SIP) and even as a standalone format for describing multicast
 sessions.
 
-##  SDSL
+## SDSL
 
 Symmetrical Digital Subscriber Line
 
@@ -426,19 +442,19 @@ private as well as business customers.
 
 More specifically, SDSL can be understood as:
 
--   in the wider sense, an umbrella term for all DSL variant which offer
+- in the wider sense, an umbrella term for all DSL variant which offer
     symmetric bandwidth, including IDSL, which offers 144 kbit/s, HDSL,
     HDSL2, G.SHDSL, which offers up to 22.784 Mbit/s over four pairs of
     copper wires, as well as the SDSL variant below
 
--   in the narrow sense, a particular proprietary and non-standardized
+- in the narrow sense, a particular proprietary and non-standardized
     DSL variant for operation at 1.544 Mbit/s or 2.048 Mbit/s over a
     single pair of copper wires, without support for analog calls on the
     same line
 
--   a term used by ETSI to refer to G.SHDSL
+- a term used by ETSI to refer to G.SHDSL
 
-##  Sed
+## Sed
 
 sed (stream editor) is a Unix utility that parses and transforms text,
 using a simple, compact programming language. sed was developed from
@@ -451,7 +467,7 @@ most notably with the substitution command. Popular alternative
 tools for plaintext string manipulation and "stream editing" include AWK
 and Perl.
 
-##  Semaphore
+## Semaphore
 
 In computer science, a semaphore is a variable or abstract data type
 used to control access to a common resource by multiple processes in a
@@ -477,16 +493,16 @@ are called counting semaphores, while semaphores which are restricted to
 the values 0 and 1 (or locked/unlocked, unavailable/available) are
 called binary semaphores and are used to implement locks.
 
-##  Sematic Versioning
+## Sematic Versioning
 
 Given a version number MAJOR.MINOR.PATCH, increment the:
 
-1.  MAJOR version when you make incompatible API changes,
+1. MAJOR version when you make incompatible API changes,
 
-2.  MINOR version when you add functionality in a backwards compatible
+2. MINOR version when you add functionality in a backwards compatible
     manner, and
 
-3.  PATCH version when you make backwards compatible bug fixes.
+3. PATCH version when you make backwards compatible bug fixes.
 
 Additional labels for pre-release and build metadata are available as
 extensions to the MAJOR.MINOR.PATCH format.
@@ -555,13 +571,13 @@ extensions to the MAJOR.MINOR.PATCH format.
 "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v"
 "w" "x" "y" "z"
 
-##  Sequence Model
+## Sequence Model
 
 Specifies the set of object roles and their interactions by showing and
 describing the messages exchanged. The focus is on the timing of
 messages.
 
-##  SF
+## SF
 
 Super Frame
 
@@ -569,7 +585,7 @@ In telecommunications, superframe (SF) is a T1 framing standard. In the
 1970s it replaced the original T1/D1 framing scheme of the 1960s in
 which the framing bit simply alternated between 0 and 1.
 
-##  SFTP
+## SFTP
 
 Secure File Transfer Protocol
 
@@ -588,7 +604,7 @@ This protocol assumes that it is run over a secure channel, such as SSH,
 that the server has already authenticated the client, and that the
 identity of the client user is available to the protocol.
 
-##  SGML
+## SGML
 
 Standard Generalized Markup Language
 
@@ -598,7 +614,7 @@ standard for defining generalized markup languages for documents. ISO
 
 Generalized markup is based on two postulates:
 
--   Markup should be declarative: it should describe a document's
+- Markup should be declarative: it should describe a document's
     structure and other attributes, rather than specify the processing
     to be performed on it. Declarative markup is less likely to conflict
     with unforeseen future processing needs and techniques.\
@@ -609,6 +625,7 @@ Generalized markup is based on two postulates:
 ```{=html}
 <!-- Lunch at the steakhouse -->
 ```
+
 \<!ELEMENT lunch (meal)+ -- one meal per person --\>
 
 \<!ELEMENT meal (appetiz?, steak, dessert?, custname, whopays) +(drink)
@@ -622,6 +639,7 @@ can appear anywhere in the element to which they are
 attached and in any of its subelements. You can have
 one or more DRINK elements any time during MEAL. -->
 ```
+
 \<!ELEMENT appetiz (soup salad) \>
 
 \<!ELEMENT soup EMPTY --soup of the day --\>
@@ -640,6 +658,7 @@ a value usually comprising up to 8 letters and numbers.
 REQUIRED means that one value must be specified for the
 attribute. -->
 ```
+
 \<!ELEMENT steak EMPTY\>
 
 \<!ATTLIST steak cook (raremedraremedium) "medrare" side
@@ -649,6 +668,7 @@ attribute. -->
 <!--The value between quotes is used to force a default
 value in case no value is specified for the attribute. -->
 ```
+
 \<!ELEMENT dessert (cakeapplepie)\>
 
 \<!ELEMENT (cakeapplepie) EMPTY\>
@@ -663,6 +683,7 @@ for an attribute. This means you can ask for any
 cake you want; if the system doesn't recognize the
 name, you may not get it. -->
 ```
+
 \<!ATTLIST applepie hot (hotwarmcool) \#IMPLIED icecream (yesno)
 \#IMPLIED
 
@@ -671,6 +692,7 @@ name, you may not get it. -->
 APPLEPIE comes the way the waiter or waitress prefers
 unless you specify otherwise. -->
 ```
+
 \<!ELEMENT drink (waterbeercola)\>
 
 \<!ELEMENT (waterbeercola) EMPTY\>
@@ -682,6 +704,7 @@ unless you specify otherwise. -->
 system. You can order any kind of fancy water you
 want, but all they've got here is tap water. -->
 ```
+
 \<!ATTLIST beer number NUMBER \#REQUIRED\>
 
 \<!ATTLIST cola type (regular diet) \#CURRENT\>
@@ -695,6 +718,7 @@ unless you specify another. In other words, you
 don't have to re-specify the type of COLA every
 time you ask for a refill.-->
 ```
+
 \<!ELEMENT (custname whopays) (\#PCDATA) \>
 
 \<!ATTLIST custname account ID \#IMPLIED\>
@@ -717,7 +741,8 @@ one of several MEALS in the LUNCH. A separate MEAL in
 the same LUNCH must include a CUSTNAME with an
 ACCOUNTID of "ALEXF" for the CHARGE IDREF to work -->
 ```
-##  SGSN
+
+## SGSN
 
 Serving GPRS support node
 
@@ -737,7 +762,7 @@ all GPRS users registered with it.
 
 ![](./images/S/15302771.png?width=170)
 
-##  SGW
+## SGW
 
 signalling gateway
 
@@ -749,23 +774,7 @@ the MGCF to the CS network.
 
 ![](./images/S/15138956.png)
 
-##  S-GW
-
-Serving Gateway
-
-The SGW routes and forwards user data packets, while also acting as the
-mobility anchor for the user plane during inter-eNodeB handovers and as
-the anchor for mobility between LTE and other 3GPP technologies
-(terminating S4 interface and relaying the traffic between 2G/3G systems
-and PGW). For idle state UEs, the SGW terminates the downlink data path
-and triggers paging when downlink data arrives for the UE. It manages
-and stores UE contexts, e.g. parameters of the IP bearer service,
-network internal routing information. It also performs replication of
-the user traffic in case of lawful interception.
-
-![](./images/S/15237222.png)
-
-##  Sh
+## Sh
 
 The Bourne shell (sh) is a shell, or command-line
 interpreter, for computer operating systems.
@@ -775,7 +784,7 @@ Unix-like systems continue to have /bin/sh---which will be the Bourne
 shell, or a symbolic link or hard link to a compatible shell---even when
 other shells are used by most users.
 
-##  SHA
+## SHA
 
 Secure Hash Algorithm
 
@@ -783,25 +792,25 @@ The Secure Hash Algorithms are a family of cryptographic hash functions
 published by the National Institute of Standards and Technology (NIST)
 as a U.S. Federal Information Processing Standard (FIPS), including:
 
--   SHA-0: A retronym applied to the original version of the 160-bit
+- SHA-0: A retronym applied to the original version of the 160-bit
     hash function published in 1993 under the name "SHA". It was
     withdrawn shortly after publication due to an undisclosed
     "significant flaw" and replaced by the slightly revised version
     SHA-1.
 
--   SHA-1: A 160-bit hash function which resembles the earlier MD5
+- SHA-1: A 160-bit hash function which resembles the earlier MD5
     algorithm. This was designed by the National Security Agency (NSA)
     to be part of the Digital Signature Algorithm. Cryptographic
     weaknesses were discovered in SHA-1, and the standard was no longer
     approved for most cryptographic uses after 2010.
 
--   SHA-2: A family of two similar hash functions, with different block
+- SHA-2: A family of two similar hash functions, with different block
     sizes, known as SHA-256 and SHA-512. They differ in the word size;
     SHA-256 uses 32-bit words where SHA-512 uses 64-bit words. There are
     also truncated versions of each standard, known as SHA-224, SHA-384,
     SHA-512/224 and SHA-512/256. These were also designed by the NSA.
 
--   SHA-3: A hash function formerly called Keccak, chosen in 2012 after
+- SHA-3: A hash function formerly called Keccak, chosen in 2012 after
     a public competition among non-NSA designers. It supports the same
     hash lengths as SHA-2, and its internal structure differs
     significantly from the rest of the SHA family.\
@@ -810,7 +819,7 @@ as a U.S. Federal Information Processing Standard (FIPS), including:
     SHA-512). NIST has updated Draft FIPS Publication 202, SHA-3
     Standard separate from the Secure Hash Standard (SHS).
 
-##  Shell Scripting
+## Shell Scripting
 
 A shell script is a computer program designed to be run by the Unix
 shell, a command-line interpreter. The various dialects of shell scripts
@@ -826,19 +835,19 @@ command procedures (VMS), and shell scripts (Windows NT stream and
 third-party derivatives like 4NT---article is at cmd.exe), and mainframe
 operating systems are associated with a number of terms.
 
-##  Sidetone
+## Sidetone
 
 Sidetone is audible feedback to someone speaking when using a handset or
 headset as an indication of an active transmission. The term is often
 used in the telecommunication field.
 
-##  Sign Up
+## Sign Up
 
 for Tasks Members of an Agile development team normally choose which
 tasks to work on, rather than being assigned work by a manager. (see
 more
 
-##  SIM
+## SIM
 
 Subscriber Identity Module
 
@@ -875,7 +884,7 @@ micro-SIM, and nano-SIM. SIM cards are also made to embed in devices.
 
 ![](./images/S/15008966.png?width=480)
 
-##  SIMPLE
+## SIMPLE
 
 Session Initiation Protocol for Instant Messaging and Presence
 Leveraging Extensions
@@ -887,12 +896,12 @@ managed by the Internet Engineering Task Force. Contrary to the vast
 majority of IM and presence protocols used by software deployed today,
 SIMPLE is an open standard like XMPP.
 
-##  Simple Design
+## Simple Design
 
 A team adopting the "simple design" practice bases its software design
 strategy on a set of "simple design" principles.
 
-##  Simplex
+## Simplex
 
 Simplex communication is a communication channel that sends information
 in one direction only.
@@ -906,12 +915,12 @@ opposite directions.
 ![](./images/S/15008972.png?width=480)\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "UNKNOWN_ATTACHMENT")
 
-##  Single Step Test
+## Single Step Test
 
 Test conducted in a debugging environment by stepping through the source
 code while executing.
 
-##  SIP
+## SIP
 
 Session Initiation Protocol
 
@@ -944,7 +953,7 @@ links, the protocol may be encrypted with Transport Layer Security
 ![](./images/S/15008978.png?width=389)\
 ![](./images/S/15008984.png?width=480)
 
-##  SIP Trunk
+## SIP Trunk
 
 SIP trunking enables the end point's PBX (Phone Exchange System) to send
 and receive calls via Internet. As SIP is applied for the signalling
@@ -956,7 +965,7 @@ by which Internet telephony service providers (ITSPs) deliver telephone
 services and unified communications to customers equipped with SIP-based
 private branch exchange (IP-PBX) and unified communications facilities.
 
-##  SISO
+## SISO
 
 single-input and single-output
 
@@ -964,7 +973,7 @@ A single-input and single-output (SISO) system is a simple single
 variable control system with one input and one output. In radio it is
 the use of only one antenna both in the transmitter and receiver.
 
-##  Skew
+## Skew
 
 Clock skew (sometimes called timing skew) is a phenomenon in synchronous
 digital circuit systems (such as computer systems) in which the same
@@ -972,7 +981,7 @@ sourced clock signal arrives at different components at different times
 i.e. the instantaneous difference between the readings of any two clocks
 is called their skew.
 
-##  SLA
+## SLA
 
 Service Level Agreement
 
@@ -990,7 +999,7 @@ repair or mean time to recovery (MTTR); identifying which party is
 responsible for reporting faults or paying fees; responsibility for
 various data rates; throughput; jitter; or similar measurable details.
 
-##  SLIP
+## SLIP
 
 Serial Line Interface Protocol
 
@@ -1003,7 +1012,7 @@ configuration to be set before it is established. On microcontrollers,
 however, SLIP is still the preferred way of encapsulating IP packets due
 to its very small overhead.
 
-##  SME
+## SME
 
 Subject Matter Expert
 
@@ -1017,16 +1026,16 @@ domain of accountancy). The development of accounting software requires
 knowledge in two different domains: accounting and software. Some of the
 development workers may be experts in one domain and not the other.
 
-##  Smoke Test
+## Smoke Test
 
 Test conducted to prove a *build*.
 
-##  smoke testing
+## smoke testing
 
 non-exhaustive software testing, ascertaining that the most crucial
 functions of a prog
 
-##  SMP
+## SMP
 
 Symmetric Multiprocessing
 
@@ -1059,7 +1068,7 @@ bus or a crossbar.
 
 ![](./images/S/15008990.png?width=480)
 
-##  SMPF
+## SMPF
 
 Shared Metallic Path Facility
 
@@ -1067,7 +1076,7 @@ A copper pair to the exchange that goes to two telcos, one for telephone
 service and one for broadband. Normally this means telephone from BT,
 and can mean broadband from BT or from another provider.
 
-##  SMSC
+## SMSC
 
 Short Message service center
 
@@ -1080,17 +1089,17 @@ Service - Service Center (SMS-SC).
 
 Basic Trajectories of SMS are
 
-1.  From mobile to another mobile - referred to as MO-MT (Mobile
+1. From mobile to another mobile - referred to as MO-MT (Mobile
     Originated - Mobile Terminated)
 
-2.  From mobile to a content provider (also known as Large Account /
+2. From mobile to a content provider (also known as Large Account /
     ESME) - referred to as MO-AT (Mobile Originated - Application
     Terminated)
 
-3.  From application to a mobile - referred to as AO-MT (Application
+3. From application to a mobile - referred to as AO-MT (Application
     Originated - Mobile Terminated)
 
-##  Snake Case
+## Snake Case
 
 Snake case (or snake\_case) is the practice of writing compound words or
 phrases in which the elements are separated with one underscore
@@ -1100,7 +1109,7 @@ lowercase---as in "foo\_bar" and "Hello\_world". It is commonly used in
 computer code for variable names, and function names, and sometimes
 computer filenames.
 
-##  SNMP
+## SNMP
 
 Simple Network Management Protocol
 
@@ -1129,7 +1138,7 @@ protocol, a database schema, and a set of data objects.
 
 ![](./images/S/15008996.png?width=480)
 
-##  SNTP
+## SNTP
 
 Simple Network time Protocol
 
@@ -1139,7 +1148,7 @@ known as the Simple Network Time Protocol (SNTP). It is used in some
 embedded devices and in applications where full NTP capability is not
 required.
 
-##  SOA
+## SOA
 
 Service-oriented architecture
 
@@ -1154,14 +1163,14 @@ retrieving a credit card statement online.
 A service has four properties according to one of many definitions of
 SOA:
 
-1.  It logically represents a business activity with a specified
+1. It logically represents a business activity with a specified
     outcome.
 
-2.  It is self-contained.
+2. It is self-contained.
 
-3.  It is a black box for its consumers.
+3. It is a black box for its consumers.
 
-4.  It may consist of other underlying services.
+4. It may consist of other underlying services.
 
     Different services can be used in conjunction to provide the
     functionality of a large software application, a principle SOA
@@ -1171,7 +1180,7 @@ SOA:
     facilitate components' communication and cooperation over a network,
     especially over an IP network.
 
-##  SOAP
+## SOAP
 
 Simple Object Access Protocol
 
@@ -1190,7 +1199,7 @@ operating systems, SOAP allows clients to invoke web services and
 receive responses independent of language and platforms.\
 ![](./images/S/15009002.png?width=433)
 
-##  Softswitch
+## Softswitch
 
 A softswitch (software switch) is a central device in a
 telecommunications network which connects telephone calls from one phone
@@ -1260,26 +1269,26 @@ the Softswitch element is represented by the Media Gateway Controller
 (MGC) element, and the term "Softswitch" is rarely used in the IMS
 context. Rather, it is called an AGCF (Access Gateway Control Function).
 
-##  Software Change Request
+## Software Change Request
 
 SCR
 
 See c*hange request.*
 
-##  Software Configuration Management
+## Software Configuration Management
 
 SCM
 
 See *configuration management*.
 
-##  Software Development Plan
+## Software Development Plan
 
 SDP
 
 Sometimes used as a synonym for *project plan* on software focused
 projects.
 
-##  Software Engineering Body of Knowledge
+## Software Engineering Body of Knowledge
 
 SWEBOK
 
@@ -1288,14 +1297,14 @@ engineering. Is intended to support defining software engineering as a
 profession. CxOne bases its top-level organization on SWEBOK.\
 [www.swebok.org](http://www.swebok.org/)
 
-##  Software Engineering Lab
+## Software Engineering Lab
 
 SEL
 
 NASA lab developed to improving the software process used to develop
 systems at Goddard.
 
-##  Software Engineering Process Group
+## Software Engineering Process Group
 
 SEPG
 
@@ -1303,7 +1312,7 @@ Provides experienced and objective technical oversight from individuals
 who are not directly involved in the project. Also provides process
 improvement input for projects and the organization.
 
-##  Software Requirements Specification
+## Software Requirements Specification
 
 SRS
 
@@ -1312,20 +1321,20 @@ system. Often used in conjunction with other requirements techniques
 such as *modeling* and *prototyping* to provide a complete view of
 system requirements.
 
-##  SoGEA
+## SoGEA
 
 Single Order Generic Ethernet Access
 
--   Single order Generic Ethernet Access.\
--   Copper bearer to the cabinet and IP FTTC service delivered in a
+- Single order Generic Ethernet Access.\
+- Copper bearer to the cabinet and IP FTTC service delivered in a
     single order.\
--   No voice service services provided on copper bearer.
+- No voice service services provided on copper bearer.
 
 ![](./images/S/15009008.png?width=487)
 
 ![](./images/S/15009014.png?width=485)
 
-##  SONET
+## SONET
 
 Synchronous Optical Network
 
@@ -1360,7 +1369,7 @@ previously used to transport circuit-oriented connections was removed
 and replaced with a large and concatenated frame (such as STS-3c) into
 which ATM cells, IP packets, or Ethernet frames are placed.
 
-##  Source Code
+## Source Code
 
 In computing, source code is any collection of code, possibly with
 comments, written using a human-readable programming language, usually
@@ -1377,7 +1386,7 @@ executable files. If the source code were included it would be useful to
 a user, programmer or a system administrator, any of whom might wish to
 study or modify the program.
 
-##  SPEEX
+## SPEEX
 
 Speex is an audio compression format specifically tuned for the
 reproduction of human speech and also a free software speech codec that
@@ -1403,16 +1412,16 @@ decoder is 1.2.0.
 Xiph.Org now considers Speex obsolete; its successor is the more modern
 Opus codec, which surpasses its performance in all areas.
 
-##  Spiral Lifecycle
+## Spiral Lifecycle
 
 A set of mini-projects cumulating in final delivery. Each mini-project
 focuses on addressing the current major project risk(s).
 
-##  Sponsor
+## Sponsor
 
 Synonym for *project sponsor*.
 
-##  Sprial Model
+## Sprial Model
 
 The spiral model is a risk-driven process model generator for software
 projects. Based on the unique risk patterns of a given project, the
@@ -1420,23 +1429,23 @@ spiral model guides a team to adopt elements of one or more process
 models, such as incremental, waterfall, or evolutionary prototyping.\
 ![](./images/S/15009020.png?width=457)
 
-##  Sprint Planning
+## Sprint Planning
 
 Sprint planning is an event that occurs at the beginning of a sprint
 where the team determines the product backlog items they will work on
 during that sprint.
 
-##  Sprint retrospective
+## Sprint retrospective
 
 a review of a Sprint providing lessons learned with the aim of promoting
 continuous improvement.
 
-##  Sprints
+## Sprints
 
 a short development phase within a larger project defined by available
 time ('timeboxes') and resources.
 
-##  SQL
+## SQL
 
 SQL is a domain-specific language used in programming and
 designed for managing data held in a relational database management
@@ -1459,7 +1468,7 @@ creation and modification), and data access control. Although SQL is
 often described as, and to a great extent is, a declarative language
 (4GL), it also includes procedural elements.
 
-##  SS7
+## SS7
 
 Signaling System 7
 
@@ -1521,7 +1530,7 @@ network functionality, or links to Intelligent Network Application Part
 (INAP) for intelligent networks, or Mobile Application Part (MAP) for
 mobile services.
 
-##  SSADM
+## SSADM
 
 Structured Systems Analysis & Design Method
 
@@ -1530,7 +1539,7 @@ divides an application development project into modules, stages, steps,
 and tasks, and provides a framework for describing projects in a fashion
 suited to managing the project.
 
-##  SSH
+## SSH
 
 Secure Shell
 
@@ -1545,7 +1554,7 @@ remote command execution, but any network service can be secured with
 SSH. The protocol specification distinguishes between two major
 versions, referred to as SSH-1 and SSH-2.
 
-##  SSID
+## SSID
 
 Service Set Identifier
 
@@ -1553,7 +1562,7 @@ Logical wireless networks (including extended service sets) are
 identified by SSIDs, which serve as "network names" and are typically
 natural language labels.
 
-##  SSIS
+## SSIS
 
 SQL Server Integration Services
 
@@ -1567,13 +1576,13 @@ transformation, and loading (ETL). The tool may also be used to automate
 maintenance of SQL Server databases and updates to multidimensional cube
 data
 
-##  SSL
+## SSL
 
 Secure Sockets Layer
 
 See TLS
 
-##  Stack
+## Stack
 
 The protocol stack or network stack is an implementation of a computer
 networking protocol suite or protocol family. The terms are often used
@@ -1591,37 +1600,37 @@ applications usually deal only with the topmost layers (see also OSI
 model)\
 ![](./images/S/15009032.png?width=274)
 
-##  Staff Days
+## Staff Days
 
 A measure of effort indicating how much work needs to take place on an
 activity or artifact. Is often used to differentiate from *calendar
 days*. Also applies to other units of time.
 
-##  Stage
+## Stage
 
 Often used as a synonym for *phase.* May be more precisely used to
 define groupings of milestones, in terms of a hierarchy
 with *phases* that are made up of *stages*.
 
-##  Staged Delivery Lifecycle
+## Staged Delivery Lifecycle
 
 Project development occurs in stages, where the most critical
 functionality is delivered first
 
-##  Stakeholder
+## Stakeholder
 
 Individuals or entities with significant investment in the outcome of a
 project. Normally includes clients, customers, internal/external
 organizations affected by the project, etc.
 
-##  Standard
+## Standard
 
 CxStand
 
 CxOne standard material type. Defined terminology, processes, policies,
 knowledge, and/or guidelines. See *CxOneOverview* for description.
 
-##  Statistical Estimation
+## Statistical Estimation
 
 Estimation techniques that utilize historical data coupled with a
 statistically derived model to provide output estimates based on input
@@ -1629,7 +1638,7 @@ characteristics. Most often use size as an input to predict effort and
 time. Works best when calibrated with relevant historical data and
 influence modifiers.
 
-##  STB
+## STB
 
 Set Top Box
 
@@ -1641,22 +1650,22 @@ form that then be displayed on the television screen or other display
 device. They are used in cable television, satellite television, and
 over-the-air television systems, as well as other uses.
 
-##  Story Mapping
+## Story Mapping
 
 Story mapping consists of ordering user stories along two independent
 dimensions.
 
-##  Story Splitting
+## Story Splitting
 
 Splitting consists of breaking up one user story into smaller ones,
 while preserving the property that each user story separately has
 measurable business value.
 
-##  Storyboard
+## Storyboard
 
 A sequence of images which depict a *scenario* or *use case*.
 
-##  STP
+## STP
 
 Spanning Tree Protocol
 
@@ -1678,11 +1687,11 @@ network changes or failures, introducing new convergence behaviors and
 bridge port roles to do this. RSTP was designed to be
 backwards-compatible with standard STP.
 
-##  Strategy
+## Strategy
 
 The way a problem or issue is approached.
 
-##  STUN
+## STUN
 
 Session Traversal Utilities for NAT
 
@@ -1706,7 +1715,7 @@ Protocol (UDP) through Network Address Translators, but this title was
 changed in a specification of an updated set of methods published as RFC
 5389, retaining the same acronym
 
-##  Subversion
+## Subversion
 
 Apache Subversion (often abbreviated SVN, after its command name svn) is
 a software versioning and revision control system distributed as open
@@ -1715,12 +1724,12 @@ maintain current and historical versions of files such as source code,
 web pages, and documentation. Its goal is to be a mostly compatible
 successor to the widely used Concurrent Versions System (CVS).
 
-##  Sustainable Pace
+## Sustainable Pace
 
 The team aims for a work pace that they would be able to sustain
 indefinitely.
 
-##  SVC
+## SVC
 
 Soft Virtual Service
 
@@ -1737,7 +1746,7 @@ complete, for example after a phone call or a file download. SVCs are
 used in situations where data transmission is sporadic and/or not always
 between the same data terminal equipment (DTE) endpoints.
 
-##  Swift
+## Swift
 
 Swift is a general-purpose, multi-paradigm, compiled programming
 language developed by Apple Inc. for iOS, macOS, watchOS, tvOS, and
@@ -1749,7 +1758,7 @@ platforms other than Linux, it uses the Objective-C runtime library
 which allows C, Objective-C, C++ and Swift code to run within one
 program
 
-##  Switch
+## Switch
 
 A network switch (also called switching hub, bridging hub, officially
 MAC bridge) is a computer networking device that connects devices
@@ -1772,7 +1781,7 @@ Unlike less advanced repeater hubs, which broadcast the same data out of
 each of its ports and let the devices decide what data they need, a
 network switch forwards data only to the devices that need to receive it
 
-##  System
+## System
 
 A functional entity, normally composed of software, hardware, and
 closely related operational processes.\
@@ -1782,17 +1791,17 @@ Also used in CxOne to refer to the end output of a project, i.e., the
 system a project was chartered to create. This is useful when discussing
 attributes of a the *system* separate from attributes of the *project*.
 
-##  System Test
+## System Test
 
 Test focused on verifying operational behavior of the entire system,
 using a *project build* and the *system test environment*.
 
-##  System Test Environment
+## System Test Environment
 
 Environment that simulates operational environment and conditions as
 closely as possible.
 
-##  SystemX
+## SystemX
 
 2nd national digital telephone exchange system to be used in the United
 Kingdom.

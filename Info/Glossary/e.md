@@ -1,6 +1,6 @@
 # E
 
-##  E NodeB
+## E NodeB
 
 Evolved Node-B
 
@@ -18,7 +18,28 @@ lower response times.
 
 ![](./images/E/14614584.png?width=340)
 
-##  E.164
+## E-UTRAN
+
+E-UTRA is the air interface of 3rd Generation Partnership Project (3GPP)
+Long Term Evolution (LTE) upgrade path for mobile networks. It is an
+acronym for Evolved Universal Mobile Telecommunications System (UMTS)
+Terrestrial Radio Access, also referred to as the 3GPP work item on the
+Long Term Evolution (LTE) also known as the Evolved Universal
+Terrestrial Radio Access (E-UTRA) in early drafts of the 3GPP LTE
+specification. E-UTRAN is the initialism of Evolved UMTS Terrestrial
+Radio Access Network and is the combination of E-UTRA, user equipment
+(UE), and E-UTRAN Node B or Evolved Node B (EnodeB).
+
+It is a radio access network (RAN) which is referred to under the name
+EUTRAN standard meant to be a replacement of the UMTS and HSDPA/HSUPA
+technologies specified in 3GPP releases 5 and beyond. Unlike HSPA, LTE's
+E-UTRA is an entirely new air interface system, unrelated to and
+incompatible with W-CDMA. It provides higher data rates, lower latency
+and is optimized for packet data. It uses OFDMA radio-access for the
+downlink and SC-FDMA on the uplink.\
+![](./images/E/15008132.png?width=480)
+
+## E.164
 
 E.164 is an ITU-T recommendation, titled The international public
 telecommunication numbering plan, that defines a numbering plan for the
@@ -36,7 +57,7 @@ international call prefix (in place of the plus sign), which is a trunk
 code to reach an international circuit from within the country of call
 origination.
 
-##  EAD
+## EAD
 
 Ethernet Access Direct
 
@@ -49,7 +70,7 @@ simultaneous online pupil access in classrooms and storage area network
 connectivity.\
 ![](./images/E/15008088.png?width=481)
 
-##  EAP
+## EAP
 
 Extensible Authentication Protocol
 
@@ -70,21 +91,21 @@ standards have adopted IEEE 802.1X with one hundred EAP Types as the
 official authentication mechanisms\
 ![](./images/E/15008096.png?width=480)
 
-##  Earned Value
+## Earned Value
 
 EV
 
 A scheduling technique for tracking variance of actual performance to
 planned performance.
 
-##  Earned Value Management
+## Earned Value Management
 
 EVM
 
 The act or discipline of managing projects utilizing *earned
 value* techniques and practices.
 
-##  Echo
+## Echo
 
 In audio signal processing and acoustics, Echo is a reflection of sound
 that arrives at the listener with a delay after the direct sound. The
@@ -93,7 +114,7 @@ source and the listener. Typical examples are the echo produced by the
 bottom of a well, by a building, or by the walls of an enclosed room and
 an empty room. A true echo is a single reflection of the sound source.
 
-##  Echo cancellation
+## Echo cancellation
 
 Echo suppression and echo cancellation are methods used in telephony to
 improve voice quality by preventing echo from being created or removing
@@ -123,14 +144,14 @@ Although echo suppressors and echo cancellers have similar
 goals---preventing a speaking individual from hearing an echo of their
 own voice---the methods they use are different:
 
--   Echo suppressors work by detecting a voice signal going in one
+- Echo suppressors work by detecting a voice signal going in one
     direction on a circuit, and then muting or attenuating the signal in
     other direction. Usually the echo suppressor at the far end of the
     circuit does this muting when it detects voice coming from the
     near-end of the circuit. This muting prevents the speaker from
     hearing their own voice returning from the far end.
 
--   Echo cancellation involves first recognizing the originally
+- Echo cancellation involves first recognizing the originally
     transmitted signal that re-appears, with some delay, in the
     transmitted or received signal. Once the echo is recognized, it can
     be removed by subtracting it from the transmitted or received
@@ -138,7 +159,7 @@ own voice---the methods they use are different:
     digital signal processor or software, although it can be implemented
     in analog circuits as well.
 
-##  Echo Cancellation - G.168
+## Echo Cancellation - G.168
 
 Echo has a major effect on voice quality in telecommunication networks.
 The objectionable effect of echo results from a combination of
@@ -156,11 +177,11 @@ mechanisms. It also describes a number of laboratory tests that should
 be performed on an echo canceller to assess its performance under
 conditions likely to be experienced in the network
 
-##  EDB
+## EDB
 
 Emergency Database
 
-##  EDGE
+## EDGE
 
 Enhanced Data rates for GSM Evolution
 
@@ -184,11 +205,11 @@ with an ordinary GSM/GPRS connection.
 EDGE can be used for any packet switched application, such as an
 Internet connection.
 
-##  Editor
+## Editor
 
 For *inspections*, performs any necessary rework on artifacts.
 
-##  EEE 802.1Qay
+## EEE 802.1Qay
 
 Provider Backbone Bridge Traffic Engineering (PBB-TE) is an approved
 telecommunications networking standard, IEEE 802.1Qay-2009. PBB-TE
@@ -249,14 +270,14 @@ promising solutions that are 30% to 40% cheaper than T-MPLS networks
 with identical features and capabilities, giving PBB-TE a better overall
 return on investment.
 
-##  EFM
+## EFM
 
 Ethernet in the First Mile
 
 describes the inclusion of an Ethernet connection at any point in the
 network where the provider and customer are immediately connected.
 
-##  Egress
+## Egress
 
 Egress traffic is network traffic that begins inside of a network and
 proceeds through its routers to a destination somewhere outside of the
@@ -266,7 +287,7 @@ LAN routers before it is delivered to the Internet to travel to its
 final destination.\
 ![](./images/E/15008102.png?width=350)
 
-##  EIA
+## EIA
 
 Electronic Industries Alliance
 
@@ -278,7 +299,7 @@ different manufacturers was compatible and interchangeable. The EIA
 ceased operations on February 11, 2011, but the former sectors continue
 to serve the constituencies of EIA
 
-##  EIGRP
+## EIGRP
 
 Enhanced Interior Gateway Routing Protocol
 
@@ -299,19 +320,19 @@ EIGRP replaced the Interior Gateway Routing Protocol (IGRP) in 1993. One
 of the major reasons for this was the change to classless IPv4 addresses
 in the Internet Protocol, which IGRP could not support.
 
-##  embedded systems programming
+## embedded systems programming
 
 the programming of an embedded system in some device using the permitted
 programming interfaces provided by that system.
 
-##  Engineering Discussion
+## Engineering Discussion
 
 A brainstorming meeting designed to frame an *issue* and seek solutions
 for it.\
 If materials are prepared ahead of time for review by participants the
 meeting may be considered a *preview*.
 
-##  Engineering Management
+## Engineering Management
 
 EM
 
@@ -320,13 +341,13 @@ controlling execution of software projects, along with team and
 organizational management. Also denotes the engineering management CKA.
 See C*xStand\_EngineeringManagement* for more information.
 
-##  Engineering Process
+## Engineering Process
 
 Software engineering process. Defining how software engineering
 activities occur. Also denotes the engineering process CKA.
 See *CxStand\_Process* for more information.
 
-##  EoFTTC
+## EoFTTC
 
 Ethernet over Fibre to the Cabinet
 
@@ -340,7 +361,7 @@ allows access to up to 20Mbps symmetrical speed with the additional
 boost downstream making a total of 76Mbps downstream bandwidth.\
 ![](./images/E/15008108.png?width=481)
 
-##  EoS
+## EoS
 
 Ethernet Over SONET
 
@@ -358,7 +379,7 @@ through a mapping block which typically uses virtual concatenation
 is byte interleaved, it provides a better level of security compared to
 other mechanisms for Ethernet transport.
 
-##  ePDG
+## ePDG
 
 Evolved Packet Data Gateway
 
@@ -368,15 +389,15 @@ purpose, the ePDG acts as a termination node of IPsec tunnels
 established with the UE.\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "UNKNOWN_ATTACHMENT")
 
-##  Epic
+## Epic
 
 An epic is a large user story.
 
-##  EPWS
+## EPWS
 
 Ethernet Private Wire Service
 
-##  ESB
+## ESB
 
 Enterprise Service Bus
 
@@ -409,24 +430,24 @@ routing of client requests to appropriate answering services.
 
 The primary duties of an ESB are:
 
--   Route messages between services
+- Route messages between services
 
--   Monitor and control routing of message exchange between services
+- Monitor and control routing of message exchange between services
 
--   Resolve contention between communicating service components
+- Resolve contention between communicating service components
 
--   Control deployment and versioning of services
+- Control deployment and versioning of services
 
--   Marshal use of redundant services
+- Marshal use of redundant services
 
--   Provide commodity services like event handling, data transformation
+- Provide commodity services like event handling, data transformation
     and mapping, message and event queuing and sequencing, security or
     exception handling, protocol conversion and enforcing proper quality
     of communication service
 
     ![](./images/E/15008114.png?width=142)
 
-##  Estimate
+## Estimate
 
 The output of an estimation process, containing a description of inputs,
 assumptions, methodology, and the resulting estimate values. Depending
@@ -435,20 +456,20 @@ document containing complete output of several different estimation
 techniques (see *project estimate*) to a terse summary (see *task
 estimate*).
 
-##  Estimation
+## Estimation
 
 In software development, an "estimate" is the evaluation of the effort
 necessary to carry out a given development task; this is most often
 expressed in terms of duration.
 
-##  Estimation
+## Estimation
 
 The process of determining the size, cost, schedule, effort, and/or
 quality *estimates* for a project. It is best to use as many different
 estimation techniques as possible when creating *estimates*, and to
 create *estimates* regularly through the life of a project.
 
-##  Ethernet over twisted pair
+## Ethernet over twisted pair
 
 Ethernet over twisted-pair technologies use twisted-pair cables for the
 physical layer of an Ethernet computer network. They are a subset of all
@@ -470,7 +491,7 @@ finding applications implementing the Internet of things.
 
 ![](./images/E/15138870.png)![](./images/E/14614590.png)
 
-##  Ethical Hacking
+## Ethical Hacking
 
 The term "white hat" in Internet slang refers to an ethical computer
 hacker, or a computer security expert, who specializes in penetration
@@ -481,7 +502,7 @@ with black hat, a malicious hacker, the name comes from Western films,
 where heroic and antagonistic cowboys might traditionally wear a white
 and a black hat respectively.
 
-##  ETL
+## ETL
 
 Extract, Transform, Load
 
@@ -489,16 +510,16 @@ ETL is short for extract, transform, load, three database functions that
 are combined into one tool to pull data out of one database and place it
 into another database.
 
--   Extract is the process of reading data from a database. In this
+- Extract is the process of reading data from a database. In this
     stage, the data is collected, often from multiple and different
     types of sources.
 
--   Transform is the process of converting the extracted data from its
+- Transform is the process of converting the extracted data from its
     previous form into the form it needs to be in so that it can be
     placed into another database. Transformation occurs by using rules
     or lookup tables or by combining the data with other data.
 
--   Load is the process of writing the data into the target database.\
+- Load is the process of writing the data into the target database.\
     Data from one or more sources is extracted and then copied to the
     data warehouse. When dealing with large volumes of data and multiple
     source systems, the data is consolidated. ETL is used to migrate
@@ -509,7 +530,7 @@ into another database.
 
     ![](./images/E/15008126.png)
 
-##  ETSI
+## ETSI
 
 European Telecommunications Standards Institute
 
@@ -539,34 +560,13 @@ Intelligent Transport Systems, Network Functions Virtualisation, Cyber
 Security, Electronic Signatures and Infrastructures etc. ETSI inspired
 the creation of, and is a partner in, 3GPP and oneM2M.
 
-##  E-UTRAN
-
-E-UTRA is the air interface of 3rd Generation Partnership Project (3GPP)
-Long Term Evolution (LTE) upgrade path for mobile networks. It is an
-acronym for Evolved Universal Mobile Telecommunications System (UMTS)
-Terrestrial Radio Access, also referred to as the 3GPP work item on the
-Long Term Evolution (LTE) also known as the Evolved Universal
-Terrestrial Radio Access (E-UTRA) in early drafts of the 3GPP LTE
-specification. E-UTRAN is the initialism of Evolved UMTS Terrestrial
-Radio Access Network and is the combination of E-UTRA, user equipment
-(UE), and E-UTRAN Node B or Evolved Node B (EnodeB).
-
-It is a radio access network (RAN) which is referred to under the name
-EUTRAN standard meant to be a replacement of the UMTS and HSDPA/HSUPA
-technologies specified in 3GPP releases 5 and beyond. Unlike HSPA, LTE's
-E-UTRA is an entirely new air interface system, unrelated to and
-incompatible with W-CDMA. It provides higher data rates, lower latency
-and is optimized for packet data. It uses OFDMA radio-access for the
-downlink and SC-FDMA on the uplink.\
-![](./images/E/15008132.png?width=480)
-
-##  Evaluation
+## Evaluation
 
 CxEval
 
 CxOne evaluation material type, see *CxOneOverview* for description.
 
-##  EVC
+## EVC
 
 Ethernet Virtual Connection
 
@@ -578,17 +578,17 @@ path within the service provider network. An EVC is a conceptual service
 pipe within the service provider network. A bridge domain is a local
 broadcast domain that exists separately from VLANs.
 
-##  Evolutionary Delivery Lifecycle
+## Evolutionary Delivery Lifecycle
 
 A combination of the *evolutionary prototyping* and *staged
 delivery* lifecycles.
 
-##  Evolutionary Prototyping Lifecycle
+## Evolutionary Prototyping Lifecycle
 
 A system concept is evolved through iteration until the system is ready
 for delivery.
 
-##  EVPL
+## EVPL
 
 Ethernet Virtual Private Line
 
@@ -617,7 +617,7 @@ is the degree of transparency - while EPL is highly transparent,
 filtering only the pause frames, EVPL is required to either peer or drop
 most of the Layer 2 Control Protocols.
 
-##  Expert Judgment
+## Expert Judgment
 
 *Estimation* technique that relies on participants creating estimates
 based on personal experience and heuristics.\
@@ -625,23 +625,23 @@ Expert judgment can be used stand-alone, but is always best when
 combined with analogy, statistical, and decomposition estimation
 techniques.
 
-##  Explicit Change Control
+## Explicit Change Control
 
 Refers to *artifacts* managed directly by a *change control board*.
 Requirements and project plans are often under explicit change control.
 Compare to *implicit change control.*
 
-##  Explicit Risk Management
+## Explicit Risk Management
 
 Synonym for *extrinsic risk management*.
 
-##  Exploratory Testing
+## Exploratory Testing
 
 Exploratory testing is, more than strictly speaking a "practice," a
 style or approach to testing software which is often contrasted to
 "scripted testing."
 
-##  Extrinsic Risk Management
+## Extrinsic Risk Management
 
 Formal *risk management* techniques that are added to a project or
 processes to explicitly mange risks. An example would be using a top 10

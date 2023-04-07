@@ -1,6 +1,6 @@
 # G
 
-##  G.711
+## G.711
 
 G.711 is an ITU-T standard for audio companding. It is primarily used in
 telephony. The standard was released for usage in 1972. Its formal name
@@ -37,7 +37,7 @@ G.711 μ-law tends to give more resolution to higher range signals while
 G.711 A-law provides more quantization levels at lower signal levels.\
 ![](./images/G/15008219.png?width=480)
 
-##  G.711.1
+## G.711.1
 
 G.711.1 is an extension to G.711, published as ITU-T Recommendation
 G.711.1 in March 2008. Its formal name is Wideband embedded extension
@@ -68,7 +68,7 @@ transformation (MDCT).
 Two extensions for G.711.1 are planned in 2010: superwideband extension
 (bandwidth to 14000 Hz) and lossless bitstream compression.
 
-##  G.719
+## G.719
 
 G.719 is an ITU-T standard audio coding format providing high quality,
 moderate bit rate (32 to 128 kbit/s) wideband (20 Hz - 20 kHz audio
@@ -96,7 +96,7 @@ possible to accommodate any rate between 32 kbit/s and 64 kbit/s by
 steps of 4 kbit/s. Moreover, the codec can also provide higher rates
 than 64 kbit/s and up to 128 kbit/s.
 
-##  G.722
+## G.722
 
 G.722 is an ITU-T standard 7 kHz Wideband audio codec operating at 48,
 56 and 64 kbit/s. It was approved by ITU-T in November 1988. Technology
@@ -122,7 +122,7 @@ When congestion returns to a normal level, a lower-compression,
 higher-quality bitrate is restored.\
 ![](./images/G/15008219.png?width=480)
 
-##  G.723.1
+## G.723.1
 
 G.723.1 is an audio codec for voice that compresses voice audio in 30 ms
 frames. An algorithmic look-ahead of 7.5 ms duration means that total
@@ -138,7 +138,7 @@ There are two bit rates at which G.723.1 can operate:
 6.3 kbit/s (using 24 byte frames) using a MPC-MLQ algorithm (MOS 3.9)\
 5.3 kbit/s (using 20 byte frames) using an ACELP algorithm (MOS 3.62)
 
-##  G.726
+## G.726
 
 G.726 is an ITU-T ADPCM speech codec standard covering the transmission
 of voice at rates of 16, 24, 32, and 40 kbit/s. It was introduced to
@@ -157,9 +157,9 @@ circuit multiplication equipment (DCME). The principal application of 40
 kbit/s channels is to carry data modem signals in DCME, especially for
 modems operating at greater than 4800 bit/s.
 
-##  G.729
+## G.729
 
-##  G.Fast
+## G.Fast
 
 G.fast is a digital subscriber line (DSL) protocol standard for local
 loops shorter than 500 m, with performance targets between 100 Mbit/s
@@ -183,36 +183,36 @@ were introduced in October 2014, with commercial hardware introduced in
 ![](./images/G/15008233.png?width=509)\
 ![](./images/G/15008239.png?width=473)
 
-##  Gantt chart
+## Gantt chart
 
 a horizontal bar chart frequently used in project management that
 provides a graphical illustration of a schedule that helps to plan,
 coordinate, and track specific tasks in a project.\
 ![](./images/G/15008245.png?width=487)
 
-##  gap analysis
+## gap analysis
 
 the study of the differences between two different information systems
 or applications, often for the purpose of determining how to get from
 one state to a new state. Sometimes spoken of as "the space between
 where we are and where we want to be."
 
-##  Gate
+## Gate
 
 A set of defined criteria that must be completed for an artifact or even
 to be complete, or to allow a process or workflow to move from one phase
 to the next.
 
-##  Gate Checklist
+## Gate Checklist
 
 A special checklist type that defines and supports verification of
 a *gate*.
 
-##  GBE / GE
+## GBE / GE
 
 Gigabit Ethernet
 
-##  GCHQ
+## GCHQ
 
 Government Communications Headquarters
 
@@ -237,7 +237,7 @@ cross-government resource responsible for mainly technical language
 support and translation and interpreting services across government
 departments. It is co-located with GCHQ for administrative purposes.
 
-##  Geocast
+## Geocast
 
 Geocast refers to the delivery of information to a group of destinations
 in a network identified by their geographical locations. It is a
@@ -245,7 +245,7 @@ specialized form of multicast addressing used by some routing protocols
 for mobile ad hoc networks.\
 ![](./images/G/15008251.png?width=195)
 
-##  GERAN
+## GERAN
 
 GERAN is an abbreviation for GSM EDGE Radio Access Network. The
 standards for GERAN are maintained by the 3GPP (Third Generation
@@ -265,7 +265,7 @@ A GERAN without EDGE is a GRAN, but is otherwise identical in concept.
 A GERAN without GSM is an ERAN.\
 ![](./images/G/15008257.png?width=364)
 
-##  GGSN
+## GGSN
 
 Gateway GPRS support node
 
@@ -307,7 +307,7 @@ functionality working in MME).
 
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "UNKNOWN_ATTACHMENT")
 
-##  Gherkin
+## Gherkin
 
 Gherkin is a language that developers use to define tests. Since this
 language uses plain English, it's meant to describe use cases for a
@@ -324,45 +324,23 @@ and supports dozens of languages.
 
 The primary keywords are:
 
--   `Feature`
+- `Feature`
 
--   `Rule` (as of Gherkin 6)
+- `Rule` (as of Gherkin 6)
 
--   `Example` (or `Scenario`)
+- `Example` (or `Scenario`)
 
--   `Given`, `When`, `Then`, `And`, `But` for steps (or `*`)
+- `Given`, `When`, `Then`, `And`, `But` for steps (or `*`)
 
--   `Background`
+- `Background`
 
--   `Scenario Outline` (or `Scenario Template`)
+- `Scenario Outline` (or `Scenario Template`)
 
--   `Examples` (or `Scenarios`)
+- `Examples` (or `Scenarios`)
 
 Feature: Guess the word
 
-##  The first example has two steps
-
-Scenario: Maker starts a game When the Maker starts a game Then the
-Maker waits for a Breaker to join
-
-##  The second example has three steps
-
-Scenario: Breaker joins a game Given the Maker has started a game with
-the word "silky" When the Breaker joins the Maker's game Then the
-Breaker must guess a word with 5 characters
-
-Feature: Calculator
-
-Calculator for adding two numbers
-
-@mytag Scenario: Add two numbers Add two numbers with the calculator
-Given I have entered `<First>`{=html} into the calculator And I have
-entered `<Second>`{=html} into the calculator
-
-When I press add Then the result should be `<Result>`{=html} on the
-screen Examples: First Second Result 50 70 120 30 40 70 60 30 90
-
-##  Gigabit Ethernet
+## Gigabit Ethernet
 
 In computer networking, Gigabit Ethernet (GbE or 1 GigE) is the various
 technologies for transmitting Ethernet frames at a rate of a gigabit per
@@ -372,7 +350,7 @@ supplanting Fast Ethernet in wired local networks, as a result of being
 considerably faster. The cables and equipment are very similar to
 previous standards and have been very common and economical since 2010.
 
-##  Git
+## Git
 
 Git is a version control system for tracking changes in computer files
 and coordinating work on those files among multiple people. It is
@@ -390,14 +368,14 @@ client--server systems, every Git directory on every computer is a
 full-fledged repository with complete history and full version tracking
 abilities, independent of network access or a central server.
 
-##  Given When Then
+## Given When Then
 
 The Given-When-Then formula is a template intended to guide the writing
 of acceptance tests for a User Story: (Given) some context, (When) some
 action is carried out, (Then) a particular set of observable
 consequences should obtain.
 
-##  GMSC
+## GMSC
 
 Gateway Mobile Switching Centre
 
@@ -409,7 +387,7 @@ the call is routed through the GMSC.
 
 In practice, the GMSC is just a function that can be part of a MSC.
 
-##  GNU
+## GNU
 
 GNU is an operating system and an extensive collection of computer
 software. GNU is composed wholly of free software, most of which is
@@ -425,7 +403,7 @@ production-ready,\[20\] this is how the GNU system is usually used.The
 combination of GNU software and the Linux kernel is commonly known as
 Linux (or less frequently GNU/Linux; see GNU/Linux naming controversy).
 
-##  Go
+## Go
 
 Go (often referred to as Golang) is a programming language created by
 Google in 2009 by Robert Griesemer, Rob Pike, and Ken Thompson. Go is a
@@ -434,14 +412,14 @@ safety, garbage collection, structural typing, and CSP-style
 concurrency. The compiler, tools and source code are all free and open
 source.
 
-##  Goals
+## Goals
 
 The desired results of a *project*, *process*, or *activity*.\
 In general, software projects exist to meet business or organizational
 goals through the creation of software. Goal and *objective* are
 synonyms in CxOne.
 
-##  GoF
+## GoF
 
 Gang of Four Design patterns
 
@@ -460,7 +438,7 @@ practice. More than 500,000 copies have been sold in English and in 13
 other languages. The authors are often referred to as the Gang of Four
 (GoF).
 
-##  Google Cloud Platform
+## Google Cloud Platform
 
 Google Cloud Platform, offered by Google, is a suite of cloud computing
 services that runs on the same infrastructure that Google uses
@@ -484,7 +462,7 @@ Google Cloud Platform public cloud infrastructure, as well as G Suite,
 enterprise versions of Android and Chrome OS, and application
 programming interfaces (APIs) for machine learning and Google Maps
 
-##  GPL
+## GPL
 
 The GNU General Public License (GNU GPL or GPL) is a widely used free
 software license, which guarantees end users the freedom to run, study,
@@ -516,7 +494,7 @@ versions as updated by the FSF. Developers can omit it when licensing
 their software; for instance the Linux kernel is licensed under GPLv2
 without the "any later version" clause.
 
-##  GPRS
+## GPRS
 
 General Packet Radio Service
 
@@ -545,7 +523,7 @@ multiple access (TDMA) channels in, for example, the GSM system. GPRS is
 integrated into GSM Release 97 and newer releases.\
 ![](./images/G/15008263.png?width=480)
 
-##  GSM
+## GSM
 
 GSM (Global System for Mobile communications) is a standard developed by
 the European Telecommunications Standards Institute (ETSI) to describe
@@ -568,7 +546,7 @@ followed by fourth-generation (4G) LTE Advanced standards, which do not
 form part of the ETSI GSM standard.\
 ![](https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment "UNKNOWN_ATTACHMENT")
 
-##  GSM AMR
+## GSM AMR
 
 GSM Adaptive Multi-Rate
 
@@ -593,7 +571,7 @@ advanced demands on the storage format, like random access or
 synchronization with video. This format is the 3GPP-specified 3GP
 container format based on ISO base media file format.
 
-##  GSM-FR
+## GSM-FR
 
 GSM Full Rate
 
@@ -609,7 +587,7 @@ is still widely used in networks around the world. Gradually FR will be
 replaced by Enhanced Full Rate (EFR) and Adaptive Multi-Rate (AMR)
 standards, which provide much higher speech quality with lower bit rate.
 
-##  GSM-R
+## GSM-R
 
 GSM-R, Global System for Mobile Communications -- Railway or GSM-Railway
 is an international wireless communications standard for railway
@@ -621,7 +599,7 @@ centres. The system is based on GSM and EIRENE -- MORANE specifications
 which guarantee performance at speeds up to 500 km/h (310 mph), without
 any communication loss.
 
-##  GSN
+## GSN
 
 GPRS support node
 
@@ -629,3 +607,25 @@ A GSN is a network node which supports the use of GPRS in the GSM core
 network. All GSNs should have a Gn interface and support the GPRS
 tunneling protocol. There are two key variants of the GSN, namely
 Gateway and Serving GPRS support node.
+
+## The first example has two steps
+
+Scenario: Maker starts a game When the Maker starts a game Then the
+Maker waits for a Breaker to join
+
+## The second example has three steps
+
+Scenario: Breaker joins a game Given the Maker has started a game with
+the word "silky" When the Breaker joins the Maker's game Then the
+Breaker must guess a word with 5 characters
+
+Feature: Calculator
+
+Calculator for adding two numbers
+
+@mytag Scenario: Add two numbers Add two numbers with the calculator
+Given I have entered `<First>`{=html} into the calculator And I have
+entered `<Second>`{=html} into the calculator
+
+When I press add Then the result should be `<Result>`{=html} on the
+screen Examples: First Second Result 50 70 120 30 40 70 60 30 90

@@ -1,6 +1,6 @@
 # Z
 
-##  ZigBee
+## ZigBee
 
 Zigbee is an IEEE 802.15.4-based specification for a suite of high-level
 communication protocols used to create personal area networks with
@@ -27,7 +27,7 @@ applications that require long battery life and secure networking
 Zigbee has a defined rate of 250 kbit/s, best suited for intermittent
 data transmissions from a sensor or input device.
 
-##  μ-law
+## μ-law
 
 The µ-law algorithm (sometimes written "mu-law", often approximated as
 "u-law") is a companding algorithm, primarily used in 8-bit PCM digital

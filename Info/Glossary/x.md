@@ -1,6 +1,6 @@
 # X
 
-##  X.25
+## X.25
 
 X.25 is an ITU-T standard protocol suite for packet switched wide area
 network (WAN) communication. An X.25 WAN consists of packet-switching
@@ -20,9 +20,7 @@ payment industry) and available in niche applications.
 
 ![](./images/X/15009253.png?width=480)
 
-##  X.509
-
-\
+## X.509
 
 In cryptography, X.509 is an International Telecommunication Union (ITU)
 standard defining the format of public key certificates. X.509
@@ -51,7 +49,7 @@ X.509 is defined by the International Telecommunications Union's
 "Standardization Sector" (ITU-T), in ITU-T Study Group 17 and is based
 on ASN.1, another ITU-T standard.
 
-##  XML
+## XML
 
 Extensible Markup Language
 
@@ -75,22 +73,29 @@ interfaces (APIs) to aid the processing of XML data.
 ```{=html}
 <note>
 ```
+
 \
 `<to>`{=html}Tove`</to>`{=html}\
 `<from>`{=html}Jani`</from>`{=html}\
 `<heading>`{=html}Reminder`</heading>`{=html}\
+
 ```{=html}
 <body>
 ```
+
 Don't forget me this weekend!
+
 ```{=html}
 </body>
 ```
+
 \
+
 ```{=html}
 </note>
 ```
-##  XML Schema
+
+## XML Schema
 
 An XML schema is a description of a type of XML document, typically
 expressed in terms of constraints on the structure and content of
@@ -140,7 +145,7 @@ xsi:noNamespaceSchemaLocation="shiporder.xsd">\
 </shiporder>
 ```
 
-##  XML-RPC
+## XML-RPC
 
 XML-RPC is a remote procedure call (RPC) protocol which uses XML to
 encode its calls and HTTP as a transport mechanism. "XML-RPC" also
@@ -148,7 +153,7 @@ refers generically to the use of XML for remote procedure call,
 independently of the specific protocol. This article is about the
 protocol named "XML-RPC".
 
-##  XMPP
+## XMPP
 
 Extensible Messaging and Presence Protocols
 
@@ -184,7 +189,7 @@ RFC 7622. In addition to these core protocols standardized at the IETF,
 the XMPP Standards Foundation (formerly the Jabber Software Foundation)
 is active in developing open XMPP extensions.
 
-##  XP
+## XP
 
 eXtreme Programming
 
@@ -194,7 +199,7 @@ quality of life for the development team. XP is the most specific of the
 agile frameworks regarding appropriate engineering practices for
 software development.
 
-##  xsd
+## xsd
 
 XSD (XML Schema Definition), a recommendation of the World Wide Web
 Consortium (W3C), specifies how to formally describe the elements in an
@@ -210,7 +215,7 @@ validity would produce a collection of information adhering to specific
 data types. Such a post-validation infoset can be useful in the
 development of XML document processing software.
 
-##  XSS
+## XSS
 
 Cross Site Scripting
 

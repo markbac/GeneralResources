@@ -1,6 +1,6 @@
 # K
 
-##  K & R
+## K & R
 
 Kernighan and Ritchie
 
@@ -13,7 +13,7 @@ Dennis MacAlistair Ritchie was an American computer scientist. He
 created the C programming language and, with long-time colleague Ken
 Thompson, the Unix operating system.
 
-##  K & R C
+## K & R C
 
 In 1978, Brian Kernighan and Dennis Ritchie published the first edition
 of The C Programming Language. This book, known to C programmers as
@@ -22,7 +22,7 @@ language. The version of C that it describes is commonly referred to as
 K&R C. The second edition of the book covers the later ANSI C standard,
 described below.
 
-##  K & R indent style
+## K & R indent style
 
 The K&R style is commonly used in C, C++, and other curly brace
 programming languages. Used in Kernighan and Ritchie's book The C
@@ -41,6 +41,7 @@ non-aligned braces are nicknamed "Egyptian braces" (or "Egyptian
 brackets") for their resemblance to arms in some fanciful poses of
 ancient Egyptians.
 
+```c
 int main(int argc, char \*argv\[\])\
 {\
 ...\
@@ -57,21 +58,22 @@ continue\_as\_usual();\
 finalthing();\
 ...\
 }
+```
 
-##  Kanban
+## Kanban
 
 a method for managing work, with an emphasis on just-in-time delivery.
 The Kanban Method is a means to design, manage and improve flow for
 knowledge work and allows teams to start where they are to drive
 evolutionary change.
 
-##  Kanban Board
+## Kanban Board
 
 A Kanban Board is a visual workflow tool consisting of multiple columns.
 Each column represents a different stage in the workflow process.\
 ![](./images/K/15008447.png?width=480)
 
-##  Kerberos
+## Kerberos
 
 Kerberos is a computer network authentication protocol that works on the
 basis of tickets to allow nodes communicating over a non-secure network
@@ -87,7 +89,7 @@ Kerberos builds on symmetric key cryptography and requires a trusted
 third party, and optionally may use public-key cryptography during
 certain phases of authentication. Kerberos uses UDP port 88 by default.
 
-##  Kernel
+## Kernel
 
 The kernel is a computer program that is the core of a computer's
 operating system, with complete control over everything in the system.
@@ -116,7 +118,7 @@ space for speed. A microkernel runs most processes in user
 space, for modularity.\
 ![](./images/K/15008455.png?width=379)
 
-##  KISS Principle
+## KISS Principle
 
 Keep It Simple, Stupid
 
@@ -124,14 +126,14 @@ the principle that people want products that are easy to learn and use,
 and that companies realize time and cost benefits by producing such
 products.
 
-##  Knowledge Management
+## Knowledge Management
 
 KM
 
 A mechanism or method of retaining, reusing, and providing people with
 useful and relevant information.
 
-##  KPI
+## KPI
 
 Key Performance Indicator
 
@@ -157,7 +159,7 @@ improvements, so performance indicators are routinely associated with
 'performance improvement' initiatives. A very common way to choose KPIs
 is to apply a management framework such as the balanced scorecard.
 
-##  ksh
+## ksh
 
 KornShell (ksh) is a Unix shell which was developed by David Korn at
 Bell Labs in the early 1980s and announced at USENIX on July 14, 1983.

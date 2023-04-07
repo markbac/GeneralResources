@@ -1,6 +1,6 @@
 # W
 
-##  W3C
+## W3C
 
 World Wide Web Consortium
 
@@ -13,12 +13,32 @@ of working together in the development of standards for the World Wide
 Web. As of 24 September 2017, the World Wide Web Consortium (W3C) has
 474 members.
 
-##  Walkthrough
+## W-CDMA
+
+Wideband Code-division multiple access
+
+W-CDMA or WCDMA (Wideband Code Division Multiple Access), along with
+UMTS-FDD, UTRA-FDD, or IMT-2000 CDMA Direct Spread is an air interface
+standard found in 3G mobile telecommunications networks. It supports
+conventional cellular voice, text and MMS services, but can also carry
+data at high speeds, allowing mobile operators to deliver higher
+bandwidth applications including streaming and broadband Internet
+access.
+
+W-CDMA uses the DS-CDMA channel access method with a pair of 5 MHz wide
+channels. In contrast, the competing CDMA2000 system uses one or more
+available 1.25 MHz channels for each direction of communication. W-CDMA
+systems are widely criticized for their large spectrum usage, which
+delayed deployment in countries that acted relatively slowly in
+allocating new frequencies specifically for 3G services (such as the
+United States).
+
+## Walkthrough
 
 An *informal* *review* in which the *author* and one or more people meet
 to review an *artifact* with the intent of finding *defects*.
 
-##  WAN
+## WAN
 
 Wide Area Network
 
@@ -38,7 +58,7 @@ metropolitan area networks (MANs) which are usually limited to a room,
 building, campus or specific metropolitan area respectively.\
 ![](./images/W/15009199.png?width=480)
 
-##  WANET
+## WANET
 
 Wireless ad hoc network
 
@@ -58,7 +78,7 @@ in which nodes are free to move. Wireless networks lack the complexities
 of infrastructure setup and administration, enabling devices to create
 and join networks "on the fly" -- anywhere, anytime.
 
-##  WAP
+## WAP
 
 Wireless Access Point
 
@@ -70,7 +90,7 @@ an integral component of the router itself. An AP is differentiated from
 a hotspot, which is the physical location where Wi-Fi access to a WLAN
 is available.
 
-##  Waterfall
+## Waterfall
 
 The waterfall model is a relatively linear sequential design approach
 for certain areas of engineering design. In software development, it
@@ -95,12 +115,12 @@ widespread.
 
 ![](./images/W/15009207.png?width=445)
 
-##  Waterfall Lifecycle
+## Waterfall Lifecycle
 
 An orderly sequence of phases from system concept to delivery with a
 review at the end of each phase.
 
-##  WBC
+## WBC
 
 Wholesale Broadband Managed
 
@@ -114,7 +134,7 @@ aggregation point will cover a region of the country, so an ISP would
 need to have presence at all twenty to cover the entire of the UK.\
 ![](./images/W/15009213.png?width=481)
 
-##  WBCC
+## WBCC
 
 Wholesale Broadband Connect Converge
 
@@ -124,7 +144,7 @@ package, with BT providing the ISP a single bill for both. Given that
 this product will again be based on WBC, one can only assume that the
 same product options and QoS would also be available.
 
-##  WBMC
+## WBMC
 
 Wholesale Broadband Managed Connect
 
@@ -143,32 +163,12 @@ certainly does not offer all of the flexibility that an ISP using WBC
 would receive. That said, all of the same products and QoS options are
 available on WBMC as on WBC.
 
-##  W-CDMA
-
-Wideband Code-division multiple access
-
-W-CDMA or WCDMA (Wideband Code Division Multiple Access), along with
-UMTS-FDD, UTRA-FDD, or IMT-2000 CDMA Direct Spread is an air interface
-standard found in 3G mobile telecommunications networks. It supports
-conventional cellular voice, text and MMS services, but can also carry
-data at high speeds, allowing mobile operators to deliver higher
-bandwidth applications including streaming and broadband Internet
-access.\[5\]
-
-W-CDMA uses the DS-CDMA channel access method with a pair of 5 MHz wide
-channels. In contrast, the competing CDMA2000 system uses one or more
-available 1.25 MHz channels for each direction of communication. W-CDMA
-systems are widely criticized for their large spectrum usage, which
-delayed deployment in countries that acted relatively slowly in
-allocating new frequencies specifically for 3G services (such as the
-United States).
-
-##  Weekly Individual Plan
+## Weekly Individual Plan
 
 A mechanism for individuals to create *miniature milestone* plan on a
 weekly basis. See C*xGuide\_WeeklyIndividualPlan*.
 
-##  WEP
+## WEP
 
 Wired Equivalent Privacy
 
@@ -189,15 +189,15 @@ WEP was the only encryption protocol available to 802.11a and 802.11b
 devices built before the WPA standard, which was available for 802.11g
 devices.
 
-##  What Requirement
+## What Requirement
 
 Synonym for *Functional Requirement*
 
-##  Why Requirement
+## Why Requirement
 
 Synonym for *Business Requirement*
 
-##  Wi-Fi
+## Wi-Fi
 
 Wi-Fi or WiFi is technology for radio wireless local area networking of
 devices based on the IEEE 802.11 standards. Wi Fi is a trademark of the
@@ -235,7 +235,7 @@ networks. Security features of Wi-Fi Protected Access have included
 stronger protections and new security practices as the security
 landscape has changed over time.
 
-##  Wiki
+## Wiki
 
 A wiki is a website on which users collaboratively modify content and
 structure directly from the web browser. In a typical wiki, text is
@@ -255,7 +255,7 @@ editing rights may permit changing, adding, or removing material. Others
 may permit access without enforcing access control. Other rules may be
 imposed to organize content.
 
-##  WiMAX
+## WiMAX
 
 Worldwide Interoperability for Microwave Access
 
@@ -275,7 +275,7 @@ a candidate for the 4G, in competition with the LTE Advanced standard.
 WiMAX was initially designed to provide 30 to 40 megabit-per-second data
 rates, with the 2011 update providing up to 1 Gbit/s for fixed stations
 
-##  WIN-T
+## WIN-T
 
 Warfighter Information Network - Tactical
 
@@ -286,15 +286,15 @@ commanders, WIN-T is changing the way the U.S. Army fights by providing
 life-saving information on-the-move, anywhere in the world. WIN-T
 enables soldiers to:
 
--   Stream real-time video over the network
+- Stream real-time video over the network
 
--   View a topographical map of friendly forces
+- View a topographical map of friendly forces
 
--   Send texts requesting medical assistance
+- Send texts requesting medical assistance
 
--   Digitally call for artillery support
+- Digitally call for artillery support
 
--   Access mission command apps like CPOF and TIGR
+- Access mission command apps like CPOF and TIGR
 
     WIN-T INCREMENT 1: COMMUNICATIONS AT-THE-HALT\
     Originally known as the Joint Network Node Network (JNN-N) program,
@@ -330,7 +330,7 @@ enables soldiers to:
 
     ![](./images/W/15009219.png?width=480)
 
-##  Wireless Mesh Network
+## Wireless Mesh Network
 
 \
 ![](./images/W/15009225.png?width=479)\
@@ -363,7 +363,7 @@ different wireless technologies including 802.11, 802.15, 802.16,
 cellular technologies and need not be restricted to any one technology
 or protocol.
 
-##  Wireless Repeater
+## Wireless Repeater
 
 A wireless repeater (also called wireless range extender) takes an
 existing signal from a wireless router or wireless access point and
@@ -380,7 +380,7 @@ making it necessary to enable safety features on the wireless repeater.
 Wireless repeaters are commonly used to improve signal range and
 strength within homes and small offices.
 
-##  Wireshark
+## Wireshark
 
 Wireshark is a free and open source packet analyzer. It is used for
 network troubleshooting, analysis, software and communications protocol
@@ -388,7 +388,7 @@ development, and education. Originally named Ethereal, the project was
 renamed Wireshark in May 2006 due to trademark issues.\
 ![](./images/W/15009231.png?width=477)
 
-##  WISP
+## WISP
 
 Wireless ISP
 
@@ -400,7 +400,7 @@ and 60 GHz bands or licensed frequencies in the UHF band (including the
 MMDS frequency band), LMDS, and other bands from 6Ghz to 80Ghz.\
 ![](./images/W/15009237.png?width=480)
 
-##  WLR
+## WLR
 
 Wholesale Line Rental
 
@@ -417,7 +417,7 @@ by the WLR operator (and included in a single bill) if a separate
 wholesale DSL product is purchased from the incumbent, but this is
 optional.
 
-##  WMA
+## WMA
 
 Windows Media Audio
 
@@ -432,7 +432,7 @@ compresses audio data without loss of audio fidelity (the regular WMA
 format is lossy).\[3\] WMA Voice, targeted at voice content, applies
 compression using a range of low bit rates.
 
-##  Work Breakdown Structure
+## Work Breakdown Structure
 
 WBS
 
@@ -442,11 +442,11 @@ project management view of a project. Smaller projects may capture their
 WBS implicitly in *work plans* or *detailed schedules*. Larger projects
 will often define the *WBS* as a separate artifact.
 
-##  Work Item
+## Work Item
 
 Synonym for *artifact*.
 
-##  Work Package
+## Work Package
 
 WP
 
@@ -456,17 +456,17 @@ is often captured in a *work plan*. *Work packages* are normally broken
 down into *activities* and *tasks* for *task estimation* and *detailed
 scheduling*.
 
-##  Work Plan
+## Work Plan
 
 A key project artifact that captures *work packages* along with
 their *task estimates.* Used to plan, track, and control detailed
 execution. See *CxGuide\_EarnedValueWorkPlan*.
 
-##  Work Product
+## Work Product
 
 Synonym for *artifact*.
 
-##  WPA2
+## WPA2
 
 Wi-Fi Protected Access
 
@@ -482,7 +482,7 @@ measure in anticipation of the availability of the more secure and
 complex WPA2, which became available in 2004 and is a common shorthand
 for the full IEEE 802.11i (or IEEE 802.11i-2004) standard.
 
-##  WPS
+## WPS
 
 Wi-Fi Protected Setup
 
@@ -497,11 +497,11 @@ existing network without entering long passphrases. Prior to the
 standard, several competing solutions were developed by different
 vendors to address the same need.
 
-##  write-only code
+## write-only code
 
 code that is hard to read.
 
-##  WS-BPEL
+## WS-BPEL
 
 Web Services Business Process Execution Language
 
@@ -510,7 +510,7 @@ large and programming in the small. This term is also known as Web
 Services Business Process Execution Language (WS-BPEL), and is sometimes
 written as business process execution language for Web Services.
 
-##  WSDL
+## WSDL
 
 Web Services Description Language
 
@@ -531,6 +531,7 @@ changed from version 1.1 where the "D" stood for "Definition".
 ```{=html}
 <?xml version="1.0" encoding="UTF-8"?>
 ```
+
 `<description xmlns="http://www.w3.org/ns/wsdl" xmlns:tns="http://www.tmsws.com/wsdl20sample" xmlns:whttp="http://schemas.xmlsoap.org/wsdl/http/"xmlns:wsoap="http://schemas.xmlsoap.org/wsdl/soap/"targetNamespace="http://www.tmsws.com/wsdl20sample">`{=html}\
 `<documentation>`{=html}This is a sample WSDL 2.0 document.
 `</documentation>`{=html}\
@@ -539,9 +540,11 @@ changed from version 1.1 where the "D" stood for "Definition".
 `</xs:element>`{=html}`<xs:element name="response">`{=html} ...
 `</xs:element>`{=html}`</xs:schema>`{=html}`</types>`{=html}\
 `<!-- Abstract interfaces -->`{=html}`<interface name="Interface1">`{=html}`<fault name="Error1" element="tns:response"/>`{=html}`<operation name="Get" pattern="http://www.w3.org/ns/wsdl/in-out">`{=html}`<input messageLabel="In" element="tns:request"/>`{=html}
+
 ```{=html}
 <output messageLabel="Out" element="tns:response"/>
 ```
+
 `</operation>`{=html}`</interface>`{=html}\
 `<!-- Concrete Binding Over HTTP -->`{=html}
 `<!-- Web Service offering endpoints for both bindings-->`{=html}`<service name="Service1" interface="tns:Interface1">`{=html}`<endpoint name="HttpEndpoint" binding="tns:HttpBinding" address="http://www.example.com/rest/"/>`{=html}`<endpoint name="SoapEndpoint" binding="tns:SoapBinding" address="http://www.example.com/soap/"/>`{=html}`</service>`{=html}`</description>`{=html}

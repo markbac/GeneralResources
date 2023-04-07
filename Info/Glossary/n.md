@@ -1,6 +1,6 @@
 # N
 
-##  NaaS
+## NaaS
 
 Network as a Service
 
@@ -15,20 +15,20 @@ Software-as-a-Service (SaaS), and Communication-as-a-Service (CaaS).
 
 NaaS sometimes includes the provision of a virtual network service by
 the owners of the network infrastructure to a third party. Often this
-includes network virtualization using a protocol such as OpenFlow.\[
+includes network virtualization using a protocol such as OpenFlow.
 
 Some service models are:
 
--   Virtual Private Network (VPN): Extends a private network and the
+- Virtual Private Network (VPN): Extends a private network and the
     resources contained in the network across networks like the public
     Internet. It enables a host computer to send and receive data across
     shared or public networks as if it were a private network with the
-    functionality and policies of the private network.\[6\]
--   Bandwidth on demand (BoD): Technique by which network capacity is
+    functionality and policies of the private network.
+- Bandwidth on demand (BoD): Technique by which network capacity is
     assigned based on requirements between different nodes or users.
     Under this model link rates can be dynamically adapted to the
     traffic demands of the nodes connected to the link.
--   Mobile network virtualization: Model in which a telecommunications
+- Mobile network virtualization: Model in which a telecommunications
     manufacturer or independent network operator builds and operates a
     network (wireless, or transport connectivity) and sells its
     communication access capabilities to third parties (commonly mobile
@@ -39,7 +39,7 @@ Some service models are:
     offers its communication services using the network infrastructure
     of an established mobile network operator.
 
-##  NAPT
+## NAPT
 
 Network Address Port Translation
 
@@ -59,7 +59,7 @@ address translation (PAT), IP masquerading, NAT overload and many-to-one
 NAT. This is the most common type of NAT and has become synonymous with
 the term "NAT" in common usage.
 
-##  NAS
+## NAS
 
 Network Access Server
 
@@ -67,7 +67,7 @@ A system that provides access to a network. In some cases also known as
 a Terminal Server or Remote Access Server (RAS).\
 ![](./images/N/15008661.png?width=480)
 
-##  NAT
+## NAT
 
 Network Address Translation
 
@@ -98,11 +98,11 @@ traffic. The specifics of NAT behavior are not commonly documented by
 vendors of equipment containing NAT implementations.\
 ![](./images/N/15008669.png?width=480)
 
-##  Native Risk Management
+## Native Risk Management
 
 See *intrinsic risk management*.
 
-##  NBAP
+## NBAP
 
 Node-B Application Part
 
@@ -141,15 +141,15 @@ unused 200 khz bands that were previously used by GSM.
 
 ![](https://cdn.everythingrf.com/live/NBIoT-Bands_636366474671552025.png)
 
--   **Downlink Peak Rate:** 250 kbps
--   **Uplink Peak Rate:** 250 kbps (Multi-tone) and 20 kbps (Single
+- **Downlink Peak Rate:** 250 kbps
+- **Uplink Peak Rate:** 250 kbps (Multi-tone) and 20 kbps (Single
     Tone)
--   **Latency:** 1.6 to 10 sec
--   **Duplex Technology:** Half Duplex
--   **Device Receive Bandwidth:** 180 kHz
--   **Device Transmit Power:** 20/23 dBm
+- **Latency:** 1.6 to 10 sec
+- **Duplex Technology:** Half Duplex
+- **Device Receive Bandwidth:** 180 kHz
+- **Device Transmit Power:** 20/23 dBm
 
-##  NCSC
+## NCSC
 
 National Cyber Security Centre
 
@@ -159,7 +159,7 @@ public and private sector in how to avoid computer security threats.
 Based in London, it became operational in October 2016, and its parent
 organisation is GCHQ.
 
-##  Network Topologies
+## Network Topologies
 
 Network topology is the arrangement of the elements (links, nodes, etc.)
 of a communication network.
@@ -192,7 +192,7 @@ control system networks of one or more controllers interconnected with
 sensors and actuators over, invariably, a physical bus topology.\
 ![](./images/N/15008675.png?width=488)
 
-##  NFS
+## NFS
 
 Network File System
 
@@ -204,7 +204,7 @@ Network Computing Remote Procedure Call (ONC RPC) system. The NFS is an
 open standard defined in Request for Comments (RFC), allowing anyone to
 implement the protocol.
 
-##  NGN
+## NGN
 
 Next Generation Networks
 
@@ -230,7 +230,7 @@ services to users.\
 From a practical perspective, NGN involves three main architectural
 changes that need to be looked at separately:
 
--   In the core network, NGN implies a consolidation of several
+- In the core network, NGN implies a consolidation of several
     (dedicated or overlay) transport networks each historically built
     for a different service into one core transport network (often based
     on IP and Ethernet). It implies amongst others the migration of
@@ -240,13 +240,13 @@ changes that need to be looked at separately:
     or technical emigration by emulation of the "legacy service" on the
     NGN).
 
--   In the wired access network, NGN implies the migration from the dual
+- In the wired access network, NGN implies the migration from the dual
     system of legacy voice next to xDSL setup in local exchanges to a
     converged setup in which the DSLAMs integrate voice ports or VoIP,
     making it possible to remove the voice switching infrastructure from
     the exchange.\[2\]
 
--   In the cable access network, NGN convergence implies migration of
+- In the cable access network, NGN convergence implies migration of
     constant bit rate voice to CableLabs PacketCable standards that
     provide VoIP and SIP services. Both services ride over DOCSIS as the
     cable data layer standard.
@@ -308,7 +308,7 @@ changes that need to be looked at separately:
     Telecommunications Standards Institute (ETSI) and the 3rd Generation
     Partnership Project (3GPP).
 
-##  NGWFQ
+## NGWFQ
 
 Weighted Fair Queueing
 
@@ -325,14 +325,14 @@ P-GPS) since it approximates generalized processor sharing "to within
 one packet transmission time, regardless of the arrival patterns."\
 ![](./images/N/15008681.png?width=480)
 
-##  Niko-niko Calendar
+## Niko-niko Calendar
 
 A Niko-niko Calendar is updated daily with each team member's mood for
 that day. Over time the calendar reveals patterns of change in the moods
 of the team, or of individual members.\
 ![](./images/N/15008687.png?width=461)
 
-##  NIST
+## NIST
 
 National Institute of Standards and Technology
 
@@ -344,7 +344,7 @@ laboratory programs that include nanoscale science and technology,
 engineering, information technology, neutron research, material
 measurement, and physical measurement.
 
-##  NNI
+## NNI
 
 Network-to-network interface
 
@@ -367,7 +367,7 @@ NNI also can be used for interconnection of two VoIP nodes. In cases of
 mixed or full-mesh scenarios, other NNI types are possible.\
 ![](./images/N/15008693.png?width=399)
 
-##  NNTP
+## NNTP
 
 Network News Transfer Protocol
 
@@ -392,7 +392,7 @@ connected to local networks. The resulting protocol was NNTP, which
 resembled the Simple Mail Transfer Protocol (SMTP) but was tailored for
 exchanging newsgroup articles.
 
-##  NOC
+## NOC
 
 Network Operation Centre
 
@@ -401,7 +401,7 @@ known as a "network management center", is one or more locations from
 which network monitoring and control, or network management, is
 exercised over a computer, telecommunication or satellite network.
 
-##  Node B
+## Node B
 
 Node B is the telecommunications node in particular mobile communication
 networks, namely those that adhere to the UMTS standard. The Node B
@@ -426,17 +426,17 @@ changing with the emergence of High Speed Downlink Packet Access
 (HSDPA), where some logic (e.g., retransmission) is handled on the Node
 B for lower response times.
 
-##  Nominal Path
+## Nominal Path
 
 Execution path for software system that performs functionality without
 encountering exceptional conditions.
 
-##  Non-functional Requirement
+## Non-functional Requirement
 
 Captures requirements such as compatibility, usability, performance,
 reliability, etc. Also known as the *how* or *how well requirements*
 
-##  NoSQL
+## NoSQL
 
 A NoSQL (originally referring to "non SQL" or "non relational") database
 provides a mechanism for storage and retrieval of data that is modeled
@@ -483,7 +483,7 @@ not allow referential integrity constraints to span databases." There
 are few systems that maintain both ACID transactions and X/Open XA
 standards for distributed transaction processing.
 
-##  NPE
+## NPE
 
 Network Provider Edge
 
@@ -493,7 +493,7 @@ providers. A network provider is usually an Internet service provider as
 well (or only that).\#\
 ![](./images/N/15008699.png?width=485)
 
-##  NSS
+## NSS
 
 Network switching subsystem
 
@@ -514,7 +514,7 @@ This allows mobile phones to have access to services such as WAP, MMS
 and the Internet.\
 ![](./images/N/15008705.png?width=449)
 
-##  NTP
+## NTP
 
 Network Time Protocol
 
@@ -534,7 +534,7 @@ one millisecond accuracy in local area networks under ideal conditions.
 Asymmetric routes and network congestion can cause errors of 100 ms or
 more
 
-##  NTS
+## NTS
 
 Number Translation Service
 
@@ -548,14 +548,14 @@ not also a local call, but the system gradually came to be seen as a way
 of making money and now most phone companies charge the caller more for
 08 numbers than for 01, 02 or 03 numbers.
 
-##  NTU
+## NTU
 
 Network Termination Unit
 
 Point between user and operator network\
 ![](./images/N/15008711.png?width=480)
 
-##  NTU
+## NTU
 
 Network Termination Unit
 
@@ -566,7 +566,7 @@ Outdoor telephone NIDs also provide the subscriber with access to the
 station wiring and serve as a convenient test point for verification of
 loop integrity and of the subscriber's inside wiring.
 
-##  NYB
+## NYB
 
 Not Yet Built data
 

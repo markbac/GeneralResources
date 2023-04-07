@@ -1,6 +1,6 @@
 # L
 
-##  L1
+## L1
 
 Layer 1
 
@@ -12,8 +12,7 @@ The physical layer consists of the electronic circuit transmission
 technologies of a network. It is a fundamental layer underlying the
 higher level functions in a network. Due to the plethora of available
 hardware technologies with widely varying characteristics, this is
-perhaps the most complex layer in the OSI architecture.\[citation
-needed\]
+perhaps the most complex layer in the OSI architecture.
 
 The physical layer defines the means of transmitting raw bits rather
 than logical data packets over a physical data link connecting network
@@ -26,7 +25,7 @@ on, the line code to use and similar low-level parameters, are specified
 here.\
 ![](./images/L/15008464.png?width=480)
 
-##  L2
+## L2
 
 Layer 2
 
@@ -58,7 +57,7 @@ point-to-point (dual-node) connections. In the Internet Protocol Suite
 layer, the lowest layer of the descriptive model.\
 ![](./images/L/15008464.png?width=480)
 
-##  L2F
+## L2F
 
 Layer 2 Forwarding
 
@@ -68,13 +67,13 @@ Internet. L2F does not provide encryption or confidentiality by itself;
 It relies on the protocol being tunneled to provide privacy. L2F was
 specifically designed to tunnel Point-to-Point Protocol (PPP) traffic.
 
-##  L2S
+## L2S
 
 Local Layer 2 Primary Switch Local Exchange (EX4200)
 
 ![](./images/L/15008472.png?width=480)
 
-##  L2TP
+## L2TP
 
 Layer 2 Tunnelling Protocol
 
@@ -83,7 +82,7 @@ tunnelling protocol used to support virtual private networks (VPNs) or
 as part of the delivery of services by ISPs. It does not provide any
 encryption or confidentiality by itself.
 
-##  L2TP
+## L2TP
 
 Layer 2 Tunneling Protocol
 
@@ -93,7 +92,7 @@ the delivery of services by ISPs. It does not provide any encryption or
 confidentiality by itself. Rather, it relies on an encryption protocol
 that it passes within the tunnel to provide privacy.
 
-##  L2VPN
+## L2VPN
 
 Layer 2 Virtual Private Network
 
@@ -114,7 +113,7 @@ Instead, two methodologies may be used. Both methods use a standard MPLS
 header to encapsulate data. However, they differ in their signaling
 protocols.
 
-##  L3VPN
+## L3VPN
 
 Layer 3 Virtual Private Network
 
@@ -127,15 +126,15 @@ Customer edge (CE) device---A CE resides on a customer network and has
 one or more interfaces directly connected to service provider networks.
 It can be a router, a switch, or a host.
 
--   Provider edge (PE) device---A PE resides at the edge of a service
+- Provider edge (PE) device---A PE resides at the edge of a service
     provider network and connects one or more CEs. On an MPLS network,
     all VPN services are processed on the PEs.
 
--   Provider (P) device---A P device is a core device on a service
+- Provider (P) device---A P device is a core device on a service
     provider network. It is not directly connected to any CE. It has
     only basic MPLS forwarding capability.
 
-##  LAC
+## LAC
 
 L2TP Access Concentrator
 
@@ -151,7 +150,7 @@ possible to set up multiple virtual networks across a single tunnel. MTU
 should be considered when implementing L2TP.\
 ![](./images/L/15008478.png?width=475)
 
-##  LACP
+## LACP
 
 Link Aggregation Control Protocol
 
@@ -164,32 +163,32 @@ LACP).
 
 LACP Features and practical examples
 
--   -   Maximum number of bundled ports allowed in the port channel:
+  - -   Maximum number of bundled ports allowed in the port channel:
         Valid values are usually from 1 to 8.
 
--   LACP packets are sent with multicast group MAC address
+- LACP packets are sent with multicast group MAC address
     01:80:c2:00:00:02 (01-80-c2-00-00-02)
 
--   During LACP detection period
+- During LACP detection period
 
-    -   LACP packets are transmitted every second
+  - LACP packets are transmitted every second
 
-    -   Keep alive mechanism for link member: (default: slow = 30s,
+  - Keep alive mechanism for link member: (default: slow = 30s,
         fast=1s)
 
--   LACP can have the port-channel load-balance mode :
+- LACP can have the port-channel load-balance mode :
 
-    -   link (link-id) Integer that identifies the member link for load
+  - link (link-id) Integer that identifies the member link for load
         balancing. The range is from 1 to 8.
 
--   LACP mode :
+- LACP mode :
 
-    -   active: Enables LACP unconditionally.
+  - active: Enables LACP unconditionally.
 
-    -   passive: Enables LACP only when an LACP device is detected.
+  - passive: Enables LACP only when an LACP device is detected.
         (This is the default state)
 
-##  LAG
+## LAG
 
 Link Aggregation Group
 
@@ -204,7 +203,7 @@ enhance the connection reliability.
 
 ![](./images/L/15008484.png?width=333)
 
-##  LAN
+## LAN
 
 Local Area Network
 
@@ -215,7 +214,7 @@ university campus or office building. By contrast, a wide area network
 involves leased telecommunication circuits.\
 ![](./images/L/15008490.png?width=200)
 
-##  LANE
+## LANE
 
 ATM LAN Emulation
 
@@ -224,13 +223,13 @@ function as a LAN backbone. The ATM network must provide multicast and
 broadcast support, address mapping (MAC-to-ATM), SVC management, and a
 usable packet format. LANE also defines Ethernet and Token Ring ELANs.
 
-##  LAS
+## LAS
 
 MPLS L2/B2B Aggregation Local (M2F)
 
 MPLS L2/B2B Aggregation Local (M2F) - Location: Local
 
-##  Latency
+## Latency
 
 Latency refers to a short period of delay (usually measured in
 milliseconds) between when an audio signal enters and when it emerges
@@ -291,7 +290,7 @@ such as G.729 perform complex voice detection and noise suppression.
 
 ![](./images/L/15008496.png?width=480)
 
-##  Lawful intercept
+## Lawful intercept
 
 Lawful interception (LI) refers to the facilities in telecommunications
 and telephone networks that allow law enforcement agencies with court
@@ -315,7 +314,7 @@ fiber-optic splice or other collection point is extracted for storage or
 filtering. It is also separate from the data retention of metadata that
 has become a legal requirement in some jurisdictions.
 
-##  LCR
+## LCR
 
 Least Cost Routing
 
@@ -327,7 +326,7 @@ hundreds of carriers for destinations across the world. This function
 might also be automated by a device or software program known as a
 "Least Cost Router."
 
-##  LDAP
+## LDAP
 
 The Lightweight Directory Access Protocol is an open, vendor-neutral,
 industry standard application protocol for accessing and maintaining
@@ -354,24 +353,24 @@ LDAP is based on a simpler subset of the standards contained within the
 X.500 standard. Because of this relationship, LDAP is sometimes called
 X.500-lite.
 
-##  Lead Time
+## Lead Time
 
 Lead Time is the time between a customer order and delivery. In software
 development, it can also be the time between a requirement made and its
 fulfillment.
 
-##  Lean
+## Lean
 
 a method of working focused on 'eliminating waste' by avoiding anything
 that does not produce value for the customer.
 
-##  lean programming
+## lean programming
 
 a concept that emphasizes optimizing efficiency and minimizing waste in
 the development of a computer program; the concept is also applicable to
 all enterprise practices.
 
-##  Leased Line
+## Leased Line
 
 A leased line is a private bidirectional or symmetric telecommunications
 circuit between two or more locations provided in exchange for a monthly
@@ -403,13 +402,13 @@ Leased lines, as opposed to DSL, are being used by companies and
 individuals for Internet access because they afford faster data transfer
 rates and are cost-effective for heavy users of the Internet.
 
-##  LeSS
+## LeSS
 
 large-scale Scrum
 
 agile development method.
 
-##  Lifecycle
+## Lifecycle
 
 A model of all *activities* between the initial idea for a *system* and
 its last use, often heavily focused on the creation of the *system* as
@@ -418,7 +417,7 @@ separate *activities* into *phases* that reflect progression of time
 and/or grouping of similar activities. Projects select and customize
 lifecycles to define ordering and optimize performance of *activities* .
 
-##  Lines of Code
+## Lines of Code
 
 LOC\
 KLOC
@@ -428,12 +427,12 @@ source code in the system. Normally created by a tool that seeks to
 count non-comment, non-blank source code instructions.\
 KLOC is often used for 'thousands of LOC'.
 
-##  Link
+## Link
 
 Reference to content inside of CxOne, usually denoted as an italicized
 file name. Compare to *pointer*.
 
-##  Linux
+## Linux
 
 Linux is a family of free and open-source software operating systems
 built around the Linux kernel. Typically, Linux is packaged in a form
@@ -451,85 +450,85 @@ the GNU project.\
 
 Widely used distributions
 
--   Debian, a non-commercial distribution and one of the earliest,
+- Debian, a non-commercial distribution and one of the earliest,
     maintained by a volunteer developer community with a strong
     commitment to free software principles and democratic project
     management
 
-    -   Knoppix, the first Live CD distribution to run completely from
+  - Knoppix, the first Live CD distribution to run completely from
         removable media without installation to a hard disk, derived
         from Debian
 
-    -   Linux Mint Debian Edition (LMDE) uses Debian packages directly
+  - Linux Mint Debian Edition (LMDE) uses Debian packages directly
         (rather than Ubuntu's)
 
-    -   Ubuntu, a desktop and server distribution derived from Debian,
+  - Ubuntu, a desktop and server distribution derived from Debian,
         maintained by British company Canonical Ltd.
 
-        -   Kubuntu, the KDE version of Ubuntu
+    - Kubuntu, the KDE version of Ubuntu
 
-        -   Linux Mint, a distribution based on and compatible with
+    - Linux Mint, a distribution based on and compatible with
             Ubuntu. Supports multiple desktop environments, among others
             GNOME Shell fork Cinnamon and GNOME 2 fork MATE.
 
-        -   Trisquel, an Ubuntu-based distribution based on Linux-libre
+    - Trisquel, an Ubuntu-based distribution based on Linux-libre
             kernel composed entirely of free software
 
-        -   Elementary OS, an Ubuntu-based distribution with strong
+    - Elementary OS, an Ubuntu-based distribution with strong
             focus on the visual experience without sacrificing
             performance.
 
--   Fedora, a community distribution sponsored by American company Red
+- Fedora, a community distribution sponsored by American company Red
     Hat and the successor to the company's previous offering, Red Hat
     Linux. It aims to be a technology testbed for Red Hat's commercial
     Linux offering, where new open source software is prototyped,
     developed, and tested in a communal setting before maturing into Red
     Hat Enterprise Linux.
 
-    -   Red Hat Enterprise Linux (RHEL), a derivative of Fedora,
+  - Red Hat Enterprise Linux (RHEL), a derivative of Fedora,
         maintained and commercially supported by Red Hat. It seeks to
         provide tested, secure, and stable Linux server and workstation
         support to businesses.
 
-        -   CentOS, a distribution derived from the same sources used by
+    - CentOS, a distribution derived from the same sources used by
             Red Hat, maintained by a dedicated volunteer community of
             developers with both 100% Red Hat-compatible versions and an
             upgraded version that is not always 100% upstream
             compatible.
 
-        -   Oracle Linux, which is a derivative of Red Hat Enterprise
+    - Oracle Linux, which is a derivative of Red Hat Enterprise
             Linux, maintained and commercially supported by Oracle
 
-        -   Scientific Linux, a distribution derived from the same
+    - Scientific Linux, a distribution derived from the same
             sources used by Red Hat, maintained by Fermilab
 
--   Mandriva Linux was a Red Hat derivative popular in several European
+- Mandriva Linux was a Red Hat derivative popular in several European
     countries and Brazil, backed by the French company of the same name.
     After the company went bankrupt, it was superseded by OpenMandriva
     Lx,\[20\]\[21\] although a number of derivatives now have a larger
     user base.
 
-    -   Mageia, a community fork of Mandriva Linux created in 2010
+  - Mageia, a community fork of Mandriva Linux created in 2010
 
-    -   PCLinuxOS, a derivative of Mandriva, which grew from a group of
+  - PCLinuxOS, a derivative of Mandriva, which grew from a group of
         packages into a community-spawned desktop distribution
 
-    -   ROSA Linux, another former derivative of Mandriva, now developed
+  - ROSA Linux, another former derivative of Mandriva, now developed
         independently
 
--   openSUSE, a community distribution mainly sponsored by German
+- openSUSE, a community distribution mainly sponsored by German
     company SUSE.
 
-    -   SUSE Linux Enterprise, derived from openSUSE, maintained and
+  - SUSE Linux Enterprise, derived from openSUSE, maintained and
         commercially supported by SUSE
 
--   Arch Linux, a rolling release distribution targeted at experienced
+- Arch Linux, a rolling release distribution targeted at experienced
     Linux users and maintained by a volunteer community, offers official
     binary packages and a wide range of unofficial user-submitted source
     packages. Packages are usually defined by a single PKGBUILD text
     file.
 
-    -   Manjaro Linux, a derivative of Arch Linux that includes a
+  - Manjaro Linux, a derivative of Arch Linux that includes a
         graphical installer and other ease-of-use features for less
         experienced Linux users. Rolling release packages from Arch
         repositories are held for further testing to achieve increased
@@ -537,22 +536,22 @@ Widely used distributions
         of critical or high severity are "fast-tracked" to the stable
         branch.
 
--   Gentoo, a distribution targeted at power users, known for its
+- Gentoo, a distribution targeted at power users, known for its
     FreeBSD Ports-like automated system for compiling applications from
     source code
 
-    -   Chrome OS, Google's commercial operating system (using Gentoo
+  - Chrome OS, Google's commercial operating system (using Gentoo
         and its Portage) that primarily runs web applications
 
-    -   Chromium OS, the fully open-source version of Chrome OS
+  - Chromium OS, the fully open-source version of Chrome OS
 
--   Slackware, created in 1993, one of the first Linux distributions and
+- Slackware, created in 1993, one of the first Linux distributions and
     among the earliest still maintained, committed to remain highly
     Unix-like and easily modifiable by end users
 
     ![](./images/L/14647331.svg?width=158)
 
-##  lisp
+## lisp
 
 Lisp (historically, LISP) is a family of computer programming languages
 with a long history and a distinctive, fully parenthesized prefix
@@ -584,19 +583,19 @@ list with the function or operator's name first, and the arguments
 following; for instance, a function f that takes three arguments would
 be called as (f arg1 arg2 arg3).
 
-##  Lite
+## Lite
 
 Lite
 
 CxOne concept, see *CxOneOverview* for description.
 
-##  LL
+## LL
 
 Local Loop
 
 ![](./images/L/15008514.png?width=481)
 
-##  LNS
+## LNS
 
 L2TP Network Server
 
@@ -606,14 +605,14 @@ tunnels. Once a tunnel is established, the network traffic between the
 peers is bidirectional.\
 ![](./images/L/15008478.png?width=483)
 
-##  Local Build
+## Local Build
 
 LB
 
 *Build* performed in a *local development environment*. Compare
 to *project build*.
 
-##  Local Development Environment
+## Local Development Environment
 
 LDE
 
@@ -621,7 +620,7 @@ A *development environment* that is local to an individual engineer.
 This is normally the machines in an engineer's office. Compare to *build
 environment*.
 
-##  Local Loop
+## Local Loop
 
 In telephony, the local loop (also referred to as a local tail,
 subscriber line, or in the aggregate as the last mile) is the physical
@@ -633,23 +632,23 @@ At the edge of the carrier access network in a traditional public
 telephone network, the local loop terminates in a circuit switch housed
 in an incumbent local exchange carrier or telephone exchange.
 
-##  Local Test Environment
+## Local Test Environment
 
 LTE
 
 The portion of the *local development environment* that
 supports *construction testing*.
 
-##  LoFi Prototype
+## LoFi Prototype
 
 See *low fidelity prototype*.
 
-##  Low Fidelity Prototype
+## Low Fidelity Prototype
 
 A mockup of a system using pencil and paper, post-its, or other
 non-technology based tools.
 
-##  Low Level Design
+## Low Level Design
 
 LLD
 
@@ -657,13 +656,13 @@ Design level between *high level design* and *construction*. Defines
 design in a way that directly supports construction.
 See *CxStand\_Design* for more information.
 
-##  LPS
+## LPS
 
 MPLS Primary Switch Local Exchange (M2F)
 
 MPLS Primary Switch Local Exchange (M2F) - Location: Local
 
-##  LSP
+## LSP
 
 Label Switched Path
 
@@ -692,7 +691,7 @@ bidirectional communication is typically desired, the aforementioned
 dynamic signaling protocols can set up an LSP in the other direction to
 compensate for this.
 
-##  LSR
+## LSR
 
 Label Switched Router
 
@@ -701,7 +700,7 @@ label switch router (LSR) or transit router. This is a type of router
 located in the middle of an MPLS network. It is responsible for
 switching the labels used to route packets.
 
-##  LTE (4G)
+## LTE (4G)
 
 Long-Term Evolution (LTE) is a standard for high-speed wireless
 communication for mobile devices and data terminals, based on the
@@ -749,23 +748,23 @@ last up to several years. In March 2019, the Global Mobile Suppliers
 Association reported that over 100 operators had deployed/launched
 either NB-IoT or LTE-M networks.
 
--   **Downlink Peak Rate:** 1 Mbit
+- **Downlink Peak Rate:** 1 Mbit
 
--   **Uplink Peak Rate:** 1 Mbit
+- **Uplink Peak Rate:** 1 Mbit
 
--   **Latency:** 10-15 ms
+- **Latency:** 10-15 ms
 
--   **Duplex Technology:** Half Duplex
+- **Duplex Technology:** Half Duplex
 
--   **Device Receive Bandwidth:** 1.4MHz to 5MHz
+- **Device Receive Bandwidth:** 1.4MHz to 5MHz
 
--   **Device Transmit Power:** 20 dBm
+- **Device Transmit Power:** 20 dBm
 
-##  LTE and Mobile Internet
+## LTE and Mobile Internet
 
 ![](./images/L/15008520.png?width=278)
 
-##  LTS
+## LTS
 
 L2TP Tunnel Switch
 
@@ -781,7 +780,7 @@ logical termination point of the original L2TP session is switched to a
 different endpoint.\
 ![](./images/L/15008526.png?width=485)
 
-##  Lua
+## Lua
 
 Lua is a lightweight, multi-paradigm programming language designed
 primarily for embedded use in applications. Lua is cross-platform, since

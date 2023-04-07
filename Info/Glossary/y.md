@@ -1,6 +1,6 @@
 # Y
 
-##  YAML
+## YAML
 
 YAML Ain't Markup Language
 
