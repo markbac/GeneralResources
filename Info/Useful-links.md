@@ -33,6 +33,7 @@
     - [API's](#apis-1)
   - [Products](#products)
   - [IOT](#iot)
+    - [MQTT](#mqtt)
     - [MQTT IoT](#mqtt-iot)
     - [IoT Mobile](#iot-mobile)
     - [IoT HW](#iot-hw)
@@ -199,6 +200,12 @@
 
 ## IOT
 
+### MQTT
+
+- [Understanding MQTT Topics & Wildcards by Case](https://www.emqx.com/en/blog/advanced-features-of-mqtt-topics)
+- [Beginners Guide To The MQTT Protocol](http://www.steves-internet-guide.com/mqtt/)
+- [Comparing MQTT Brokers for the Industrial IoT](https://learn.umh.app/blog/comparing-mqtt-brokers-for-the-industrial-iot/)
+
 ### MQTT IoT
 
 - [HiveMQ](https://www.hivemq.com/blog/best-alternative-google-cloud-iot-core-integrating-mqtt-data-with-gcp/)
@@ -220,6 +227,7 @@
 - [RUT956 INDUSTRIAL CELLULAR ROUTER](https://teltonika-networks.com/products/routers/rut956)
 - [ATOP - MB5901B Series 4G LTE Cellular to Ethernet and Serial Secure Modbus Gateway/Router](https://www.atoponline.com/industrial-networking-computing/products/serial-modbus-gateways/cellular-gateways/mb5901b/)
 - [EasyNET 2G/4G NB-IoT data logger](https://www.4next.eu/en/prodotto/gsm-data-logger/)
+- [Impulse Embedded](https://www.impulse-embedded.co.uk/)
 
 ### IoT platforms
 
@@ -237,6 +245,13 @@
 - [Drawio](https://www.diagrams.net/)
 - [Drawio vscode](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
 - [Markdown](https://www.markdownguide.org/basic-syntax/)
+- [Wavedrom - digital timing diagrams](https://wavedrom.com/)
+- [WireViz - documenting cables, wiring harnesses and connector pinouts.](https://github.com/formatc1702/WireViz)
+- [kroki](https://kroki.io/)
+- [svgbob - text diagrams to svg](https://github.com/ivanceras/svgbob)
+- [bytefield-svg create bytefield diagrams](https://github.com/Deep-Symmetry/bytefield-svg)
+- [packetdiag](https://github.com/blockdiag/nwdiag/blob/master/packetdiag.1)
+- [ditaa - text (ascii art) to svg](https://ditaa.sourceforge.net/)
 
 ### API
 - [Widdrshins Open APi to Markdown](https://github.com/Mermade/widdershins)
