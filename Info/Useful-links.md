@@ -18,6 +18,7 @@
       - [Cloud Events](#cloud-events)
       - [Versioning](#versioning)
   - [Python](#python)
+    - [API'sin Python](#apisin-python)
   - [Security](#security)
   - [IDSR](#idsr)
   - [OpenADR](#openadr)
@@ -44,6 +45,9 @@
     - [WSL](#wsl)
     - [Linux tools](#linux-tools)
     - [Other](#other-1)
+  - [Development methodologies](#development-methodologies)
+    - [SAFe](#safe)
+  - [Other (temp dumnping ground for links)](#other-temp-dumnping-ground-for-links)
 
 <!-- /code_chunk_output -->
 ## API
@@ -102,6 +106,11 @@
 
 - [Python Tutorial](https://www.w3schools.com/python/default.asp)
 - [Getting Started With Async Features in Python – Real Python](https://realpython.com/python-async-features/)
+
+### API'sin Python
+
+- [Python REST APIs With Flask, Connexion, and SQLAlchemy](https://dassum.medium.com/python-rest-apis-with-flask-connexion-and-sqlalchemy-3c8c3292d9ce)
+- [Python REST APIs With Flask, Connexion, and SQLAlchemy – Part 3](https://realpython.com/flask-connexion-rest-api-part-3/)
 
 ## Security
 
@@ -280,4 +289,34 @@
 - [git-delta - The delta tool (a.k.a. git-delta, a.k.a. delta-diff) is a diff viewer written in Rust](https://dandavison.github.io/delta/)
 
 ### Other
+
 - [Regex Tester](https://github.com/artemanufrij/regextester)
+
+## Development methodologies
+
+### SAFe
+
+- [What is SAFe](https://scaledagile.com/what-is-safe/)
+- [The SAFe Delusion](https://safedelusion.com/)
+- [The Major Problems with SAFe](https://productcoalition.com/the-major-problems-with-safe-1e797f7e48f8)
+- [Issues with Safe](https://ronjeffries.com/xprog/articles/issues-with-safe/)
+- [Beware SAFe (the Scaled Agile Framework for Enterprise), an Unholy Incarnation of Darkness](https://seandexter1.medium.com/beware-safe-the-scaled-agile-framework-for-enterprise-an-unholy-incarnation-of-darkness-bf6819f6943f)
+- [L.A.F.A.B.L.E](https://www.lafable.com/)
+- [A Critique of SAFe – The Scaled Agile Framework](https://tomgeraghty.co.uk/index.php/a-short-critique-of-safe/)
+
+## Other (temp dumnping ground for links)
+
+- [Enterprise Architecture Principles - dfe](https://dfe-digital.github.io/architecture/principles/enterprise-architecture-principles/#enterprise-architecture-principles)
+- [The Technology Code of Practice - UK Gov](https://www.gov.uk/guidance/the-technology-code-of-practice)
+- [5 Key Principles of Software Architecture](https://towardsdatascience.com/5-key-principles-of-software-architecture-e5379cb10fd5)
+- [Azure - Architectural principles](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles)
+- [Architectural Principles](https://cio-wiki.org/wiki/Architectural_Principles)
+- [TOGAF - Architecture Principles](https://pubs.opengroup.org/architecture/togaf8-doc/arch/chap29.html)
+- [IT Architecture Principles](https://www.itarch.info/2020/01/it-architecture-principles.html#:~:text=Architecture%20Principle%201%3A%20Reuse%20before,consider%20buying%20instead%20of%20building.)
+- [Key Principles](https://sceweb.sce.uhcl.edu/helm/SWEN5233%20Software%20Architecture/my_files/TableContents/Module-3/key_principles.html)
+
+- [Embedded Design Pattern Catalogue](https://embeddedartistry.com/fieldatlas/design-pattern-catalogue/)
+- [Design Patterns](https://www.eventhelix.com/design-patterns/)
+- [Embedded Control Systems Design/Design Patterns](https://en.wikibooks.org/wiki/Embedded_Control_Systems_Design/Design_Patterns)
+- [Design Patterns for Embedded Systems in C_ An Embedded Software Engineering Toolkit](Design_Patterns_for_Embedded_Systems_in_C.pdf)
+- [NHS+Architecture+Principles+January+2021+v4+.docx](./NHS+Architecture+Principles+January+2021+v4+.docx)
