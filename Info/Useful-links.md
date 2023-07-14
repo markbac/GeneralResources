@@ -90,6 +90,9 @@
 - [OpenAPI tutorial using Swagger Editor and Swagger UI: Overview | Documenting APIs (idratherbewriting.com)](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview.html)
 - [OpenAPI 3.0 Tutorial | SwaggerHub Documentation (smartbear.com)](https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html)
 - [openapi tutorial overview](https://idratherbewriting.com/learnapidoc/pubapis_openapi_tutorial_overview.html)
+- [Units](https://idratherbewriting.com/learnapidoc/pubapis_openapi_step5_components_object.html)
+- [more units](https://github.com/OAI/OpenAPI-Specification/issues/2061)
+- [even more on units](https://github.com/json-schema-org/json-schema-vocabularies/issues/46)
 
 #### Cloud Events
 
