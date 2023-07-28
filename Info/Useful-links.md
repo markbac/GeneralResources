@@ -11,19 +11,24 @@
     - [General Guidance](#general-guidance)
       - [RFC 7807: Problem Details for HTTP APIs](#rfc-7807-problem-details-for-http-apis)
     - [APIs](#apis)
-    - [REST](#rest)
-      - [Asynchronous API](#asynchronous-api)
-      - [Synchronous API](#synchronous-api)
+      - [API Design](#api-design)
+      - [Asynchronous API's](#asynchronous-apis)
+        - [AsyncAPI](#asyncapi)
+      - [Synchronous API's](#synchronous-apis)
+        - [REST](#rest)
         - [OpenAPI](#openapi)
       - [Cloud Events](#cloud-events)
       - [Versioning](#versioning)
+      - [Tools](#tools)
   - [Python](#python)
     - [API'sin Python](#apisin-python)
   - [Security](#security)
   - [IDSR](#idsr)
   - [OpenADR](#openadr)
-  - [Other](#other)
+  - [Docs as code](#docs-as-code)
     - [Diagrams](#diagrams)
+  - [Other](#other)
+    - [Diagrams](#diagrams-1)
     - [Markdown](#markdown)
     - [Architecture](#architecture)
       - [ADR](#adr)
@@ -44,10 +49,10 @@
     - [API](#api-1)
     - [WSL](#wsl)
     - [Linux tools](#linux-tools)
-    - [Other](#other-1)
+    - [Other tools](#other-tools)
   - [Development methodologies](#development-methodologies)
     - [SAFe](#safe)
-  - [Other (temp dumnping ground for links)](#other-temp-dumnping-ground-for-links)
+  - [Other (temp dumping ground for links)](#other-temp-dumping-ground-for-links)
 
 <!-- /code_chunk_output -->
 ## API
@@ -70,17 +75,26 @@
 
 ### APIs
 
-### REST
+#### API Design
+
+- [Best practices in API design](https://swagger.io/resources/articles/best-practices-in-api-design/)
+- [API Design Guide](https://stoplight.io/api-design-guide)
+- [API design guidance](https://www.gov.uk/government/collections/api-design-guidance)
+- [OpenAPI Best practices](https://learn.openapis.org/best-practices.html)
+
+#### Asynchronous API's
+
+##### AsyncAPI
+
+- [AsyncAPI](https://www.asyncapi.com/)
+
+#### Synchronous API's
+
+##### REST
 
 - [Kenneth Lange Lttle book on REST](http://www.kennethlange.com/books/The-Little-Book-on-REST-Services.pdf&usg=AOvVaw1cqSsJE4cRxIDf6ieavWyI)
 - [REST API Tutorial](https://www.restapitutorial.com/)
 - [RESTful API Design: nouns are good, verbs are bad | Google Cloud Blog](https://cloud.google.com/blog/products/api-management/restful-api-design-nouns-are-good-verbs-are-bad)
-
-#### Asynchronous API
-
-- [AsyncAPI](https://www.asyncapi.com/)
-
-#### Synchronous API
 
 ##### OpenAPI
 
@@ -104,6 +118,14 @@
 
 - [Semantic Versioning](https://semver.org/)
 - [SemVer Github](https://github.com/semver/semver)
+
+#### Tools
+
+- [GUI Editors](https://tools.openapis.org/categories/gui-editors)
+- [APIGit](https://apigit.com/)
+- [Apibldr](https://apibldr.com/)
+- [OpenAPI Designer](https://openapidesigner.com/)
+- [Apicurio Studio](https://www.apicur.io/studio/)
 
 ## Python
 
@@ -137,6 +159,20 @@
 - [Introduction & Overview (openadr.org)](https://www.openadr.org/assets/docs/understanding%20openadr%202%200%20webinar_11_10_11_sm.pdf)
 - [Microsoft Word - OpenADR_Primer_0812Final.doc](https://www.openadr.org/assets/docs/openadr_primer.pdf)
 - [OpenADR Webinar Series](https://www.openadr.org/webinar-series)
+
+## Docs as code
+
+- [Write The Docs](https://www.writethedocs.org/)
+- [https://cchesser.github.io/docs-as-code/](https://cchesser.github.io/docs-as-code/)
+- [Docs as code, a brief intro](https://medium.com/@ezinneanne/docs-as-code-a-brief-introduction-4fe15b7f0b4c)
+- [Docs as code, a beginners guide](https://zaycodes.com/docs-as-code-a-beginners-guide/)
+- [What is docs as code](https://nordicapis.com/what-is-docs-as-code-and-why-does-it-matter/)
+
+### Diagrams
+
+See PlantUML and Mermaid
+
+- [Docs as code, mermaid inline diagrams](https://frehberg.com/2022/12/docs-as-code-mermaid-inline-diagrams/)
 
 ## Other
 
@@ -266,6 +302,7 @@
 - [ditaa - text (ascii art) to svg](https://ditaa.sourceforge.net/)
 
 ### API
+
 - [Widdrshins Open APi to Markdown](https://github.com/Mermade/widdershins)
 - [panadoc markdown to html](https://pandoc.org/demos.html)
 - [Postman](https://www.postman.com/downloads/)
@@ -291,7 +328,7 @@
 - [Onefetch is a command-line Git information tool written in Rust that displays project information and code statistics for a local Git repository](https://github.com/o2sh/onefetch)
 - [git-delta - The delta tool (a.k.a. git-delta, a.k.a. delta-diff) is a diff viewer written in Rust](https://dandavison.github.io/delta/)
 
-### Other
+### Other tools
 
 - [Regex Tester](https://github.com/artemanufrij/regextester)
 
@@ -307,7 +344,7 @@
 - [L.A.F.A.B.L.E](https://www.lafable.com/)
 - [A Critique of SAFe – The Scaled Agile Framework](https://tomgeraghty.co.uk/index.php/a-short-critique-of-safe/)
 
-## Other (temp dumnping ground for links)
+## Other (temp dumping ground for links)
 
 - [Enterprise Architecture Principles - dfe](https://dfe-digital.github.io/architecture/principles/enterprise-architecture-principles/#enterprise-architecture-principles)
 - [The Technology Code of Practice - UK Gov](https://www.gov.uk/guidance/the-technology-code-of-practice)
