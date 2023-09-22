@@ -1,0 +1,593 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>h - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html" class="active"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="h"><a class="header" href="#h">H</a></h1>
+<h2 id="h248"><a class="header" href="#h248">H.248</a></h2>
+<p>The Gateway Control Protocol (Megaco, H.248) is an implementation of the
+media gateway control protocol architecture for providing
+telecommunication services across a converged internetwork consisting of
+the traditional public switched telephone network (PSTN) and modern
+packet networks, such as the Internet. H.248 is the designation of the
+recommendations developed by the ITU Telecommunication Standardization
+Sector (ITU-T) and Megaco is a contraction of media gateway control
+protocol used by the earliest specifications by the Internet Engineering
+Task Force (IETF). The standard published in March 2013 by ITU-T is
+entitled H.248.1: Gateway control protocol: Version 3.</p>
+<p>Megaco/H.248 follows the guidelines published in RFC 2805 in April 2000,
+entitled Media Gateway Control Protocol Architecture and Requirements.
+The protocol performs the same functions as the Media Gateway Control
+Protocol (MGCP), is however a formal standard while MGCP has only
+informational status. Using different syntax and symbolic
+representation, the two protocols are not directly interoperable. They
+are both complementary to H.323 and the Session Initiation Protocol
+(SIP) protocols.</p>
+<p>H.248 was the result of collaboration of the MEGACO working group of the
+Internet Engineering Task Force (IETF) and the International
+Telecommunication Union Telecommunication Study Group 16. The IETF
+originally published the standard as RFC 3015, which was superseded by
+RFC 3525. The term Megaco is the IETF designation. Megaco combines
+concepts from MGCP and the Media Device Control Protocol (MDCP). MGCP
+originated from a combination of the Simple Gateway Control Protocol
+(SGCP) with the Internet Protocol Device Control (IPDC).</p>
+<p>After the ITU took responsibility of the protocol maintenance, the IETF
+reclassified its publications as historic in RFC 5125. The ITU has
+published three versions of H.248, the most recent in September 2005.
+H.248 encompasses not only the base protocol specification in H.248.1,
+but many extensions defined throughout the H.248 sub-series.</p>
+<p><img src="./images/H/15008304.png?width=480" alt="" /></p>
+<h2 id="h323"><a class="header" href="#h323">H.323</a></h2>
+<p>H.323 is a recommendation from the ITU Telecommunication Standardization
+Sector (ITU-T) that defines the protocols to provide audio-visual
+communication sessions on any packet network. The H.323 standard
+addresses call signaling and control, multimedia transport and control,
+and bandwidth control for point-to-point and multi-point
+conferences.[1]</p>
+<p>It is widely implemented[2] by voice and videoconferencing equipment
+manufacturers, is used within various Internet real-time applications
+such as GnuGK and NetMeeting and is widely deployed worldwide by service
+providers and enterprises for both voice and video services over IP
+networks.</p>
+<p>It is a part of the ITU-T H.32x series of protocols, which also address
+multimedia communications over ISDN, the PSTN or SS7, and 3G mobile
+networks.</p>
+<p>H.323 call signaling is based on the ITU-T Recommendation Q.931 protocol
+and is suited for transmitting calls across networks using a mixture of
+IP, PSTN, ISDN, and QSIG over ISDN. A call model, similar to the ISDN
+call model, eases the introduction of IP telephony into existing
+networks of ISDN-based PBX systems, including transitions to IP-based
+PBXs.</p>
+<p>Within the context of H.323, an IP-based PBX might be a gatekeeper or
+other call control element which provides service to telephones or
+videophones. Such a device may provide or facilitate both basic services
+and supplementary services, such as call transfer, park, pick-up, and
+hold.</p>
+<p><img src="./images/H/15008312.png?width=480" alt="" /></p>
+<h2 id="half-duplex"><a class="header" href="#half-duplex">Half Duplex</a></h2>
+<p>In a half-duplex system, both parties can communicate with each other,
+but not simultaneously; the communication is one direction at a time. An
+example of a half-duplex device is a walkie-talkie two-way radio that
+has a &quot;push-to-talk&quot; button; when the local user wants to speak to the
+remote person they push this button, which turns on the transmitter but
+turns off the receiver, so they cannot hear the remote person. To listen
+to the other person they release the button, which turns on the receiver
+but turns off the transmitter.</p>
+<h2 id="happy-path"><a class="header" href="#happy-path">Happy Path</a></h2>
+<p>See <em>nominal path</em>.</p>
+<h2 id="hash-function"><a class="header" href="#hash-function">Hash Function</a></h2>
+<p>hash function is any function that can be used to map data of arbitrary
+size to data of a fixed size. The values returned by a hash function are
+called hash values, hash codes, digests, or simply hashes. Hash
+functions are often used in combination with a hash table, a common data
+structure used in computer software for rapid data lookup. Hash
+functions accelerate table or database lookup by detecting duplicated
+records in a large file. One such application is finding similar
+stretches in DNA sequences. They are also useful in cryptography. A
+cryptographic hash function allows one to easily verify that some input
+data maps to a given hash value, but if the input data is unknown, it is
+deliberately difficult to reconstruct it (or any equivalent
+alternatives) by knowing the stored hash value. This is
+used for assuring integrity of transmitted data, and is the building
+block for HMACs, which provide message authentication.</p>
+<p>Hash functions are related to (and often confused with) checksums, check
+digits, fingerprints, lossy compression, randomization functions,
+error-correcting codes, and ciphers. Although the concepts overlap to
+some extent, each one has its own uses and requirements and is designed
+and optimized differently. The HashKeeper database maintained by the
+American National Drug Intelligence Center, for instance, is more aptly
+described as a catalogue of file fingerprints than of hash values.<br />
+<img src="./images/H/15008318.png?width=300" alt="" /></p>
+<h2 id="hdf"><a class="header" href="#hdf">HDF</a></h2>
+<p>Handover Distribution Frame</p>
+<p>Used to terminate the cable from the exchange and to make the pairs
+available to the operator.<br />
+<img src="./images/H/15008324.png?width=469" alt="" /></p>
+<h2 id="hdlc"><a class="header" href="#hdlc">HDLC</a></h2>
+<p>High-Level Datalink Control</p>
+<p>High-Level Data Link Control (HDLC) is a bit-oriented code-transparent
+synchronous data link layer protocol developed by the International
+Organization for Standardization (ISO). The original ISO standards for
+HDLC are as follows:</p>
+<p>ISO 3309-1979 -- Frame Structure<br />
+ISO 4335-1979 -- Elements of Procedure<br />
+ISO 6159-1980 -- Unbalanced Classes of Procedure<br />
+ISO 6256-1981 -- Balanced Classes of Procedure<br />
+The current standard for HDLC is ISO/IEC 13239:2002, which replaces all
+of those standards.</p>
+<p>HDLC provides both connection-oriented and connectionless service.</p>
+<p>HDLC can be used for point-to-multipoint connections via the original
+master-slave modes Normal Response Mode (NRM) and Asynchronous Response
+Mode (ARM), but they are now rarely used; is now used almost exclusively
+to connect one device to another, using Asynchronous Balanced Mode
+(ABM).</p>
+<p><img src="./images/H/15008330.png?width=480" alt="" /></p>
+<h2 id="hdsl"><a class="header" href="#hdsl">HDSL</a></h2>
+<p>High Speed Digital Subscriber Line (also known as High-speed Digital
+Subscriber Loop)</p>
+<p>A copper delivered service on Copper Wideband Serving Section (CWSS). It
+is subject to reach limitations and is used primarily to provide 2 Mbit
+service to singleton sites.</p>
+<h2 id="heartbeat-retrospective"><a class="header" href="#heartbeat-retrospective">Heartbeat Retrospective</a></h2>
+<p>The team meets regularly to reflect on the most significant events that
+occurred since the previous such meeting, and identify opportunities for
+improvement.</p>
+<h2 id="hifi-prototype"><a class="header" href="#hifi-prototype">HiFi Prototype</a></h2>
+<p>See <em>high fidelity prototype.</em></p>
+<h2 id="high-fidelity-prototype"><a class="header" href="#high-fidelity-prototype">High Fidelity Prototype</a></h2>
+<p>Mockup of a system using a software or technology based tool, usually
+one with a <em>RAD environment</em>, e.g., Visual Basic or Delphi.</p>
+<h2 id="high-level-design"><a class="header" href="#high-level-design">High Level Design</a></h2>
+<p>HLD</p>
+<p>Design level between <em>architecture</em> and <em>low level design</em>. Focuses
+defining the details of the software solution at levels abstracted from
+their construction. See <em>CxStand_Design</em> for more information.</p>
+<h2 id="hlr"><a class="header" href="#hlr">HLR</a></h2>
+<p>Home Location Register</p>
+<p>The home location register (HLR) is a central database that contains
+details of each mobile phone subscriber that is authorized to use the
+GSM core network. There can be several logical, and physical, HLRs per
+public land mobile network (PLMN), though one international mobile
+subscriber identity (IMSI)/MSISDN pair can be associated with only one
+logical HLR (which can span several physical nodes) at a time.</p>
+<p>The HLRs store details of every SIM card issued by the mobile phone
+operator. Each SIM has a unique identifier called an IMSI which is the
+primary key to each HLR record.</p>
+<p>Another important item of data associated with the SIM are the MSISDNs,
+which are the telephone numbers used by mobile phones to make and
+receive calls. The primary MSISDN is the number used for making and
+receiving voice calls and SMS, but it is possible for a SIM to have
+other secondary MSISDNs associated with it for fax and data calls. Each
+MSISDN is also a primary key to the HLR record. The HLR data is stored
+for as long as a subscriber remains with the mobile phone operator.</p>
+<p>Examples of other data stored in the HLR against an IMSI record is:</p>
+<ul>
+<li>
+<p>GSM services that the subscriber has requested or been given.</p>
+</li>
+<li>
+<p>General Packet Radio Service (GPRS) settings to allow the subscriber
+to access packet services.</p>
+</li>
+<li>
+<p>Current location of subscriber (VLR and serving GPRS support
+node/SGSN).</p>
+</li>
+<li>
+<p>Call divert settings applicable for each associated MSISDN.</p>
+<p>The HLR is a system which directly receives and processes MAP
+transactions and messages from elements in the GSM network, for
+example, the location update messages received as mobile phones roam
+around.</p>
+</li>
+</ul>
+<h2 id="hotfix"><a class="header" href="#hotfix">Hotfix</a></h2>
+<p>code (sometimes called a patch) that fixes a bug in a product.</p>
+<h2 id="how-requirement"><a class="header" href="#how-requirement">How Requirement</a></h2>
+<p>Often a synonym for <em>non-functional requirement</em>. Sometimes used to
+refer to design issues.</p>
+<h2 id="how-well-requirement"><a class="header" href="#how-well-requirement">How Well Requirement</a></h2>
+<p>Synonym for <em>non-functional requirement</em>.</p>
+<h2 id="hsrp"><a class="header" href="#hsrp">HSRP</a></h2>
+<p>Hot Standby Router Protocol</p>
+<p>In computer networking, the Hot Standby Router Protocol (HSRP) is a
+Cisco proprietary redundancy protocol for establishing a fault-tolerant
+default gateway. Version 1 of the protocol was described in RFC 2281 in
+1998. There is no RFC for version 2 of the protocol.</p>
+<p>The protocol establishes an association between gateways in order to
+achieve default gateway failover if the primary gateway becomes
+inaccessible. HSRP gateways send multicast hello messages to other
+gateways to notify them of their priorities (which gateway is preferred)
+and current status (active or standby).<br />
+<img src="./images/H/15008336.png?width=298" alt="" /></p>
+<h2 id="hss"><a class="header" href="#hss">HSS</a></h2>
+<p>Home subscriber server</p>
+<p>The home subscriber server (HSS), or user profile server function
+(UPSF), is a master user database that supports the IMS network entities
+that actually handle calls. It contains the subscription-related
+information (subscriber profiles), performs authentication and
+authorization of the user, and can provide information about the
+subscriber's location and IP information. It is similar to the GSM home
+location register (HLR) and Authentication centre (AuC).<br />
+<img src="https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment" alt="" title="worddavdbd23573d6dff5163d9993faa7fb6ca5.png" /><br />
+<img src="https://markbac.github.io/Glossary/plugins/servlet/confluence/placeholder/unknown-attachment" alt="" title="worddave29b71bb267aef894ab1e2f80badf6d9.png" /></p>
+<h2 id="http"><a class="header" href="#http">HTTP</a></h2>
+<p>Hypertext Transfer Protocol</p>
+<p>The Hypertext Transfer Protocol (HTTP) is an application protocol for
+distributed, collaborative, and hypermedia information systems.[1]
+HTTP is the foundation of data communication for the World Wide Web.</p>
+<p>Hypertext is structured text that uses logical links (hyperlinks)
+between nodes containing text. HTTP is the protocol to exchange or
+transfer hypertext.</p>
+<p>Development of HTTP was initiated by Tim Berners-Lee at CERN in 1989.
+Standards development of HTTP was coordinated by the Internet
+Engineering Task Force (IETF) and the World Wide Web Consortium (W3C),
+culminating in the publication of a series of Requests for Comments
+(RFCs). The first definition of HTTP/1.1, the version of HTTP in common
+use, occurred in RFC 2068 in 1997, although this was made obsolete by
+RFC 2616 in 1999 and then again by the RFC 7230 family of RFCs in 2014.</p>
+<p>A later version, the successor HTTP/2, was standardized in 2015, and is
+now supported by major web servers and browsers over TLS using ALPN
+extension where TLS 1.2 or newer is required</p>
+<p>Example session<br />
+Below is a sample conversation between an HTTP client and an HTTP server
+running on <a href="http://www.example.com/">www.example.com</a>, port 80. As
+mentioned in the previous sections, all the data is sent in a plain-text
+(ASCII) encoding, using a two-byte CR LF ('<code>\r\n</code>{=tex}') line ending at
+the end of each line.</p>
+<p>Client request<br />
+GET /index.html HTTP/1.1<br />
+Host: <a href="http://www.example.com/">www.example.com</a></p>
+<p>Server response<br />
+HTTP/1.1 200 OK<br />
+Date: Mon, 23 May 2005 22:38:34 GMT<br />
+Content-Type: text/html; charset=UTF-8<br />
+Content-Length: 138<br />
+Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT<br />
+Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)<br />
+ETag: &quot;3f80f-1b6-3e1cb03b&quot;<br />
+Accept-Ranges: bytes<br />
+Connection: close</p>
+<pre><code class="language-{=html}">&lt;html&gt;
+</code></pre>
+<p></p>
+<pre><code class="language-{=html}">&lt;head&gt;
+</code></pre>
+<p></p>
+<pre><code class="language-{=html}">&lt;title&gt;
+</code></pre>
+<p>An Example Page</p>
+<pre><code class="language-{=html}">&lt;/title&gt;
+</code></pre>
+<p></p>
+<pre><code class="language-{=html}">&lt;/head&gt;
+</code></pre>
+<p></p>
+<pre><code class="language-{=html}">&lt;body&gt;
+</code></pre>
+<p><br />
+Hello World, this is a very simple HTML document.</p>
+<pre><code class="language-{=html}">&lt;/body&gt;
+</code></pre>
+<p></p>
+<pre><code class="language-{=html}">&lt;/html&gt;
+</code></pre>
+<h2 id="https"><a class="header" href="#https">HTTPS</a></h2>
+<p>HTTP Secure (HTTPS) is an extension of the Hypertext Transfer Protocol
+(HTTP) for secure communication over a computer network, and is widely
+used on the Internet. In HTTPS, the communication protocol is encrypted
+using Transport Layer Security (TLS), or formerly, its predecessor,
+Secure Sockets Layer (SSL). The protocol is therefore also often
+referred to as HTTP over TLS, or HTTP over SSL.</p>
+<p>The principal motivation for HTTPS is authentication of the accessed
+website and protection of the privacy and integrity of the exchanged
+data while in transit. It protects against man-in-the-middle attacks.
+The bidirectional encryption of communications between a client and
+server protects against eavesdropping and tampering of the
+communication. In practice, this provides a reasonable assurance that
+one is communicating without interference by attackers with the website
+that one intended to communicate with, as opposed to an impostor.</p>
+<p>Historically, HTTPS connections were primarily used for payment
+transactions on the World Wide Web, e-mail and for sensitive
+transactions in corporate information systems. Since 2018, HTTPS is used
+more often by webusers than the original non-secure HTTP, primarily to
+protect page authenticity on all types of websites; secure accounts; and
+keep user communications, identity, and web browsing private.</p>
+<h2 id="hub"><a class="header" href="#hub">Hub</a></h2>
+<p>An Ethernet hub, active hub, network hub, repeater hub, multiport
+repeater, or simply hub is a network hardware device for connecting
+multiple Ethernet devices together and making them act as a single
+network segment. It has multiple input/output (I/O) ports, in which a
+signal introduced at the input of any port appears at the output of
+every port except the original incoming. A hub works at the physical
+layer (layer 1) of the OSI model. A repeater hub also participates in
+collision detection, forwarding a jam signal to all ports if it detects
+a collision. In addition to standard 8P8C (&quot;RJ45&quot;) ports, some hubs may
+also come with a BNC or an Attachment Unit Interface (AUI) connector to
+allow connection to legacy 10BASE2 or 10BASE5 network segments.</p>
+<p>Hubs are now largely obsolete, having been replaced by network switches
+except in very old installations or specialized applications. As of
+2011, connecting network segments by repeaters or hubs is deprecated by
+IEEE 802.3.</p>
+<p><img src="./images/H/15008342.png?width=355" alt="" /></p>
+<h2 id="human-factors"><a class="header" href="#human-factors">human factors</a></h2>
+<p>the study of how humans behave physically and psychologically in
+relation to particular environments, products, or services.</p>
+<h2 id="hungarian-notation"><a class="header" href="#hungarian-notation">Hungarian notation</a></h2>
+<p>Hungarian notation is an identifier naming convention in computer
+programming, in which the name of a variable or function indicates its
+intention or kind, and in some dialects its type. The original Hungarian
+Notation uses intention or kind in its naming convention and is
+sometimes called Apps Hungarian as it became popular in the Microsoft
+Apps division in the development of Word, Excel and other apps. As the
+Microsoft Windows division adopted the naming convention, they used the
+actual data type for naming, and this convention became widely spread
+through the Windows API; this is sometimes called Systems Hungarian
+notation.</p>
+<ul>
+<li>
+<p>bBusy : boolean</p>
+</li>
+<li>
+<p>chInitial : char</p>
+</li>
+<li>
+<p>cApples : count of items</p>
+</li>
+<li>
+<p>dwLightYears : double word (Systems)</p>
+</li>
+<li>
+<p>fBusy : flag (or float)</p>
+</li>
+<li>
+<p>nSize : integer (Systems) or count (Apps)</p>
+</li>
+<li>
+<p>iSize : integer (Systems) or index (Apps)</p>
+</li>
+<li>
+<p>fpPrice: floating-point</p>
+</li>
+<li>
+<p>dbPi : double (Systems)</p>
+</li>
+<li>
+<p>pFoo : pointer</p>
+</li>
+<li>
+<p>rgStudents : array, or range</p>
+</li>
+<li>
+<p>szLastName : zero-terminated string</p>
+</li>
+<li>
+<p>u16Identifier : unsigned 16-bit integer (Systems)</p>
+</li>
+<li>
+<p>u32Identifier : unsigned 32-bit integer (Systems)</p>
+</li>
+<li>
+<p>stTime : clock time structure</p>
+</li>
+<li>
+<p>fnFunction : function name</p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="g.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="i.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="g.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="i.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

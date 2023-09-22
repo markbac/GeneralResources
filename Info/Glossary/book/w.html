@@ -1,0 +1,655 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>w - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html" class="active"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="w"><a class="header" href="#w">W</a></h1>
+<h2 id="w3c"><a class="header" href="#w3c">W3C</a></h2>
+<p>World Wide Web Consortium</p>
+<p>The World Wide Web Consortium (W3C) is the main international standards
+organization for the World Wide Web (abbreviated WWW or W3).</p>
+<p>Founded and currently led by Tim Berners-Lee, the consortium is made up
+of member organizations which maintain full-time staff for the purpose
+of working together in the development of standards for the World Wide
+Web. As of 24 September 2017, the World Wide Web Consortium (W3C) has
+474 members.</p>
+<h2 id="w-cdma"><a class="header" href="#w-cdma">W-CDMA</a></h2>
+<p>Wideband Code-division multiple access</p>
+<p>W-CDMA or WCDMA (Wideband Code Division Multiple Access), along with
+UMTS-FDD, UTRA-FDD, or IMT-2000 CDMA Direct Spread is an air interface
+standard found in 3G mobile telecommunications networks. It supports
+conventional cellular voice, text and MMS services, but can also carry
+data at high speeds, allowing mobile operators to deliver higher
+bandwidth applications including streaming and broadband Internet
+access.</p>
+<p>W-CDMA uses the DS-CDMA channel access method with a pair of 5 MHz wide
+channels. In contrast, the competing CDMA2000 system uses one or more
+available 1.25 MHz channels for each direction of communication. W-CDMA
+systems are widely criticized for their large spectrum usage, which
+delayed deployment in countries that acted relatively slowly in
+allocating new frequencies specifically for 3G services (such as the
+United States).</p>
+<h2 id="walkthrough"><a class="header" href="#walkthrough">Walkthrough</a></h2>
+<p>An <em>informal</em> <em>review</em> in which the <em>author</em> and one or more people meet
+to review an <em>artifact</em> with the intent of finding <em>defects</em>.</p>
+<h2 id="wan"><a class="header" href="#wan">WAN</a></h2>
+<p>Wide Area Network</p>
+<p>A wide area network (WAN) is a telecommunications network or computer
+network that extends over a large geographical distance/place. Wide area
+networks are often established with leased telecommunication circuits.</p>
+<p>Business, education and government entities use wide area networks to
+relay data to staff, students, clients, buyers, and suppliers from
+various locations across the world. In essence, this mode of
+telecommunication allows a business to effectively carry out its daily
+function regardless of location. The Internet may be considered a WAN.</p>
+<p>Related terms for other types of networks are personal area networks
+(PANs), local area networks (LANs), campus area networks (CANs), or
+metropolitan area networks (MANs) which are usually limited to a room,
+building, campus or specific metropolitan area respectively.<br />
+<img src="./images/W/15009199.png?width=480" alt="" /></p>
+<h2 id="wanet"><a class="header" href="#wanet">WANET</a></h2>
+<p>Wireless ad hoc network</p>
+<p>A wireless ad hoc network (WANET) or MANET (Mobile ad hoc network) is a
+decentralised type of wireless network. The network is ad hoc because it
+does not rely on a pre-existing infrastructure, such as routers in wired
+networks or access points in managed (infrastructure) wireless networks.
+Instead, each node participates in routing by forwarding data for other
+nodes, so the determination of which nodes forward data is made
+dynamically on the basis of network connectivity and the routing
+algorithm in use.<br />
+In the Windows operating system, ad-hoc is a communication mode
+(setting) that allows computers to directly communicate with each other
+without a router.<br />
+Wireless mobile ad hoc networks are self-configuring, dynamic networks
+in which nodes are free to move. Wireless networks lack the complexities
+of infrastructure setup and administration, enabling devices to create
+and join networks &quot;on the fly&quot; -- anywhere, anytime.</p>
+<h2 id="wap"><a class="header" href="#wap">WAP</a></h2>
+<p>Wireless Access Point</p>
+<p>In computer networking, a wireless access point (WAP), or more generally
+just access point (AP), is a networking hardware device that allows a
+Wi-Fi device to connect to a wired network. The AP usually connects to a
+router (via a wired network) as a standalone device, but it can also be
+an integral component of the router itself. An AP is differentiated from
+a hotspot, which is the physical location where Wi-Fi access to a WLAN
+is available.</p>
+<h2 id="waterfall"><a class="header" href="#waterfall">Waterfall</a></h2>
+<p>The waterfall model is a relatively linear sequential design approach
+for certain areas of engineering design. In software development, it
+tends to be among the less iterative and flexible approaches, as
+progress flows in largely one direction (&quot;downwards&quot; like a waterfall)
+through the phases of conception, initiation, analysis, design,
+construction, testing, deployment and maintenance.</p>
+<p>The waterfall development model originated in the manufacturing and
+construction industries; where the highly structured physical
+environments meant that design changes became prohibitively expensive
+much sooner in the development process. When first adopted for software
+development, there were no recognized alternatives for knowledge-based
+creative work</p>
+<p>The Waterfall methodology came about by mistake due to a
+misunderstanding a 1970 paper which gave it as an example of a
+methodology along with a comment that states this is a risky method and
+invites failure. A US Department of Defense standard was published in
+1985 with a methodology based on the 1970 paper and it then became
+widespread.</p>
+<p><img src="./images/W/15009207.png?width=445" alt="" /></p>
+<h2 id="waterfall-lifecycle"><a class="header" href="#waterfall-lifecycle">Waterfall Lifecycle</a></h2>
+<p>An orderly sequence of phases from system concept to delivery with a
+review at the end of each phase.</p>
+<h2 id="wbc"><a class="header" href="#wbc">WBC</a></h2>
+<p>Wholesale Broadband Managed</p>
+<p>The vanilla WBC product is the most flexible of the three. Crudely
+speaking, it is not that dissimilar to DataStream. But rather than
+having to rent capacity at every exchange from BT, the ISP has to
+install equipment (&quot;have presence&quot;) at BT's WBC Aggregation Points
+(APs). There are twenty of these dotted around the country, and these
+are the same as the Core nodes discussed on the 21CN overview. One
+aggregation point will cover a region of the country, so an ISP would
+need to have presence at all twenty to cover the entire of the UK.<br />
+<img src="./images/W/15009213.png?width=481" alt="" /></p>
+<h2 id="wbcc"><a class="header" href="#wbcc">WBCC</a></h2>
+<p>Wholesale Broadband Connect Converge</p>
+<p>There is relatively little public information available about this
+product. It is known to roll the voice and broadband products in to a
+package, with BT providing the ISP a single bill for both. Given that
+this product will again be based on WBC, one can only assume that the
+same product options and QoS would also be available.</p>
+<h2 id="wbmc"><a class="header" href="#wbmc">WBMC</a></h2>
+<p>Wholesale Broadband Managed Connect</p>
+<p>The IPSC replacement<br />
+In the same way that the vanilla WBC product could be seen as a
+replacement for DataStream, WBMC can be seen as a replacement for
+IPStream. This product is an end-to-end product, encompassing the EUA
+(End User Access), presence at the APs (Aggregation Points), EPs
+(Extension Paths) and an MSIL (Although the MSIL is purchased separately
+by the ISP). Ultimately this saves the ISP having to manage and maintain
+presence at the 20 WBC nodes (APs), which would involve considerable
+initial outlay and ongoing investment. The backhaul is also managed by
+BT entirely. On the other side of the coin this means the ISP is locked
+in to a BT platform - which may not necessarily be the cheapest - and it
+certainly does not offer all of the flexibility that an ISP using WBC
+would receive. That said, all of the same products and QoS options are
+available on WBMC as on WBC.</p>
+<h2 id="weekly-individual-plan"><a class="header" href="#weekly-individual-plan">Weekly Individual Plan</a></h2>
+<p>A mechanism for individuals to create <em>miniature milestone</em> plan on a
+weekly basis. See C<em>xGuide_WeeklyIndividualPlan</em>.</p>
+<h2 id="wep"><a class="header" href="#wep">WEP</a></h2>
+<p>Wired Equivalent Privacy</p>
+<p>Wired Equivalent Privacy (WEP) is a security algorithm for IEEE 802.11
+wireless networks. Introduced as part of the original 802.11 standard
+ratified in 1997, its intention was to provide data confidentiality
+comparable to that of a traditional wired network. WEP, recognizable by
+its key of 10 or 26 hexadecimal digits (40 or 104 bits), was at one time
+widely in use and was often the first security choice presented to users
+by router configuration tools.</p>
+<p>In 2003 the Wi-Fi Alliance announced that WEP had been superseded by
+Wi-Fi Protected Access (WPA). In 2004, with the ratification of the full
+802.11i standard (i.e. WPA2), the IEEE declared that both WEP-40 and
+WEP-104 have been deprecated.</p>
+<p>WEP was the only encryption protocol available to 802.11a and 802.11b
+devices built before the WPA standard, which was available for 802.11g
+devices.</p>
+<h2 id="what-requirement"><a class="header" href="#what-requirement">What Requirement</a></h2>
+<p>Synonym for <em>Functional Requirement</em></p>
+<h2 id="why-requirement"><a class="header" href="#why-requirement">Why Requirement</a></h2>
+<p>Synonym for <em>Business Requirement</em></p>
+<h2 id="wi-fi"><a class="header" href="#wi-fi">Wi-Fi</a></h2>
+<p>Wi-Fi or WiFi is technology for radio wireless local area networking of
+devices based on the IEEE 802.11 standards. Wi Fi is a trademark of the
+Wi-Fi Alliance, which restricts the use of the term Wi-Fi Certified to
+products that successfully complete interoperability certification
+testing.</p>
+<p>Devices that can use Wi-Fi technology include desktops and laptops,
+video game consoles, smartphones and tablets, smart TVs, digital audio
+players and modern printers. Wi-Fi compatible devices can connect to the
+Internet via a WLAN and a wireless access point. Such an access point
+(or hotspot) has a range of about 20 meters (66 feet) indoors and a
+greater range outdoors. Hotspot coverage can be as small as a single
+room with walls that block radio waves, or as large as many square
+kilometres achieved by using multiple overlapping access points.</p>
+<p>Depiction of a device sending information wirelessly to another device,
+both connected to the local network, in order to print a document<br />
+Wi-Fi most commonly uses the 2.4 gigahertz (12 cm) UHF and 5.8 gigahertz
+(5 cm) SHF ISM radio bands, these bands are subdivided into multiple
+channels. Each channel can be time-shared by multiple networks. These
+wavelengths work best for line-of-sight. Many common materials absorb or
+reflect them, which further restricts range, but can tend to help
+minimise interference between different networks in crowded
+environments. At close range, some versions of Wi-Fi, running on
+suitable hardware[disambiguation needed] can achieve speeds of over 1
+Gbps.</p>
+<p>Anyone within range with a wireless network interface controller can
+attempt to access a network; because of this, Wi-Fi is more vulnerable
+to attack (called eavesdropping) than wired networks. Wi-Fi Protected
+Access is a family of technologies created to protect information moving
+across Wi-Fi networks and includes solutions for personal and enterprise
+networks. Security features of Wi-Fi Protected Access have included
+stronger protections and new security practices as the security
+landscape has changed over time.</p>
+<h2 id="wiki"><a class="header" href="#wiki">Wiki</a></h2>
+<p>A wiki is a website on which users collaboratively modify content and
+structure directly from the web browser. In a typical wiki, text is
+written using a simplified markup language and often edited with the
+help of a rich-text editor.</p>
+<p>A wiki is run using wiki software, otherwise known as a wiki engine. A
+wiki engine is a type of content management system, but it differs from
+most other such systems, including blog software, in that the content is
+created without any defined owner or leader, and wikis have little
+inherent structure, allowing structure to emerge according to the needs
+of the users. There are dozens of different wiki engines in use, both
+standalone and part of other software, such as bug tracking systems.
+Some wiki engines are open source, whereas others are proprietary. Some
+permit control over different functions (levels of access); for example,
+editing rights may permit changing, adding, or removing material. Others
+may permit access without enforcing access control. Other rules may be
+imposed to organize content.</p>
+<h2 id="wimax"><a class="header" href="#wimax">WiMAX</a></h2>
+<p>Worldwide Interoperability for Microwave Access</p>
+<p>WiMAX (Worldwide Interoperability for Microwave Access) is a family of
+wireless communication standards based on the IEEE 802.16 set of
+standards, which provide multiple physical layer (PHY) and Media Access
+Control (MAC) options.</p>
+<p>The name &quot;WiMAX&quot; was created by the WiMAX Forum, which was formed in
+June 2001 to promote conformity and interoperability of the standard,
+including the definition of predefined system profiles for commercial
+vendors. The forum describes WiMAX as &quot;a standards-based technology
+enabling the delivery of last mile wireless broadband access as an
+alternative to cable and DSL&quot;. IEEE 802.16m or WirelessMAN-Advanced was
+a candidate for the 4G, in competition with the LTE Advanced standard.</p>
+<p>WiMAX was initially designed to provide 30 to 40 megabit-per-second data
+rates, with the 2011 update providing up to 1 Gbit/s for fixed stations</p>
+<h2 id="win-t"><a class="header" href="#win-t">WIN-T</a></h2>
+<p>Warfighter Information Network - Tactical</p>
+<p>WIN-T is the U.S. Army's tactical network backbone, providing secure
+voice and data communications for soldiers on the battlefield without
+the need for fixed infrastructure. By connecting soldiers with their
+commanders, WIN-T is changing the way the U.S. Army fights by providing
+life-saving information on-the-move, anywhere in the world. WIN-T
+enables soldiers to:</p>
+<ul>
+<li>
+<p>Stream real-time video over the network</p>
+</li>
+<li>
+<p>View a topographical map of friendly forces</p>
+</li>
+<li>
+<p>Send texts requesting medical assistance</p>
+</li>
+<li>
+<p>Digitally call for artillery support</p>
+</li>
+<li>
+<p>Access mission command apps like CPOF and TIGR</p>
+<p>WIN-T INCREMENT 1: COMMUNICATIONS AT-THE-HALT<br />
+Originally known as the Joint Network Node Network (JNN-N) program,
+WIN-T Increment 1 (Inc. 1) began fielding in 2004 to support combat
+missions during Operation Enduring Freedom and Operation Iraqi
+Freedom.</p>
+<p>With WIN-T Inc. 1, for the first time in history, the soldiers on
+the battlefield had a high-speed, interoperable voice and data
+communications network at the battalion level.</p>
+<p>WIN-T INCREMENT 2: COMMUNICATIONS ON-THE-MOVE<br />
+The Army's 10th Mountain Division was the first to field WIN-T
+Inc. 2 new capabilities when they deployed for Afghanistan in
+July 2013. WIN-T Inc. 2's unique value was immediately recognized,
+as it provided soldiers with communications even as fixed
+infrastructure was removed.</p>
+<p>The Tactical Communication Nodes in Inc. 2 took the first step in
+providing a mobile infrastructure on the battlefield. This includes
+mobile Point Of Presence systems (installed on select vehicles at
+battalion levels and above, which include four companies of up to
+200 soldiers and about 10 to 30 vehicles each), vehicle wireless
+packages, and the Soldier Network Extension (for Company-level
+connectivity).</p>
+<p>Increment 2 enables mission command from brigade to division to
+company through a completely ad-hoc, self-forming network.
+Commanders and select staff now have the ability to maneuver
+anywhere on the battlefield and maintain connectivity to the
+network, without the need to stop and set up communications, making
+them vulnerable to attack.</p>
+<p><img src="./images/W/15009219.png?width=480" alt="" /></p>
+</li>
+</ul>
+<h2 id="wireless-mesh-network"><a class="header" href="#wireless-mesh-network">Wireless Mesh Network</a></h2>
+<p><br />
+<img src="./images/W/15009225.png?width=479" alt="" /><br />
+A wireless mesh network (WMN) is a communications network made up of
+radio nodes organized in a mesh topology. It is also a form of wireless
+ad hoc network.</p>
+<p>A mesh refers to rich interconnection among devices or nodes. Wireless
+mesh networks often consist of mesh clients, mesh routers and gateways.
+Mobility of nodes is less frequent. If nodes were to constantly or
+frequently move, the mesh will spend more time updating routes than
+delivering data. In a wireless mesh network, topology tends to be more
+static, so that routes computation can converge and delivery of data to
+their destinations can occur. Hence, this is a low-mobility centralized
+form of wireless ad hoc network. Also, because it sometimes relies on
+static nodes to act as gateways, it is not a truly all-wireless ad hoc
+network.</p>
+<p>The mesh clients are often laptops, cell phones and other wireless
+devices while the mesh routers forward traffic to and from the gateways
+which may, but need not, be connected to the Internet. The coverage area
+of the radio nodes working as a single network is sometimes called a
+mesh cloud. Access to this mesh cloud is dependent on the radio nodes
+working in harmony with each other to create a radio network. A mesh
+network is reliable and offers redundancy. When one node can no longer
+operate, the rest of the nodes can still communicate with each other,
+directly or through one or more intermediate nodes. Wireless mesh
+networks can self form and self heal. Wireless mesh networks work with
+different wireless technologies including 802.11, 802.15, 802.16,
+cellular technologies and need not be restricted to any one technology
+or protocol.</p>
+<h2 id="wireless-repeater"><a class="header" href="#wireless-repeater">Wireless Repeater</a></h2>
+<p>A wireless repeater (also called wireless range extender) takes an
+existing signal from a wireless router or wireless access point and
+rebroadcasts it to create a second network. When two or more hosts have
+to be connected with one another over the IEEE 802.11 protocol and the
+distance is too long for a direct connection to be established, a
+wireless repeater is used to bridge the gap. It can be a specialized
+stand alone computer networking device. Also, some Wireless network
+interface controllers (WNIC)s optionally support operating in such a
+mode. Those outside of the primary network will be able to connect
+through the new &quot;repeated&quot; network. However, as far as the original
+router or access point is concerned, only the repeater MAC is connected,
+making it necessary to enable safety features on the wireless repeater.
+Wireless repeaters are commonly used to improve signal range and
+strength within homes and small offices.</p>
+<h2 id="wireshark"><a class="header" href="#wireshark">Wireshark</a></h2>
+<p>Wireshark is a free and open source packet analyzer. It is used for
+network troubleshooting, analysis, software and communications protocol
+development, and education. Originally named Ethereal, the project was
+renamed Wireshark in May 2006 due to trademark issues.<br />
+<img src="./images/W/15009231.png?width=477" alt="" /></p>
+<h2 id="wisp"><a class="header" href="#wisp">WISP</a></h2>
+<p>Wireless ISP</p>
+<p>A wireless Internet service provider (WISP) is an Internet service
+provider with a network based on wireless networking. Technology may
+include commonplace Wi-Fi wireless mesh networking, or proprietary
+equipment designed to operate over open 900 MHz, 2.4 GHz, 4.9, 5, 24,
+and 60 GHz bands or licensed frequencies in the UHF band (including the
+MMDS frequency band), LMDS, and other bands from 6Ghz to 80Ghz.<br />
+<img src="./images/W/15009237.png?width=480" alt="" /></p>
+<h2 id="wlr"><a class="header" href="#wlr">WLR</a></h2>
+<p>Wholesale Line Rental</p>
+<p>Wholesale line rental (WLR) is a service in which a telecommunications
+operator takes control of all the connections made through a telephone
+line from the native operator and collects the subscription fee from the
+subscribers.</p>
+<p>With WLR the alternative telecoms provider buys a wholesale product from
+the incumbent (usually in conjunction with a wholesale call product such
+as CPS) and is then able to produce a single bill for the end user
+covering calls and line rental. Broadband services can also be provided
+by the WLR operator (and included in a single bill) if a separate
+wholesale DSL product is purchased from the incumbent, but this is
+optional.</p>
+<h2 id="wma"><a class="header" href="#wma">WMA</a></h2>
+<p>Windows Media Audio</p>
+<p>Windows Media Audio (WMA) is the name of a series of audio codecs and
+their corresponding audio coding formats developed by Microsoft. It is a
+proprietary technology that forms part of the Windows Media framework.
+WMA consists of four distinct codecs. The original WMA codec, known
+simply as WMA, was conceived as a competitor to the popular MP3 and
+RealAudio codecs. WMA Pro, a newer and more advanced codec, supports
+multichannel and high resolution audio. A lossless codec, WMA Lossless,
+compresses audio data without loss of audio fidelity (the regular WMA
+format is lossy).[3] WMA Voice, targeted at voice content, applies
+compression using a range of low bit rates.</p>
+<h2 id="work-breakdown-structure"><a class="header" href="#work-breakdown-structure">Work Breakdown Structure</a></h2>
+<p>WBS</p>
+<p>A representation of all work (<em>activities</em> and <em>tasks</em>) on a project,
+decomposed into <em>work packages</em>. The <em>WBS</em> provides the fundamental
+project management view of a project. Smaller projects may capture their
+WBS implicitly in <em>work plans</em> or <em>detailed schedules</em>. Larger projects
+will often define the <em>WBS</em> as a separate artifact.</p>
+<h2 id="work-item"><a class="header" href="#work-item">Work Item</a></h2>
+<p>Synonym for <em>artifact</em>.</p>
+<h2 id="work-package"><a class="header" href="#work-package">Work Package</a></h2>
+<p>WP</p>
+<p>A leaf element of a <em>WBS,</em> often defined as a tangible deliverable.
+Bottom-up project estimation and planning is driven by work packages and
+is often captured in a <em>work plan</em>. <em>Work packages</em> are normally broken
+down into <em>activities</em> and <em>tasks</em> for <em>task estimation</em> and <em>detailed
+scheduling</em>.</p>
+<h2 id="work-plan"><a class="header" href="#work-plan">Work Plan</a></h2>
+<p>A key project artifact that captures <em>work packages</em> along with
+their <em>task estimates.</em> Used to plan, track, and control detailed
+execution. See <em>CxGuide_EarnedValueWorkPlan</em>.</p>
+<h2 id="work-product"><a class="header" href="#work-product">Work Product</a></h2>
+<p>Synonym for <em>artifact</em>.</p>
+<h2 id="wpa2"><a class="header" href="#wpa2">WPA2</a></h2>
+<p>Wi-Fi Protected Access</p>
+<p>Wi-Fi Protected Access (WPA) and Wi-Fi Protected Access II (WPA2) are
+two security protocols and security certification programs developed by
+the Wi-Fi Alliance to secure wireless computer networks. The Alliance
+defined these in response to serious weaknesses researchers had found in
+the previous system, Wired Equivalent Privacy (WEP).</p>
+<p>WPA (sometimes referred to as the draft IEEE 802.11i standard) became
+available in 2003. The Wi-Fi Alliance intended it as an intermediate
+measure in anticipation of the availability of the more secure and
+complex WPA2, which became available in 2004 and is a common shorthand
+for the full IEEE 802.11i (or IEEE 802.11i-2004) standard.</p>
+<h2 id="wps"><a class="header" href="#wps">WPS</a></h2>
+<p>Wi-Fi Protected Setup</p>
+<p>Wi-Fi Protected Setup (WPS; originally, Wi-Fi Simple Config) is a
+network security standard to create a secure wireless home network.</p>
+<p>Created by the Wi-Fi Alliance and introduced in 2006, the goal of the
+protocol is to allow home users who know little of wireless security and
+may be intimidated by the available security options to set up Wi-Fi
+Protected Access, as well as making it easy to add new devices to an
+existing network without entering long passphrases. Prior to the
+standard, several competing solutions were developed by different
+vendors to address the same need.</p>
+<h2 id="write-only-code"><a class="header" href="#write-only-code">write-only code</a></h2>
+<p>code that is hard to read.</p>
+<h2 id="ws-bpel"><a class="header" href="#ws-bpel">WS-BPEL</a></h2>
+<p>Web Services Business Process Execution Language</p>
+<p>BPEL was developed to address the differences between programming in the
+large and programming in the small. This term is also known as Web
+Services Business Process Execution Language (WS-BPEL), and is sometimes
+written as business process execution language for Web Services.</p>
+<h2 id="wsdl"><a class="header" href="#wsdl">WSDL</a></h2>
+<p>Web Services Description Language</p>
+<p>The Web Services Description Language is an XML-based interface
+definition language that is used for describing the functionality
+offered by a web service. The acronym is also used for any specific WSDL
+description of a web service (also referred to as a WSDL file), which
+provides a machine-readable description of how the service can be
+called, what parameters it expects, and what data structures it returns.
+Therefore, its purpose is roughly similar to that of a type signature in
+a programming language.</p>
+<p>The current version of WSDL is WSDL 2.0. The meaning of the acronym has
+changed from version 1.1 where the &quot;D&quot; stood for &quot;Definition&quot;.</p>
+<p><img src="./images/W/15009243.png?width=480" alt="" /></p>
+<pre><code class="language-{=html}">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+</code></pre>
+<p><code>&lt;description xmlns=&quot;http://www.w3.org/ns/wsdl&quot; xmlns:tns=&quot;http://www.tmsws.com/wsdl20sample&quot; xmlns:whttp=&quot;http://schemas.xmlsoap.org/wsdl/http/&quot;xmlns:wsoap=&quot;http://schemas.xmlsoap.org/wsdl/soap/&quot;targetNamespace=&quot;http://www.tmsws.com/wsdl20sample&quot;&gt;</code>{=html}<br />
+<code>&lt;documentation&gt;</code>{=html}This is a sample WSDL 2.0 document.
+<code>&lt;/documentation&gt;</code>{=html}<br />
+<code>&lt;!-- Abstract type --&gt;</code>{=html}<code>&lt;types&gt;</code>{=html}<code>&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;xmlns=&quot;http://www.tmsws.com/wsdl20sample&quot;targetNamespace=&quot;http://www.example.com/wsdl20sample&quot;&gt;</code>{=html}
+<code>&lt;xs:element name=&quot;request&quot;&gt;</code>{=html} ...
+<code>&lt;/xs:element&gt;</code>{=html}<code>&lt;xs:element name=&quot;response&quot;&gt;</code>{=html} ...
+<code>&lt;/xs:element&gt;</code>{=html}<code>&lt;/xs:schema&gt;</code>{=html}<code>&lt;/types&gt;</code>{=html}<br />
+<code>&lt;!-- Abstract interfaces --&gt;</code>{=html}<code>&lt;interface name=&quot;Interface1&quot;&gt;</code>{=html}<code>&lt;fault name=&quot;Error1&quot; element=&quot;tns:response&quot;/&gt;</code>{=html}<code>&lt;operation name=&quot;Get&quot; pattern=&quot;http://www.w3.org/ns/wsdl/in-out&quot;&gt;</code>{=html}<code>&lt;input messageLabel=&quot;In&quot; element=&quot;tns:request&quot;/&gt;</code>{=html}</p>
+<pre><code class="language-{=html}">&lt;output messageLabel=&quot;Out&quot; element=&quot;tns:response&quot;/&gt;
+</code></pre>
+<p><code>&lt;/operation&gt;</code>{=html}<code>&lt;/interface&gt;</code>{=html}<br />
+<code>&lt;!-- Concrete Binding Over HTTP --&gt;</code>{=html}
+<code>&lt;!-- Web Service offering endpoints for both bindings--&gt;</code>{=html}<code>&lt;service name=&quot;Service1&quot; interface=&quot;tns:Interface1&quot;&gt;</code>{=html}<code>&lt;endpoint name=&quot;HttpEndpoint&quot; binding=&quot;tns:HttpBinding&quot; address=&quot;http://www.example.com/rest/&quot;/&gt;</code>{=html}<code>&lt;endpoint name=&quot;SoapEndpoint&quot; binding=&quot;tns:SoapBinding&quot; address=&quot;http://www.example.com/soap/&quot;/&gt;</code>{=html}<code>&lt;/service&gt;</code>{=html}<code>&lt;/description&gt;</code>{=html}</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="v.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="x.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="v.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="x.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

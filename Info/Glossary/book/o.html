@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>o - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html" class="active"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="o"><a class="header" href="#o">O</a></h1>
+<h2 id="objective-c"><a class="header" href="#objective-c">Objective C</a></h2>
+<p>Objective-C is a general-purpose, object-oriented programming language
+that adds Smalltalk-style messaging to the C programming language. It
+was the main programming language used by Apple for the OS X and iOS
+operating systems, and their respective application programming
+interfaces (APIs) Cocoa and Cocoa Touch prior to the introduction of
+Swift.</p>
+<h2 id="objectives"><a class="header" href="#objectives">Objectives</a></h2>
+<p>Synonym for <em>goals</em>.</p>
+<h2 id="odf"><a class="header" href="#odf">ODF</a></h2>
+<p>Optical Distribution Frame</p>
+<p>In telecommunications, a distribution frame is a passive device which
+terminates cables, allowing arbitrary interconnections to be made.</p>
+<h2 id="ofc"><a class="header" href="#ofc">OFC</a></h2>
+<p>Optical fiber connector</p>
+<p>An optical fiber connector terminates the end of an optical fiber, and
+enables quicker connection and disconnection than splicing. The
+connectors mechanically couple and align the cores of fibers so light
+can pass. Better connectors lose very little light due to reflection or
+misalignment of the fibers. In all, about 100 different types of fiber
+optic connectors have been introduced to the market.<br />
+<img src="./images/O/15008720.png?width=220" alt="" /></p>
+<h2 id="ofcom"><a class="header" href="#ofcom">Ofcom</a></h2>
+<p>The Office of Communications, commonly known as Ofcom, is the UK
+government-approved regulatory and competition authority for the
+broadcasting, telecommunications and postal industries of the United
+Kingdom.</p>
+<p>Ofcom has wide-ranging powers across the television, radio, telecoms and
+postal sectors. It has a statutory duty to represent the interests of
+citizens and consumers by promoting competition and protecting the
+public from harmful or offensive material.</p>
+<p>Some of the main areas Ofcom presides over are licensing, research,
+codes and policies, complaints, competition and protecting the radio
+spectrum from abuse (e.g. pirate radio stations).</p>
+<p>The regulator was initially established by the Office of Communications
+Act 2002 and received its full authority from the Communications Act
+2003.</p>
+<h2 id="ofdma"><a class="header" href="#ofdma">OFDMA</a></h2>
+<p>Orthogonal frequency-division multiple access</p>
+<p>Orthogonal frequency-division multiple access (OFDMA) is a multi-user
+version of the popular orthogonal frequency-division multiplexing (OFDM)
+digital modulation scheme. Multiple access is achieved in OFDMA by
+assigning subsets of subcarriers to individual users. This allows
+simultaneous low-data-rate transmission from several users</p>
+<h2 id="oo"><a class="header" href="#oo">OO</a></h2>
+<p>Object-oriented</p>
+<p>Object-oriented programming (OOP) is a programming paradigm based on the
+concept of &quot;objects&quot;, which may contain data, in the form of fields,
+often known as attributes; and code, in the form of procedures, often
+known as methods. A feature of objects is that an object's procedures
+can access and often modify the data fields of the object with which
+they are associated (objects have a notion of &quot;this&quot; or &quot;self&quot;). In OOP,
+computer programs are designed by making them out of objects that
+interact with one another. There is significant diversity of OOP
+languages, but the most popular ones are class-based, meaning that
+objects are instances of classes, which typically also determine their
+type.</p>
+<p>Many of the most widely-used programming languages (such as C+, Object
+Pascal, Java, Python etc.) are multi-paradigm programming languages that
+support object-oriented programming to a greater or lesser degree,
+typically in combination with imperative, procedural programming.
+Significant object-oriented languages include Java, C+, C#, Python,
+PHP, Ruby, Perl, Object Pascal, Objective-C, Dart, Swift, Scala, Common
+Lisp, and Smalltalk.</p>
+<h2 id="operations-plan"><a class="header" href="#operations-plan">Operations Plan</a></h2>
+<p>A plan specifying how a system will be utilized after deployment along
+with other information such as roles, responsibilities, maintenance
+schedules, etc.</p>
+<h2 id="opus"><a class="header" href="#opus">OPUS</a></h2>
+<p>Opus is a lossy audio coding format developed by the Xiph.Org Foundation
+and standardized by the Internet Engineering Task Force, designed to
+efficiently code speech and general audio in a single format, while
+remaining low-latency enough for real-time interactive communication and
+low-complexity enough for low-end embedded processors. Opus replaces
+both Vorbis and Speex for new applications, and several blind listening
+tests have ranked it higher-quality than any other standard audio format
+at any given bitrate until transparency is reached, including MP3, AAC,
+and HE-AAC.</p>
+<p>Opus combines the speech-oriented linear predictive coding SILK
+algorithm and the lower-latency, MDCT-based CELT algorithm, switching
+between or combining them as needed for maximal efficiency. Bitrate,
+audio bandwidth, complexity, and algorithm can all be adjusted
+seamlessly in each frame. Opus has the low algorithmic delay (26.5 ms by
+default) necessary for use as part of a real-time communication link,
+permitting natural conversation, networked music performances, and live
+lip sync; by trading-off quality or bitrate, the delay can be reduced
+down to 5 ms. Its delay is exceptionally low compared to competing
+codecs, which require well over 100 ms, yet Opus performs very
+competitively with these formats in terms of quality per bitrate</p>
+<h2 id="os-x"><a class="header" href="#os-x">OS X</a></h2>
+<p>macOS (previously Mac OS X and later OS X) is a series of graphical
+operating systems developed and marketed by Apple Inc. since 2001. It is
+the primary operating system for Apple's Mac family of computers. Within
+the market of desktop, laptop and home computers, and by web usage, it
+is the second most widely used desktop OS, after Microsoft Windows.</p>
+<p>macOS is the second major series of Macintosh operating systems. The
+first is colloquially called the &quot;classic&quot; Mac OS, which was introduced
+in 1984, and the final release of which was Mac OS 9 in 1999. The first
+desktop version, Mac OS X 10.0, was released in March 2001, with its
+first update, 10.1, arriving later that year. After this, Apple began
+naming its releases after big cats, which lasted until OS X 10.8
+Mountain Lion. Since OS X 10.9 Mavericks, releases have been named after
+landmarks in California. Apple shortened the name to &quot;OS X&quot; in 2012 and
+then changed it to &quot;macOS&quot; in 2016, adopting the nomenclature that they
+were using for their other operating systems, iOS, watchOS, and tvOS.
+The latest version is macOS High Sierra, which was publicly released in
+September 2017.</p>
+<h2 id="osa-fc"><a class="header" href="#osa-fc">OSA-FC</a></h2>
+<p>Optical Spectrum Access Filter Connect</p>
+<p>Openreach virtual dark fibre service that provides CPs all the key
+benefits of dark fibre -- like the freedom to control and increase
+bandwidth usage at no extra cost -- without compromising on service and
+maintenance levels.</p>
+<p>It works by enabling CPs to operate their own network electronics on top
+of a managed connection which Openreach can monitor 24/7 and provide
+rapid response and repair times over.<br />
+<img src="./images/O/15008728.png?width=485" alt="" /></p>
+<h2 id="ospf"><a class="header" href="#ospf">OSPF</a></h2>
+<p>Open Shortest Path First</p>
+<p>Open Shortest Path First (OSPF) is a routing protocol for Internet
+Protocol (IP) networks. It uses a link state routing (LSR) algorithm and
+falls into the group of interior gateway protocols (IGPs), operating
+within a single autonomous system (AS). It is defined as OSPF Version 2
+in RFC 2328 (1998) for IPv4. The updates for IPv6 are specified as OSPF
+Version 3 in RFC 5340 (2008). OSPF supports the Classless Inter-Domain
+Routing (CIDR) addressing model.</p>
+<p>OSPF is a widely used IGP in large enterprise networks. IS-IS, another
+LSR-based protocol, is more common in large service provider networks.</p>
+<h2 id="oss"><a class="header" href="#oss">OSS</a></h2>
+<p>Operations support systems</p>
+<p>Operations support systems (OSS), or operational support systems in
+British usage, are computer systems used by telecommunications service
+providers to manage their networks (e.g., telephone networks). They
+support management functions such as network inventory, service
+provisioning, network configuration and fault management.</p>
+<p>Together with business support systems (BSS), they are used to support
+various end-to-end telecommunication services. BSS and OSS have their
+own data and service responsibilities. The two systems together are
+often abbreviated OSS/BSS, BSS/OSS or simply B/OSS.</p>
+<p>The abbreviation OSS is also used in a singular form to refer to all the
+Operations Support Systems viewed as a whole system.</p>
+<p>Different subdivisions of OSS have been proposed by the TM Forum,
+industrial research labs or OSS vendors. In general, an OSS covers at
+least the following five functions:</p>
+<ul>
+<li>
+<p>Network management systems</p>
+</li>
+<li>
+<p>Service delivery</p>
+</li>
+<li>
+<p>Service fulfillment, including the network inventory, activation and
+provisioning</p>
+</li>
+<li>
+<p>Service assurance</p>
+</li>
+<li>
+<p>Customer care<br />
+<img src="./images/O/15008734.png?width=300" alt="" /></p>
+</li>
+</ul>
+<h2 id="otn"><a class="header" href="#otn">OTN</a></h2>
+<p>Optical Transport Network</p>
+<p>ITU-T defines an Optical Transport Network (OTN) as a set of Optical
+Network Elements (ONE) connected by optical fiber links, able to provide
+functionality of transport, multiplexing, switching, management,
+supervision and survivability of optical channels carrying client
+signals.</p>
+<h2 id="out-of-order-delivery"><a class="header" href="#out-of-order-delivery">Out-of-order delivery</a></h2>
+<p>In computer networking, out-of-order delivery is the delivery of data
+packets in a different order from which they were sent. Out-of-order
+delivery can be caused by packets following multiple paths through a
+network, or via parallel processing paths within network equipment that
+are not designed to ensure that packet ordering is preserved. One of the
+functions of TCP is to prevent the out-of-order delivery of data, either
+by reassembling packets into order or forcing retries of out-of-order
+packets.<br />
+<img src="./images/O/15008740.png?width=480" alt="" /></p>
+<h2 id="overlap-dialling"><a class="header" href="#overlap-dialling">Overlap Dialling</a></h2>
+<p>Overlap dialing is required by CAS signaled lines. Overlap dial provides
+for a longer time-out period between digits, also called the inter-digit
+timer. With overlap dial set to off, the gateway expects to receive the
+digits one right after the other coming in to this line with very little
+delay between digits. With overlap dial set to on, then the device waits
+up to about 2 seconds between digits.</p>
+<p>Basically overlap dialing is a mechanism where a destination number can
+be specified partially to complete the first stage of a routing path.
+For example, if the number was &quot;23168104&quot;, it may be possible for the
+telecom to dial &quot;23168&quot; to reach the first port of call as quickly as
+possible (to save time on sending the remaining 3 digits) and then
+deliver the remaining 3 digits &quot;104&quot; in overlap mode.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="n.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="p.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="n.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="p.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>v - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html" class="active"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="v"><a class="header" href="#v">V</a></h1>
+<h2 id="v-model"><a class="header" href="#v-model">V Model</a></h2>
+<p>In software development, the V-model represents a development process
+that may be considered an extension of the waterfall model, and is an
+example of the more general V-model. Instead of moving down in a linear
+way, the process steps are bent upwards after the coding phase, to form
+the typical V shape. The V-Model demonstrates the relationships between
+each phase of the development life cycle and its associated phase of
+testing. The horizontal and vertical axes represents time or project
+completeness (left-to-right) and level of abstraction (coarsest-grain
+abstraction uppermost), respectively.<br />
+<img src="./images/V/15009151.png?width=446" alt="" /></p>
+<h2 id="v90"><a class="header" href="#v90">V.90</a></h2>
+<p>V.90 is an ITU-T recommendation for a modem, allowing 56 kbit/s digital
+download and 33.6 kbit/s analog upload. It replaced two vendor standards
+(K56flex and X2) and was designed to allow modems from both prior
+standards to be flash upgraded to support it. It was developed between
+March 1998 and February 1999. It is also known as V.Last as it was
+anticipated to be the last standard for modems operating near the
+channel capacity of POTS lines to be developed. V.90 is generally used
+in concert with the V.42bis compression standard. A follow-on standard,
+V.92, was developed later in 1999 to replace V.90.</p>
+<h2 id="v92"><a class="header" href="#v92">V.92</a></h2>
+<p>V.92 is an ITU-T recommendation, titled Enhancements to Recommendation
+V.90, that establishes a modem standard allowing near 56 kb/s download
+and 48 kb/s upload rates. With V.92 PCM is used for both the upstream
+and downstream connections; previously 56K modems only used PCM for
+downstream data.</p>
+<h2 id="vad"><a class="header" href="#vad">VAD</a></h2>
+<p>Voice Activity Detection</p>
+<p>Voice activity detection (VAD), also known as speech activity detection
+or speech detection, is a technique used in speech processing in which
+the presence or absence of human speech is detected. The main uses of
+VAD are in speech coding and speech recognition. It can facilitate
+speech processing, and can also be used to deactivate some processes
+during non-speech section of an audio session: it can avoid unnecessary
+coding/transmission of silence packets in Voice over Internet Protocol
+applications, saving on computation and on network bandwidth.</p>
+<p>VAD is an important enabling technology for a variety of speech-based
+applications. Therefore, various VAD algorithms have been developed that
+provide varying features and compromises between latency, sensitivity,
+accuracy and computational cost. Some VAD algorithms also provide
+further analysis, for example whether the speech is voiced, unvoiced or
+sustained. Voice activity detection is usually language independent.</p>
+<h2 id="vb"><a class="header" href="#vb">VB</a></h2>
+<p>Visual Basic</p>
+<p>Visual Basic is a third-generation event-driven programming language and
+integrated development environment (IDE) from Microsoft for its
+Component Object Model (COM) programming model first released in 1991
+and declared legacy during 2008. Microsoft intended Visual Basic to be
+relatively easy to learn and use. Visual Basic was derived from BASIC
+and enables the rapid application development (RAD) of graphical user
+interface (GUI) applications, access to databases using Data Access
+Objects, Remote Data Objects, or ActiveX Data Objects, and creation of
+ActiveX controls and objects.</p>
+<p>A programmer can create an application using the components provided by
+the Visual Basic program itself. Over time the community of programmers
+developed third-party components. Programs written in Visual Basic can
+also use the Windows API, which requires external function declarations.</p>
+<h2 id="vbs"><a class="header" href="#vbs">VBS</a></h2>
+<p>VB Script</p>
+<p>VBScript (&quot;Microsoft Visual Basic Scripting Edition&quot;) is an Active
+Scripting language developed by Microsoft that is modeled on Visual
+Basic. It allows Microsoft Windows system administrators to generate
+powerful tools for managing computers with error handling, subroutines,
+and other advanced programming constructs. It can give the user complete
+control over many aspects of their computing environment.</p>
+<p>VBScript uses the Component Object Model to access elements of the
+environment within which it is running; for example, the
+FileSystemObject (FSO) is used to create, read, update and delete files.
+VBScript has been installed by default in every desktop release of
+Microsoft Windows since Windows 98; in Windows Server since Windows NT
+4.0 Option Pack; and optionally with Windows CE (depending on the device
+it is installed on).</p>
+<h2 id="vc"><a class="header" href="#vc">VC</a></h2>
+<p>Virtual Circuit</p>
+<p>A virtual circuit (VC) is a means of transporting data over a packet
+switched computer network in such a way that it appears as though there
+is a dedicated physical layer link between the source and destination
+end systems of this data. The term virtual circuit is synonymous with
+virtual connection and virtual channel. Before a connection or virtual
+circuit may be used, it has to be established, between two or more nodes
+or software applications, by configuring the relevant parts of the
+interconnecting network. After that, a bit stream or byte stream may be
+delivered between the nodes; hence, a virtual circuit protocol allows
+higher level protocols to avoid dealing with the division of data into
+segments, packets, or frames.</p>
+<p>Virtual circuit communication resembles circuit switching, since both
+are connection oriented, meaning that in both cases data is delivered in
+correct order, and signalling overhead is required during a connection
+establishment phase. However, circuit switching provides a constant bit
+rate and latency, while these may vary in a virtual circuit service due
+to factors such as:</p>
+<ul>
+<li>
+<p>varying packet queue lengths in the network nodes,</p>
+</li>
+<li>
+<p>varying bit rate generated by the application,</p>
+</li>
+<li>
+<p>varying load from other users sharing the same network resources by
+means of statistical multiplexing, etc.</p>
+<p>Many virtual circuit protocols, but not all, provide reliable
+communication service through the use of data retransmissions
+because of error detection and automatic repeat request (ARQ).</p>
+<p>An alternate network configuration to virtual circuit is datagram.</p>
+</li>
+</ul>
+<h2 id="vci"><a class="header" href="#vci">VCI</a></h2>
+<p>Virtual Channel Identifier</p>
+<p>The VCI, used in conjunction with the VPI (virtual path indicator),
+indicates where an ATM cell is to travel over a network. ATM, or
+asynchronous transfer mode, is a method that many ISPs (Internet Service
+Providers) use to transfer data to client computers. Because ATM sends
+packets over fixed channels, the data is easier to track than
+information sent over the standard TCP/IP protocol.</p>
+<p>The VCI within each ATM cell defines the fixed channel on which the
+packet of information should be sent. It is a 16-bit field, compared to
+the VPI, which is only 8 bits. Since this numerical tag specifies the
+virtual channel that each packet belongs to, it prevents interference
+with other data being sent across the network.</p>
+<h2 id="vcid"><a class="header" href="#vcid">VCID</a></h2>
+<p>Virtual Circuit/Channel ID</p>
+<p><br />
+<img src="./images/V/15009159.png?width=483" alt="" /></p>
+<h2 id="vdsl"><a class="header" href="#vdsl">VDSL</a></h2>
+<p>Very-high-bit-rate digital subscriber line</p>
+<p>Very-high-bit-rate digital subscriber line (VDSL) and very-high-bit-rate
+digital subscriber line 2 <a href="2">VDSL2</a> are digital subscriber line (DSL)
+technologies providing data transmission faster than asymmetric digital
+subscriber line (ADSL).</p>
+<p>VDSL offers speeds of up to 52 Mbit/s downstream and 16 Mbit/s upstream,
+over a single flat untwisted or twisted pair of copper wires using the
+frequency band from 25 kHz to 12 MHz. These rates mean that VDSL is
+capable of supporting applications such as high-definition television,
+as well as telephone services (voice over IP) and general Internet
+access, over a single connection. VDSL is deployed over existing wiring
+used for analog telephone service and lower-speed DSL connections. This
+standard was approved by the International Telecommunication Union (ITU)
+in November 2001.</p>
+<p>Second-generation systems (VDSL2; ITU-T G.993.2 approved in February
+2006) use frequencies of up to 30 MHz to provide data rates exceeding
+100 Mbit/s simultaneously in both the upstream and downstream
+directions. The maximum available bit rate is achieved at a range of
+about 300 meters; performance degrades as the local loop attenuation
+increases.</p>
+<h2 id="velocity"><a class="header" href="#velocity">Velocity</a></h2>
+<p>At the end of each iteration, the team adds up effort estimates
+associated with user stories that were completed during that iteration.
+This total is called velocity.</p>
+<h2 id="verifier"><a class="header" href="#verifier">Verifier</a></h2>
+<p>Verifies any <em>rework</em> for <em>inspections</em>.</p>
+<h2 id="version"><a class="header" href="#version">Version</a></h2>
+<p>A formally released revision of an artifact, recognized by the
+configuration management process that oversees the artifact.</p>
+<h2 id="version-control"><a class="header" href="#version-control">Version Control</a></h2>
+<p>Version control is not strictly an Agile &quot;practice&quot; insofar as it is now
+widespread in the industry as a whole. But it is mentioned here for
+several reasons.</p>
+<h2 id="vhdl"><a class="header" href="#vhdl">VHDL</a></h2>
+<p>The VHSIC Hardware Description Language (VHDL) is a hardware description
+language (HDL) that can model the behavior and structure of digital
+systems at multiple levels of abstraction, ranging from the system level
+down to that of logic gates, for design entry, documentation, and
+verification purposes. Since 1987, VHDL has been standardized by the
+Institute of Electrical and Electronics Engineers (IEEE) as IEEE Std
+1076; the latest version (as of April 2020) of which is IEEE Std
+1076-2019. To model analog and mixed-signal systems, an
+IEEE-standardized HDL based on VHDL called VHDL-AMS (officially IEEE
+1076.1) has been developed.</p>
+<p>VHDL is named after the United States Department of Defense program that
+created it, the Very High-Speed Integrated Circuits Program (VHSIC). In
+the early 1980s, the VHSIC Program sought a new HDL for use in the
+design of the integrated circuits it aimed to develop. The product of
+this effort was VHDL Version 7.2, released in 1985. The effort to
+standardize it as an IEEE standard began in the following year.</p>
+<p>VHDL is generally used to write text models that describe a logic
+circuit. Such a model is processed by a synthesis program, only if it is
+part of the logic design. A simulation program is used to test the logic
+design using simulation models to represent the logic circuits that
+interface to the design. This collection of simulation models is
+commonly called a testbench.</p>
+<p>A VHDL simulator is typically an event-driven simulator. This means that
+each transaction is added to an event queue for a specific scheduled
+time. E.g. if a signal assignment should occur after 1 nanosecond, the
+event is added to the queue for time +1ns. Zero delay is also allowed,
+but still needs to be scheduled: for these cases delta delay is used,
+which represent an infinitely small time step. The simulation alters
+between two modes: statement execution, where triggered statements are
+evaluated, and event processing, where events in the queue are
+processed.</p>
+<p>VHDL has constructs to handle the parallelism inherent in hardware
+designs, but these constructs (processes) differ in syntax from the
+parallel constructs in Ada (tasks). Like Ada, VHDL is strongly typed and
+is not case sensitive. In order to directly represent operations which
+are common in hardware, there are many features of VHDL which are not
+found in Ada, such as an extended set of Boolean operators including
+nand and nor.</p>
+<p>VHDL has file input and output capabilities, and can be used as a
+general-purpose language for text processing, but files are more
+commonly used by a simulation testbench for stimulus or verification
+data. There are some VHDL compilers which build executable binaries. In
+this case, it might be possible to use VHDL to write a testbench to
+verify the functionality of the design using files on the host computer
+to define stimuli, to interact with the user, and to compare results
+with those expected. However, most designers leave this job to the
+simulator.</p>
+<p>It is relatively easy for an inexperienced developer to produce code
+that simulates successfully but that cannot be synthesized into a real
+device, or is too large to be practical. One particular pitfall is the
+accidental production of transparent latches rather than D-type
+flip-flops as storage elements.</p>
+<p>One can design hardware in a VHDL IDE (for FPGA implementation such as
+Xilinx ISE, Altera Quartus, Synopsys Synplify or Mentor Graphics HDL
+Designer) to produce the RTL schematic of the desired circuit. After
+that, the generated schematic can be verified using simulation software
+which shows the waveforms of inputs and outputs of the circuit after
+generating the appropriate testbench. To generate an appropriate
+testbench for a particular circuit or VHDL code, the inputs have to be
+defined correctly. For example, for clock input, a loop process or an
+iterative statement is required.</p>
+<p>A final point is that when a VHDL model is translated into the &quot;gates
+and wires&quot; that are mapped onto a programmable logic device such as a
+CPLD or FPGA, then it is the actual hardware being configured, rather
+than the VHDL code being &quot;executed&quot; as if on some form of a processor
+chip.</p>
+<p>-- (this is a VHDL comment) /<em>this is a block comment (VHDL-2008)</em>/ --
+import std_logic from the IEEE library library IEEE; use
+IEEE.std_logic_1164.all;</p>
+<p>-- this is the entity entity ANDGATE is port ( I1 : in std_logic; I2 :
+in std_logic; O : out std_logic); end entity ANDGATE;</p>
+<p>-- this is the architecture architecture RTL of ANDGATE is begin O &lt;=
+I1 and I2;</p>
+<p>library IEEE; use IEEE.std_logic_1164.all; use IEEE.numeric_std.all;
+-- for the unsigned type</p>
+<p>entity COUNTER is generic ( WIDTH : in natural := 32); port ( RST : in
+std_logic; CLK : in std_logic; LOAD : in std_logic; DATA : in
+std_logic_vector(WIDTH-1 downto 0); Q : out std_logic_vector(WIDTH-1
+downto 0)); end entity COUNTER;</p>
+<p>architecture RTL of COUNTER is</p>
+<p>begin process(all) is begin if RST then Q &lt;= (others =&gt; '0'); elsif
+rising_edge(CLK) then if LOAD then Q &lt;= DATA; else Q &lt;=
+std_logic_vector(unsigned(Q) + 1); --Addition is unsigned, converted
+back to std_logic_vector end if; end if; end process;</p>
+<p>end architecture RTL;</p>
+<h2 id="visp"><a class="header" href="#visp">VISP</a></h2>
+<p>Virtual ISP</p>
+<p>A Virtual ISP (VISP), also known as an Affinity ISP, is an Internet
+Service Provider (ISP) that resells the resources of existing ISPs under
+another brand name.</p>
+<h2 id="vlan"><a class="header" href="#vlan">VLAN</a></h2>
+<p>Virtual LAN</p>
+<p>A virtual LAN (VLAN) is any broadcast domain that is partitioned and
+isolated in a computer network at the data link layer (OSI layer
+2).[1][2] LAN is the abbreviation for local area network and in this
+context virtual refers to a physical object recreated and altered by
+additional logic. VLANs work by applying tags to network packets and
+handling these tags in networking systems -- creating the appearance and
+functionality of network traffic that is physically on a single network
+but acts as if it is split between separate networks. In this way, VLANs
+can keep network applications separate despite being connected to the
+same physical network, and without requiring multiple sets of cabling
+and networking devices to be deployed.</p>
+<p><img src="./images/V/15009165.png?width=478" alt="" /></p>
+<h2 id="vlr"><a class="header" href="#vlr">VLR</a></h2>
+<p>Visitor Location Register</p>
+<p>The Visitor Location Register (VLR) is a database of the MSs (Mobile
+stations) that have roamed into the jurisdiction of the MSC (Mobile
+Switching Center) which it serves. Each main base station in the network
+is served by exactly one VLR (one BTS may be served by many MSCs in case
+of MSC in pool), hence a subscriber cannot be present in more than one
+VLR at a time.</p>
+<p>The data stored in the VLR has either been received from the Home
+Location Register (HLR), or collected from the MS. In practice, for
+performance reasons, most vendors integrate the VLR directly to the
+V-MSC and, where this is not done, the VLR is very tightly linked with
+the MSC via a proprietary interface. Whenever an MSC detects a new MS in
+its network, in addition to creating a new record in the VLR, it also
+updates the HLR of the mobile subscriber, apprising it of the new
+location of that MS. If VLR data is corrupted it can lead to serious
+issues with text messaging and call services.</p>
+<p>Data stored include:</p>
+<ul>
+<li>
+<p>IMSI (the subscriber's identity number).</p>
+</li>
+<li>
+<p>Authentication data.</p>
+</li>
+<li>
+<p>MSISDN (the subscriber's phone number).</p>
+</li>
+<li>
+<p>GSM services that the subscriber is allowed to access.</p>
+</li>
+<li>
+<p>access point (GPRS) subscribed.</p>
+</li>
+<li>
+<p>The HLR address of the subscriber.</p>
+</li>
+<li>
+<p>SCP Address(For Prepaid Subscriber).</p>
+</li>
+</ul>
+<h2 id="vm"><a class="header" href="#vm">VM</a></h2>
+<p>Virtual Machine</p>
+<p>In computing, a virtual machine (VM) is an emulation of a computer
+system. Virtual machines are based on computer architectures and provide
+functionality of a physical computer. Their implementations may involve
+specialized hardware, software, or a combination.</p>
+<h2 id="vod"><a class="header" href="#vod">VOD</a></h2>
+<p>Video On Demand</p>
+<p>Video on demand is a programming system which allows users to select and
+watch/listen to video or audio content such as movies and TV shows
+whenever they choose, rather than at a scheduled broadcast time, the
+method that prevailed with over-the-air programming during the 20th
+century. IPTV technology is commonly used to bring VOD to televisions
+and personal computers.</p>
+<p>Television VOD systems can stream content through either a set-top box,
+a computer or other device, allowing viewing in real time, or download
+it to a device such as a computer, digital video recorder (also called a
+personal video recorder) or portable media player for viewing at any
+time. The majority of cable- and telephone company-based television
+providers offer:</p>
+<ul>
+<li>
+<p>VOD streaming, whereby a user selects a video program and it begins
+to play immediately on the television set, or</p>
+</li>
+<li>
+<p>downloading to a digital video recorder (DVR) rented or purchased
+from the provider, or downloading onto a PC or to a portable device,
+for viewing in the future.</p>
+</li>
+<li>
+<p>Internet television, using the Internet, is an increasingly popular
+form of video on demand. VOD can also be accessed via desktop client
+applications such as the Apple iTunes online content store.</p>
+<p>Some airlines offer VOD as in-flight entertainment to passengers
+through individually controlled video screens embedded in seatback
+or armrests or offered via portable media players. Some video on
+demand services, such as Netflix, use a subscription model that
+requires users to pay a monthly fee to access a bundled set of
+content, which is mainly movies and TV shows. Other services use an
+advertising-based model, where access is free.</p>
+</li>
+</ul>
+<h2 id="voip"><a class="header" href="#voip">VoIP</a></h2>
+<p>Voice over IP</p>
+<p>Voice over Internet Protocol (also voice over IP, VoIP or IP telephony)
+is a methodology and group of technologies for the delivery of voice
+communications and multimedia sessions over Internet Protocol (IP)
+networks, such as the Internet. The terms Internet telephony, broadband
+telephony, and broadband phone service specifically refer to the
+provisioning of communications services (voice, fax, SMS,
+voice-messaging) over the public Internet, rather than via the public
+switched telephone network (PSTN).</p>
+<p>Voice over IP has been implemented in various ways using both
+proprietary protocols and protocols based on open standards. These
+protocols can be used by a VoIP phone, special-purpose software, a
+mobile application or integrated into a web page. VoIP protocols
+include:</p>
+<ul>
+<li>
+<p>Session Initiation Protocol (SIP), connection management protocol
+developed by the IETF</p>
+</li>
+<li>
+<p>H.323, one of the first VoIP call signaling and control protocols
+that found widespread implementation. Since the development of
+newer, less complex protocols such as MGCP and SIP, H.323
+deployments are increasingly limited to carrying existing long-haul
+network traffic.[citation needed]</p>
+</li>
+<li>
+<p>Media Gateway Control Protocol (MGCP), connection management for
+media gateways</p>
+</li>
+<li>
+<p>H.248, control protocol for media gateways across a converged
+internetwork consisting of the traditional public switched telephone
+network (PSTN) and modern packet networks</p>
+</li>
+<li>
+<p>Real-time Transport Protocol (RTP), transport protocol for real-time
+audio and video data</p>
+</li>
+<li>
+<p>Real-time Transport Control Protocol (RTCP), sister protocol for RTP
+providing stream statistics and status information</p>
+</li>
+<li>
+<p>Secure Real-time Transport Protocol (SRTP), encrypted version of RTP</p>
+</li>
+<li>
+<p>Session Description Protocol (SDP), file format used principally by
+SIP to describe VoIP connections</p>
+</li>
+<li>
+<p>Inter-Asterisk eXchange (IAX), protocol used between VoIP servers</p>
+</li>
+<li>
+<p>Extensible Messaging and Presence Protocol (XMPP), instant
+messaging, presence information, and contact list maintenance</p>
+</li>
+<li>
+<p>Jingle, adds peer-to-peer session control to XMPP</p>
+</li>
+<li>
+<p>Skype protocol, proprietary Internet telephony protocol suite based
+on peer-to-peer architecture</p>
+<p><img src="./images/V/15009171.png?width=251" alt="" /></p>
+</li>
+</ul>
+<h2 id="volte"><a class="header" href="#volte">VoLTE</a></h2>
+<p>Voice over Long-Term Evolution</p>
+<p>Voice over Long-Term Evolution (VoLTE) is a standard for high-speed
+wireless communication for mobile phones and data terminals - including
+IoT devices and wearables. It is based on the IP Multimedia Subsystem
+(IMS) network, with specific profiles for control and media planes of
+voice service on LTE defined by GSMA in PRD IR.92. This approach results
+in the voice service (control and media planes) being delivered as data
+flows within the LTE data bearer. This means that there is no dependency
+on (or ultimately, requirement for) the legacy circuit-switched voice
+network to be maintained. VoLTE has up to three times more voice and
+data capacity than 3G UMTS and up to six times more than 2G GSM.
+Furthermore, it frees up bandwidth because VoLTE's packets headers are
+smaller than those of unoptimized VoIP/LTE.</p>
+<h2 id="vorbis"><a class="header" href="#vorbis">Vorbis</a></h2>
+<p>Vorbis is a free and open-source software project headed by the Xiph.Org
+Foundation. The project produces an audio coding format and software
+reference encoder/decoder (codec) for lossy audio compression. Vorbis is
+most commonly used in conjunction with the Ogg container format and it
+is therefore often referred to as Ogg Vorbis.</p>
+<h2 id="vpi"><a class="header" href="#vpi">VPI</a></h2>
+<p>Virtual Path Identifier</p>
+<p>See VCI</p>
+<h2 id="vpls"><a class="header" href="#vpls">VPLS</a></h2>
+<p>Virtual Private LAN Service</p>
+<p>Virtual Private LAN Service (VPLS) is a way to provide Ethernet-based
+multipoint to multipoint communication over IP or MPLS networks. It
+allows geographically dispersed sites to share an Ethernet broadcast
+domain by connecting sites through pseudowires. The term 'sites'
+includes multiplicities of both servers and clients. The technologies
+that can be used as pseudo-wire can be Ethernet over MPLS, L2TPv3 or
+even GRE. There are two IETF standards track RFCs (RFC 4761 and RFC
+4762) describing VPLS establishment.</p>
+<p>VPLS is a virtual private network (VPN) technology. In contrast to
+L2TPv3, which allows only point-to-point layer 2 tunnels, VPLS allows
+any-to-any (multipoint) connectivity.</p>
+<p>In a VPLS, the local area network (LAN) at each site is extended to the
+edge of the provider network. The provider network then emulates a
+switch or bridge to connect all of the customer LANs to create a single
+bridged LAN.</p>
+<p>VPLS is designed for applications that require multipoint or broadcast
+access.<br />
+<img src="./images/V/15009177.png?width=480" alt="" /></p>
+<h2 id="vpn"><a class="header" href="#vpn">VPN</a></h2>
+<p>Virtual Private Network</p>
+<p>A virtual private network (VPN) extends a private network across a
+public network, and enables users to send and receive data across shared
+or public networks as if their computing devices were directly connected
+to the private network. Applications running across a VPN may therefore
+benefit from the functionality, security, and management of the private
+network.</p>
+<p><img src="./images/V/15009183.png?width=330" alt="" /></p>
+<h2 id="vpws"><a class="header" href="#vpws">VPWS</a></h2>
+<p>Virtual Private Wire Service</p>
+<p>Virtual Leased Lines (VLL) is a way to provide Ethernet-based point to
+point communication over IP/MPLS networks.</p>
+<p>The term Virtual Leased Line is also used to describe a point to point
+bonded connection using the Broadband Bonding technology. This
+implementation is bonded in layer 4.</p>
+<p>In the industry, the technology is also referred to as Virtual Private
+Wire Service (VPWS) or EoMPLS (Ethernet over MPLS).</p>
+<p>VLL uses the pseudo-wire encapsulation for transporting Ethernet traffic
+over an MPLS tunnel across an IP/MPLS backbone.</p>
+<h2 id="vrf"><a class="header" href="#vrf">VRF</a></h2>
+<p>Virtual (VPN) Routing and Forwarding</p>
+<p>In IP-based computer networks, (VRF) is a technology that allows
+multiple instances of a routing table to co-exist within the same router
+at the same time. Because the routing instances are independent, the
+same or overlapping IP addresses can be used without conflicting with
+each other. Network functionality is improved because network paths can
+be segmented without requiring multiple routers.</p>
+<p>Cisco implementation - VPN routing and forwarding, the key element in
+the Cisco MPLS VPN technology</p>
+<p><img src="./images/V/15009189.png?width=481" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="u.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="w.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="u.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="w.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

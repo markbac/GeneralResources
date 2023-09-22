@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>x - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html" class="active"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="x"><a class="header" href="#x">X</a></h1>
+<h2 id="x25"><a class="header" href="#x25">X.25</a></h2>
+<p>X.25 is an ITU-T standard protocol suite for packet switched wide area
+network (WAN) communication. An X.25 WAN consists of packet-switching
+exchange (PSE) nodes as the networking hardware, and leased lines, plain
+old telephone service connections, or ISDN connections as physical
+links.</p>
+<p>X.25 was originally defined by the International Telegraph and Telephone
+Consultative Committee (CCITT, now ITU-T) in a series of drafts and
+finalized in a publication known as The Orange Book in 1976.</p>
+<p>X.25 networks were popular during the 1980s with telecommunications
+companies and in financial transaction systems such as automated teller
+machines. However, most uses have moved to internet protocol (IP)
+systems instead. X.25 is still used (e.g., as of 2012 in the credit card
+payment industry) and available in niche applications.</p>
+<p><img src="./images/X/15009253.png?width=480" alt="" /></p>
+<h2 id="x509"><a class="header" href="#x509">X.509</a></h2>
+<p>In cryptography, X.509 is an International Telecommunication Union (ITU)
+standard defining the format of public key certificates. X.509
+certificates are used in many Internet protocols, including TLS/SSL,
+which is the basis for HTTPS, the secure protocol for browsing the web.
+They are also used in offline applications, like electronic signatures.</p>
+<p>An X.509 certificate binds an identity to a public key using a digital
+signature. A certificate contains an identity (a hostname, or an
+organization, or an individual) and a public key (RSA, DSA, ECDSA,
+ed25519, etc.), and is either signed by a certificate authority or is
+self-signed. When a certificate is signed by a trusted certificate
+authority, or validated by other means, someone holding that certificate
+can use the public key it contains to establish secure communications
+with another party, or validate documents digitally signed by the
+corresponding private key.</p>
+<p>X.509 also defines certificate revocation lists, which are a means to
+distribute information about certificates that have been deemed invalid
+by a signing authority, as well as a certification path validation
+algorithm, which allows for certificates to be signed by intermediate CA
+certificates, which are, in turn, signed by other certificates,
+eventually reaching a trust anchor.</p>
+<p>X.509 is defined by the International Telecommunications Union's
+&quot;Standardization Sector&quot; (ITU-T), in ITU-T Study Group 17 and is based
+on ASN.1, another ITU-T standard.</p>
+<h2 id="xml"><a class="header" href="#xml">XML</a></h2>
+<p>Extensible Markup Language</p>
+<p>In computing, Extensible Markup Language (XML) is a markup language that
+defines a set of rules for encoding documents in a format that is both
+human-readable and machine-readable. The W3C's XML 1.0 Specification and
+several other related specifications---all of them free open
+standards---define XML.</p>
+<p>The design goals of XML emphasize simplicity, generality, and usability
+across the Internet.[5] It is a textual data format with strong
+support via Unicode for different human languages. Although the design
+of XML focuses on documents, the language is widely used for the
+representation of arbitrary data structures such as those used in web
+services.</p>
+<p>Several schema systems exist to aid in the definition of XML-based
+languages, while programmers have developed many application programming
+interfaces (APIs) to aid the processing of XML data.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;shiporder orderid=&quot;889923&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xsi:noNamespaceSchemaLocation=&quot;shiporder.xsd&quot;&gt;
+  &lt;orderperson&gt;John Smith&lt;/orderperson&gt;
+  &lt;shipto&gt;
+    &lt;name&gt;Ola Nordmann&lt;/name&gt;
+    &lt;address&gt;Langgt 23&lt;/address&gt;
+    &lt;city&gt;4000 Stavanger&lt;/city&gt;
+    &lt;country&gt;Norway&lt;/country&gt;
+  &lt;/shipto&gt;
+  &lt;item&gt;
+    &lt;title&gt;Empire Burlesque&lt;/title&gt;
+    &lt;note&gt;Special Edition&lt;/note&gt;
+    &lt;quantity&gt;1&lt;/quantity&gt;
+    &lt;price&gt;10.90&lt;/price&gt;
+  &lt;/item&gt;
+  &lt;item&gt;
+    &lt;title&gt;Hide your heart&lt;/title&gt;
+    &lt;quantity&gt;1&lt;/quantity&gt;
+    &lt;price&gt;9.90&lt;/price&gt;
+  &lt;/item&gt;
+&lt;/shiporder&gt;
+</code></pre>
+<h2 id="xml-schema"><a class="header" href="#xml-schema">XML Schema</a></h2>
+<p>An XML schema is a description of a type of XML document, typically
+expressed in terms of constraints on the structure and content of
+documents of that type, above and beyond the basic syntactical
+constraints imposed by XML itself. These constraints are generally
+expressed using some combination of grammatical rules governing the
+order of elements, Boolean predicates that the content must satisfy,
+data types governing the content of elements and attributes, and more
+specialized rules such as uniqueness and referential integrity
+constraints.</p>
+<p>There are languages developed specifically to express XML schemas. The
+Document Type Definition (DTD) language, which is native to the XML
+specification, is a schema language that is of relatively limited
+capability, but that also has other uses in XML aside from the
+expression of schemas. Two more expressive XML schema languages in
+widespread use are XML Schema (with a capital S) and RELAX NG.</p>
+<p>The mechanism for associating an XML document with a schema varies
+according to the schema language. The association may be achieved via
+markup within the XML document itself, or via some external means.</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+
+&lt;xs:simpleType name=&quot;stringtype&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:string&quot;/&gt;
+&lt;/xs:simpleType&gt;
+
+&lt;xs:simpleType name=&quot;inttype&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:positiveInteger&quot;/&gt;
+&lt;/xs:simpleType&gt;
+
+&lt;xs:simpleType name=&quot;dectype&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:decimal&quot;/&gt;
+&lt;/xs:simpleType&gt;
+
+&lt;xs:simpleType name=&quot;orderidtype&quot;&gt;
+  &lt;xs:restriction base=&quot;xs:string&quot;&gt;
+    &lt;xs:pattern value=&quot;[0-9]{6}&quot;/&gt;
+  &lt;/xs:restriction&gt;
+&lt;/xs:simpleType&gt;
+
+&lt;xs:complexType name=&quot;shiptotype&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;name&quot; type=&quot;stringtype&quot;/&gt;
+    &lt;xs:element name=&quot;address&quot; type=&quot;stringtype&quot;/&gt;
+    &lt;xs:element name=&quot;city&quot; type=&quot;stringtype&quot;/&gt;
+    &lt;xs:element name=&quot;country&quot; type=&quot;stringtype&quot;/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+
+&lt;xs:complexType name=&quot;itemtype&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;title&quot; type=&quot;stringtype&quot;/&gt;
+    &lt;xs:element name=&quot;note&quot; type=&quot;stringtype&quot; minOccurs=&quot;0&quot;/&gt;
+    &lt;xs:element name=&quot;quantity&quot; type=&quot;inttype&quot;/&gt;
+    &lt;xs:element name=&quot;price&quot; type=&quot;dectype&quot;/&gt;
+  &lt;/xs:sequence&gt;
+&lt;/xs:complexType&gt;
+
+&lt;xs:complexType name=&quot;shipordertype&quot;&gt;
+  &lt;xs:sequence&gt;
+    &lt;xs:element name=&quot;orderperson&quot; type=&quot;stringtype&quot;/&gt;
+    &lt;xs:element name=&quot;shipto&quot; type=&quot;shiptotype&quot;/&gt;
+    &lt;xs:element name=&quot;item&quot; maxOccurs=&quot;unbounded&quot; type=&quot;itemtype&quot;/&gt;
+  &lt;/xs:sequence&gt;
+  &lt;xs:attribute name=&quot;orderid&quot; type=&quot;orderidtype&quot; use=&quot;required&quot;/&gt;
+&lt;/xs:complexType&gt;
+
+&lt;xs:element name=&quot;shiporder&quot; type=&quot;shipordertype&quot;/&gt;
+
+&lt;/xs:schema&gt;
+</code></pre>
+<h2 id="xml-rpc"><a class="header" href="#xml-rpc">XML-RPC</a></h2>
+<p>XML-RPC is a remote procedure call (RPC) protocol which uses XML to
+encode its calls and HTTP as a transport mechanism. &quot;XML-RPC&quot; also
+refers generically to the use of XML for remote procedure call,
+independently of the specific protocol. This article is about the
+protocol named &quot;XML-RPC&quot;.</p>
+<h2 id="xmpp"><a class="header" href="#xmpp">XMPP</a></h2>
+<p>Extensible Messaging and Presence Protocols</p>
+<p>Extensible Messaging and Presence Protocol (XMPP) is a communication
+protocol for message-oriented middleware based on XML (Extensible Markup
+Language). It enables the near-real-time exchange of structured yet
+extensible data between any two or more network entities. Originally
+named Jabber, the protocol was developed by the Jabber open-source
+community in 1999 for near real-time instant messaging (IM), presence
+information, and contact list maintenance. Designed to be extensible,
+the protocol has been used also for publish-subscribe systems,
+signalling for VoIP, video, file transfer, gaming, the Internet of
+Things (IoT) applications such as the smart grid, and social networking
+services.</p>
+<p>Unlike most instant messaging protocols, XMPP is defined in an open
+standard and uses an open systems approach of development and
+application, by which anyone may implement an XMPP service and
+interoperate with other organizations' implementations. Because XMPP is
+an open protocol, implementations can be developed using any software
+license and many server, client, and library implementations are
+distributed as free and open-source software, numerous freeware and
+commercial software implementations also exist.</p>
+<p>The Internet Engineering Task Force (IETF) formed an XMPP working group
+in 2002 to formalize the core protocols as an IETF instant messaging and
+presence technology. The XMPP Working group produced four specifications
+(RFC 3920, RFC 3921, RFC 3922, RFC 3923), which were approved as
+Proposed Standards in 2004. In 2011, RFC 3920 and RFC 3921 were
+superseded by RFC 6120 and RFC 6121 respectively, with RFC 6122
+specifying the XMPP address format. In 2015, RFC 6122 was superseded by
+RFC 7622. In addition to these core protocols standardized at the IETF,
+the XMPP Standards Foundation (formerly the Jabber Software Foundation)
+is active in developing open XMPP extensions.</p>
+<h2 id="xp"><a class="header" href="#xp">XP</a></h2>
+<p>eXtreme Programming</p>
+<p>Programming Extreme Programming (XP) is an agile software development
+framework that aims to produce higher quality software, and higher
+quality of life for the development team. XP is the most specific of the
+agile frameworks regarding appropriate engineering practices for
+software development.</p>
+<h2 id="xsd"><a class="header" href="#xsd">xsd</a></h2>
+<p>XSD (XML Schema Definition), a recommendation of the World Wide Web
+Consortium (W3C), specifies how to formally describe the elements in an
+Extensible Markup Language (XML) document. It can be used by programmers
+to verify each piece of item content in a document. They can check if it
+adheres to the description of the element it is placed in.</p>
+<p>Like all XML schema languages, XSD can be used to express a set of rules
+to which an XML document must conform in order to be considered &quot;valid&quot;
+according to that schema. However, unlike most other schema languages,
+XSD was also designed with the intent that determination of a document's
+validity would produce a collection of information adhering to specific
+data types. Such a post-validation infoset can be useful in the
+development of XML document processing software.</p>
+<h2 id="xss"><a class="header" href="#xss">XSS</a></h2>
+<p>Cross Site Scripting</p>
+<p>Cross-site scripting (XSS) is a type of computer security vulnerability
+typically found in web applications. XSS enables attackers to inject
+client-side scripts into web pages viewed by other users. A cross-site
+scripting vulnerability may be used by attackers to bypass access
+controls such as the same-origin policy. Cross-site scripting carried
+out on websites accounted for roughly 84% of all security
+vulnerabilities documented by Symantec as of 2007. Bug bounty company
+HackerOne in 2017 reported that XSS is still a major threat vector. XSS
+effects vary in range from petty nuisance to significant security risk,
+depending on the sensitivity of the data handled by the vulnerable site
+and the nature of any security mitigation implemented by the site's
+owner.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="w.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="y.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="w.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="y.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

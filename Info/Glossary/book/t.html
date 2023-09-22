@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>t - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html" class="active"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="t"><a class="header" href="#t">T</a></h1>
+<h2 id="task"><a class="header" href="#task">Task</a></h2>
+<p>An atomic unit of work on a project. See <em>activity</em>.</p>
+<h2 id="t-shirt-sizing"><a class="header" href="#t-shirt-sizing">T-Shirt Sizing</a></h2>
+<p>T-shirt sizing is a way to practice relative sizing. By comparing
+stories, you can break them into buckets of extra-small, small, medium,
+large, and extra-large.</p>
+<p>Estimating in relative buckets is more important than estimating
+absolute time or effort. We want to understand how things compare to
+each other in a rough sense, and not waste time on false precision.</p>
+<h2 id="task-board"><a class="header" href="#task-board">Task Board</a></h2>
+<p>The most basic form of a task board is divided into three columns
+labeled &quot;To Do,&quot; &quot;In Progress,&quot; and &quot;Done.&quot; Cards are placed in the
+columns to reflect the current status of that task.<br />
+<img src="./images/T/15009042.png?width=353" alt="" /></p>
+<h2 id="task-estimate"><a class="header" href="#task-estimate">Task Estimate</a></h2>
+<p>An <em>estimate</em> for a particular task. Depending on purpose and formality
+these <em>estimates</em> are often created and captured as part of ongoing
+planning and tracking and incorporated in <em>work plans</em> and <em>detailed
+schedules.</em></p>
+<h2 id="tcap"><a class="header" href="#tcap">TCAP</a></h2>
+<p>Transaction Capabilities Application Part</p>
+<p>Transaction Capabilities Application Part, from ITU-T recommendations
+Q.771-Q.775 or ANSI T1.114 is a protocol for Signalling System 7
+networks. Its primary purpose is to facilitate multiple concurrent
+dialogs between the same sub-systems on the same machines, using
+Transaction IDs to differentiate these, similar to the way TCP ports
+facilitate multiplexing connections between the same IP addresses on the
+Internet.</p>
+<p>TCAP uses ASN.1 BER encoding, as well as the protocols it encapsulates,
+namely MAP in mobile phone networks or INAP in Intelligent Networks.</p>
+<h2 id="tcltk"><a class="header" href="#tcltk">Tcl/tk</a></h2>
+<p>Tk is a free and open-source, cross-platform widget toolkit that
+provides a library of basic elements of GUI widgets for building a
+graphical user interface (GUI) in many programming languages.</p>
+<p>Tk provides a number of widgets commonly needed to develop desktop
+applications, such as button, menu, canvas, text, frame, label, etc. Tk
+has been ported to run on most flavors of Linux, Mac OS, Unix, and
+Microsoft Windows. Like Tcl, Tk supports Unicode within the Basic
+Multilingual Plane but it has not yet been extended to handle 32-bit
+Unicode.</p>
+<p>Tk was designed to be extended, and a wide range of extensions are
+available that offer new widgets or other capabilities.</p>
+<p>Since Tcl/Tk 8, it offers &quot;native look and feel&quot; (for instance, menus
+and buttons are displayed in the manner of &quot;native&quot; software for any
+given platform). Highlights of version 8.5 include a new theming engine,
+originally called Tk Tile, but now generally referred to as &quot;themed Tk&quot;,
+as well as improved font rendering.</p>
+<h2 id="tcp"><a class="header" href="#tcp">TCP</a></h2>
+<p>Transmission Control Protocol</p>
+<p>The Transmission Control Protocol (TCP) is one of the main protocols of
+the Internet protocol suite. It originated in the initial network
+implementation in which it complemented the Internet Protocol (IP).
+Therefore, the entire suite is commonly referred to as TCP/IP. TCP
+provides reliable, ordered, and error-checked delivery of a stream of
+octets (bytes) between applications running on hosts communicating via
+an IP network. Major internet applications such as the World Wide Web,
+email, remote administration, and file transfer rely on TCP.
+Applications that do not require reliable data stream service may use
+the User Datagram Protocol (UDP), which provides a connectionless
+datagram service that emphasizes reduced latency over reliability.</p>
+<p><img src="./images/T/15009050.png?width=480" alt="" /></p>
+<h2 id="tcsh"><a class="header" href="#tcsh">Tcsh</a></h2>
+<p>tcsh is a Unix shell based on and compatible with the C shell (csh). It
+is essentially the C shell with programmable command-line completion,
+command-line editing, and a few other features. Unlike the other common
+shells, functions cannot be defined in a tcsh script and the user must
+use aliases instead (as in csh). It is the native root
+shell for BSD-based systems such as FreeBSD.</p>
+<p>tcsh added filename and command completion and command line editing
+concepts borrowed from the Tenex system, which is the source of the &quot;t&quot;.
+Because it only added functionality and did not change what was there,
+tcsh remained backward compatible with the original C shell. Though it
+started as a side branch from the original source tree Joy had created,
+tcsh is now the main branch for ongoing development. tcsh is very stable
+but new releases continue to appear roughly once a year, consisting
+mostly of minor bug fixes.</p>
+<h2 id="tdd"><a class="header" href="#tdd">TDD</a></h2>
+<p>Test Driven Development</p>
+<p>Test-driven development is a style of programming in which three
+activities are tightly interwoven: coding, testing (in the form of
+writing unit tests) and design (in the form of refactoring).</p>
+<h2 id="tdm"><a class="header" href="#tdm">TDM</a></h2>
+<p>Time Division Multiplexing</p>
+<p>Time-division multiplexing (TDM) is a method of transmitting and
+receiving independent signals over a common signal path by means of
+synchronized switches at each end of the transmission line so that each
+signal appears on the line only a fraction of time in an alternating
+pattern. It is used when the bit rate of the transmission medium exceeds
+that of the signal to be transmitted. This form of signal multiplexing
+was developed in telecommunications for telegraphy systems in the late
+19th century, but found its most common application in digital telephony
+in the second half of the 20th century.<br />
+<img src="./images/T/15009056.png?width=480" alt="" /></p>
+<h2 id="team"><a class="header" href="#team">Team</a></h2>
+<p>A &quot;team&quot; in the Agile sense is a small group of people, assigned to the
+same project or effort, nearly all of them on a full-time basis.</p>
+<h2 id="team-room"><a class="header" href="#team-room">Team Room</a></h2>
+<p>The team (ideally the whole team, including the product owner or domain
+expert) has the use of a dedicated space for the duration of the
+project, set apart from other groups' activities.</p>
+<h2 id="technical-debt"><a class="header" href="#technical-debt">Technical Debt</a></h2>
+<p>Technical debt (also known as design debt or code debt) is a concept in
+software development that reflects the implied cost of additional rework
+caused by choosing an easy solution now instead of using a better
+approach that would take longer.</p>
+<p>Technical debt can be compared to monetary debt. If technical debt is
+not repaid, it can accumulate 'interest', making it harder to implement
+changes later on. Unaddressed technical debt increases software entropy.
+Technical debt is not necessarily a bad thing, and sometimes (e.g., as a
+proof-of-concept) technical debt is required to move projects forward.
+On the other hand, some experts claim that the &quot;technical debt&quot; metaphor
+tends to minimize the impact, which results in insufficient
+prioritization of the necessary work to correct it</p>
+<h2 id="template"><a class="header" href="#template">Template</a></h2>
+<p>CxTemp</p>
+<p>CxOne template material type. Provides an outline, framework, or
+container for creating an <em>artifact</em>. See <em>CxOneOverview</em> for
+description.</p>
+<h2 id="test"><a class="header" href="#test">Test</a></h2>
+<p>See <em>Testing</em>. May also be used to describe an individual <em>test case</em>.</p>
+<h2 id="test-activity"><a class="header" href="#test-activity">Test Activity</a></h2>
+<p>A specific test procedure created by combining one or more <em>test
+techniques</em> and <em>test types</em>.</p>
+<h2 id="test-case"><a class="header" href="#test-case">Test Case</a></h2>
+<p>TC</p>
+<p>A description of inputs, execution instructions, and expected results,
+which are created for the purpose of determining whether a specific
+software feature works correctly or a specific <em>requirement</em> has been
+satisfied.</p>
+<h2 id="test-case-specification"><a class="header" href="#test-case-specification">Test Case Specification</a></h2>
+<p>TCS</p>
+<p>Documents the set of <em>test cases</em> needed to verify one or more product
+features.</p>
+<h2 id="test-design"><a class="header" href="#test-design">Test Design</a></h2>
+<p>Provides a bridge between the <em>test cases</em> and the
+product's <em>requirements</em> and <em>design</em>. Test design is analogous to
+software design, and is used when test solutions require a significant
+amount of analysis and defined structure.<br />
+Test design is not software design necessary to support testing (e.g.,
+design of an automated test framework).</p>
+<h2 id="test-design-specification"><a class="header" href="#test-design-specification">Test Design Specification</a></h2>
+<p>TDS</p>
+<p>Documents the <em>test design</em> for a group of <em>test cases</em>.</p>
+<h2 id="test-level"><a class="header" href="#test-level">Test Level</a></h2>
+<p>Synonym for <em>test type</em>.</p>
+<h2 id="test-plan"><a class="header" href="#test-plan">Test Plan</a></h2>
+<p>TP</p>
+<p>Documents the scope, approach, resources, test items, and schedule of
+the testing activities.</p>
+<h2 id="test-technique"><a class="header" href="#test-technique">Test Technique</a></h2>
+<p>Strategy and approach to a <em>test activity</em>.</p>
+<h2 id="test-type"><a class="header" href="#test-type">Test Type</a></h2>
+<p>Standard definitions capturing the what, how, why, and when of a <em>test
+activity</em>.</p>
+<h2 id="testing"><a class="header" href="#testing">Testing</a></h2>
+<p>Software testing CKA. Dynamic execution of software to detect <em>defects</em>.
+See <em>CxStand_Testing</em> for more information.</p>
+<h2 id="three-amigos"><a class="header" href="#three-amigos">Three Amigos</a></h2>
+<p>Three amigos refers to the primary perspectives to examine an increment
+of work before, during, and after development. Those perspectives are
+Business, Development, and Testing.</p>
+<h2 id="three-cs"><a class="header" href="#three-cs">Three C's</a></h2>
+<p>&quot;Card, Conversation, Confirmation&quot; is a formula that captures the
+components of a User Story.</p>
+<h2 id="three-questions"><a class="header" href="#three-questions">Three Questions</a></h2>
+<p>The daily meeting is structured around some variant of the following
+three questions: What have you completed? What will you do next? What is
+getting in your way?</p>
+<h2 id="tia"><a class="header" href="#tia">TIA</a></h2>
+<p>Telecommunications Industry Association</p>
+<p>The Telecommunications Industry Association (TIA) is accredited by the
+American National Standards Institute (ANSI) to develop voluntary,
+consensus-based industry standards for a wide variety of Information and
+Communication Technologies (ICT) products, and currently represents
+nearly 400 companies. TIA's Standards and Technology Department operates
+twelve engineering committees, which develop guidelines for private
+radio equipment, cellular towers, data terminals, satellites, telephone
+terminal equipment, accessibility, VoIP devices, structured cabling,
+data centers, mobile device communications, multimedia multicast,
+vehicular telematics, healthcare ICT, machine to machine communications,
+and smart utility networks.</p>
+<h2 id="timebox"><a class="header" href="#timebox">Timebox</a></h2>
+<p>A timebox is a previously agreed period of time during which a person or
+a team works steadily towards completion of some goal.</p>
+<h2 id="tkip"><a class="header" href="#tkip">TKIP</a></h2>
+<p>Temporal Key Integrity Protocol</p>
+<p>Temporal Key Integrity Protocol or TKIP /tiːˈkɪp/ is a security protocol
+used in the IEEE 802.11 wireless networking standard. TKIP was designed
+by the IEEE 802.11i task group and the Wi-Fi Alliance as an interim
+solution to replace WEP without requiring the replacement of legacy
+hardware. This was necessary because the breaking of WEP had left Wi-Fi
+networks without viable link-layer security, and a solution was required
+for already deployed hardware. However, TKIP itself is no longer
+considered secure, and was deprecated in the 2012 revision of the 802.11
+standard.</p>
+<h2 id="tls"><a class="header" href="#tls">TLS</a></h2>
+<p>Transport Layer Security</p>
+<p>Transport Layer Security (TLS) -- and its predecessor, Secure Sockets
+Layer (SSL), which is now deprecated by the Internet Engineering Task
+Force (IETF) -- are cryptographic protocols that provide communications
+security over a computer network. Several versions of the protocols find
+widespread use in applications such as web browsing, email, instant
+messaging, and voice over IP (VoIP). Websites are able to use TLS to
+secure all communications between their servers and web browsers.</p>
+<p>The TLS protocol aims primarily to provide privacy and data integrity
+between two or more communicating computer applications. When secured by
+TLS, connections between a client (e.g., a web browser) and a server
+(e.g., wikipedia.org) have one or more of the following properties:</p>
+<ul>
+<li>
+<p>The connection is private (or secure) because symmetric cryptography
+is used to encrypt the data transmitted. The keys for this symmetric
+encryption are generated uniquely for each connection and are based
+on a shared secret negotiated at the start of the session. The
+server and client negotiate the details of which encryption
+algorithm and cryptographic keys to use before the first byte of
+data is transmitted . The negotiation of a shared secret is both
+secure (the negotiated secret is unavailable to eavesdroppers and
+cannot be obtained, even by an attacker who places themselves in the
+middle of the connection) and reliable (no attacker can modify the
+communications during the negotiation without being detected).</p>
+</li>
+<li>
+<p>The identity of the communicating parties can be authenticated using
+public-key cryptography. This authentication can be made optional,
+but is generally required for at least one of the parties (typically
+the server).</p>
+</li>
+<li>
+<p>The connection is reliable because each message transmitted includes
+a message integrity check using a message authentication code to
+prevent undetected loss or alteration of the data during
+transmission.</p>
+</li>
+<li>
+<p><img src="./images/T/15009062.png?width=451" alt="" /></p>
+</li>
+</ul>
+<h2 id="tlv"><a class="header" href="#tlv">TLV</a></h2>
+<p>Type(Tag), Length and Value</p>
+<p>Within data communication protocols, TLV (type-length-value or
+tag-length-value) is an encoding scheme used for optional information
+element in a certain protocol.</p>
+<p>The type and length are fixed in size (typically 1-4 bytes), and the
+value field is of variable size. These fields are used as follows:</p>
+<p>Type<br />
+A binary code, often simply alphanumeric, which indicates the kind of
+field that this part of the message represents;<br />
+Length<br />
+The size of the value field (typically in bytes);<br />
+Value<br />
+Variable-sized series of bytes which contains data for this part of the
+message.</p>
+<p><img src="./images/T/15009068.png?width=480" alt="" /></p>
+<h2 id="token-ring"><a class="header" href="#token-ring">Token Ring</a></h2>
+<p>Token Ring local area network (LAN) technology is a communications
+protocol for local area networks. It uses a special three-byte frame
+called a &quot;token&quot; that travels around a logical &quot;ring&quot; of workstations or
+servers. This token passing is a channel access method providing fair
+access for all stations, and eliminating the collisions of
+contention-based access methods.</p>
+<p>Introduced by IBM in 1984, it was then standardized with protocol IEEE
+802.5 and was fairly successful, particularly in corporate environments,
+but gradually eclipsed by the later versions of Ethernet.<br />
+<img src="./images/T/15009074.png?width=220" alt="" /></p>
+<h2 id="toml"><a class="header" href="#toml">TOML</a></h2>
+<p>TOML is a file format for configuration files. It is intended to be easy
+to read and write due to obvious semantics which aim to be &quot;minimal&quot;, and
+is designed to map unambiguously to a dictionary. Its specification is
+open-source, and receives community contributions. TOML is used in a number
+of software projects, and is implemented in many programming languages.
+The name &quot;TOML&quot; is an acronym for &quot;Tom's Obvious, Minimal Language&quot;
+referring to its creator, Tom Preston-Werner.</p>
+<pre><code class="language-toml"># This is a TOML document.
+
+title = &quot;ImpalaPay Co.&quot;
+
+[owner]
+name = &quot;Impala Co.&quot;
+establishment=&quot;&quot;
+
+[database]
+server = &quot;192.168.1.1&quot;
+ports = [ 8000, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+
+  # Indentation (tabs and/or spaces) is allowed but not required
+  [servers.alpha]
+  ip = &quot;10.0.0.1&quot;
+  dc = &quot;eqdc10&quot;
+
+  [servers.beta]
+  ip = &quot;10.0.0.2&quot;
+  dc = &quot;eqdc10&quot;
+
+[clients]
+data = [ [&quot;gamma&quot;, &quot;delta&quot;], [1, 2] ]
+
+# Line breaks are OK when inside arrays
+hosts = [
+  &quot;alpha&quot;,
+  &quot;omega&quot;
+]
+</code></pre>
+<h2 id="top-level-schedule"><a class="header" href="#top-level-schedule">Top Level Schedule</a></h2>
+<p>See <em>Business Schedule</em>.</p>
+<h2 id="top-down-estimation"><a class="header" href="#top-down-estimation">Top-Down Estimation</a></h2>
+<p>Estimating a system by deriving values for the entire system, and then
+splitting the total values among decomposed pieces of the system.</p>
+<h2 id="triple-des"><a class="header" href="#triple-des">Triple DES</a></h2>
+<p>In cryptography, Triple DES (3DES), officially the Triple Data
+Encryption Algorithm (TDEA or Triple DEA), is a symmetric-key block
+cipher, which applies the DES cipher algorithm three times to each data
+block.</p>
+<p>While the government and industry standards abbreviate the algorithm's
+name as TDES (Triple DES) and TDEA (Triple Data Encryption Algorithm),
+RFC 1851 called it 3DES from the time it first promulgated the idea, and
+this namesake has since come into wide use by most vendors, users, and
+cryptographers.</p>
+<h2 id="tty"><a class="header" href="#tty">TTY</a></h2>
+<p>A terminal emulator, terminal application, or term, is a program that
+emulates a video terminal within some other display architecture. Though
+typically synonymous with a shell or text terminal, the term terminal
+covers all remote terminals, including graphical interfaces. A terminal
+emulator inside a graphical user interface is often called a terminal
+window.</p>
+<p>A terminal window allows the user access to a text terminal and all its
+applications such as command-line interfaces (CLI) and text user
+interface (TUI) applications. These may be running either on the same
+machine or on a different one via telnet, ssh, or dial-up. On Unix-like
+operating systems, it is common to have one or more terminal windows
+connected to the local machine.</p>
+<h2 id="tup"><a class="header" href="#tup">TUP</a></h2>
+<p>Telephone User Part</p>
+<p>Telephone User Part (TUP) provides conventional PSTN telephony services
+across the Signalling System No. 7 (SS7) network. TUP was the first
+layer 4 protocol defined by the standards bodies and as such did not
+provision for ISDN services. It has now largely been replaced by ISUP.
+However, it can still be found in operational use in some parts of the
+world (e.g., China).</p>
+<p>TUP is defined in ITU-T Recommendations Q.721-725. These define the
+international telephone call control signalling functions for use over
+SS7.</p>
+<p>Various national variants of TUP have evolved, some of which provide
+varying degrees of support for ISDN.</p>
+<h2 id="twisted-pair"><a class="header" href="#twisted-pair">Twisted pair</a></h2>
+<p>Twisted pair cabling is a type of wiring in which two conductors of a
+single circuit are twisted together for the purposes of improving
+electromagnetic compatibility. Compared to a single conductor or an
+untwisted balanced pair, a twisted pair reduces electromagnetic
+radiation, crosstalk between neighboring pairs and improves rejection of
+external electromagnetic interference</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="s.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="u.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="s.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="u.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

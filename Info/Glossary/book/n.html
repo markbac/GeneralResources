@@ -1,0 +1,694 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>n - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html" class="active"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="n"><a class="header" href="#n">N</a></h1>
+<h2 id="naas"><a class="header" href="#naas">NaaS</a></h2>
+<p>Network as a Service</p>
+<p>Network as a service (NaaS) describes services for network transport
+connectivity. NaaS involves the optimization of resource allocations by
+considering network and computing resources as a unified whole</p>
+<p>The term &quot;Network as a service&quot; (NaaS) is often used along with other
+marketing terms like cloud computing, along with acronyms such as
+Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS),
+Software-as-a-Service (SaaS), and Communication-as-a-Service (CaaS).</p>
+<p>NaaS sometimes includes the provision of a virtual network service by
+the owners of the network infrastructure to a third party. Often this
+includes network virtualization using a protocol such as OpenFlow.</p>
+<p>Some service models are:</p>
+<ul>
+<li>Virtual Private Network (VPN): Extends a private network and the
+resources contained in the network across networks like the public
+Internet. It enables a host computer to send and receive data across
+shared or public networks as if it were a private network with the
+functionality and policies of the private network.</li>
+<li>Bandwidth on demand (BoD): Technique by which network capacity is
+assigned based on requirements between different nodes or users.
+Under this model link rates can be dynamically adapted to the
+traffic demands of the nodes connected to the link.</li>
+<li>Mobile network virtualization: Model in which a telecommunications
+manufacturer or independent network operator builds and operates a
+network (wireless, or transport connectivity) and sells its
+communication access capabilities to third parties (commonly mobile
+phone operators) charging by capacity utilization. A mobile virtual
+network operator (MVNO), is a mobile communications services
+provider that does not own the radio spectrum or wireless network
+infrastructure over which it provides services. Commonly a MVNO
+offers its communication services using the network infrastructure
+of an established mobile network operator.</li>
+</ul>
+<h2 id="napt"><a class="header" href="#napt">NAPT</a></h2>
+<p>Network Address Port Translation</p>
+<p>All IP packets have a source IP address and a destination IP address.
+Typically packets passing from the private network to the public network
+will have their source address modified, while packets passing from the
+public network back to the private network will have their destination
+address modified. To avoid ambiguity in how replies are translated,
+further modifications to the packets are required. The vast bulk of
+Internet traffic uses Transmission Control Protocol (TCP) or User
+Datagram Protocol (UDP). For these protocols the port numbers are
+changed so that the combination of IP address and port information on
+the returned packet can be unambiguously mapped to the corresponding
+private network destination. RFC 2663 uses the term network address and
+port translation (NAPT) for this type of NAT. Other names include port
+address translation (PAT), IP masquerading, NAT overload and many-to-one
+NAT. This is the most common type of NAT and has become synonymous with
+the term &quot;NAT&quot; in common usage.</p>
+<h2 id="nas"><a class="header" href="#nas">NAS</a></h2>
+<p>Network Access Server</p>
+<p>A system that provides access to a network. In some cases also known as
+a Terminal Server or Remote Access Server (RAS).<br />
+<img src="./images/N/15008661.png?width=480" alt="" /></p>
+<h2 id="nat"><a class="header" href="#nat">NAT</a></h2>
+<p>Network Address Translation</p>
+<p>Network address translation (NAT) is a method of remapping one IP
+address space into another by modifying network address information in
+the IP header of packets while they are in transit across a traffic
+routing device. The technique was originally used as a shortcut to avoid
+the need to readdress every host when a network was moved. It has become
+a popular and essential tool in conserving global address space in the
+face of IPv4 address exhaustion. One Internet-routable IP address of a
+NAT gateway can be used for an entire private network.</p>
+<p>IP masquerading is a technique that hides an entire IP address space,
+usually consisting of private IP addresses, behind a single IP address
+in another, usually public address space. The address that has to be
+hidden is changed into a single (public) IP address as &quot;new&quot; source
+address of the outgoing IP packet so it appears as originating not from
+the hidden host but from the routing device itself. Because of the
+popularity of this technique to conserve IPv4 address space, the term
+NAT has become virtually synonymous with IP masquerading.</p>
+<p>As network address translation modifies the IP address information in
+packets, it has serious consequences on the quality of Internet
+connectivity and requires careful attention to the details of its
+implementation. NAT implementations vary widely in their specific
+behavior in various addressing cases and their effect on network
+traffic. The specifics of NAT behavior are not commonly documented by
+vendors of equipment containing NAT implementations.<br />
+<img src="./images/N/15008669.png?width=480" alt="" /></p>
+<h2 id="native-risk-management"><a class="header" href="#native-risk-management">Native Risk Management</a></h2>
+<p>See <em>intrinsic risk management</em>.</p>
+<h2 id="nbap"><a class="header" href="#nbap">NBAP</a></h2>
+<p>Node-B Application Part</p>
+<p>In the 3GPP UTRAN architecture, NBAP (Node B Application Part) is the
+signalling protocol responsible for the control of the Node B by the
+RNC. NBAP is subdivided into Common and Dedicated NBAP (C-NBAP and
+D-NBAP), where Common NBAP controls overall Node B functionality, and
+Dedicated NBAP controls radio links to specific user equipment. NBAP
+forms part of the Iub interface.</p>
+<p>NBAP handles two kind of Procedures for different NBAP functionalities
+Common Procedures for Managing Logical O &amp; M Functions for Controlling
+BCCH Broadcast for creating new Node B Communication Context Dedicated
+Procedures for handling procedures of an existing Node B Communication
+Context in a TTP/CCP.</p>
+<p>NB-IoT Narrowband IoT</p>
+<p>Narrowband Internet of things (NB-IoT) is a low-power wide-area network
+(LPWAN) radio technology standard developed by 3GPP for cellular devices
+and services. The specification was frozen in 3GPP Release 13 (LTE
+Advanced Pro), in June 2016. Other 3GPP IoT technologies include eMTC
+(enhanced Machine-Type Communication) and EC-GSM-IoT.</p>
+<p>NB-IoT focuses specifically on indoor coverage, low cost, long battery
+life, and high connection density. NB-IoT uses a subset of the LTE
+standard, but limits the bandwidth to a single narrow-band of 200kHz. It
+uses OFDM modulation for downlink communication and SC-FDMA for uplink
+communications. IoT applications which require more frequent
+communications will be better served by NB-IoT, which has no duty cycle
+limitations operating on the licensed spectrum.</p>
+<p>The NB-IoT technology operates using resource blocks on existing LTE
+networks or in the LTE carrier's guard bands. It can also operate using
+unused 200 khz bands that were previously used by GSM.</p>
+<p><img src="https://cdn.everythingrf.com/live/NBIoT-Bands_636366474671552025.png" alt="" /></p>
+<ul>
+<li><strong>Downlink Peak Rate:</strong> 250 kbps</li>
+<li><strong>Uplink Peak Rate:</strong> 250 kbps (Multi-tone) and 20 kbps (Single
+Tone)</li>
+<li><strong>Latency:</strong> 1.6 to 10 sec</li>
+<li><strong>Duplex Technology:</strong> Half Duplex</li>
+<li><strong>Device Receive Bandwidth:</strong> 180 kHz</li>
+<li><strong>Device Transmit Power:</strong> 20/23 dBm</li>
+</ul>
+<h2 id="ncsc"><a class="header" href="#ncsc">NCSC</a></h2>
+<p>National Cyber Security Centre</p>
+<p>The National Cyber Security Centre (NCSC) is an organisation of the
+United Kingdom Government that provides advice and support for the
+public and private sector in how to avoid computer security threats.
+Based in London, it became operational in October 2016, and its parent
+organisation is GCHQ.</p>
+<h2 id="network-topologies"><a class="header" href="#network-topologies">Network Topologies</a></h2>
+<p>Network topology is the arrangement of the elements (links, nodes, etc.)
+of a communication network.</p>
+<p>Network topology is the topological[3] structure of a network and may
+be depicted physically or logically. It is an application of graph
+theory[4] wherein communicating devices are modeled as nodes and the
+connections between the devices are modeled as links or lines between
+the nodes. Physical topology is the placement of the various components
+of a network (e.g., device location and cable installation), while
+logical topology illustrates how data flows within a network. Distances
+between nodes, physical interconnections, transmission rates, or signal
+types may differ between two different networks, yet their topologies
+may be identical. A network's physical topology is a particular concern
+of the physical layer of the OSI model. Network topology can be used to
+define or describe the arrangement of various types of telecommunication
+networks, including command and control radio networks,[4] industrial
+fieldbusses, and computer networks.</p>
+<p>Examples of network typologies are found in local area networks (LAN), a
+common computer network installation. Any given node in the LAN has one
+or more physical links to other devices in the network; graphically
+mapping these links results in a geometric shape that can be used to
+describe the physical topology of the network. A wide variety of
+physical topologies have been used in LANs, including ring, bus, mesh
+and star. Conversely, mapping the data flow between the components
+determines the logical topology of the network. In comparison,
+Controller Area Networks, common in vehicles, are primarily distributed
+control system networks of one or more controllers interconnected with
+sensors and actuators over, invariably, a physical bus topology.<br />
+<img src="./images/N/15008675.png?width=488" alt="" /></p>
+<h2 id="nfs"><a class="header" href="#nfs">NFS</a></h2>
+<p>Network File System</p>
+<p>Network File System (NFS) is a distributed file system protocol
+originally developed by Sun Microsystems in 1984, allowing a user on a
+client computer to access files over a computer network much like local
+storage is accessed. NFS, like many other protocols, builds on the Open
+Network Computing Remote Procedure Call (ONC RPC) system. The NFS is an
+open standard defined in Request for Comments (RFC), allowing anyone to
+implement the protocol.</p>
+<h2 id="ngn"><a class="header" href="#ngn">NGN</a></h2>
+<p>Next Generation Networks</p>
+<p>The next-generation network (NGN) is a body of key architectural changes
+in telecommunication core and access networks. The general idea behind
+the NGN is that one network transports all information and services
+(voice, data, and all sorts of media such as video) by encapsulating
+these into IP packets, similar to those used on the Internet. NGNs are
+commonly built around the Internet Protocol, and therefore the term all
+IP is also sometimes used to describe the transformation of formerly
+telephone-centric networks toward NGN.</p>
+<p>According to ITU-T, the definition is:</p>
+<p>A next-generation network (NGN) is a packet-based network which can
+provide services including Telecommunication Services and is able to
+make use of multiple broadband, quality of Service-enabled transport
+technologies and in which service-related functions are independent from
+underlying transport-related technologies. It offers unrestricted access
+by users to different service providers. It supports generalized
+mobility which will allow consistent and ubiquitous provision of
+services to users.<br />
+From a practical perspective, NGN involves three main architectural
+changes that need to be looked at separately:</p>
+<ul>
+<li>
+<p>In the core network, NGN implies a consolidation of several
+(dedicated or overlay) transport networks each historically built
+for a different service into one core transport network (often based
+on IP and Ethernet). It implies amongst others the migration of
+voice from a circuit-switched architecture (PSTN) to VoIP, and also
+migration of legacy services such as X.25, frame relay (either
+commercial migration of the customer to a new service like IP VPN,
+or technical emigration by emulation of the &quot;legacy service&quot; on the
+NGN).</p>
+</li>
+<li>
+<p>In the wired access network, NGN implies the migration from the dual
+system of legacy voice next to xDSL setup in local exchanges to a
+converged setup in which the DSLAMs integrate voice ports or VoIP,
+making it possible to remove the voice switching infrastructure from
+the exchange.[2]</p>
+</li>
+<li>
+<p>In the cable access network, NGN convergence implies migration of
+constant bit rate voice to CableLabs PacketCable standards that
+provide VoIP and SIP services. Both services ride over DOCSIS as the
+cable data layer standard.</p>
+<p>In an NGN, there is a more defined separation between the transport
+(connectivity) portion of the network and the services that run on
+top of that transport. This means that whenever a provider wants to
+enable a new service, they can do so by defining it directly at the
+service layer without considering the transport layer --
+i.e. services are independent of transport details. Increasingly
+applications, including voice, tend to be independent of the access
+network (de-layering of network and applications) and will reside
+more on end-user devices (phone, PC, set-top box).</p>
+<p>Underlying technology components<br />
+Next-generation networks are based on Internet technologies
+including Internet Protocol (IP) and multiprotocol label switching
+(MPLS). At the application level, Session Initiation Protocol (SIP)
+seems to be taking over from ITU-T H.323.</p>
+<p>Initially H.323 was the most popular protocol, though its popularity
+decreased in the &quot;local loop&quot; due to its original poor traversal of
+network address translation (NAT) and firewalls. For this reason as
+domestic VoIP services have been developed, SIP has been more widely
+adopted. However, in voice networks where everything is under the
+control of the network operator or telco, many of the largest
+carriers use H.323 as the protocol of choice in their core
+backbones.[citation needed] With the most recent changes
+introduced for H.323, it is now possible for H.323 devices to easily
+and consistently traverse NAT and firewall devices, opening up the
+possibility that H.323 may again be looked upon more favorably in
+cases where such devices encumbered its use previously. Nonetheless,
+most of the telcos are extensively researching and supporting IP
+Multimedia Subsystem (IMS), which gives SIP a major chance of being
+the most widely adopted protocol.</p>
+<p>For voice applications one of the most important devices in NGN is a
+Softswitch -- a programmable device that controls Voice over IP
+(VoIP) calls. It enables correct integration of different protocols
+within NGN. The most important function of the Softswitch is
+creating the interface to the existing telephone network, PSTN,
+through Signalling Gateways and Media Gateways. However, the
+Softswitch as a term may be defined differently by the different
+equipment manufacturers and have somewhat different functions.</p>
+<p>One may quite often find the term Gatekeeper in NGN literature. This
+was originally a VoIP device, which converted (using gateways) voice
+and data from their analog or digital switched-circuit form (PSTN,
+SS7) to the packet-based one (IP). It controlled one or more
+gateways. As soon as this kind of device started using the Media
+Gateway Control Protocol, the name was changed to Media Gateway
+Controller (MGC).</p>
+<p>A Call Agent is a general name for devices/systems controlling
+calls.</p>
+<p>The IP Multimedia Subsystem (IMS) is a standardised NGN architecture
+for an Internet media-services capability defined by the European
+Telecommunications Standards Institute (ETSI) and the 3rd Generation
+Partnership Project (3GPP).</p>
+</li>
+</ul>
+<h2 id="ngwfq"><a class="header" href="#ngwfq">NGWFQ</a></h2>
+<p>Weighted Fair Queueing</p>
+<p>See PWFQ<br />
+Weighted fair queueing (WFQ) is a network scheduler scheduling
+algorithm. WFQ is both a packet-based implementation of the generalized
+processor sharing (GPS) policy, and a natural extension of fair queuing
+(FQ). Whereas FQ shares the link's capacity in equal subparts, WFQ
+allows schedulers to specify, for each flow, which fraction of the
+capacity will be given.</p>
+<p>Weighted fair queuing is also known as packet-by-packet GPS (PGPS or
+P-GPS) since it approximates generalized processor sharing &quot;to within
+one packet transmission time, regardless of the arrival patterns.&quot;<br />
+<img src="./images/N/15008681.png?width=480" alt="" /></p>
+<h2 id="niko-niko-calendar"><a class="header" href="#niko-niko-calendar">Niko-niko Calendar</a></h2>
+<p>A Niko-niko Calendar is updated daily with each team member's mood for
+that day. Over time the calendar reveals patterns of change in the moods
+of the team, or of individual members.<br />
+<img src="./images/N/15008687.png?width=461" alt="" /></p>
+<h2 id="nist"><a class="header" href="#nist">NIST</a></h2>
+<p>National Institute of Standards and Technology</p>
+<p>The National Institute of Standards and Technology (NIST) is a physical
+sciences laboratory, and a non-regulatory agency of the United States
+Department of Commerce. Its mission is to promote innovation and
+industrial competitiveness. NIST's activities are organized into
+laboratory programs that include nanoscale science and technology,
+engineering, information technology, neutron research, material
+measurement, and physical measurement.</p>
+<h2 id="nni"><a class="header" href="#nni">NNI</a></h2>
+<p>Network-to-network interface</p>
+<p>See UNI<br />
+In telecommunications, a network-to-network interface (NNI) is an
+interface that specifies signalling and management functions between two
+networks. An NNI circuit can be used for interconnection of signalling
+(e.g., SS7), Internet Protocol (IP) (e.g., MPLS) or ATM networks.</p>
+<p>In networks based on MPLS or GMPLS, NNI is used for the interconnection
+of core Provider Routers (class 4 or higher). In the case of GMPLS, the
+type of interconnection can vary across Back-to-Back, EBGP or mixed NNI
+connection scenarios, depending on the type of VRF exchange used for
+interconnection. In case of Back-to-Back, VRF is necessary to create
+VLANs and subsequently sub-interfaces (VLAN headers and DLCI headers for
+Ethernet and frame relay network packets) on each interface used for the
+NNI circuit. In the case of eBGP NNI interconnection, P routers are
+taught how to dynamically exchange VRF records without VLAN creation.
+NNI also can be used for interconnection of two VoIP nodes. In cases of
+mixed or full-mesh scenarios, other NNI types are possible.<br />
+<img src="./images/N/15008693.png?width=399" alt="" /></p>
+<h2 id="nntp"><a class="header" href="#nntp">NNTP</a></h2>
+<p>Network News Transfer Protocol</p>
+<p>The Network News Transfer Protocol (NNTP) is an application protocol
+used for transporting Usenet news articles (netnews) between news
+servers and for reading and posting articles by end user client
+applications. Brian Kantor of the University of California, San Diego
+and Phil Lapsley of the University of California, Berkeley wrote RFC
+977, the specification for the Network News Transfer Protocol, in March
+1986. Other contributors included Stan O. Barber from the Baylor College
+of Medicine and Erik Fair of Apple Computer.</p>
+<p>Usenet was originally designed based on the UUCP network, with most
+article transfers taking place over direct point-to-point telephone
+links between news servers, which were powerful time-sharing systems.
+Readers and posters logged into these computers reading the articles
+directly from the local disk.</p>
+<p>As local area networks and Internet participation proliferated, it
+became desirable to allow newsreaders to be run on personal computers
+connected to local networks. The resulting protocol was NNTP, which
+resembled the Simple Mail Transfer Protocol (SMTP) but was tailored for
+exchanging newsgroup articles.</p>
+<h2 id="noc"><a class="header" href="#noc">NOC</a></h2>
+<p>Network Operation Centre</p>
+<p>A network operations center (NOC, pronounced like the word knock), also
+known as a &quot;network management center&quot;, is one or more locations from
+which network monitoring and control, or network management, is
+exercised over a computer, telecommunication or satellite network.</p>
+<h2 id="node-b"><a class="header" href="#node-b">Node B</a></h2>
+<p>Node B is the telecommunications node in particular mobile communication
+networks, namely those that adhere to the UMTS standard. The Node B
+provides the connection between mobile phones (UEs) and the wider
+telephone network. UMTS is the dominating 3G standard.</p>
+<p>Node B corresponds to BTS (base transceiver station) in GSM.</p>
+<p>Functionality<br />
+This is the hardware that is connected to the mobile phone network that
+communicates directly with mobile handsets. In contrast with GSM base
+stations, Node B uses WCDMA/TD-SCDMA as the air interface technology. As
+in all cellular systems, such as UMTS and GSM, the Node B contains radio
+frequency transmitter(s) and the receiver(s) used to communicate
+directly with mobile devices, which move freely around it. In this type
+of cellular network, the mobile devices cannot communicate directly with
+each other but have to communicate with the NodeB.</p>
+<p>Traditionally, the Node Bs have minimum functionality, and are
+controlled by an RNC (Radio Network Controller). However, this is
+changing with the emergence of High Speed Downlink Packet Access
+(HSDPA), where some logic (e.g., retransmission) is handled on the Node
+B for lower response times.</p>
+<h2 id="nominal-path"><a class="header" href="#nominal-path">Nominal Path</a></h2>
+<p>Execution path for software system that performs functionality without
+encountering exceptional conditions.</p>
+<h2 id="non-functional-requirement"><a class="header" href="#non-functional-requirement">Non-functional Requirement</a></h2>
+<p>Captures requirements such as compatibility, usability, performance,
+reliability, etc. Also known as the <em>how</em> or <em>how well requirements</em></p>
+<h2 id="nosql"><a class="header" href="#nosql">NoSQL</a></h2>
+<p>A NoSQL (originally referring to &quot;non SQL&quot; or &quot;non relational&quot;) database
+provides a mechanism for storage and retrieval of data that is modeled
+in means other than the tabular relations used in relational databases.
+Such databases have existed since the late 1960s, but did not obtain the
+&quot;NoSQL&quot; moniker until a surge of popularity in the early twenty-first
+century, triggered by the needs of Web 2.0 companies. NoSQL databases
+are increasingly used in big data and real-time web applications. NoSQL
+systems are also sometimes called &quot;Not only SQL&quot; to emphasize that they
+may support SQL-like query languages.</p>
+<p>Motivations for this approach include: simplicity of design, simpler
+&quot;horizontal&quot; scaling to clusters of machines (which is a
+problem for relational databases), and finer control over availability.
+The data structures used by NoSQL databases (e.g. key-value, wide
+column, graph, or document) are different from those used by default in
+relational databases, making some operations faster in NoSQL. The
+particular suitability of a given NoSQL database depends on the problem
+it must solve. Sometimes the data structures used by NoSQL databases are
+also viewed as &quot;more flexible&quot; than relational database tables.</p>
+<p>Many NoSQL stores compromise consistency (in the sense of the CAP
+theorem) in favor of availability, partition tolerance, and speed.
+Barriers to the greater adoption of NoSQL stores include the use of
+low-level query languages (instead of SQL, for instance the lack of
+ability to perform ad-hoc joins across tables), lack of standardized
+interfaces, and huge previous investments in existing relational
+databases.[ Most NoSQL stores lack true ACID transactions, although a
+few databases, such as MarkLogic, Aerospike, FairCom c-treeACE, Google
+Spanner (though technically a NewSQL database), Symas LMDB, and OrientDB
+have made them central to their designs. (See ACID and join support.)</p>
+<p>Instead, most NoSQL databases offer a concept of &quot;eventual consistency&quot;
+in which database changes are propagated to all nodes &quot;eventually&quot;
+(typically within milliseconds) so queries for data might not return
+updated data immediately or might result in reading data that is not
+accurate, a problem known as stale reads. Additionally, some NoSQL
+systems may exhibit lost writes and other forms of data loss. Some NoSQL
+systems provide concepts such as write-ahead logging to avoid data
+loss. For distributed transaction processing across multiple databases,
+data consistency is an even bigger challenge that is difficult for both
+NoSQL and relational databases. Even current relational databases &quot;do
+not allow referential integrity constraints to span databases.&quot; There
+are few systems that maintain both ACID transactions and X/Open XA
+standards for distributed transaction processing.</p>
+<h2 id="npe"><a class="header" href="#npe">NPE</a></h2>
+<p>Network Provider Edge</p>
+<p>A Provider Edge router (PE router) is a router between one network
+service provider's area and areas administered by other network
+providers. A network provider is usually an Internet service provider as
+well (or only that).#<br />
+<img src="./images/N/15008699.png?width=485" alt="" /></p>
+<h2 id="nss"><a class="header" href="#nss">NSS</a></h2>
+<p>Network switching subsystem</p>
+<p>Network switching subsystem (NSS) (or GSM core network) is the component
+of a GSM system that carries out call out and mobility management
+functions for mobile phones roaming on the network of base stations. It
+is owned and deployed by mobile phone operators and allows mobile
+devices to communicate with each other and telephones in the wider
+public switched telephone network4g LET(PSTN). The architecture contains
+specific features and functions which are needed because the phones are
+not fixed in one location.</p>
+<p>The NSS originally consisted of the circuit-switched core network, used
+for traditional GSM services such as voice calls, SMS, and circuit
+switched data calls. It was extended with an overlay architecture to
+provide packet-switched data services known as the GPRS core network.
+This allows mobile phones to have access to services such as WAP, MMS
+and the Internet.<br />
+<img src="./images/N/15008705.png?width=449" alt="" /></p>
+<h2 id="ntp"><a class="header" href="#ntp">NTP</a></h2>
+<p>Network Time Protocol</p>
+<p>Network Time Protocol (NTP) is a networking protocol for clock
+synchronization between computer systems over packet-switched,
+variable-latency data networks. In operation since before 1985, NTP is
+one of the oldest Internet protocols in current use. NTP was designed by
+David L. Mills of the University of Delaware.</p>
+<p>NTP is intended to synchronize all participating computers to within a
+few milliseconds of Coordinated Universal Time (UTC).[1]:3 It uses the
+intersection algorithm, a modified version of Marzullo's algorithm, to
+select accurate time servers and is designed to mitigate the effects of
+variable network latency. NTP can usually maintain time to within tens
+of milliseconds over the public Internet, and can achieve better than
+one millisecond accuracy in local area networks under ideal conditions.
+Asymmetric routes and network congestion can cause errors of 100 ms or
+more</p>
+<h2 id="nts"><a class="header" href="#nts">NTS</a></h2>
+<p>Number Translation Service</p>
+<p>A number translation service translates a dialled telephone number,
+typically beginning 08 in the UK to a geographical 'connect number'
+beginning 01 or 02 in the UK. The connect number may be changed without
+changing the published dialled number. Originally NTS numbers were used,
+for example, to allow any caller to dial a local call to the called
+party irrespective of location, saving money if the connect number was
+not also a local call, but the system gradually came to be seen as a way
+of making money and now most phone companies charge the caller more for
+08 numbers than for 01, 02 or 03 numbers.</p>
+<h2 id="ntu"><a class="header" href="#ntu">NTU</a></h2>
+<p>Network Termination Unit</p>
+<p>Point between user and operator network<br />
+<img src="./images/N/15008711.png?width=480" alt="" /></p>
+<h2 id="ntu-1"><a class="header" href="#ntu-1">NTU</a></h2>
+<p>Network Termination Unit</p>
+<p>In telecommunications, a network interface device (NID; also known by
+several other names) is a device that serves as the demarcation point
+between the carrier's local loop and the customer's premises wiring.
+Outdoor telephone NIDs also provide the subscriber with access to the
+station wiring and serve as a convenient test point for verification of
+loop integrity and of the subscriber's inside wiring.</p>
+<h2 id="nyb"><a class="header" href="#nyb">NYB</a></h2>
+<p>Not Yet Built data</p>
+<p>Royal Mail Not Yet Built data</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="m.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="o.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="m.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="o.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

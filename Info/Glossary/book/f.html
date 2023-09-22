@@ -1,0 +1,532 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>f - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html" class="active"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="f"><a class="header" href="#f">F</a></h1>
+<h2 id="facilitation"><a class="header" href="#facilitation">Facilitation</a></h2>
+<p>A facilitator is a person who chooses or is given the explicit role of
+conducting a meeting.</p>
+<h2 id="fcs"><a class="header" href="#fcs">FCS</a></h2>
+<p>Frame Check Sequence</p>
+<p>A frame check sequence (FCS) refers to the extra error-detecting code
+added to a frame in a communications protocol. Frames are used to send
+upper-layer data and ultimately the application data from a source to a
+destination.</p>
+<p>The detection does not imply error recovery; for example, Ethernet
+specifies that a damaged frame should be discarded, but at the same time
+does not specify any action to cause the frame to be retransmitted.
+Other protocols, notably the Transmission Control Protocol (TCP), can
+notice the data loss and initiate error recovery.</p>
+<h2 id="fddi"><a class="header" href="#fddi">FDDI</a></h2>
+<p>Fiber Distributed Data Interface</p>
+<p>Fiber Distributed Data Interface (FDDI) is a standard for data
+transmission in a local area network. It uses optical fiber as its
+standard underlying physical medium, although it was also later
+specified to use copper cable, in which case it may be called CDDI
+(Copper Distributed Data Interface), standardized as TP-PMD
+(Twisted-Pair Physical Medium-Dependent), also referred to as TP-DDI
+(Twisted-Pair Distributed Data Interface).</p>
+<p>FDDI was effectively made obsolete in local networks by Fast Ethernet
+which offered the same 100 Mbit/s speeds, but at a much lower cost and,
+since 1998, by Gigabit Ethernet due to its speed, and even lower cost,
+and ubiquity.</p>
+<h2 id="feature"><a class="header" href="#feature">Feature</a></h2>
+<p>Used in CxOne as an abstract measure or description of system
+functionality, i.e., the feature scope for a project.<br />
+Is also used to discuss a discrete piece of system behavior, e.g.,
+&quot;feature X&quot;.</p>
+<h2 id="feature-creep"><a class="header" href="#feature-creep">feature creep</a></h2>
+<p>a tendency for product or project requirements to increase during
+development beyond those originally foreseen, leading to features that
+weren't originally planned and resulting risk to product quality or
+schedule.</p>
+<h2 id="feature-test"><a class="header" href="#feature-test">Feature Test</a></h2>
+<p>Testing a specific subset of <em>system</em> functionality after construction
+of the functionality is completed.</p>
+<h2 id="femtocell"><a class="header" href="#femtocell">FemtoCell</a></h2>
+<p>In telecommunications, a femtocell is a small, low-power cellular base
+station, typically designed for use in a home or small business. A
+broader term which is more widespread in the industry is small cell,
+with femtocell as a subset. It is also called femto AccessPoint (AP). It
+connects to the service provider's network via broadband (such as DSL or
+cable); current designs typically support four to eight simultaneously
+active mobile phones in a residential setting depending on version
+number and femtocell hardware, and eight to sixteen mobile phones in
+enterprise settings. A femtocell allows service providers to extend
+service coverage indoors or at the cell edge, especially where access
+would otherwise be limited or unavailable. Although much attention is
+focused on WCDMA, the concept is applicable to all standards, including
+GSM, CDMA2000, TD-SCDMA, WiMAX and LTE solutions.<br />
+<img src="./images/F/15008172.png?width=480" alt="" /></p>
+<h2 id="fips"><a class="header" href="#fips">FIPS</a></h2>
+<p>Federal Information Processing Standards (FIPS) are publicly announced
+standards developed by the United States federal government for use in
+computer systems by non-military government agencies and government
+contractors.</p>
+<p>FIPS standards are issued to establish requirements for various purposes
+such as ensuring computer security and interoperability, and are
+intended for cases in which suitable industry standards do not already
+exist. Many FIPS specifications are modified versions of standards used
+in the technical communities, such as the American National Standards
+Institute (ANSI), the Institute of Electrical and Electronics Engineers
+(IEEE), and the International Organization for Standardization (ISO).</p>
+<h2 id="fips-140-2"><a class="header" href="#fips-140-2">FIPS 140-2</a></h2>
+<p>The Federal Information Processing Standard (FIPS) Publication 140-2,
+(FIPS PUB 140-2), is a U.S. government computer security standard used
+to approve cryptographic modules. The title is Security
+Requirements for Cryptographic Modules. Initial publication was on May
+25, 2001 and was last updated December 3, 2002</p>
+<p>Purpose<br />
+The National Institute of Standards and Technology (NIST) issued the
+FIPS 140 Publication Series to coordinate the requirements and
+standards for cryptography modules that include both hardware and
+software components. Protection of a cryptographic module within a
+security system is necessary to maintain the confidentiality and
+integrity of the information protected by the module. This standard
+specifies the security requirements that will be satisfied by a
+cryptographic module. The standard provides four increasing, qualitative
+levels of security intended to cover a wide range of potential
+applications and environments. The security requirements cover areas
+related to the secure design and implementation of a cryptographic
+module. These areas include cryptographic module specification;
+cryptographic module ports and interfaces; roles, services, and
+authentication; finite state model; physical security; operational
+environment; cryptographic key management; electromagnetic
+interference/electromagnetic compatibility (EMI/EMC); self-tests; design
+assurance; and mitigation of other attacks.</p>
+<p>Federal agencies and departments can validate that the module in use is
+covered by an existing FIPS 140-1 or FIPS 140-2 certificate that
+specifies the exact module name, hardware, software, firmware, and/or
+applet version numbers. The cryptographic modules are produced by
+the private sector or open source communities for use by the U.S.
+government and other regulated industries (such as financial and
+health-care institutions) that collect, store, transfer, share and
+disseminate sensitive but unclassified (SBU) information. A commercial
+cryptographic module is also commonly referred to as a hardware security
+module (HSM).</p>
+<p>Security levels<br />
+FIPS 140-2 defines four levels of security, simply named &quot;Level 1&quot; to
+&quot;Level 4&quot;. It does not specify in detail what level of security is
+required by any particular application.</p>
+<p>Level 1<br />
+Security Level 1 provides the lowest level of security. Basic security
+requirements are specified for a cryptographic module (e.g., at least
+one Approved algorithm or Approved security function shall be used). No
+specific physical security mechanisms are required in a Security Level 1
+cryptographic module beyond the basic requirement for production-grade
+components. An example of a Security Level 1 cryptographic module is a
+personal computer (PC) encryption board.</p>
+<p>Level 2<br />
+Security Level 2 improves upon the physical security mechanisms of a
+Security Level 1 cryptographic module by requiring features that show
+evidence of tampering, including tamper-evident coatings or seals that
+must be broken to attain physical access to the plaintext cryptographic
+keys and critical security parameters (CSPs) within the module, or
+pick-resistant locks on covers or doors to protect against unauthorized
+physical access.</p>
+<p>Level 3<br />
+In addition to the tamper-evident physical security mechanisms required
+at Security Level 2, Security Level 3 attempts to prevent the intruder
+from gaining access to CSPs held within the cryptographic module.
+Physical security mechanisms required at Security Level 3 are intended
+to have a high probability of detecting and responding to attempts at
+physical access, use or modification of the cryptographic module. The
+physical security mechanisms may include the use of strong enclosures
+and tamper-detection/response circuitry that zeroes all plaintext CSPs
+when the removable covers/doors of the cryptographic module are opened.</p>
+<p>Level 4<br />
+Security Level 4 provides the highest level of security. At this
+security level, the physical security mechanisms provide a complete
+envelope of protection around the cryptographic module with the intent
+of detecting and responding to all unauthorized attempts at physical
+access. Penetration of the cryptographic module enclosure from any
+direction has a very high probability of being detected, resulting in
+the immediate deletion of all plaintext CSPs.</p>
+<p>Security Level 4 cryptographic modules are useful for operation in
+physically unprotected environments. Security Level 4 also protects a
+cryptographic module against a security compromise due to environmental
+conditions or fluctuations outside of the module's normal operating
+ranges for voltage and temperature. Intentional excursions beyond the
+normal operating ranges may be used by an attacker to thwart a
+cryptographic module's defenses. A cryptographic module is required to
+either include special environmental protection features designed to
+detect fluctuations and delete CSPs, or to undergo rigorous
+environmental failure testing to provide a reasonable assurance that the
+module will not be affected by fluctuations outside of the normal
+operating range in a manner that can compromise the security of the
+module.</p>
+<h2 id="firewall"><a class="header" href="#firewall">Firewall</a></h2>
+<p>n computing, a firewall is a network security system that monitors and
+controls incoming and outgoing network traffic based on predetermined
+security rules. A firewall typically establishes a barrier between a
+trusted internal network and untrusted external network, such as the
+Internet.</p>
+<p>Firewalls are often categorized as either network firewalls or
+host-based firewalls. Network firewalls filter traffic between two or
+more networks and run on network hardware. Host-based firewalls run on
+host computers and control network traffic in and out of those
+machines.<br />
+<img src="./images/F/15008180.png?width=480" alt="" /><br />
+<img src="./images/F/15008186.png?width=529" alt="" /></p>
+<h2 id="fna"><a class="header" href="#fna">FNA</a></h2>
+<p>Full Network Authentication</p>
+<p>This is where your line is assigned a NetworkID and the authentication
+is done on that. If the line connected matches the NetworkID records on
+the RADIUS servers it creates an auth session.</p>
+<h2 id="formal-testing"><a class="header" href="#formal-testing">Formal Testing</a></h2>
+<p>Execution of testing using documented <em>test cases</em>. Compare to <em>informal
+testing.</em></p>
+<h2 id="fortran"><a class="header" href="#fortran">Fortran</a></h2>
+<p>Fortran is a general-purpose, compiled imperative programming language
+that is especially suited to numeric computation and scientific
+computing.</p>
+<p>Originally developed by IBM in the 1950s for scientific and engineering
+applications, FORTRAN came to dominate this area of programming early on
+and has been in continuous use for over half a century in
+computationally intensive areas such as numerical weather prediction,
+finite element analysis, computational fluid dynamics, computational
+physics, crystallography and computational chemistry. It is a popular
+language for high-performance computing and is used for programs that
+benchmark and rank the world's fastest supercomputers.</p>
+<p>Fortran encompasses a lineage of versions, each of which evolved to add
+extensions to the language while usually retaining compatibility with
+prior versions. Successive versions have added support for structured
+programming and processing of character-based data (FORTRAN 77), array
+programming, modular programming and generic programming (Fortran 90),
+high performance Fortran (Fortran 95), object-oriented programming
+(Fortran 2003) and concurrent programming (Fortran 2008).</p>
+<p>Fortran's design was the basis for many other programming languages.
+Among the better known is BASIC, which is a based on FORTRAN II with a
+number of syntax cleanups, notably better logical structures, and other
+changes to more easily work in an interactive environment.</p>
+<h2 id="forwarding-plane"><a class="header" href="#forwarding-plane">Forwarding plane</a></h2>
+<p>See User Plane</p>
+<h2 id="fqdn"><a class="header" href="#fqdn">FQDN</a></h2>
+<p>Fully Qualified Domain Name</p>
+<p>A fully qualified domain name (FQDN), sometimes also referred to as an
+absolute domain name, is a domain name that specifies its exact location
+in the tree hierarchy of the Domain Name System (DNS). It specifies all
+domain levels, including at least a second-level domain and a top-level
+domain. A fully qualified domain name is distinguished by its lack of
+ambiguity: it can be interpreted only in one way.</p>
+<p>The DNS root domain is unnamed which is expressed by having an empty
+label in the DNS hierarchy, resulting in a fully qualified domain name
+ending with the top-level domain. However, in some cases the full stop
+(period) character is required at the end of the fully qualified domain
+name.</p>
+<p>In contrast to a domain name that is fully specified, a domain name that
+does not include the full path of labels up to the DNS root is often
+called a partially qualified domain name.</p>
+<p><img src="./images/F/15008192.png?width=480" alt="" /></p>
+<h2 id="frame-relay"><a class="header" href="#frame-relay">Frame Relay</a></h2>
+<p>Frame Relay is a standardized wide area network technology that
+specifies the physical and data link layers of digital
+telecommunications channels using a packet switching methodology.
+Originally designed for transport across Integrated Services Digital
+Network (ISDN) infrastructure, it may be used today in the context of
+many other network interfaces.</p>
+<p>Network providers commonly implement Frame Relay for voice (VoFR) and
+data as an encapsulation technique used between local area networks
+(LANs) over a wide area network (WAN). Each end-user gets a private line
+(or leased line) to a Frame Relay node. The Frame Relay network handles
+the transmission over a frequently changing path transparent to all
+end-user extensively used WAN protocols. It is less expensive than
+leased lines and that is one reason for its popularity. The extreme
+simplicity of configuring user equipment in a Frame Relay network offers
+another reason for Frame Relay's popularity.</p>
+<p><img src="./images/F/15008198.png?width=389" alt="" /></p>
+<h2 id="frequent-releases"><a class="header" href="#frequent-releases">Frequent Releases</a></h2>
+<p>An Agile team frequently releases its product into the hands of end
+users, listening to feedback, whether critical or appreciative.</p>
+<h2 id="frequently-asked-question"><a class="header" href="#frequently-asked-question">Frequently Asked Question</a></h2>
+<p>FAQ</p>
+<p>Documents commonly asked questions and their answers.</p>
+<h2 id="fsk"><a class="header" href="#fsk">FSK</a></h2>
+<p>Frequency-shift keying (FSK) is a frequency modulation scheme in which
+digital information is transmitted through discrete frequency changes of
+a carrier signal. The technology is used for communication systems such
+as amateur radio, caller ID and emergency broadcasts. The simplest FSK
+is binary FSK (BFSK). BFSK uses a pair of discrete frequencies to
+transmit binary (0s and 1s) information. With this scheme, the &quot;1&quot; is
+called the mark frequency and the &quot;0&quot; is called the space frequency.<br />
+<img src="./images/F/15008204.png?width=480" alt="" /></p>
+<h2 id="ftp"><a class="header" href="#ftp">FTP</a></h2>
+<p>File Transfer Protocol</p>
+<p>The File Transfer Protocol (FTP) is a standard network protocol used for
+the transfer of computer files between a client and server on a computer
+network.</p>
+<p>FTP is built on a client-server model architecture and uses separate
+control and data connections between the client and the server.</p>
+<h2 id="ftps"><a class="header" href="#ftps">FTPS</a></h2>
+<p>File Transfer Protocol Secure</p>
+<p>FTPS (also known as FTPES, FTP-SSL, and FTP Secure) is an extension to
+the commonly used File Transfer Protocol (FTP) that adds support for the
+Transport Layer Security (TLS) and the Secure Sockets Layer (SSL)
+cryptographic protocols.</p>
+<p>FTPS should not be confused with the SSH File Transfer Protocol (SFTP),
+a secure file transfer subsystem for the Secure Shell (SSH) protocol it
+is not compatible with. It is also different from FTP over SSH, the
+practice of tunneling FTP through an SSH connection.</p>
+<h2 id="full-duplex"><a class="header" href="#full-duplex">Full duplex</a></h2>
+<p>In a full-duplex system, both parties can communicate with each other
+simultaneously. An example of a full-duplex device is a telephone; the
+parties at both ends of a call can speak and be heard by the other party
+simultaneously. The earphone reproduces the speech of the remote party
+as the microphone transmits the speech of the local party, because there
+is a two-way communication channel between them, or more strictly
+speaking, because there are two communication channels between them.</p>
+<h2 id="function-point"><a class="header" href="#function-point">Function Point</a></h2>
+<p>Size measure for a software system based on abstracted measure of system
+functionality.</p>
+<h2 id="functional-requirement"><a class="header" href="#functional-requirement">Functional Requirement</a></h2>
+<p>Functionality that must be built into the system to satisfy the business
+requirements. Also known as a <em>what requirement.</em></p>
+<h2 id="functional-testing"><a class="header" href="#functional-testing">Functional Testing</a></h2>
+<p>Comparing a system's behavior against expected behavior, without concern
+for the internal workings of the system.</p>
+<h2 id="fuzzy-front-end"><a class="header" href="#fuzzy-front-end">Fuzzy Front End</a></h2>
+<p>Term coined by Steve McConnell to describes the initial inception phases
+of a project. CxOne defines the start of the fuzzy front end as the
+point someone starts thinking about a project and working on chartering
+it, and the end as the point at which the charter is approved and the
+project begins.</p>
+<h2 id="fuzzy-logic"><a class="header" href="#fuzzy-logic">Fuzzy Logic</a></h2>
+<p>A relative ranking technique for describing characteristics. Often used
+in conjunction with items that contain uncertainty, like estimates. A
+general example is to take three buckets called small, medium, and
+large. Items are assigned t each bucket, and then the bucket values are
+used as stand-ins for a possible range of quantitative values. One
+common characteristic of fuzzy logic buckets is that the high end value
+from one bucket overlaps the low end value of the next bucket.</p>
+<h2 id="fxo"><a class="header" href="#fxo">FXO</a></h2>
+<p>Foreign Exchange Office</p>
+<p>FXS (Foreign Exchange Station) means the wall jack or the interface to
+the telephone system which FXO devices can be connected to. Using these
+interfaces a call can be established. The port provides the necessary
+electricity as well as the dialtone and the call signal.<br />
+<img src="./images/F/15008210.png?width=481" alt="" /></p>
+<h2 id="fxs"><a class="header" href="#fxs">FXS</a></h2>
+<p>Foreign Exchange Station</p>
+<p>FXO (Foreign Exchange Office) is the port that receives the analog line
+on the telephone or fax machine. It establishes the connection to the
+analog line (FXS). FXS devices connected to phone system are referred to
+as endpoints (e.g. a phone).<br />
+<img src="./images/F/15008210.png?width=483" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="e.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="g.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="e.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="g.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>

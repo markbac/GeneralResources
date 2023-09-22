@@ -1,0 +1,712 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>b - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html" class="active"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="b"><a class="header" href="#b">B</a></h1>
+<h2 id="b2b"><a class="header" href="#b2b">B2B</a></h2>
+<p>business-to-business</p>
+<p>Business-to-business (B2B or, in some countries, BtoB) refers to a
+situation where one business makes a commercial transaction with
+another. This typically occurs when:</p>
+<p>A business is sourcing materials for their production process (e.g. a
+food manufacturer purchasing salt).<br />
+A business needs the services of another for operational reasons (e.g. a
+food manufacturer employing an accountancy firm to audit their
+finances).<br />
+A business re-sells goods and services produced by others (e.g. a
+retailer buying the end product from the food manufacturer).<br />
+B2B is often contrasted with business-to-consumer (B2C). In B2B
+commerce, it is often the case that the parties to the relationship have
+comparable negotiating power, and even when they do not, each party
+typically involves professional staff and legal counsel in the
+negotiation of terms, whereas B2C is shaped to a far greater degree by
+economic implications of information asymmetry. However, within a B2B
+context, large companies may have many commercial, resource and
+information advantages over smaller businesses.</p>
+<h2 id="b2c"><a class="header" href="#b2c">B2C</a></h2>
+<p>business-to-consumer</p>
+<p>Business to consumer (B2C) refers to the transactions conducted directly
+between a company and consumers who are the end-users of its products or
+services. The business to consumer as a business model differs
+significantly from the business-to-business model, which refers to
+commerce between two or more businesses. While most companies that sell
+directly to consumers can be referred to as B2C companies, the term
+became immensely popular during the dotcom boom of the late 1990s, when
+it was used mainly to refer to online retailers, as well as other
+companies that sold products and services to consumers through the
+internet.</p>
+<h2 id="backhaul"><a class="header" href="#backhaul">Backhaul</a></h2>
+<p>In a hierarchical telecommunications network the backhaul portion of the
+network comprises the intermediate links between the core network, or
+backbone network, and the small subnetworks at the &quot;edge&quot; of the entire
+hierarchical network.</p>
+<p>In contracts pertaining to such networks, backhaul is the obligation to
+carry packets to and from that global network. A non-technical business
+definition of backhaul is the commercial wholesale bandwidth provider
+who offers quality of service (QOS) guarantees to the retailer. It
+appears most often in telecommunications trade literature in this sense,
+whereby the backhaul connection is defined not technically but by who
+operates and manages it, and who takes legal responsibility for the
+connection or uptime to the Internet or 3G/4G network. See also hotspot
+contracts below.</p>
+<p>In both the technical and commercial definitions, backhaul generally
+refers to the side of the network that communicates with the global
+Internet, paid for at wholesale commercial access rates to or at an
+Ethernet Exchange or other core network access location. Sometimes
+middle mile networks exist between the customer's own LAN and those
+exchanges. This can be a local WAN or WLAN connection, for instance
+Network New Hampshire Now and Maine Fiber Company run tariffed public
+dark fiber networks as a backhaul alternative to encourage local and
+national carriers to reach areas with broadband and cell phone that they
+otherwise would not be serving. These serve retail networks which in
+turn connect buildings and bill customers directly.</p>
+<h2 id="backlog"><a class="header" href="#backlog">Backlog</a></h2>
+<p>A backlog is an ordered list of items representing everything that may
+be needed to deliver a specific outcome. There are different types of
+backlogs depending on the type of item they contain and the approach
+being used.</p>
+<h2 id="backlog-grooming"><a class="header" href="#backlog-grooming">Backlog Grooming</a></h2>
+<p>Backlog grooming is when the product owner and some, or all, of the rest
+of the team refine the backlog on a regular basis to ensure the backlog
+contains the appropriate items, that they are prioritized, and that the
+items at the top of the backlog are ready for delivery.</p>
+<h2 id="bandwidth"><a class="header" href="#bandwidth">Bandwidth</a></h2>
+<p>Bandwidth is the maximum rate of data transfer across a given path.
+Bandwidth may be characterized as network bandwidth, data bandwidth, or
+digital bandwidth.</p>
+<p>This definition of bandwidth is in contrast to the field of signal
+processing, wireless communications, modem data transmission, digital
+communications, and electronics[citation needed], in which bandwidth
+is used to refer to analog signal bandwidth measured in hertz, meaning
+the frequency range between lowest and highest attainable frequency
+while meeting a well-defined impairment level in signal power.</p>
+<p>However, the actual bit rate that can be achieved depends not only on
+the signal bandwidth, but also on the noise on the channel.</p>
+<h2 id="baseline"><a class="header" href="#baseline">Baseline</a></h2>
+<p>The original version of an <em>artifact</em> that serves as the basis for all
+future development work. Baselined artifacts are normally placed
+under <em>change control</em>.</p>
+<h2 id="bash"><a class="header" href="#bash">Bash</a></h2>
+<p>Bash is a Unix shell and command language written by Brian Fox for the
+GNU Project as a free software replacement for the Bourne shell. First
+released in 1989, it has been distributed widely as the default login
+shell for most Linux distributions and Apple's macOS (formerly OS X). A
+version is also available for Windows 10. It is also the default user
+shell in Solaris 11.</p>
+<p>Bash is a command processor that typically runs in a text window where
+the user types commands that cause actions. Bash can also read and
+execute commands from a file, called a shell script. Like all Unix
+shells, it supports filename globbing (wildcard matching), piping, here
+documents, command substitution, variables, and control
+structures for condition-testing and iteration. The keywords, syntax and
+other basic features of the language are all copied from sh. Other
+features, e.g., history, are copied from csh and ksh. Bash is a
+POSIX-compliant shell, but with a number of extensions.</p>
+<p>The shell's name is an acronym for Bourne-again shell, a pun on the name
+of the Bourne shell that it replaces.</p>
+<h2 id="basic"><a class="header" href="#basic">BASIC</a></h2>
+<p>BASIC (an acronym for Beginner's All-purpose Symbolic Instruction Code)
+is a family of general-purpose, high-level programming languages whose
+design philosophy emphasizes ease of use. In 1964, John G. Kemeny,
+Thomas E. Kurtz and Sr. Mary Kenneth Keller designed the original BASIC
+language at Dartmouth College. They wanted to enable students in fields
+other than science and mathematics to use computers. At the time, nearly
+all use of computers required writing custom software, which was
+something only scientists and mathematicians tended to learn.</p>
+<h2 id="bau"><a class="header" href="#bau">BAU</a></h2>
+<p>Business as Usual</p>
+<p>Business as usual (BAU) - the normal execution of standard functional
+operations within an organization - forms a possible contrast to
+projects or programmes which might introduce change.[citation needed]
+BAU may also stand in contradistinction to external events which may
+have the effect of unsettling or distracting those inside an
+organisation</p>
+<h2 id="bdd"><a class="header" href="#bdd">BDD</a></h2>
+<p>Behavior Driven Development (BDD)</p>
+<p>BDD is a practice where members of the team discuss the expected
+behavior of a system in order to build a shared understanding of
+expected functionality.</p>
+<h2 id="bench-test"><a class="header" href="#bench-test">Bench Test</a></h2>
+<p>A <em>test</em> that is performed in the <em>development environment</em> and focuses
+on the part of the system being worked on.</p>
+<h2 id="ber"><a class="header" href="#ber">BER</a></h2>
+<p>Bit Error Rate</p>
+<p>In digital transmission, the number of bit errors is the number of
+received bits of a data stream over a communication channel that have
+been altered due to noise, interference, distortion or bit
+synchronization errors.</p>
+<p>The bit error rate (BER) is the number of bit errors per unit time. The
+bit error ratio (also BER) is the number of bit errors divided by the
+total number of transferred bits during a studied time interval. Bit
+error ratio is a unitless performance measure, often expressed as a
+percentage.</p>
+<h2 id="ber-1"><a class="header" href="#ber-1">BER</a></h2>
+<p>Basic Encoding Rules</p>
+<p>The format for Basic Encoding Rules specifies a self-describing and
+self-delimiting format for encoding ASN.1 data structures. Each data
+element is encoded as a type identifier, a length description, the
+actual data elements, and, where necessary, an end-of-content marker.
+These types of encodings are commonly called type-length-value or TLV
+encodings. This format allows a receiver to decode the ASN.1 information
+from an incomplete stream, without requiring any pre-knowledge of the
+size, content, or semantic meaning of the data.</p>
+<h2 id="best-practice"><a class="header" href="#best-practice">Best Practice</a></h2>
+<p>A practice, technique, process, or idiom that has been proven effective
+and/or efficient for completing a goal or addressing common risks.
+See <em>CxOne Best Practice</em> material type.</p>
+<h2 id="best-practice-description"><a class="header" href="#best-practice-description">Best Practice Description</a></h2>
+<p>CxBest</p>
+<p>CxOne best practice material type, see <em>CxOneOverview</em> for description.</p>
+<h2 id="bgcf"><a class="header" href="#bgcf">BGCF</a></h2>
+<p>Breakout Gateway Control Function</p>
+<p>A Breakout Gateway Control Function (BGCF) is a SIP proxy which
+processes requests for routing from an S-CSCF when the S-CSCF has
+determined that the session cannot be routed using DNS or ENUM/DNS. It
+includes routing functionality based on telephone numbers.<br />
+<img src="./images/B/15007813.png?width=480" alt="" /></p>
+<h2 id="bgp"><a class="header" href="#bgp">BGP</a></h2>
+<p>Border Gateway Protocol</p>
+<p>Border Gateway Protocol (BGP) is a standardized exterior gateway
+protocol designed to exchange routing and reachability information among
+autonomous systems (AS) on the Internet. The protocol is classified as a
+path vector protocol. The Border Gateway Protocol makes routing
+decisions based on paths, network policies, or rule-sets configured by a
+network administrator and is involved in making core routing decisions.</p>
+<h2 id="bjarne-stroustrup"><a class="header" href="#bjarne-stroustrup">Bjarne Stroustrup</a></h2>
+<p>Bjarne Stroustrup is a Danish computer scientist, who is most notable
+for the creation and development of the widely used C++ programming
+language.</p>
+<h2 id="black-box-testing"><a class="header" href="#black-box-testing">Black-Box Testing</a></h2>
+<p>Synonym for <em>functional testing</em>.</p>
+<h2 id="bluetooth"><a class="header" href="#bluetooth">Bluetooth</a></h2>
+<p>Bluetooth is a wireless technology standard for exchanging data over
+short distances (using short-wavelength UHF radio waves in the ISM band
+from 2.4 to 2.485 GHz) from fixed and mobile devices, and building
+personal area networks (PANs). Invented by Dutch electrical engineer
+Jaap Haartsen, working for telecom vendor Ericsson in 1994, it was
+originally conceived as a wireless alternative to RS-232 data cables.</p>
+<p>Bluetooth is managed by the Bluetooth Special Interest Group (SIG),
+which has more than 30,000 member companies in the areas of
+telecommunication, computing, networking, and consumer electronics. The
+IEEE standardized Bluetooth as IEEE 802.15.1, but no longer maintains
+the standard.</p>
+<h2 id="bnf"><a class="header" href="#bnf">BNF</a></h2>
+<p>Backus--Naur form</p>
+<p>In computer science, Backus--Naur form or Backus normal form (BNF) is a
+metasyntax notation for context-free grammars, often used to describe
+the syntax of languages used in computing, such as computer programming
+languages, document formats, instruction sets and communication
+protocols. They are applied wherever exact descriptions of languages are
+needed: for instance, in official language specifications, in manuals,
+and in textbooks on programming language theory.</p>
+<p>Many extensions and variants of the original Backus--Naur notation are
+used; some are exactly defined, including extended Backus--Naur form
+(EBNF) and augmented Backus--Naur form (ABNF).</p>
+<p><code>&lt;postal-address&gt;</code>{=html} ::= <code>&lt;name-part&gt;</code>{=html}
+<code>&lt;street-address&gt;</code>{=html} <code>&lt;zip-part&gt;</code>{=html} <code>&lt;name-part&gt;</code>{=html} ::=
+<code>&lt;personal-part&gt;</code>{=html} <code>&lt;last-name&gt;</code>{=html} <code>&lt;opt-suffix-part&gt;</code>{=html}
+<code>&lt;EOL&gt;</code>{=html} <code>&lt;personal-part&gt;</code>{=html} <code>&lt;name-part&gt;</code>{=html}
+<code>&lt;personal-part&gt;</code>{=html} ::= <code>&lt;initial&gt;</code>{=html} &quot;.&quot;
+<code>&lt;first-name&gt;</code>{=html} <code>&lt;street-address&gt;</code>{=html} ::= <code>&lt;house-num&gt;</code>{=html}
+<code>&lt;street-name&gt;</code>{=html} <code>&lt;opt-apt-num&gt;</code>{=html} <code>&lt;EOL&gt;</code>{=html}
+<code>&lt;zip-part&gt;</code>{=html} ::= <code>&lt;town-name&gt;</code>{=html} &quot;,&quot; <code>&lt;state-code&gt;</code>{=html}
+<code>&lt;ZIP-code&gt;</code>{=html} <code>&lt;EOL&gt;</code>{=html} <code>&lt;opt-suffix-part&gt;</code>{=html} ::= &quot;Sr.&quot;
+&quot;Jr.&quot; <code>&lt;roman-numeral&gt;</code>{=html} &quot;&quot; <code>&lt;opt-apt-num&gt;</code>{=html} ::=
+<code>&lt;apt-num&gt;</code>{=html} &quot;&quot;</p>
+<h2 id="bng"><a class="header" href="#bng">BNG</a></h2>
+<p>Broadband Network Gateway</p>
+<p>The Broadband Network Gateway (BNG) allows subscribers to connect to a
+broadband network through an access portal. It creates and manages
+subscriber sessions, aggregating traffic from various subscriber
+sessions from an access network, and routing it to the network of the
+Internet Service Provider (ISP) or Network Service Provider (NSP).</p>
+<h2 id="bootp"><a class="header" href="#bootp">BOOTP</a></h2>
+<p>Dynamic IP Address Allocation -- Bootstrap protocol</p>
+<p>The Bootstrap Protocol (BOOTP) is a computer networking protocol used in
+Internet Protocol networks to automatically assign an IP address to
+network devices from a configuration server. The BOOTP was originally
+defined in RFC 951.</p>
+<p>When a computer that is connected to a network is powered up and boots
+its operating system, the system software broadcasts BOOTP messages onto
+the network to request an IP address assignment. A BOOTP configuration
+server assigns an IP address based on the request from a pool of
+addresses configured by an administrator.</p>
+<p>BOOTP is implemented using the User Datagram Protocol (UDP) as transport
+protocol, port number 67 is used by the (DHCP) server to receive client
+requests and port number 68 is used by the client to receive (DHCP)
+server responses. BOOTP operates only on IPv4 networks.</p>
+<p>Historically, BOOTP has also been used for Unix-like diskless
+workstations to obtain the network location of their boot image, in
+addition to the IP address assignment. Enterprises used it to roll out a
+pre-configured client (e.g., Windows) installation to newly installed
+PCs.</p>
+<h2 id="boston-matrix"><a class="header" href="#boston-matrix">Boston Matrix</a></h2>
+<p>The growth--share matrix (aka the product portfolio matrix,[ Boston
+Box, BCG-matrix, Boston matrix, Boston Consulting Group analysis,
+portfolio diagram) is a chart that to help corporations to analyze their
+business units, that is, their product lines. This helps the company
+allocate resources and is used as an analytical tool in brand marketing,
+product management, strategic management, and portfolio analysis. Some
+analysis of market performance by firms using its principles has called
+its usefulness into question.</p>
+<h2 id="bottom-up-estimation"><a class="header" href="#bottom-up-estimation">Bottom-Up Estimation</a></h2>
+<p>Estimating a system by decomposing it and then estimating each
+decomposed piece individually, rolling up the total to get an entire
+system estimate.</p>
+<h2 id="bpel"><a class="header" href="#bpel">BPEL</a></h2>
+<p>Business Process Execution Language</p>
+<p>BPEL (Business Process Execution Language) is an XML-based language that
+allows Web services in a service-oriented architecture (SOA) to
+interconnect and share data.</p>
+<p>Programmers use BPEL to define how a business process that involves web
+services will be executed. BPEL messages are typically used to invoke
+remote services, orchestrate process execution and manage events and
+exceptions.</p>
+<p>BPEL is often associated with Business Process Management Notation
+(BPMN), a standard for representing business processes graphically. In
+many organizations, analysts use BPMN to visualize business processes
+and developers transform the visualizations to BPEL for execution.</p>
+<p>BPEL was standardized by OASIS in 2004 after collaborative efforts to
+create the language by Microsoft, IBM and other companies.</p>
+<h2 id="bpmn"><a class="header" href="#bpmn">BPMN</a></h2>
+<p>Business Process Model and Notation</p>
+<p>Business Process Model and Notation (BPMN) is a graphical representation
+for specifying business processes in a business process model.</p>
+<p>Business Process Management Initiative (BPMI) developed BPMN, which has
+been maintained by the Object Management Group since the two
+organizations merged in 2005. Version 2.0 of BPMN was released in
+January 2011,[1] at which point the name was adapted to Business
+Process Model and Notation as execution semantics were also introduced
+alongside the notational and diagramming elements.<br />
+<img src="./images/B/15007821.png?width=698" alt="" /></p>
+<h2 id="bras"><a class="header" href="#bras">BRAS</a></h2>
+<p>Broadband Remote Access Server</p>
+<p>A broadband remote access server (BRAS, B-RAS or BBRAS) routes traffic
+to and from broadband remote access devices such as digital subscriber
+line access multiplexers (DSLAM) on an Internet service provider's (ISP)
+network</p>
+<p>BRAS can also be referred to as a Broadband Network Gateway (BNG)</p>
+<p><img src="./images/B/15007827.png?width=485" alt="" /></p>
+<p><img src="./images/B/15007833.png?width=440" alt="" /></p>
+<h2 id="broadcast"><a class="header" href="#broadcast">Broadcast</a></h2>
+<p>In computer networking, telecommunication and information theory,
+broadcasting is a method of transferring a message to all recipients
+simultaneously. Broadcasting can be performed as a high level operation
+in a program, for example broadcasting Message Passing Interface, or it
+may be a low level networking operation, for example broadcasting on
+Ethernet.</p>
+<p>All-to-all communication is a computer communication method in which
+each sender transmits messages to all receivers within a group. This
+contrasts with the point-to-point method in which each sender
+communicates with one receiver.</p>
+<p><img src="./images/B/15007839.png?width=227" alt="" /></p>
+<h2 id="bsc"><a class="header" href="#bsc">BSC</a></h2>
+<p>The base station controller (BSC) provides, classically, the
+intelligence behind the BTSs. Typically a BSC has tens or even hundreds
+of BTSs under its control. The BSC handles allocation of radio channels,
+receives measurements from the mobile phones, and controls handovers
+from BTS to BTS (except in the case of an inter-BSC handover in which
+case control is in part the responsibility of the anchor MSC). A key
+function of the BSC is to act as a concentrator where many different low
+capacity connections to BTSs (with relatively low utilisation) become
+reduced to a smaller number of connections towards the mobile switching
+center (MSC) (with a high level of utilisation). Overall, this means
+that networks are often structured to have many BSCs distributed into
+regions near their BTSs which are then connected to large centralised
+MSC sites.</p>
+<p>The BSC is undoubtedly the most robust element in the BSS as it is not
+only a BTS controller but, for some vendors, a full switching center, as
+well as an SS7 node with connections to the MSC and serving GPRS support
+node (SGSN) (when using GPRS). It also provides all the required data to
+the operation support subsystem (OSS) as well as to the performance
+measuring centers.</p>
+<p>A BSC is often based on a distributed computing architecture, with
+redundancy applied to critical functional units to ensure availability
+in the event of fault conditions. Redundancy often extends beyond the
+BSC equipment itself and is commonly used in the power supplies and in
+the transmission equipment providing the A-ter interface to PCU.<br />
+<img src="./images/B/15007845.png?width=399" alt="" /></p>
+<h2 id="bss"><a class="header" href="#bss">BSS</a></h2>
+<p>Base station subsystem</p>
+<p>The base station subsystem (BSS) is the section of a traditional
+cellular telephone network which is responsible for handling traffic and
+signaling between a mobile phone and the network switching subsystem.
+The BSS carries out transcoding of speech channels, allocation of radio
+channels to mobile phones, paging, transmission and reception over the
+air interface and many other tasks related to the radio network.</p>
+<p>BSS interfaces</p>
+<ul>
+<li>
+<p>Um</p>
+<ul>
+<li>The air interface between the mobile station (MS) and the BTS.
+This interface uses LAPDm protocol for signaling, to conduct
+call control, measurement reporting, handover, power control,
+authentication, authorization, location update and so on.
+Traffic and signaling are sent in bursts of 0.577 ms at
+intervals of 4.615 ms, to form data blocks each 20 ms.</li>
+</ul>
+</li>
+<li>
+<p>Abis</p>
+<ul>
+<li>The interface between the BTS and BSC. Generally carried by a
+DS-1, ES-1, or E1 TDM circuit. Uses TDM subchannels for traffic
+(TCH), LAPD protocol for BTS supervision and telecom signaling,
+and carries synchronization from the BSC to the BTS and MS.</li>
+</ul>
+</li>
+<li>
+<p>A</p>
+<ul>
+<li>The interface between the BSC and MSC. It is used for carrying
+traffic channels and the BSSAP user part of the SS7 stack.
+Although there are usually transcoding units between BSC and
+MSC, the signaling communication takes place between these two
+ending points and the transcoder unit doesn't touch the SS7
+information, only the voice or CS data are transcoded or rate
+adapted.</li>
+</ul>
+</li>
+<li>
+<p>Ater</p>
+<ul>
+<li>The interface between the BSC and transcoder. It is a
+proprietary interface whose name depends on the vendor (for
+example Ater by Nokia), it carries the A interface information
+from the BSC leaving it untouched.</li>
+</ul>
+</li>
+<li>
+<p>Gb</p>
+<ul>
+<li>
+<p>Connects the BSS to the SGSN in the GPRS core network.</p>
+<pre><code>    ![](./images/B/15007851.png?width=251)
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="bss-1"><a class="header" href="#bss-1">BSS</a></h2>
+<p>Business support systems</p>
+<p>Business support systems (BSS) are the components that a
+telecommunications service provider (or telco) uses to run its business
+operations towards customers.</p>
+<p>Together with operations support systems (OSS), they are used to support
+various end-to-end telecommunication services (e.g., telephone
+services). BSS and OSS have their own data and service responsibilities.
+The two systems together are often abbreviated OSS/BSS, BSS/OSS or
+simply B/OSS.</p>
+<p>The acronym BSS is also used in a singular form to refer to all the
+business support systems viewed as a whole system.</p>
+<h2 id="bt-21cn"><a class="header" href="#bt-21cn">BT 21CN</a></h2>
+<p>BT 21st Century Network</p>
+<p>21CN involves a huge overhaul of the existing 20CN network. Over the
+next few years BT will gradually be updating the existing equipment and
+replacing it with a new multi-service network.</p>
+<p>The PSTN (telephone) services will be provided over the same IP network
+as broadband. This will involve replacing telephone switching equipment
+and the adsl broadband DSLAMs with MSANs (Multi-Service Access Nodes)
+which will terminate telephone and broadband connections.<br />
+Note: Plans to also move the telephone network over to IP has been
+temporary been abandoned by BT.</p>
+<p>As well as faster speeds the new equipment will also allow BT more
+configuration options and allow them to offer products with QoS (Quality
+of Service) availability.</p>
+<p><img src="./images/B/15007857.png?width=485" alt="" /></p>
+<p><img src="./images/B/15007863.png?width=480" alt="" /></p>
+<h2 id="btnup"><a class="header" href="#btnup">BTNUP</a></h2>
+<p>See IUP</p>
+<h2 id="bts"><a class="header" href="#bts">BTS</a></h2>
+<p>Base Transceiver Station</p>
+<p>A base transceiver station (BTS) is a piece of equipment that
+facilitates wireless communication between user equipment (UE) and a
+network. UEs are devices like mobile phones (handsets), WLL phones,
+computers with wireless Internet connectivity. The network can be that
+of any of the wireless communication technologies like GSM, CDMA,
+wireless local loop, Wi-Fi, WiMAX or other wide area network (WAN)
+technology.</p>
+<p>BTS is also referred to as the node B (in 3G Networks) or, simply, the
+Base Station (BS). For discussion of the LTE standard the abbreviation
+eNB for evolved node B is widely used</p>
+<h2 id="bug"><a class="header" href="#bug">bug</a></h2>
+<p>a coding error in a computer program.</p>
+<h2 id="build"><a class="header" href="#build">Build</a></h2>
+<p>The process of executing a software build, which is normally largely
+automated. Also refers to the resulting output, which is a built version
+of a system, ready for testing.</p>
+<h2 id="build-environment"><a class="header" href="#build-environment">Build Environment</a></h2>
+<p>A <em>development environment</em> that is isolated and dedicated to the create
+of <em>builds</em>. Normally one or more dedicate <em>build machines</em>.</p>
+<h2 id="build-machine"><a class="header" href="#build-machine">Build Machine</a></h2>
+<p>A computer dedicated to the create of software <em>builds</em>.</p>
+<h2 id="build-tool"><a class="header" href="#build-tool">build tool</a></h2>
+<p>a programming utility that is used when building a new version of a
+program.</p>
+<h2 id="burndown-chart"><a class="header" href="#burndown-chart">Burndown Chart</a></h2>
+<p>Burndown charts and burnup charts track the amount of output (in terms
+of hours, story points, or backlog items) a team has completed across an
+iteration or a project.<br />
+<img src="./images/B/15007869.png?width=480" alt="" /></p>
+<h2 id="burst"><a class="header" href="#burst">Burst</a></h2>
+<p>In telecommunication, a burst transmission or data burst is the
+broadcast of a relatively high-bandwidth transmission over a short
+period.</p>
+<h2 id="business-agility-ownership"><a class="header" href="#business-agility-ownership">Business Agility Ownership</a></h2>
+<p>Business agility is the ability of an organization to sense changes
+internally or externally and respond accordingly in order to deliver
+value to its customers.</p>
+<h2 id="business-requirement"><a class="header" href="#business-requirement">Business Requirement</a></h2>
+<p>High level objectives of the organization or customer requesting a
+system or product. Also known as the <em>Why Requirements</em>.</p>
+<h2 id="business-schedule"><a class="header" href="#business-schedule">Business Schedule</a></h2>
+<p>High level project schedule containing top level milestones and their
+associated business goals for the entire project. A business schedule
+often defines a set of top-down schedule constraints that will be
+managed to. Compare to <em>detailed schedule</em>.</p>
+<h2 id="byod"><a class="header" href="#byod">BYOD</a></h2>
+<p>Bring your own device</p>
+<p>Bring your own device (BYOD)---also called bring your own technology
+(BYOT), bring your own phone (BYOP), and bring your own personal
+computer (BYOPC)---refers to the policy of permitting employees to bring
+personally owned devices (laptops, tablets, and smart phones) to their
+workplace, and to use those devices to access privileged company
+information and applications. The phenomenon is commonly referred to as
+IT consumerization.</p>
+<p>BYOD is making significant inroads in the business world, with about 75%
+of employees in high growth markets such as Brazil and Russia and 44% in
+developed markets already using their own technology at work. Surveys
+have indicated that businesses are unable to stop employees from
+bringing personal devices into the workplace. Research is divided on
+benefits. One survey shows around 95% of employees stating they use at
+least one personal device for work. a food manufacturer employing an
+accountancy firm to audit their finances).<br />
+A business re-sells goods and services produced by others (e.g. a
+retailer buying the end product from the food manufacturer).<br />
+B2B is often contrasted with business-to-consumer (B2C). In B2B
+commerce, it is often the case that the parties to the relationship have
+comparable negotiating power, and even when they do not, each party
+typically involves professional staff and legal counsel in the
+negotiation of terms, whereas B2C is shaped to a far greater degree by
+economic implications of information asymmetry. However, within a B2B
+context, large companies may have many commercial, resource and
+information advantages over smaller businesses.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="#aa.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="c.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="#aa.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="c.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
