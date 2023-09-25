@@ -1,0 +1,20 @@
+[book]
+authors = ["Mark Bacon"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Glossary"
+
+[preprocessor.plantuml]
+plantuml-cmd = "plantuml"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
+[output.html.search]
+search = true
+
+[output.pdf]
