@@ -1412,6 +1412,13 @@ decoder is 1.2.0.
 Xiph.Org now considers Speex obsolete; its successor is the more modern
 Opus codec, which surpasses its performance in all areas.
 
+## SPI
+
+Serial Peripheral Interface
+
+
+
+
 ## Spiral Lifecycle
 
 A set of mini-projects cumulating in final delivery. Each mini-project

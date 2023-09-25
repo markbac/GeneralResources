@@ -1365,6 +1365,39 @@ validation service for CSS documents.
 In addition to HTML, other markup languages support the use of CSS,
 including XHTML, plain XML, SVG, and XUL
 
+## CUE 
+
+Configure Unify Execute
+
+CUE is an open-source data validation language and inference engine with its roots in logic programming. Although the language is not a general-purpose programming language, it has many applications, such as data validation, data templating, configuration, querying, code generation and even scripting. The inference engine can be used to validate data in code or to include it as part of a code generation pipeline.
+
+A key thing that sets CUE apart from its peer languages is that it merges types and values into a single concept. Whereas in most languages types and values are strictly distinct, CUE orders them in a single hierarchy (a lattice, to be precise). This is a very powerful concept that allows CUE to do many fancy things. It also simplifies matters. For instance, there is no need for generics and enums, sum types and null coalescing are all the same thing.
+
+``` cue
+#Spec: {
+  kind: string
+
+  name: {
+    first:   !=""  // must be specified and non-empty
+    middle?: !=""  // optional, but must be non-empty when specified
+    last:    !=""
+  }
+
+  // The minimum must be strictly smaller than the maximum and vice versa.
+  minimum?: int & <maximum
+  maximum?: int & >minimum
+}
+
+// A spec is of type #Spec
+spec: #Spec
+spec: {
+  knid: "Homo Sapiens" // error, misspelled field
+
+  name: first: "Jane"
+  name: last:  "Doe"
+}
+```
+
 ## Customer Development
 
 Customer development is a four-step framework that provides a way to use
