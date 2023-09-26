@@ -1,0 +1,1013 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>p - Glossary</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="a.html"><strong aria-hidden="true">1.</strong> A</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="#aa.html"><strong aria-hidden="true">1.1.</strong> AA</a></li></ol></li><li class="chapter-item expanded "><a href="b.html"><strong aria-hidden="true">2.</strong> b</a></li><li class="chapter-item expanded "><a href="c.html"><strong aria-hidden="true">3.</strong> c</a></li><li class="chapter-item expanded "><a href="d.html"><strong aria-hidden="true">4.</strong> d</a></li><li class="chapter-item expanded "><a href="e.html"><strong aria-hidden="true">5.</strong> e</a></li><li class="chapter-item expanded "><a href="f.html"><strong aria-hidden="true">6.</strong> f</a></li><li class="chapter-item expanded "><a href="g.html"><strong aria-hidden="true">7.</strong> g</a></li><li class="chapter-item expanded "><a href="h.html"><strong aria-hidden="true">8.</strong> h</a></li><li class="chapter-item expanded "><a href="i.html"><strong aria-hidden="true">9.</strong> i</a></li><li class="chapter-item expanded "><a href="j.html"><strong aria-hidden="true">10.</strong> j</a></li><li class="chapter-item expanded "><a href="k.html"><strong aria-hidden="true">11.</strong> k</a></li><li class="chapter-item expanded "><a href="l.html"><strong aria-hidden="true">12.</strong> l</a></li><li class="chapter-item expanded "><a href="m.html"><strong aria-hidden="true">13.</strong> m</a></li><li class="chapter-item expanded "><a href="n.html"><strong aria-hidden="true">14.</strong> n</a></li><li class="chapter-item expanded "><a href="o.html"><strong aria-hidden="true">15.</strong> o</a></li><li class="chapter-item expanded "><a href="p.html" class="active"><strong aria-hidden="true">16.</strong> p</a></li><li class="chapter-item expanded "><a href="q.html"><strong aria-hidden="true">17.</strong> q</a></li><li class="chapter-item expanded "><a href="r.html"><strong aria-hidden="true">18.</strong> r</a></li><li class="chapter-item expanded "><a href="s.html"><strong aria-hidden="true">19.</strong> s</a></li><li class="chapter-item expanded "><a href="t.html"><strong aria-hidden="true">20.</strong> t</a></li><li class="chapter-item expanded "><a href="u.html"><strong aria-hidden="true">21.</strong> u</a></li><li class="chapter-item expanded "><a href="v.html"><strong aria-hidden="true">22.</strong> v</a></li><li class="chapter-item expanded "><a href="w.html"><strong aria-hidden="true">23.</strong> w</a></li><li class="chapter-item expanded "><a href="x.html"><strong aria-hidden="true">24.</strong> x</a></li><li class="chapter-item expanded "><a href="y.html"><strong aria-hidden="true">25.</strong> y</a></li><li class="chapter-item expanded "><a href="z.html"><strong aria-hidden="true">26.</strong> z</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Glossary</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="p"><a class="header" href="#p">P</a></h1>
+<h2 id="paas"><a class="header" href="#paas">PaaS</a></h2>
+<p>Platform As A Service</p>
+<p>Platform as a Service (PaaS) or Application Platform as a Service
+(aPaaS) or platform-based service is a category of cloud computing
+services that provides a platform allowing customers to develop, run,
+and manage applications without the complexity of building and
+maintaining the infrastructure typically associated with developing and
+launching an app</p>
+<p><img src="./images/P/14909529.png" alt="" /></p>
+<h2 id="packet-sniffing"><a class="header" href="#packet-sniffing">packet sniffing</a></h2>
+<p>A packet analyzer (also known as a packet sniffer) is a computer program
+or piece of computer hardware (such as a packet capture appliance) that
+can intercept and log traffic that passes over a digital network or part
+of a network. Packet capture is the process of intercepting and logging
+traffic. As data streams flow across the network, the sniffer captures
+each packet and, if needed, decodes the packet's raw data, showing the
+values of various fields in the packet, and analyzes its content
+according to the appropriate RFC or other specifications.</p>
+<p>A packet analyzer used for intercepting traffic on wireless networks is
+known as a wireless analyzer or WiFi analyzer. A packet analyzer can
+also be referred to as a network analyzer or protocol analyzer though
+these terms also have other meanings.</p>
+<p>Capabilities<br />
+On wired shared medias networks, such as Ethernet, Token Ring, and FDDI
+networks, depending on the network structure (hub or switch), it may be
+possible to capture all traffic on the network from a single machine on
+the network. On modern networks, traffic can be captured using a network
+switch with a so-called monitoring port that mirrors all packets that
+pass through designated ports of the switch. A network tap is an even
+more reliable solution than to use a monitoring port, since taps are
+less likely to drop packets during high traffic load.</p>
+<p>On wireless LANs, traffic can be captured on one channel at a time, or
+by using multiple adapters, on several channels simultaneously.</p>
+<p>On wired broadcast and wireless LANs, to capture unicast traffic between
+other machines, the network adapter capturing the traffic must be in
+promiscuous mode. On wireless LANs, even if the adapter is in
+promiscuous mode, packets not for the service set the adapter is
+configured for are usually ignored. To see those packets, the adapter
+must be in monitor mode. No special provisions are required to capture
+multicast traffic to a multicast group the packet analyzer is already
+monitoring, or broadcast traffic.</p>
+<p>When traffic is captured, either the entire contents of packets are
+recorded, or just the headers are recorded. Recording just headers
+reduces storage requirements, and avoids some legal issues, yet often
+provides sufficient information to diagnose problems.</p>
+<p>Captured information is decoded from raw digital form into a
+human-readable format that lets users easily review exchanged
+information. Protocol analyzers vary in their abilities to display and
+analyze data.</p>
+<p>Some protocol analyzers can also generate traffic and thus act as the
+reference device. These can act as protocol testers. Such testers
+generate protocol-correct traffic for functional testing, and may also
+have the ability to deliberately introduce errors to test the DUT's
+ability to handle errors.</p>
+<p>Protocol analyzers can also be hardware-based, either in probe format
+or, as is increasingly common, combined with a disk array. These devices
+record packets (or a slice of the packet) to a disk array. This allows
+historical forensic analysis of packets without users having to recreate
+any fault.</p>
+<h2 id="packet-switched"><a class="header" href="#packet-switched">Packet Switched</a></h2>
+<p>Packet switching is a method of grouping data which is transmitted over
+a digital network into packets which are made of a header and a payload.
+Data in the header is used by networking hardware to direct the packet
+to its destination where the payload is extracted and used by
+application software. Packet switching is the primary basis for data
+communications in computer networks worldwide.</p>
+<p><img src="./images/P/15008750.png?width=480" alt="" /></p>
+<h2 id="paf"><a class="header" href="#paf">PAF</a></h2>
+<p>Postal Address File</p>
+<p>Royal Mail Postal Address File data</p>
+<h2 id="pair-programming"><a class="header" href="#pair-programming">Pair Programming</a></h2>
+<p>Pair programming consists of two programmers sharing a single
+workstation (one screen, keyboard and mouse among the pair).</p>
+<h2 id="pap"><a class="header" href="#pap">PAP</a></h2>
+<p>Password Authentication Protocol</p>
+<p>Password Authentication Protocol (PAP) is a password-based
+authentication protocol used by Point to Point Protocol (PPP) to
+validate users. Almost all network operating system remote servers
+support PAP.</p>
+<p>PAP is considered a weak authentication scheme (weak schemes are simple
+and have lighter computational overhead but are much more vulnerable to
+attack; while weak schemes may have limited application in some
+constrained environments, they are avoided in general). Among PAP's
+deficiencies is the fact that it transmits unencrypted passwords over
+the network. PAP is therefore used only as a last resort when the remote
+server does not support a stronger scheme such as CHAP or EAP</p>
+<p><img src="./images/P/15008758.png?width=480" alt="" /></p>
+<h2 id="parametric-estimation"><a class="header" href="#parametric-estimation">Parametric Estimation</a></h2>
+<p>Estimation using an algorithmic model, normally as part of a software
+tool. Models work by taking input factors and calculating outputs with
+algorithms based on historical data.</p>
+<h2 id="pascal"><a class="header" href="#pascal">Pascal</a></h2>
+<p>Pascal is an imperative and procedural programming language, which
+Niklaus Wirth designed in 1968--69 and published in 1970, as a small,
+efficient language intended to encourage good programming practices
+using structured programming and data structuring. It is named in honor
+of the French mathematician, philosopher and physicist Blaise Pascal.</p>
+<p>Pascal was developed on the pattern of the ALGOL 60 language. Wirth had
+already developed several improvements to this language as part of the
+ALGOL X proposals, but these were not accepted and Pascal was developed
+separately and released in 1970. A derivative known as Object Pascal
+designed for object-oriented programming was developed in 1985; this was
+used by Apple Computer and Borland in the late 1980s and later developed
+into Delphi on the Microsoft Windows platform. Extensions to the Pascal
+concepts led to the Pascal-like languages Modula-2 and Oberon</p>
+<h2 id="pattern"><a class="header" href="#pattern">Pattern</a></h2>
+<p>CxPattern</p>
+<p>CxOne pattern material type. A predefined model or template used to
+create an artifact or accomplish a goal. See <em>CxOneOverview</em> for
+description.</p>
+<h2 id="pcm"><a class="header" href="#pcm">PCM</a></h2>
+<p>Pulse-code modulation</p>
+<p>Pulse-code modulation (PCM) is a method used to digitally represent
+sampled analog signals. It is the standard form of digital audio in
+computers, compact discs, digital telephony and other digital audio
+applications. In a PCM stream, the amplitude of the analog signal is
+sampled regularly at uniform intervals, and each sample is quantized to
+the nearest value within a range of digital steps.</p>
+<p>Linear pulse-code modulation (LPCM) is a specific type of PCM where the
+quantization levels are linearly uniform. This is in contrast to PCM
+encodings where quantization levels vary as a function of amplitude (as
+with the A-law algorithm or the μ-law algorithm). Though PCM is a more
+general term, it is often used to describe data encoded as LPCM.</p>
+<p>A PCM stream has two basic properties that determine the stream's
+fidelity to the original analog signal: the sampling rate, which is the
+number of times per second that samples are taken; and the bit depth,
+which determines the number of possible digital values that can be used
+to represent each sample.</p>
+<h2 id="pcp"><a class="header" href="#pcp">PCP</a></h2>
+<p>Primary Connection Point</p>
+<p>Part of the line plant, in the form of a metal cabinet at the roadside,
+that enables flexibility between the main cables from the exchange and
+the smaller cables to individual streets or premises, also known as a
+Cabinet, or Cab&quot; &quot;Primary Cross-connection Point - this is the local
+street cabinet in which cables extending out to local distribution
+points are aggregated and connected to larger copper and fibre optic
+cables to move the voice and data signals to and from the local exchange</p>
+<p><img src="./images/P/15008764.png?width=488" alt="" /></p>
+<h2 id="pcrf"><a class="header" href="#pcrf">PCRF</a></h2>
+<p>Policy and Charging Rules Function</p>
+<p>Policy and Charging Rules Function (PCRF) is the software node
+designated in real-time to determine policy rules in a multimedia
+network. As a policy tool, the PCRF plays a central role in
+next-generation networks. Unlike earlier policy engines that were added
+onto an existing network to enforce policy, the PCRF is a software
+component that operates at the network core and accesses subscriber
+databases and other specialized functions, such as a charging system, in
+a centralized manner. Because it operates in real time, the PCRF has an
+increased strategic significance and broader potential role than
+traditional policy engines. This has led to a proliferation of PCRF
+products since 2008.</p>
+<p>The PCRF is the part of the network architecture that aggregates
+information to and from the network, operational support systems, and
+other sources (such as portals) in real time, supporting the creation of
+rules and then automatically making policy decisions for each subscriber
+active on the network. Such a network might offer multiple services,
+quality of service (QoS) levels, and charging rules. PCRF can provide a
+network agnostic solution (wire line and wireless) and can also enable
+multi-dimensional approach which helps in creating a lucrative and
+innovative platform for operators. PCRF can also be integrated with
+different platforms like billing, rating, charging, and subscriber
+database or can also be deployed as a standalone entity.</p>
+<p>PCRF plays a key role in VoLTE as a mediator of network resources for
+the IP Multimedia Systems network for establishing the calls and
+allocating the requested bandwidth to the call bearer with configured
+attributes.</p>
+<h2 id="pcs"><a class="header" href="#pcs">PCS</a></h2>
+<p>Physical Coding Sub-layer</p>
+<p>The Physical Coding Sublayer (PCS) is a networking protocol sublayer in
+the Fast Ethernet, Gigabit Ethernet, and 10 Gigabit Ethernet standards.
+It resides at the top of the physical layer (PHY), and provides an
+interface between the Physical Medium Attachment (PMA) sublayer and the
+Media Independent Interface (MII). It is responsible for data encoding
+and decoding, scrambling and descrambling, alignment marker insertion
+and removal, block and symbol redistribution, and lane block
+synchronization and deskew.</p>
+<h2 id="pdcp"><a class="header" href="#pdcp">PDCP</a></h2>
+<p>Packet Data Convergence Protocol</p>
+<p>PDCP is an abbreviation for Packet Data Convergence Protocol. This
+protocol is specified by 3GPP in TS 25.323 for UMTS, TS 36.323 for LTE
+and TS 38.323 for 5G New Radio [NR). The PDCP is located in the Radio
+Protocol Stack in the UMTS/LTE/5G Air interface on top of the RLC layer.</p>
+<p>PDCP provides its services to the RRC and user plane upper layers,
+e.g. IP at the UE or to the relay at the base station.</p>
+<h2 id="pdh"><a class="header" href="#pdh">PDH</a></h2>
+<p>plesiochronous digital hierarchy</p>
+<p>The plesiochronous digital hierarchy (PDH) is a technology used in
+telecommunications networks to transport large quantities of data over
+digital transport equipment such as fibre optic and microwave radio
+systems. The term plesiochronous is derived from Greek plēsios, meaning
+near, and chronos, time, and refers to the fact that PDH networks run in
+a state where different parts of the network are nearly, but not quite
+perfectly, synchronized.</p>
+<p>Backbone transport networks replaced PDH networks with synchronous
+digital hierarchy (SDH) or synchronous optical networking (SONET)
+equipment over the ten years ending around the turn of the millennium
+(2000), whose floating payloads relaxed the more stringent timing
+requirements of PDH network technology.</p>
+<p>PDH allows transmission of data streams that are nominally running at
+the same rate, but allowing some variation on the speed around a nominal
+rate. By analogy, any two watches are nominally running at the same
+rate, clocking up 60 seconds every minute. However, there is no link
+between watches to guarantee that they run at exactly the same rate, and
+it is highly likely that one is running slightly faster than the other.</p>
+<h2 id="pdu"><a class="header" href="#pdu">PDU</a></h2>
+<p>Protocol Data Unit</p>
+<p>In telecommunications, a protocol data unit (PDU) is information that is
+transmitted as a single unit among peer entities of a computer network.
+A PDU may contain user data or control information and network
+addressing. In layered architectures of communication protocol stacks,
+each layer implements protocols tailored to the specific type or mode of
+data exchange, or network function of the layer. For example, the
+Transmission Control Protocol (TCP) implements a connection-oriented
+transfer mode, and the PDU of this protocol is called a segment, while
+the User Datagram Protocol (UDP) uses datagrams as protocol data unit
+for connection-less transfer. A layer lower in the Internet Protocol
+Suite, at the Internet Layer, the PDU is called a packet, irrespective
+of its payload type.<br />
+<img src="./images/P/15008770.png?width=480" alt="" /></p>
+<h2 id="peap"><a class="header" href="#peap">PEAP</a></h2>
+<p>Protected Extensible Authentication Protocol</p>
+<p>The Protected Extensible Authentication Protocol, also known as
+Protected EAP or simply PEAP, is a protocol that encapsulates the
+Extensible Authentication Protocol (EAP) within an encrypted and
+authenticated Transport Layer Security (TLS) tunnel. The purpose was to
+correct deficiencies in EAP; EAP assumed a protected communication
+channel, such as that provided by physical security, so facilities for
+protection of the EAP conversation were not provided.</p>
+<p>PEAP was jointly developed by Cisco Systems, Microsoft, and RSA
+Security. PEAPv0 was the version included with Microsoft Windows XP and
+was nominally defined in draft-kamath-pppext-peapv0-00. PEAPv1 and
+PEAPv2 were defined in different versions of
+draft-josefsson-pppext-eap-tls-eap. PEAPv1 was defined in
+draft-josefsson-pppext-eap-tls-eap-00 through
+draft-josefsson-pppext-eap-tls-eap-05, and PEAPv2 was defined in
+versions beginning with draft-josefsson-pppext-eap-tls-eap-06.</p>
+<p>The protocol only specifies chaining multiple EAP mechanisms and not any
+specific method. However, use of the EAP-MSCHAPv2 and EAP-GTC methods
+are the most commonly supported<br />
+<img src="./images/P/15008776.png?width=602" alt="" /></p>
+<h2 id="peer-review"><a class="header" href="#peer-review">peer review</a></h2>
+<p>a process used for checking the work performed by one's equals (peers)
+to ensure it meets specific criteria.</p>
+<h2 id="pen-testing"><a class="header" href="#pen-testing">Pen testing</a></h2>
+<p>Penetration Testing</p>
+<p>A penetration test, colloquially known as a pen test, is an authorized
+simulated attack on a computer system, performed to evaluate the
+security of the system. The test is performed to identify both
+weaknesses (also referred to as vulnerabilities), including the
+potential for unauthorized parties to gain access to the system's
+features and data, as well as strengths, enabling a full risk assessment
+to be completed.</p>
+<p>The process typically identifies the target systems and a particular
+goal---then reviews available information and undertakes various means
+to attain the goal. A penetration test target may be a white box (which
+provides background and system information) or black box (which provides
+only basic or no information except the company name). A penetration
+test can help determine whether a system is vulnerable to attack if the
+defenses were sufficient, and which defenses (if any) the test defeated.</p>
+<p>Security issues that the penetration test uncovers should be reported to
+the system owner. Penetration test reports may also assess potential
+impacts to the organization and suggest countermeasures to reduce risk.</p>
+<p>The goals of a penetration test vary depending on the type of approved
+activity for any given engagement with the primary goal focused on
+finding vulnerabilities that could be exploited by a nefarious actor and
+informing the client of those vulnerabilities along with recommended
+mitigation strategies.</p>
+<p>Penetration tests are a component of a full security audit. For example,
+the Payment Card Industry Data Security Standard requires penetration
+testing on a regular schedule, and after system changes.</p>
+<p>Flaw hypothesis methodology is a systems analysis and penetration
+prediction technique where a list of hypothesized flaws in a software
+system are compiled through analysis of the specifications and
+documentation for the system. The list of hypothesized flaws is then
+prioritized on the basis of the estimated probability that a flaw
+actually exists, and on the ease of exploiting it to the extent of
+control or compromise. The prioritized list is used to direct the actual
+testing of the system.</p>
+<h2 id="per"><a class="header" href="#per">PER</a></h2>
+<p>Packed Encoding Rules</p>
+<p>Packed Encoding Rules (PER) are ASN.1 encoding rules for producing a
+compact transfer syntax for data structures described in ASN.1, defined
+in 1994.</p>
+<p>This Recommendation or International Standard describes a set of
+encoding rules that can be applied to values of all ASN.1 types to
+achieve a much more compact representation than that achieved by the BER
+and its derivatives (described in ITU-T Rec. X.690 ISO/IEC 8825-1).</p>
+<p>It uses additional information, such as the lower and upper limits for
+numeric values, from the ASN.1 specification to represent the data units
+using the minimum number of bits. The compactness requires that the
+decoder knows the complete abstract syntax of the data structure to be
+decoded, however.</p>
+<p>There are two variations of packed encoding rules: unaligned and
+aligned. With the unaligned encoding, the bits are packed with no regard
+for octet (byte) boundaries. With aligned encoding, certain types of
+data structures are aligned on octet boundaries, meaning there may be
+some number of wasted padding bits. Unaligned encoding uses the least
+number of bits, but presumably at some cost in processing time.</p>
+<h2 id="performance"><a class="header" href="#performance">Performance</a></h2>
+<p>May be used to describe the combination
+of <em>feature</em> and <em>quality</em> a <em>system</em> has (or that
+a <em>project</em> delivers).<br />
+Also used in relation to the level of support for various non-functional
+system requirements such as speed, resource usage, reliability,
+availability, etc.</p>
+<h2 id="perl"><a class="header" href="#perl">Perl</a></h2>
+<p>Perl is a family of two high-level, general-purpose, interpreted,
+dynamic programming languages, Perl 5 and Perl 6.</p>
+<p>Though Perl is not officially an acronym, there are various backronyms
+in use, including &quot;Practical Extraction and Reporting Language&quot;. Perl
+was originally developed by Larry Wall in 1987 as a general-purpose Unix
+scripting language to make report processing easier. Since then, it has
+undergone many changes and revisions. Perl 6, which began as a redesign
+of Perl 5 in 2000, eventually evolved into a separate language. Both
+languages continue to be developed independently by different
+development teams and liberally borrow ideas from one another.</p>
+<p>The Perl languages borrow features from other programming languages
+including C, shell script (sh), AWK, and sed; Wall also alludes to Basic
+and Lisp in the introduction to Learning Perl (Schwartz &amp; Christiansen)
+and so on. They provide text processing facilities without the arbitrary
+data-length limits of many contemporary Unix commandline tools,
+facilitating manipulation of text files. Perl 5 gained widespread
+popularity in the late 1990s as a CGI scripting language, in part due to
+its then unsurpassed regular expression and string parsing abilities.</p>
+<pre><code class="language-{.perl}">## !/usr/bin/perl
+use warnings;
+print(&quot;Hello, World!\n&quot;);
+</code></pre>
+<h2 id="personas"><a class="header" href="#personas">Personas</a></h2>
+<p>Personas are synthetic biographies of fictitious users of the future
+product.</p>
+<h2 id="perspective"><a class="header" href="#perspective">Perspective</a></h2>
+<p>During an <em>inspection</em>, an assigned focus used to increase the
+likelihood that each inspector will find unique issues or to focus
+attention an particular aspects of an artifact.</p>
+<h2 id="pert-chart"><a class="header" href="#pert-chart">PERT chart</a></h2>
+<p>The program (or project) evaluation and review technique, commonly
+abbreviated PERT, is a statistical tool, used in project management,
+which was designed to analyze and represent the tasks involved in
+completing a given project.</p>
+<p>First developed by the United States Navy in the 1950s, it is commonly
+used in conjunction with the critical path method (CPM).</p>
+<p><img src="./images/P/15008782.png?width=309" alt="" /></p>
+<h2 id="pgp"><a class="header" href="#pgp">PGP</a></h2>
+<p>Pretty Good Privacy</p>
+<p>Pretty Good Privacy (PGP) is an encryption program that provides
+cryptographic privacy and authentication for data communication. PGP is
+used for signing, encrypting, and decrypting texts, e-mails, files,
+directories, and whole disk partitions and to increase the security of
+e-mail communications. Phil Zimmermann developed PGP in 1991.</p>
+<p>PGP and similar software follow the OpenPGP standard (RFC
+4880) for encrypting and decrypting data.</p>
+<p><img src="./images/P/15008788.png?width=480" alt="" /></p>
+<h2 id="pgw"><a class="header" href="#pgw">PGW</a></h2>
+<p>Packet Data Network Gateway</p>
+<p>The PDN Gateway provides connectivity from the UE to external packet
+data networks by being the point of exit and entry of traffic for the
+UE. A UE may have simultaneous connectivity with more than one PGW for
+accessing multiple PDNs. The PGW performs policy enforcement, packet
+filtering for each user, charging support, lawful interception and
+packet screening. Another key role of the PGW is to act as the anchor
+for mobility between 3GPP and non-3GPP technologies such as WiMAX and
+3GPP2 (CDMA 1X and EvDO).</p>
+<p><img src="./images/P/14876769.png?width=170" alt="" /></p>
+<h2 id="phase"><a class="header" href="#phase">Phase</a></h2>
+<p>A translation of a group of <em>activities</em> onto a portion of
+a <em>lifecycle</em> or a period of time defined by a <em>schedule</em>. Often used in
+conjunction with denoting a major transition in project activities or
+lifecycle processes.<br />
+Sometimes used as a synonym for <em>stage</em>. Sometimes used (incorrectly) as
+a synonym for <em>milestone</em>.</p>
+<h2 id="phased-estimation"><a class="header" href="#phased-estimation">Phased Estimation</a></h2>
+<p>The practice of creating <em>estimates</em> throughout a project's lifecycle,
+utilizing groups of estimation techniques optimized for each lifecycle
+phase.</p>
+<h2 id="php"><a class="header" href="#php">PHP</a></h2>
+<p>PHP: Hypertext Preprocessor (or simply PHP) is a server-side scripting
+language designed for Web development, but also used as a
+general-purpose programming language. It was originally created by
+Rasmus Lerdorf in 1994, the PHP reference implementation is now produced
+by The PHP Group.[6] PHP originally stood for Personal Home Page, but
+it now stands for the recursive acronym PHP: Hypertext Preprocessor.</p>
+<p>PHP code may be embedded into HTML code, or it can be used in
+combination with various web template systems, web content management
+systems, and web frameworks. PHP code is usually processed by a PHP
+interpreter implemented as a module in the web server or as a Common
+Gateway Interface (CGI) executable. The web server combines the results
+of the interpreted and executed PHP code, which may be any type of data,
+including images, with the generated web page. PHP code may also be
+executed with a command-line interface (CLI) and can be used to
+implement standalone graphical applications.</p>
+<p>The standard PHP interpreter, powered by the Zend Engine, is free
+software released under the PHP License. PHP has been widely ported and
+can be deployed on most web servers on almost every operating system and
+platform, free of charge.</p>
+<p>The PHP language evolved without a written formal specification or
+standard until 2014, with the original implementation acting as the de
+facto standard which other implementations aimed to follow. Since 2014
+work has gone on to create a formal PHP specification.</p>
+<pre><code class="language-{.html}">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;PHP - Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;h1&gt;&lt;?php echo 'Hello, World!'; ?&gt;&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="planning-and-tracking-lead"><a class="header" href="#planning-and-tracking-lead">Planning and Tracking Lead</a></h2>
+<p>PTL</p>
+<p>Directs overall flow of technical work on the project. Directly
+responsible for project planning and overseeing the execution of work
+breakdown, estimation, scheduling, and tracking.</p>
+<h2 id="planning-poker"><a class="header" href="#planning-poker">Planning Poker</a></h2>
+<p>An approach to estimation used by Agile teams. Each team member &quot;plays&quot;
+a card bearing a numerical value corresponding to a point estimation for
+a user story.</p>
+<h2 id="pll"><a class="header" href="#pll">PLL</a></h2>
+<p>Phase Locked Loop</p>
+<p>A phase-locked loop or phase lock loop abbreviated as PLL is a control
+system that generates an output signal whose phase is related to the
+phase of an input signal. There are several different types; the
+simplest is an electronic circuit consisting of a variable frequency
+oscillator and a phase detector in a feedback loop. The oscillator
+generates a periodic signal, and the phase detector compares the phase
+of that signal with the phase of the input periodic signal, adjusting
+the oscillator to keep the phases matched.</p>
+<p>Keeping the input and output phase in lock step also implies keeping the
+input and output frequencies the same. Consequently, in addition to
+synchronizing signals, a phase-locked loop can track an input frequency,
+or it can generate a frequency that is a multiple of the input
+frequency. These properties are used for computer clock synchronization,
+demodulation, and frequency synthesis.</p>
+<p>Phase-locked loops are widely employed in radio, telecommunications,
+computers and other electronic applications. They can be used to
+demodulate a signal, recover a signal from a noisy communication
+channel, generate a stable frequency at multiples of an input frequency
+(frequency synthesis), or distribute precisely timed clock pulses in
+digital logic circuits such as microprocessors. Since a single
+integrated circuit can provide a complete phase-locked-loop building
+block, the technique is widely used in modern electronic devices, with
+output frequencies from a fraction of a hertz up to many gigahertz.</p>
+<h2 id="pnt"><a class="header" href="#pnt">PNT</a></h2>
+<p>Pointer data</p>
+<p>OSNI Pointer data</p>
+<h2 id="points"><a class="header" href="#points">Points</a></h2>
+<p>(estimates in) Agile teams generally prefer to express estimates in
+units other than the time-honored &quot;man-hours.&quot; Possibly the most
+widespread unit is &quot;story points.&quot;</p>
+<h2 id="polymorphism"><a class="header" href="#polymorphism">polymorphism</a></h2>
+<p>from the Greek meaning &quot;having multiple forms,&quot; the characteristic of
+being able to assign a different meaning or usage to something in
+different contexts - specifically, to allow an entity such as a
+variable, a function, or an object to have more than one form.</p>
+<h2 id="pop"><a class="header" href="#pop">POP</a></h2>
+<p>Point Of Presence</p>
+<p>A point of presence (PoP) is an artificial demarcation point or
+interface point between communicating entities.<br />
+<img src="./images/P/15008794.png?width=485" alt="" /></p>
+<h2 id="portability"><a class="header" href="#portability">portability</a></h2>
+<p>a characteristic attributed to a computer program if it can be used in
+an operating systems other than the one in which it was created without
+requiring major rework.</p>
+<h2 id="posix"><a class="header" href="#posix">POSIX</a></h2>
+<p>The Portable Operating System Interface (POSIX) is a family of standards
+specified by the IEEE Computer Society for maintaining compatibility
+between operating systems. POSIX defines the application programming
+interface (API), along with command line shells and utility
+interfaces, for software compatibility with variants of Unix and other
+operating systems.</p>
+<h2 id="postmortem"><a class="header" href="#postmortem">Postmortem</a></h2>
+<p>A phase at the end of a software project during which project team
+members evaluate the project and learn lessons that can be applied to
+the next project. &quot;Postmortem&quot; also refers to the report created during
+the postmortem phase.</p>
+<h2 id="pots"><a class="header" href="#pots">POTS</a></h2>
+<p>Plain Old Telephone Service or<br />
+Plain Ordinary Telephone Service</p>
+<p>POTS is a retronym for voice-grade telephone service employing analog
+signal transmission over copper loops<br />
+See FXO &amp; FXS</p>
+<p><img src="./images/P/15008800.png?width=477" alt="" /></p>
+<h2 id="ppp"><a class="header" href="#ppp">PPP</a></h2>
+<p>Point-to-Point Protocol</p>
+<p>In computer networking, Point-to-Point Protocol (PPP) is a data link
+layer (layer 2) communications protocol used to establish a direct
+connection between two nodes. It connects two routers directly without
+any host or any other networking device in between. It can provide
+connection authentication, transmission encryption,[1] and
+compression.</p>
+<p>PPP is used over many types of physical networks including serial cable,
+phone line, trunk line, cellular telephone, specialized radio links, and
+fiber optic links such as SONET. Internet service providers (ISPs) have
+used PPP for customer dial-up access to the Internet, since IP packets
+cannot be transmitted over a modem line on their own, without some data
+link protocol.</p>
+<p>Two derivatives of PPP, Point-to-Point Protocol over Ethernet (PPPoE)
+and Point-to-Point Protocol over ATM (PPPoA), are used most commonly by
+Internet Service Providers (ISPs) to establish a Digital Subscriber Line
+(DSL) Internet service connection with customers.</p>
+<h2 id="pppoe"><a class="header" href="#pppoe">PPPoE</a></h2>
+<p>PPP over Ethernet</p>
+<p>The Point-to-Point Protocol over Ethernet (PPPoE) is a network protocol
+for encapsulating PPP frames inside Ethernet frames. It appeared in
+1999, in the context of the boom of DSL as the solution for tunneling
+packets over the DSL connection to the ISP's IP network, and from there
+to the rest of the Internet. A 2005 networking book noted that &quot;Most DSL
+providers use PPPoE, which provides authentication, encryption, and
+compression.&quot; Typical use of PPPoE involves leveraging the PPP
+facilities for authenticating the user with a username and password,
+predominately via the PAP protocol and less often via CHAP.</p>
+<h2 id="pptp"><a class="header" href="#pptp">PPTP</a></h2>
+<p>Point-to-Point Tunneling Protocol</p>
+<p>The Point-to-Point Tunneling Protocol (PPTP) is an obsolete method for
+implementing virtual private networks, with many known security issues.
+PPTP uses a TCP control channel and a Generic Routing Encapsulation
+tunnel to encapsulate PPP packets.</p>
+<p>The PPTP specification does not describe encryption or authentication
+features and relies on the Point-to-Point Protocol being tunneled to
+implement security functionality. However, the most common PPTP
+implementation shipping with the Microsoft Windows product families
+implements various levels of authentication and encryption natively as
+standard features of the Windows PPTP stack. The intended use of this
+protocol is to provide security levels and remote access levels
+comparable with typical VPN products.<br />
+<img src="./images/P/15008806.png?width=474" alt="" /></p>
+<h2 id="preemption"><a class="header" href="#preemption">Preemption</a></h2>
+<p>In computing, preemption is the act of temporarily interrupting a task
+being carried out by a computer system, without requiring its
+cooperation, and with the intention of resuming the task at a later
+time. Such changes of the executed task are known as context switches.
+It is normally carried out by a privileged task or part of the system
+known as a preemptive scheduler, which has the power to preempt, or
+interrupt, and later resume, other tasks in the system.</p>
+<h2 id="preview"><a class="header" href="#preview">Preview</a></h2>
+<p>An <em>engineering discussion</em> where materials have been prepared ahead of
+time for review and discussion in a meeting. The goal is to probe
+proposed solution to detect <em>defects</em> and suggest alternatives.<br />
+<em>Previews</em> differ from <em>reviews</em> in that they are solution oriented
+rather than detection oriented.</p>
+<h2 id="prince2"><a class="header" href="#prince2">PRINCE2</a></h2>
+<p>a project management methodology developed by the government of the
+United Kingdom that makes use of the best proven practices from a
+variety of industries and backgrounds.</p>
+<h2 id="process"><a class="header" href="#process">Process</a></h2>
+<p>A standard method for performing an <em>activity</em> or <em>task</em>.<br />
+Processes may or may not be documented; a defined process implies that
+it is documented. Processes are often supported by materials, tools,
+conventions, and other infrastructure. The terms process may also refer
+to the execution of the activities and tasks that make up the process,
+e.g., &quot;the outcome of the build process&quot;.</p>
+<h2 id="process-flow"><a class="header" href="#process-flow">Process Flow</a></h2>
+<p>A process model which defines the materials, structure, techniques,
+actions, events, and other elements necessary to implement a lifecycle,
+workflow, or methodology.</p>
+<h2 id="product-owner"><a class="header" href="#product-owner">Product Owner</a></h2>
+<p>The product owner is a role created by the Scrum Framework responsible
+for making sure the team delivers the desired outcome.</p>
+<h2 id="product-release"><a class="header" href="#product-release">Product Release</a></h2>
+<p>A <em>release</em> that is produced for distribution and/or deployment to end
+users.</p>
+<h2 id="programming-language"><a class="header" href="#programming-language">programming language</a></h2>
+<p>A programming language is a formal language which comprises a set of
+instructions used to produce various kinds of output. Programming
+languages are used to create programs that implement specific
+algorithms.<br />
+<img src="./images/P/15008812.png?width=547" alt="" /></p>
+<p><img src="./images/P/15008818.png?width=558" alt="" /></p>
+<h2 id="programming-paradigm"><a class="header" href="#programming-paradigm">Programming paradigm</a></h2>
+<p>Programming paradigms are a way to classify programming languages based
+on their features. Languages can be classified into multiple paradigms.</p>
+<p>Some paradigms are concerned mainly with implications for the execution
+model of the language, such as allowing side effects, or whether the
+sequence of operations is defined by the execution model. Other
+paradigms are concerned mainly with the way that code is organized, such
+as grouping a code into units along with the state that is modified by
+the code. Yet others are concerned mainly with the style of syntax and
+grammar.</p>
+<p>Common programming paradigms include:</p>
+<ul>
+<li>
+<p>imperative which allows side effects,</p>
+<ul>
+<li>
+<p>object-oriented which groups code together with the state the
+code modifies,</p>
+</li>
+<li>
+<p>procedural which groups code into functions,</p>
+</li>
+</ul>
+</li>
+<li>
+<p>declarative which does not state the order in which operations
+execute,</p>
+<ul>
+<li>
+<p>functional which disallows side effects,</p>
+</li>
+<li>
+<p>logic which has a particular style of execution model coupled to
+a particular style of syntax and grammar, and</p>
+</li>
+</ul>
+</li>
+<li>
+<p>symbolic programming which has a particular style of syntax and
+grammar.</p>
+<p>For example, languages that fall into the imperative paradigm have
+two main features: they state the order in which operations occur,
+with constructs that explicitly control that order, and they allow
+side effects, in which state can be modified at one point in time,
+within one unit of code, and then later read at a different point in
+time inside a different unit of code. The communication between the
+units of code is not explicit. Meanwhile, in object-oriented
+programming, code is organized into objects that contain state that
+is only modified by the code that is part of the object. Most
+object-oriented languages are also imperative languages. In
+contrast, languages that fit the declarative paradigm do not state
+the order in which to execute operations. Instead, they supply a
+number of operations that are available in the system, along with
+the conditions under which each is allowed to execute. The
+implementation of the language's execution model tracks which
+operations are free to execute and chooses the order on its own.
+More at Comparison of multi-paradigm programming languages.</p>
+<p><img src="./images/P/15008824.png?width=278" alt="" /></p>
+</li>
+</ul>
+<h2 id="progressive-elaboration"><a class="header" href="#progressive-elaboration">Progressive Elaboration</a></h2>
+<p>PMBOK term for iteratively defining a project's requirements, moving
+from the general to the specific as the project is underway. Most
+software lifecycles and projects employ some degree of progressive
+elaboration. Relates to <em>project headlights</em> and <em>rolling wave
+planning</em>.</p>
+<h2 id="project"><a class="header" href="#project">Project</a></h2>
+<p>A temporary endeavor undertaken to create a unique product or service.
+Normally used with CxOne to refer to a project creating a
+software <em>system</em>.</p>
+<h2 id="project-build"><a class="header" href="#project-build">Project Build</a></h2>
+<p>PB</p>
+<p><em>Build</em> performed as part of a shared project build process, usually in
+a dedicated <em>build environment</em>. Compare to <em>local build</em>.</p>
+<h2 id="project-business-manager"><a class="header" href="#project-business-manager">Project Business Manager</a></h2>
+<p>PBM</p>
+<p>Responsible for successful business outcome of the project. In charge of
+project staffing, acquiring resources for the project, personnel issues,
+top-level work assignments, and client interaction. Is the top decision
+maker on the project, but normally defers technical decisions to the
+appropriate technical lead.</p>
+<h2 id="project-charter"><a class="header" href="#project-charter">Project Charter</a></h2>
+<p>Used to incept and define a project. Documents the objectives, business
+case, risks and assets, resources, and constraints of a project.</p>
+<h2 id="project-chartering"><a class="header" href="#project-chartering">Project Chartering</a></h2>
+<p>A high-level summary of the project's key success factors displayed on
+one wall of the team room as a flipchart-sized sheet of paper.</p>
+<h2 id="project-estimate"><a class="header" href="#project-estimate">Project Estimate</a></h2>
+<p>An <em>estimate</em> that characterizes work on an entire project or large
+portion of a project. Project estimates are often the result of
+significant effort to predict a large phase of a project, and utilize
+several different techniques. Compare to <em>task estimate</em>.</p>
+<h2 id="project-headlights"><a class="header" href="#project-headlights">Project Headlights</a></h2>
+<p>The concept that there is a sliding window of time that a project's plan
+can be clearly defined with confidence. Beyond this &quot;lighted&quot; area,
+project planning is less precise and entails more uncertainty. Derives
+from the phrase &quot;don't drive beyond your headlights&quot;.</p>
+<h2 id="project-history"><a class="header" href="#project-history">Project History</a></h2>
+<p>Summarizes the significant information and statistics about an entire
+project.</p>
+<h2 id="project-log"><a class="header" href="#project-log">Project Log</a></h2>
+<p>Describes significant information and statistics about each phase of a
+project.</p>
+<h2 id="project-management"><a class="header" href="#project-management">Project Management</a></h2>
+<p>PM</p>
+<p>The act of managing a project, including planning, tracking, control,
+and reporting activities.</p>
+<h2 id="project-management-body-of-knowledge"><a class="header" href="#project-management-body-of-knowledge">Project Management Body of Knowledge</a></h2>
+<p>PMBOK</p>
+<p>PMI developed definition of the essential knowledge related to the
+science and discipline of project management.</p>
+<h2 id="project-management-institute"><a class="header" href="#project-management-institute">Project Management Institute</a></h2>
+<p>PMI</p>
+<p>Professional organization for project managers. Developers of the
+PMBOK.<br />
+<a href="http://www.pmi.org/">www.pmi.org</a></p>
+<h2 id="project-manager"><a class="header" href="#project-manager">Project Manager</a></h2>
+<p>PM</p>
+<p>Often used as synonym for <em>project business manager</em>, especially when
+one person is playing both <em>project business manager</em> and <em>planning and
+tracking lead</em> roles. Also used to refer generically to an individual
+playing a management role on a project.</p>
+<h2 id="project-plan"><a class="header" href="#project-plan">Project Plan</a></h2>
+<p>PP</p>
+<p>The controlling document for a project that defines how the project will
+be executed.</p>
+<h2 id="project-reviewer"><a class="header" href="#project-reviewer">Project Reviewer</a></h2>
+<p>Performs reviews and audits on projects using personnel who are not
+participating on the project. Ensures processes are being followed and
+risks are being identified and managed.</p>
+<h2 id="project-sponsor"><a class="header" href="#project-sponsor">Project Sponsor</a></h2>
+<p>Individual or entity responsible for sponsoring a <em>project</em>. Synonym
+for <em>authority</em> in a <em>project charter</em>. Initiates and staffs a project,
+directly oversees the <em>project business manager</em>. Ensures that the
+project is meeting the technical and business needs of external and
+internal <em>stakeholders</em>.</p>
+<h2 id="pseudocode"><a class="header" href="#pseudocode">pseudocode</a></h2>
+<p>a detailed yet readable description of what a computer program or
+algorithm must do, expressed in a formally-styled natural language
+rather than in a programming language.</p>
+<h2 id="pstn"><a class="header" href="#pstn">PSTN</a></h2>
+<p>Public Switched Telephone Network</p>
+<p>The public switched telephone network (PSTN) is the aggregate of the
+world's circuit-switched telephone networks that are operated by
+national, regional, or local telephony operators, providing
+infrastructure and services for public telecommunication.<br />
+The PSTN consists of telephone lines, fiber optic cables, microwave
+transmission links, cellular networks, communications satellites, and
+undersea telephone cables, all interconnected by switching centers, thus
+allowing most telephones to communicate with each other.<br />
+Originally a network of fixed-line analog telephone systems, the PSTN is
+now almost entirely digital in its core network and includes mobile and
+other networks, as well as fixed telephones<br />
+<img src="./images/P/15008830.png?width=480" alt="" /></p>
+<h2 id="ptp"><a class="header" href="#ptp">PTP</a></h2>
+<p>Precision Time Protocol</p>
+<p>The Precision Time Protocol (PTP) is a protocol used to synchronize
+clocks throughout a computer network. On a local area network, it
+achieves clock accuracy in the sub-microsecond range, making it suitable
+for measurement and control systems.</p>
+<p>PTP was originally defined in the IEEE 1588-2002 standard, officially
+entitled &quot;Standard for a Precision Clock Synchronization Protocol for
+Networked Measurement and Control Systems&quot; and published in 2002. In
+2008, IEEE 1588-2008 was released as a revised standard; also known as
+PTP Version 2, it improves accuracy, precision and robustness but is not
+backward compatible with the original 2002 version.</p>
+<p>&quot;IEEE 1588 is designed to fill a niche not well served by either of the
+two dominant protocols, NTP and GPS. IEEE 1588 is designed for local
+systems requiring accuracies beyond those attainable using NTP. It is
+also designed for applications that cannot bear the cost of a GPS
+receiver at each node, or for which GPS signals are inaccessible.&quot;</p>
+<h2 id="ptt"><a class="header" href="#ptt">PTT</a></h2>
+<p>Push-to-talk</p>
+<p>Push-to-talk (PTT), also known as press-to-transmit, is a method of
+having conversations or talking on half-duplex communication lines,
+including two-way radio, using a momentary button to switch from voice
+reception mode to transmit mode.</p>
+<h2 id="pvc"><a class="header" href="#pvc">PVC</a></h2>
+<p>Permanent Virtual Circuit</p>
+<p>A permanent virtual circuit (PVC) is a virtual circuit established for
+repeated/continuous use between the same DTE. In a PVC, the long-term
+association is identical to the data transfer phase of a virtual call.
+Permanent virtual circuits eliminate the need for repeated call set-up
+and clearing. Frame relay is typically used to provide PVCs.</p>
+<h2 id="pw"><a class="header" href="#pw">PW</a></h2>
+<p>PseudoWire</p>
+<p>A pseudowire (or pseudo-wire) is an emulation of a point-to-point
+connection over a packet-switching network<br />
+<img src="./images/P/15008836.png?width=491" alt="" /></p>
+<h2 id="pwfq"><a class="header" href="#pwfq">PWFQ</a></h2>
+<p>Priority-based Weighted Fair Queueing</p>
+<p>See WFQ</p>
+<h2 id="python-2x--3x"><a class="header" href="#python-2x--3x">Python (2.x &amp; 3.x)</a></h2>
+<p>Python is an interpreted high-level programming
+language for general-purpose programming. Created by Guido van Rossum
+and first released in 1991, Python has a design philosophy that
+emphasizes code readability, notably using significant whitespace. It
+provides constructs that enable clear programming on both small and
+large scales. In July 2018, the creator Van Rossum stepped down as the
+leader in the language community after 30 years.</p>
+<p>Python features a dynamic type system and automatic memory management.
+It supports multiple programming paradigms, including object-oriented,
+imperative, functional and procedural, and has a large and comprehensive
+standard library</p>
+<p>Python 2.0 was released on 16 October 2000 and had many
+major new features, including a cycle-detecting garbage collector and
+support for Unicode. With this release, the development process became
+more transparent and community-backed.</p>
+<p>Python 3.0 (initially called Python 3000 or py3k) was released on 3
+December 2008 after a long testing period. It is a major revision of the
+language that is not completely backward-compatible with previous
+versions. However, many of its major features have been backported to
+the Python 2.6.x and 2.7.x version series, and releases of Python 3
+include the 2to3 utility, which automates the translation of Python 2
+code to Python 3</p>
+<pre><code class="language-{.python}">##  This program prints Hello, world!
+
+print('Hello, world!')
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="o.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="q.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="o.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="q.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="mermaid.min.js"></script>
+        <script src="mermaid-init.js"></script>
+
+
+    </div>
+    </body>
+</html>
