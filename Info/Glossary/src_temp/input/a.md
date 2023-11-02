@@ -182,7 +182,7 @@ premises (downstream) than the reverse (upstream). Providers usually
 market ADSL as a service for consumers for Internet access for primarily
 downloading content from the Internet, but not serving content accessed
 by others.\
-![](./output/A/images/15007760.png?width=480)
+![](./images/15007760.png?width=480)
 
 ## AES
 
@@ -222,7 +222,7 @@ packages, and is the first (and only) publicly accessible cipher
 approved by the National Security Agency (NSA) for top secret
 information when used in an NSA approved cryptographic module
 
-![](./output/A/images/15007768.png)
+![](./images/15007768.png)
 
 ## Agent
 
@@ -321,7 +321,7 @@ instructions can be executed at the same time. All of the CPUs have the
 same user-mode instruction set, so a running job can be rescheduled from
 one CPU to another.
 
-![](./output/A/images/15007774.png?width=393)
+![](./images/15007774.png?width=393)
 
 ## AMR-NB
 
@@ -394,7 +394,7 @@ non-3GPP access networks (such as Wi-Fi). The purpose of the ANDSF is to
 assist the UE to discover the access networks in their vicinity and to
 provide rules (policies) to prioritize and manage connections to these
 networks.\
-![](./output/A/images/15007780.png?width=480)
+![](./images/15007780.png?width=480)
 
 ## ANSI
 
@@ -428,7 +428,7 @@ endpoint destinations. Routers will select the desired path on the basis
 of number of hops, distance, lowest cost, latency measurements or based
 on the least congested route. Anycast networks are widely used for CDN
 products to bring their content closer to the end user.\
-![](./output/A/images/15007786.png?width=194)
+![](./images/15007786.png?width=194)
 
 ## AOP
 
@@ -530,7 +530,7 @@ the middle, or session hijacking attacks.
 
 The attack can only be used on networks that use ARP, and requires
 attacker have direct access to the local network segment to be attacked\
-![](./output/A/images/15007792.png?width=300)
+![](./images/15007792.png?width=300)
 
 ## Artifact
 
@@ -633,7 +633,7 @@ physical layer.\[3\] ATM is a core protocol used over the SONET/SDH
 backbone of the public switched telephone network (PSTN) and Integrated
 Services Digital Network (ISDN), but its use is declining in favour of
 all IP.\
-![](./output/A/images/15007798.png?width=480)
+![](./images/15007798.png?width=480)
 
 ## Audio Codecs
 
@@ -674,7 +674,7 @@ compression works is by removing data in ways humans can't hear,
 according to a psychoacoustic model; the implementer of an encoder has
 some freedom of choice in which data to remove (according to their
 psychoacoustic model).\
-![](./output/A/images/15007804.png?width=480)
+![](./images/15007804.png?width=480)
 
 ## Audit
 

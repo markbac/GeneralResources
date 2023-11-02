@@ -38,5 +38,5 @@ compression works is by removing data in ways humans can't hear,
 according to a psychoacoustic model; the implementer of an encoder has
 some freedom of choice in which data to remove (according to their
 psychoacoustic model).\
-![](./output/A/images/15007804.png?width=480)
+![](./images/15007804.png?width=480)
 

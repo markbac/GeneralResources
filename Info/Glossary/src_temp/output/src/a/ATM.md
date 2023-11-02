@@ -18,5 +18,5 @@ physical layer.\[3\] ATM is a core protocol used over the SONET/SDH
 backbone of the public switched telephone network (PSTN) and Integrated
 Services Digital Network (ISDN), but its use is declining in favour of
 all IP.\
-![](./output/A/images/15007798.png?width=480)
+![](./images/15007798.png?width=480)
 

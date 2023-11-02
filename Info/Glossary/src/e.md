@@ -320,6 +320,10 @@ EIGRP replaced the Interior Gateway Routing Protocol (IGRP) in 1993. One
 of the major reasons for this was the change to classless IPv4 addresses
 in the Internet Protocol, which IGRP could not support.
 
+## ELF
+
+![](image.png)
+
 ## embedded systems programming
 
 the programming of an embedded system in some device using the permitted

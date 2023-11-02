@@ -8,5 +8,5 @@ non-3GPP access networks (such as Wi-Fi). The purpose of the ANDSF is to
 assist the UE to discover the access networks in their vicinity and to
 provide rules (policies) to prioritize and manage connections to these
 networks.\
-![](./output/A/images/15007780.png?width=480)
+![](./images/15007780.png?width=480)
 

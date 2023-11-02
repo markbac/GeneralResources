@@ -25,5 +25,5 @@ instructions can be executed at the same time. All of the CPUs have the
 same user-mode instruction set, so a running job can be rescheduled from
 one CPU to another.
 
-![](./output/A/images/15007774.png?width=393)
+![](./images/15007774.png?width=393)
 

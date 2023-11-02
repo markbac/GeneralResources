@@ -13,5 +13,5 @@ premises (downstream) than the reverse (upstream). Providers usually
 market ADSL as a service for consumers for Internet access for primarily
 downloading content from the Internet, but not serving content accessed
 by others.\
-![](./output/A/images/15007760.png?width=480)
+![](./images/15007760.png?width=480)
 

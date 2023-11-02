@@ -37,5 +37,5 @@ packages, and is the first (and only) publicly accessible cipher
 approved by the National Security Agency (NSA) for top secret
 information when used in an NSA approved cryptographic module
 
-![](./output/A/images/15007768.png)
+![](./images/15007768.png)
 
