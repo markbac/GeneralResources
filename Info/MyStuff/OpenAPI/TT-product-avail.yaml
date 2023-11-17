@@ -1,0 +1,2943 @@
+openapi: 3.0.1
+info:
+  title: Product Availability API
+  version: 1.0.0
+servers:
+  - url: >-
+      https://virtserver.swaggerhub.com/TalkTalkGroup/OSS_Partner_Product_Availability_API/1.0.0
+    description: SwaggerHub API Auto Mocking
+paths:
+  /v1/address-availability/access-level-key:
+    get:
+      tags:
+        - AddressAvailability
+      summary: Endpoint handles service availability checks by GALK
+      parameters:
+        - name: agentID
+          in: query
+          description: Value to GET.used to identify were request is from.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            description: Value to GET.used to identify were request is from.
+            format: int32
+        - name: throughputSpeedType
+          in: query
+          description: >-
+            Value to GET. optional, returns throughput speeds for all FTTP is
+            not provided.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: >-
+              Value to GET. optional, returns throughput speeds for all FTTP is
+              not provided.
+            nullable: true
+        - name: galk
+          in: query
+          description: Value to GET. Gold Address Key to queried.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET. Gold Address Key to queried.
+            nullable: true
+        - name: districtCode
+          in: query
+          description: Value to GET. District Code to be queried.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET. District Code to be queried.
+            nullable: true
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAddressAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: Openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                addressAvailability:
+                  accessLinesSummary:
+                    - accessLineId: A123
+                      lineStatus: Online
+                      location: L12
+                  ontsSummary:
+                    - ontSerialNumber: ABCDEFG
+                      ontReference: FTTP13
+                      ontPorts:
+                        - portNumber: '1'
+                          portStatus: Working
+                      ontLocation:
+                        floor: FirstFloor
+                        room: Kitchen
+                        position: Corner
+                  addressData:
+                    fttpAvailability:
+                      ontInstallProcess: In
+                      tmaNoticeOrPermitRequired: 'Y'
+                      tmaNoticeOrPermit: Notice
+                      servingNetworkNotes: Notes 1
+                      premisesType: House
+                      mduStatus: Pending
+                      mduAvailableDate: '2021-02-16'
+                      mduProgressUpdate: Progress
+                      mduNotes: Notes
+                    openOrders:
+                      - orderType: Provide
+                        orderTargetDate: '2021-02-16'
+                        serviceType: MPF
+                        orderTypeOrigin: OR
+                        commandId: C000001
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAddressAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: Openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                addressAvailability:
+                  accessLinesSummary:
+                    - accessLineId: A123
+                      lineStatus: Online
+                      location: L12
+                  ontsSummary:
+                    - ontSerialNumber: ABCDEFG
+                      ontReference: FTTP13
+                      ontPorts:
+                        - portNumber: '1'
+                          portStatus: Working
+                      ontLocation:
+                        floor: FirstFloor
+                        room: Kitchen
+                        position: Corner
+                  addressData:
+                    fttpAvailability:
+                      ontInstallProcess: In
+                      tmaNoticeOrPermitRequired: 'Y'
+                      tmaNoticeOrPermit: Notice
+                      servingNetworkNotes: Notes 1
+                      premisesType: House
+                      mduStatus: Pending
+                      mduAvailableDate: '2021-02-16'
+                      mduProgressUpdate: Progress
+                      mduNotes: Notes
+                    openOrders:
+                      - orderType: Provide
+                        orderTargetDate: '2021-02-16'
+                        serviceType: MPF
+                        orderTypeOrigin: OR
+                        commandId: C000001
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetAddressAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: Openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                addressAvailability:
+                  accessLinesSummary:
+                    - accessLineId: A123
+                      lineStatus: Online
+                      location: L12
+                  ontsSummary:
+                    - ontSerialNumber: ABCDEFG
+                      ontReference: FTTP13
+                      ontPorts:
+                        - portNumber: '1'
+                          portStatus: Working
+                      ontLocation:
+                        floor: FirstFloor
+                        room: Kitchen
+                        position: Corner
+                  addressData:
+                    fttpAvailability:
+                      ontInstallProcess: In
+                      tmaNoticeOrPermitRequired: 'Y'
+                      tmaNoticeOrPermit: Notice
+                      servingNetworkNotes: Notes 1
+                      premisesType: House
+                      mduStatus: Pending
+                      mduAvailableDate: '2021-02-16'
+                      mduProgressUpdate: Progress
+                      mduNotes: Notes
+                    openOrders:
+                      - orderType: Provide
+                        orderTargetDate: '2021-02-16'
+                        serviceType: MPF
+                        orderTypeOrigin: OR
+                        commandId: C000001
+        '400':
+          description: >-
+            If the input request was invalid such as a malformed request or
+            missing required fields.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '404':
+          description: If the resource was not found.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+        '406':
+          description: If the requested content type is not valid.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+        '503':
+          description: If internal server is not responding.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+  /v1/line-availability/optical-network-terminator:
+    get:
+      tags:
+        - LineAvailability
+      summary: Endpoint handles product availability checks by ONT Reference
+      parameters:
+        - name: ontRef
+          in: query
+          description: >-
+            Value to GET. 3 upper or lowercase characters, followed by exactly
+            10 digits 0 to 9.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: >-
+              Value to GET. 3 upper or lowercase characters, followed by exactly
+              10 digits 0 to 9.
+            nullable: true
+        - name: agentID
+          in: query
+          description: Value to GET.used to identify were request is from.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            description: Value to GET.used to identify were request is from.
+            format: int32
+        - name: throughputSpeedType
+          in: query
+          description: >-
+            Value to GET. optional, returns throughput speeds for all FTTP is
+            not provided.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: >-
+              Value to GET. optional, returns throughput speeds for all FTTP is
+              not provided.
+            nullable: true
+        - name: accessCircuit
+          in: query
+          description: 'Value to GET. For Ont Ref requests, "fttp" is supported.'
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: 'Value to GET. For Ont Ref requests, "fttp" is supported.'
+            nullable: true
+        - name: supplierName
+          in: query
+          description: "Value to GET. Only \"openreach\" is supported at this time.\r\n///"
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: "Value to GET. Only \"openreach\" is supported at this time.\r\n///"
+            nullable: true
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+        '400':
+          description: >-
+            If the input request was invalid such as a malformed request or
+            missing required fields.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '404':
+          description: If the resource was not found.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+        '406':
+          description: If the requested content type is not valid.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+        '503':
+          description: If internal server is not responding.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+  /v1/line-availability/access-line:
+    get:
+      tags:
+        - LineAvailability
+      summary: Endpoint handles product availability checks by Access Line Id
+      parameters:
+        - name: accessLineId
+          in: query
+          description: >-
+            Value to GET. 3 upper or lowercase characters, followed by exactly
+            10 digits 0 to 9.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: >-
+              Value to GET. 3 upper or lowercase characters, followed by exactly
+              10 digits 0 to 9.
+            nullable: true
+        - name: agentID
+          in: query
+          description: Value to GET.used to identify were request is from.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            description: Value to GET.used to identify were request is from.
+            format: int32
+        - name: throughputSpeedType
+          in: query
+          description: >-
+            Value to GET. optional, returns throughput speeds for all FTTP is
+            not provided.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: >-
+              Value to GET. optional, returns throughput speeds for all FTTP is
+              not provided.
+            nullable: true
+        - name: accessCircuit
+          in: query
+          description: 'Value to GET. For Ont Ref requests, "fttp" is supported.'
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: 'Value to GET. For Ont Ref requests, "fttp" is supported.'
+            nullable: true
+        - name: supplierName
+          in: query
+          description: "Value to GET. Only \"openreach\" is supported at this time.\r\n///"
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: "Value to GET. Only \"openreach\" is supported at this time.\r\n///"
+            nullable: true
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+        '400':
+          description: >-
+            If the input request was invalid such as a malformed request or
+            missing required fields.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '404':
+          description: If the resource was not found.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+        '406':
+          description: If the requested content type is not valid.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+        '503':
+          description: If internal server is not responding.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+  /v1/oss-wholesale-product:
+    get:
+      tags:
+        - OssWholesaleProduct
+      summary: Endpoint handles retrieval of OSS wholesale products
+      parameters:
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetOssWholesaleProductsDto'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOssWholesaleProductsDto'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetOssWholesaleProductsDto'
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+    put:
+      tags:
+        - OssWholesaleProduct
+      summary: Endpoint handles update of OSS wholesale product
+      parameters:
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/UpdOssWholesaleProductRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdOssWholesaleProductRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/UpdOssWholesaleProductRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/UpdOssWholesaleProductRequest'
+      responses:
+        '204':
+          description: If the request was successful.
+        '400':
+          description: If resource oss-wholesale-product is invalid
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+    post:
+      tags:
+        - OssWholesaleProduct
+      summary: Endpoint handles insert of OSS wholesale product
+      parameters:
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      requestBody:
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/InsOssWholesaleProductRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InsOssWholesaleProductRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/InsOssWholesaleProductRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/InsOssWholesaleProductRequest'
+      responses:
+        '201':
+          description: If the request was successful.
+        '400':
+          description: If resource oss-wholesale-product is invalid
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+  '/v1/oss-wholesale-product/{id}':
+    delete:
+      tags:
+        - OssWholesaleProduct
+      summary: Endpoint handles delete of OSS wholesale product
+      parameters:
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+        - name: id
+          in: path
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '204':
+          description: If the request was successful.
+        '400':
+          description: If resource oss-wholesale-product is invalid
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+  /v1/reference-availability/cpwnref:
+    get:
+      tags:
+        - ReferenceAvailability
+      summary: Endpoint handles product availability checks by CPWN Reference
+      parameters:
+        - name: CPWNRef
+          in: query
+          description: The CPWNRef of MPF line to be queried
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: The CPWNRef of MPF line to be queried
+            nullable: true
+        - name: agentID
+          in: query
+          description: Value to GET.used to identify were request is from.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            description: Value to GET.used to identify were request is from.
+            format: int32
+        - name: throughputSpeedType
+          in: query
+          description: Value to GET alphanumeric string 1-50 chars.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET alphanumeric string 1-50 chars.
+            nullable: true
+        - name: accessCircuit
+          in: query
+          description: 'Value to GET. Only "sogea", "fttp" or "all" is supported.'
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: 'Value to GET. Only "sogea", "fttp" or "all" is supported.'
+            nullable: true
+        - name: supplierName
+          in: query
+          description: Value to GET. Only "openreach" is supported at this time.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET. Only "openreach" is supported at this time.
+            nullable: true
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+        '400':
+          description: >-
+            If the input request was invalid such as a malformed request or
+            missing required fields.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '404':
+          description: If the resource was not found.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+        '406':
+          description: If the requested content type is not valid.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+        '503':
+          description: If internal server is not responding.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+  /v1/reference-availability/casr:
+    get:
+      tags:
+        - ReferenceAvailability
+      summary: Endpoint handles product availability checks by Access CASR
+      parameters:
+        - name: accessCASR
+          in: query
+          description: The AccessCASR of fibre line be queried
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: The AccessCASR of fibre line be queried
+            nullable: true
+        - name: agentID
+          in: query
+          description: Value to GET.used to identify were request is from.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: integer
+            description: Value to GET.used to identify were request is from.
+            format: int32
+        - name: throughputSpeedType
+          in: query
+          description: Value to GET alphanumeric string 1-50 chars.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET alphanumeric string 1-50 chars.
+            nullable: true
+        - name: accessCircuit
+          in: query
+          description: 'Value to GET. Only "sogea", "fttp" or "all" is supported.'
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: 'Value to GET. Only "sogea", "fttp" or "all" is supported.'
+            nullable: true
+        - name: supplierName
+          in: query
+          description: Value to GET. Only "openreach" is supported at this time.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+            description: Value to GET. Only "openreach" is supported at this time.
+            nullable: true
+        - name: headers
+          in: header
+          description: >-
+            Username is given as the header parameter in order to be used as
+            logging purposes
+          required: false
+          style: simple
+          explode: false
+          schema:
+            $ref: '#/components/schemas/RequestHeaders'
+      responses:
+        '200':
+          description: If the request was successful.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+            text/json:
+              schema:
+                $ref: '#/components/schemas/GetAvailabilityResponseDto'
+              example:
+                availableProduct:
+                  - productName: FTTPProdName
+                    productDescription: FTTPProdDescription
+                    supplierName: TalkTalk
+                    accessType: AccessType1
+                    technologyType: TechnologyType1
+                availableTechnology:
+                  - accessCircuit: FTTP
+                    supplierName: openreach
+                    technologyType: Type1
+                    productThroughputSpeeds:
+                      - serviceCatalogueName: Service Catalogue Name
+                        throughputSpeedType: Throughput Speed Type
+                        serviceCatalogueThroughputSpeeds:
+                          - attributeName: MinDownstreamThreshold
+                            value: 30
+                    availableCommands:
+                      - orderType: Switch
+                        available: 'N'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                        noAvailabilityCode: SPEED_TOO_SLOW
+                        noAvailabilityMessage: None
+                      - orderType: Takeover
+                        available: 'Y'
+                        existingLineIdentifierRequired: 'N'
+                        lineIdentifierType: AccessLineID
+                        selfInstallAvailable: 'Y'
+                        earliestAvailabilityDate: '2021-02-16'
+                lineData:
+                  networkStatus: Status
+                  premisesEnvironmentStatus:
+                    bridgeTapDetected: 'Y'
+                    vriDetected: D
+                    nteFaceplateDetected: F
+                    lastRoutineTestDate: '2021-01-20'
+                    nteFaceplateTypeRecorded: SECURE
+                    nteTypeRecorded: NTE5C
+                    nteLocationRecorded: HALLWAY
+                    dateNteDetailsRecorded: '2021-01-21'
+                  fttpAvailability:
+                    ontInstallProcess: In
+                    tmaNoticeOrPermitRequired: 'Y'
+                    tmaNoticeOrPermit: Notice
+                    servingNetworkNotes: Notes 1
+                    premisesType: House
+                    mduStatus: Pending
+                    mduAvailableDate: '2021-01-19'
+                    mduProgressUpdate: Progress
+                    mduNotes: Notes
+                  existingServices:
+                    - serviceType: MPF
+                      accessLineStatus: Stopped
+                      accessLineStatusGfast: Working
+                      currentCp: N/A Future use
+                      currentCpTelephone: N/A Future use
+                      currentReseller: N/A Future use
+                  openOrders:
+                    - orderType: Provide
+                      orderTargetDate: '2021-02-16'
+                      serviceType: MPF
+                      orderTypeOrigin: OR
+                      commandId: C000001
+        '400':
+          description: >-
+            If the input request was invalid such as a malformed request or
+            missing required fields.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response400'
+              example:
+                errorCode: '0'
+                errorMessage: Parameter x is not valid. Check and re-submit
+        '404':
+          description: If the resource was not found.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response404'
+              example:
+                errorCode: '0'
+                errorMessage: Unable to find resource.
+        '406':
+          description: If the requested content type is not valid.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response406'
+              example:
+                errorCode: '0'
+                errorMessage: Requested content type not valid.
+        '500':
+          description: If internal server error occured.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response500'
+              example:
+                errorCode: '0'
+                errorMessage: Unknown Server Error
+        '503':
+          description: If internal server is not responding.
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Response503'
+              example:
+                errorCode: '0'
+                errorMessage: Server not responding
+components:
+  schemas:
+    RequestHeaders:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Username e.g. ttuserin@talktalkplc.com
+          nullable: true
+      additionalProperties: false
+      description: Request Header for the request
+    AvailableProduct:
+      type: object
+      properties:
+        productName:
+          type: string
+          nullable: true
+        productDescription:
+          type: string
+          nullable: true
+        supplierName:
+          type: string
+          nullable: true
+        accessType:
+          type: string
+          nullable: true
+        technologyType:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: Contains product details.
+    ServiceCatalogueThroughputSpeed:
+      type: object
+      properties:
+        attributeName:
+          type: string
+          description: "Name of the Speed type Eg.MinDownstreamThreshold Possible\r\nValues:[MinDownstreamThreshold,TopDownstreamPeakHour,BottomDownstreamPeakHour,MaxDownstreamQuietHour,MinUpstreamThreshold,TopUpstreamPeakHour,BottomUpstreamPeakHour,MaxUpstreamQuietHour,\r\nProductDownstream, DownstreamPeak, UpstreamPeak, DownstreamPrioritised,UpstreamPrioritised]"
+          nullable: true
+        value:
+          type: number
+          description: Speed value
+          format: double
+          nullable: true
+      additionalProperties: false
+    ProductThroughputSpeed:
+      type: object
+      properties:
+        serviceCatalogueName:
+          type: string
+          description: Service Catalogue name.
+          nullable: true
+        throughputSpeedType:
+          type: string
+          nullable: true
+        serviceCatalogueThroughputSpeeds:
+          type: array
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ServiceCatalogueThroughputSpeed'
+      additionalProperties: false
+      description: Product throughput speed.
+    AvailableCommand:
+      type: object
+      properties:
+        orderType:
+          type: string
+          description: 'Order type available for the product, [NewLine, Takeover, Switch].'
+          nullable: true
+        available:
+          type: string
+          description: 'Indicates product availability [Y, N, P].'
+          nullable: true
+        existingLineIdentifierRequired:
+          type: string
+          description: "Indicates if ExistingLineIdentifier(Access CASR/CPWNRef/AccessLineID) is required while placing an order\r\nPossible Values:\r\n[Y, N]"
+          nullable: true
+        lineIdentifierType:
+          type: string
+          description: "LineIdentifier Type for target order\r\nPossible Values:\r\n[GALK, AccessLineID, ONTReference]"
+          nullable: true
+        lineId:
+          type: array
+          description: LineIdentifier Value(s) for target order
+          nullable: true
+          items:
+            type: string
+        serviceApi:
+          type: string
+          description: "Service API\r\nPossible Values:\r\n[line-availability, reference-availability]"
+          nullable: true
+        selfInstallAvailable:
+          type: string
+          description: 'Indicates self install ability for this product, [Y, N].'
+          nullable: true
+        earliestAvailabilityDate:
+          type: string
+          description: Earliest date product is available.
+          format: date-time
+          nullable: true
+        noAvailabilityCode:
+          type: string
+          description: "Code if product is not available (Available = \"N\")\r\n[SPEED_TOO_SLOW,\r\nINFRASTRUCTURE_NOT_AVAILABLE,\r\nPLANNED_FOR_SUPPORT,\r\nCAPACITY_WAITERS,\r\nSUPPLIER_NOT_AVAILABLE,\r\nNO_NETWORK_CAPACITY,\r\nINCOMPATIBLE_PRODUCTS,\r\nOPEN_PROVIDE_ORDER,\r\nNO_SWITCH_ON_STOPPED_LINE,\r\nNO_SWITCH_ON_ONNET_LINE,\r\nNO_TAKEOVER_ON_ONNET_LINE]"
+          nullable: true
+        noAvailabilityMessage:
+          type: string
+          description: Reason
+          nullable: true
+        serviceId:
+          type: string
+          description: Service ID
+          nullable: true
+      additionalProperties: false
+      description: An available provisioning command.
+    AvailableTechnology:
+      type: object
+      properties:
+        accessCircuit:
+          type: string
+          description: 'THe access circuit type, [SOGEA, FTTP, etc].'
+          nullable: true
+        supplierName:
+          type: string
+          description: 'Access circuit provider, [Openreach].'
+          nullable: true
+        technologyType:
+          type: string
+          description: 'Product technology type, [VDSL, G.fast, GPON].'
+          nullable: true
+        productThroughputSpeeds:
+          type: array
+          description: An unbounded array of estimated throughput speeds for FTTP.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ProductThroughputSpeed'
+        availableCommands:
+          type: array
+          description: Provisioning commands available/applicable to the technology.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AvailableCommand'
+      additionalProperties: false
+      description: Contains Available Technology for the availability response.
+    AccessLinesSummary:
+      type: object
+      properties:
+        accessLineId:
+          type: string
+          description: Address access line id
+          nullable: true
+        lineStatus:
+          type: string
+          description: Address line status
+          nullable: true
+        location:
+          type: string
+          description: NTE Location recorded against the Access Line
+          nullable: true
+      additionalProperties: false
+      description: Summary for a particular address
+    OntPort:
+      type: object
+      properties:
+        portNumber:
+          type: string
+          description: The Ont port number
+          nullable: true
+        portStatus:
+          type: string
+          description: 'The status of the port [Working, Spare]'
+          nullable: true
+      additionalProperties: false
+      description: Status of an ont port
+    OntLocation:
+      type: object
+      properties:
+        floor:
+          type: string
+          description: Floor location on which ONT has to be installed
+          nullable: true
+        room:
+          type: string
+          description: Room in which ONT has to be installed
+          nullable: true
+        position:
+          type: string
+          description: Location on specific Floor/Room at which ONT has to be installed
+          nullable: true
+      additionalProperties: false
+      description: OntLocation Enum
+    OntsSummary:
+      type: object
+      properties:
+        ontSerialNumber:
+          type: string
+          description: Serial number of ONT.
+          nullable: true
+        ontReference:
+          type: string
+          description: The FTTP ONT Reference.
+          nullable: true
+        ontPorts:
+          type: array
+          description: Collection of ONT Ports at the address.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OntPort'
+        ontLocation:
+          $ref: '#/components/schemas/OntLocation'
+      additionalProperties: false
+      description: OntSummary Enum
+    OpticalNetworkTerminatorPort:
+      type: object
+      properties:
+        portNumber:
+          type: string
+          description: OntPort number
+          nullable: true
+        portStatus:
+          type: string
+          description: 'Status of the ONP port [Working, Spare]'
+          nullable: true
+        portType:
+          type: string
+          description: 'Type of ONP port [Data, Voice]'
+          nullable: true
+      additionalProperties: false
+      description: ONT details.
+    OpticalNetworkTerminator:
+      type: object
+      properties:
+        serialNumber:
+          type: string
+          description: Identity of the ONT.
+          nullable: true
+        refNum:
+          type: string
+          description: ONT Logical identifier
+          nullable: true
+        l2SId:
+          type: string
+          description: Identity of the L2S
+          nullable: true
+        floor:
+          type: string
+          description: Floor location for install
+          nullable: true
+        room:
+          type: string
+          description: Room for ONT install
+          nullable: true
+        position:
+          type: string
+          description: Specific location at with ONT has to be installed
+          nullable: true
+        ontPorts:
+          type: array
+          description: Array of ONTPorts.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OpticalNetworkTerminatorPort'
+      additionalProperties: false
+      description: ONT details.
+    FttpAvailability:
+      type: object
+      properties:
+        ontInstallProcess:
+          type: string
+          description: "This is derived from serving network notes and indicates number of stages\r\nto be followed by the engineer.\r\n[1 Stage, 2 Stage]"
+          nullable: true
+        tmaNoticeOrPermitRequired:
+          type: string
+          description: "Details if a notice or permit is required.\r\n[Y, N]"
+          nullable: true
+        tmaNoticeOrPermit:
+          type: string
+          description: >-
+            Details if the network node (Splitter, Fibre DP, Manifold) requires
+            either a Permit, a Notice or if the traffic sensitive area is
+            undetermined (i.e. no TMA classification
+          nullable: true
+        servingNetworkNotes:
+          type: string
+          description: Surveyor assessment of serving network
+          nullable: true
+        premisesType:
+          type: string
+          description: Surveyors assessment of premises type.
+          nullable: true
+        mduStatus:
+          type: string
+          description: "Status of MDU\r\nNot Started,\r\nBuild Complete,\r\nEtc."
+          nullable: true
+        mduAvailableDate:
+          type: string
+          description: RFS date of MDU
+          format: date-time
+          nullable: true
+        mduProgressUpdate:
+          type: string
+          description: Updates on MDU status.
+          nullable: true
+        mduNotes:
+          type: string
+          description: Notes on MDU premise.
+          nullable: true
+        opticalNetworkTerminators:
+          type: array
+          description: OpticalNetworkTerminators
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OpticalNetworkTerminator'
+      additionalProperties: false
+      description: Availability details for FTTP
+    OpenOrder:
+      type: object
+      properties:
+        orderType:
+          type: string
+          description: >-
+            This field will specify the type of open order against the line
+            [Provide, Change, Stop, Start, Cease].
+          nullable: true
+        orderTargetDate:
+          type: string
+          description: 'The order completion target date, where available.'
+          format: date-time
+          nullable: true
+        serviceType:
+          type: string
+          description: "The existing service type against the open order [GEA, SMPF, NBLS, SMPF, MPF, WLR,\r\nSLU MPF,SLU SMPF, NotSet]."
+          nullable: true
+        orderTypeOrigin:
+          type: string
+          description: 'The origin of the order information, either set by OR or TTT.'
+          nullable: true
+        commandId:
+          type: string
+          description: "TTT Command ID\r\nWill be populated if the Open TTT order found belongs to the partner placing the order"
+          nullable: true
+      additionalProperties: false
+      description: This object will detail any open orders against the requested line.
+    AddressData:
+      type: object
+      properties:
+        fttpAvailability:
+          $ref: '#/components/schemas/FttpAvailability'
+        openOrders:
+          type: array
+          description: This array will detail any open orders against the requested line.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OpenOrder'
+      additionalProperties: false
+      description: Address data details as returned by MLPA and eMLC access.
+    AddressAvailability:
+      type: object
+      properties:
+        accessLinesSummary:
+          type: array
+          description: Summary of lines at an address
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AccessLinesSummary'
+        ontsSummary:
+          type: array
+          description: Summary of ONTs at the address
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OntsSummary'
+        addressData:
+          $ref: '#/components/schemas/AddressData'
+      additionalProperties: false
+      description: Contains the Address Line Summaries and Address Data
+    GetAddressAvailabilityResponseDto:
+      type: object
+      properties:
+        availableProduct:
+          type: array
+          description: Summary of available products
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AvailableProduct'
+        availableTechnology:
+          type: array
+          description: Summary of available technology and provisioning commands
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AvailableTechnology'
+        addressAvailability:
+          $ref: '#/components/schemas/AddressAvailability'
+      additionalProperties: false
+      description: >-
+        This contains the Line type details as returned by the Openreach’s
+        Manage Plant Line Availability (MLPA) dialogue service
+    Response400:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: 'Response400 Class base : APIErrorResponse.Error'
+    Response404:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: 'Response404 Class base : APIErrorResponse.Error'
+    Response406:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: 'Response406 Class base : APIErrorResponse.Error'
+    Response500:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: 'Response500 Class base : APIErrorResponse.Error'
+    Response503:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          nullable: true
+        errorMessage:
+          type: string
+          nullable: true
+      additionalProperties: false
+      description: 'Response503 Class base : APIErrorResponse.Error'
+    PremisesEnvironmentStatus:
+      type: object
+      properties:
+        bridgeTapDetected:
+          type: string
+          description: "Tag indicating there is a Bridge tap (a possible speed loss due to signal interference) on the line.\r\nOne of the following values will be set:[Y, N, U]"
+          nullable: true
+        vriDetected:
+          type: string
+          description: "Provides the information whether the voltage from VRI is isolated to the home environment or not.\r\nList of Values – Y, D, N, U"
+          nullable: true
+        nteFaceplateDetected:
+          type: string
+          description: "Provides information whether the service test did or didn’t detect a faceplate signature.\r\nList Of Values: P, F, O, N, U"
+          nullable: true
+        lastRoutineTestDate:
+          type: string
+          description: >-
+            Last routine test date provides the date stamp of the routine test
+            that sourced the values in the ‘VRI detected’ and ‘NTE faceplate
+            detected’ fields.
+          format: date-time
+          nullable: true
+        nteFaceplateTypeRecorded:
+          type: string
+          description: NTE faceplate recorded against the line in inventory by Openreach.
+          nullable: true
+        nteTypeRecorded:
+          type: string
+          description: NTE type recorded against the line in inventory by Openreach.
+          nullable: true
+        nteLocationRecorded:
+          type: string
+          description: NTE location recorded against the line in inventory by Openreach.
+          nullable: true
+        dateNteDetailsRecorded:
+          type: string
+          description: >-
+            The date NTE details are recorded against the line in inventory by
+            Openreach.
+          format: date-time
+          nullable: true
+      additionalProperties: false
+      description: PremisesEnvironmentStatus details.
+    ExistingService:
+      type: object
+      properties:
+        serviceType:
+          type: string
+          description: "The existing service type against the requested line [GEA, LLU, MPF, SMPF, NBLS,\r\nFTTC, FN_FTTP, ORFTTP, SLU]."
+          nullable: true
+        serviceId:
+          type: string
+          description: Service ID held on Openreach's records.
+          nullable: true
+        accessLineId:
+          type: string
+          description: The Access Line ID held on Openreach’s records.
+          nullable: true
+        accessLineStatus:
+          type: string
+          description: 'The status of the line [NotSet, Stopped, Working].'
+          nullable: true
+        accessLineStatusVdsl:
+          type: string
+          description: 'The status of the VDSL line [Stopped, Working].'
+          nullable: true
+        accessLineStatusGfast:
+          type: string
+          description: 'The status of the GGFAST line [Stopped, Working].'
+          nullable: true
+        currentCp:
+          type: string
+          description: The name of the current Cp.
+          nullable: true
+        currentCpTelephone:
+          type: string
+          description: The telephone number of the current Cp.
+          nullable: true
+        currentReseller:
+          type: string
+          description: Reserved for future use.
+          nullable: true
+        currentResellerAgentId:
+          type: string
+          description: Reserved for future use.
+          nullable: true
+      additionalProperties: false
+      description: >-
+        ServiceInfo type object that will detail any live services against the
+        requested line
+    LineData:
+      type: object
+      properties:
+        networkStatus:
+          type: string
+          description: 'Indicates if the line is [On, OffNet]'
+          nullable: true
+        premisesEnvironmentStatus:
+          $ref: '#/components/schemas/PremisesEnvironmentStatus'
+        fttpAvailability:
+          $ref: '#/components/schemas/FttpAvailability'
+        existingServices:
+          type: array
+          description: >-
+            Array of ServiceInfo type object that will detail any live services
+            against the requested line
+          nullable: true
+          items:
+            $ref: '#/components/schemas/ExistingService'
+        openOrders:
+          type: array
+          description: This array will detail any open orders against the requested line.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/OpenOrder'
+      additionalProperties: false
+      description: LineData object returned from Openreach Provider.
+    GetAvailabilityResponseDto:
+      type: object
+      properties:
+        availableProduct:
+          type: array
+          description: Summary of available products
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AvailableProduct'
+        availableTechnology:
+          type: array
+          description: >-
+            Contains a summary of available technology and provisioning
+            commands.
+          nullable: true
+          items:
+            $ref: '#/components/schemas/AvailableTechnology'
+        lineData:
+          $ref: '#/components/schemas/LineData'
+      additionalProperties: false
+      description: Availability response returned to the client.
+    WholesaleProduct:
+      type: object
+      properties:
+        ossWholesaleProductId:
+          type: integer
+          description: Id for WholesaleProduct in the database
+          format: int32
+        productCode:
+          type: string
+          description: Product Code for wholesale product
+          nullable: true
+        productName:
+          type: string
+          description: Product Name for wholesale product
+          nullable: true
+        productDescription:
+          type: string
+          description: Product Description for wholesale product
+          nullable: true
+        accessType:
+          type: string
+          description: Access Type for wholesale product
+          nullable: true
+        technology:
+          type: string
+          description: Technology for wholesale product
+          nullable: true
+        accessSpeed:
+          type: number
+          description: Access Speed for wholesale product
+          format: double
+        supplier:
+          type: string
+          description: Supplier for wholesale product
+          nullable: true
+        serviceCatalogueName:
+          type: string
+          description: Service Catalogue Name for wholesale product
+          nullable: true
+        isActive:
+          type: string
+          description: Is Active for wholesale product
+        lastUpdated:
+          type: string
+          description: Last updated date for wholesale product
+          nullable: true
+      additionalProperties: false
+      description: 'Wholesale product object, modeled from DB'
+    GetOssWholesaleProductsDto:
+      type: object
+      properties:
+        wholesaleProducts:
+          type: array
+          description: Summary of wholesale products
+          nullable: true
+          items:
+            $ref: '#/components/schemas/WholesaleProduct'
+      additionalProperties: false
+      description: This contains the Wholesale Products returned from the OSS Database
+    InsOssWholesaleProductRequest:
+      type: object
+      properties:
+        ossWholesaleProductId:
+          type: integer
+          description: Id for WholesaleProduct in the database
+          format: int32
+        productCode:
+          type: string
+          description: Product Code for wholesale product
+          nullable: true
+        productName:
+          type: string
+          description: Product Name for wholesale product
+          nullable: true
+        productDescription:
+          type: string
+          description: Product Description for wholesale product
+          nullable: true
+        accessType:
+          type: string
+          description: Access Type for wholesale product
+          nullable: true
+        technology:
+          type: string
+          description: Technology for wholesale product
+          nullable: true
+        accessSpeed:
+          type: number
+          description: Access Speed for wholesale product
+          format: double
+        supplier:
+          type: string
+          description: Supplier for wholesale product
+          nullable: true
+        serviceCatalogueName:
+          type: string
+          description: Service Catalogue Name for wholesale product
+          nullable: true
+        isActive:
+          type: string
+          description: Is Active for wholesale product
+        lastUpdated:
+          type: string
+          description: Last updated date for wholesale product
+          nullable: true
+      additionalProperties: false
+      description: Wrapper for the insert request
+    UpdOssWholesaleProductRequest:
+      type: object
+      properties:
+        ossWholesaleProductId:
+          type: integer
+          description: Id for WholesaleProduct in the database
+          format: int32
+        productCode:
+          type: string
+          description: Product Code for wholesale product
+          nullable: true
+        productName:
+          type: string
+          description: Product Name for wholesale product
+          nullable: true
+        productDescription:
+          type: string
+          description: Product Description for wholesale product
+          nullable: true
+        accessType:
+          type: string
+          description: Access Type for wholesale product
+          nullable: true
+        technology:
+          type: string
+          description: Technology for wholesale product
+          nullable: true
+        accessSpeed:
+          type: number
+          description: Access Speed for wholesale product
+          format: double
+        supplier:
+          type: string
+          description: Supplier for wholesale product
+          nullable: true
+        serviceCatalogueName:
+          type: string
+          description: Service Catalogue Name for wholesale product
+          nullable: true
+        isActive:
+          type: string
+          description: Is Active for wholesale product
+        lastUpdated:
+          type: string
+          description: Last updated date for wholesale product
+          nullable: true
+      additionalProperties: false
+      description: Wrapper for the update request

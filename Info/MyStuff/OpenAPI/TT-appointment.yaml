@@ -1,0 +1,2261 @@
+---
+openapi: 3.0.0
+info:
+  title: OSS API Appointment
+  description: OSS Appointment API
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 2.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/TalkTalkGroup/oss-api-appointment/2.0.0/appointment
+- url: http://virtserver.swaggerhub.com/TalkTalkGroup/oss-api-appointment/2.0.0/appointment
+security:
+- basicAuth: []
+paths:
+  /appointments:
+    post:
+      summary: creates a new appointment
+      description: creates a new appointment
+      operationId: addAppointment
+      parameters:
+      - name: Correlation-ID
+        in: header
+        description: Guid used for journey tracking
+        required: false
+        schema:
+          type: string
+        example: 123e4567-e89b-12d3-a456-42665544000
+      requestBody:
+        $ref: '#/components/requestBodies/New-Appointment'
+      responses:
+        "201":
+          description: appointment created
+          headers:
+            Location:
+              description: Contains a direct link to the newly created appointment
+              style: simple
+              explode: false
+              schema:
+                type: string
+            Content-Type:
+              description: Media Type of the body
+              style: simple
+              explode: false
+              schema:
+                type: string
+              example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentDetails'
+              examples:
+                newAppointmentResponse:
+                  $ref: '#/components/examples/New-Appointment-Response-Example'
+                newAppointmentCityFibreFTTPResponse:
+                  $ref: '#/components/examples/New-Appointment-Response-CityFibre-FTTP-Example'
+        "401":
+          description: User is not authorized
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SEC000-Unauthorized:
+                  $ref: '#/components/examples/SEC000-Unauthorized'
+        "403":
+          description: User does not have permission to access the requested resource
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SEC001-Forbidden:
+                  $ref: '#/components/examples/SEC001-Forbidden'
+        "400":
+          description: Invalid input, object invalid
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTValidationError'
+              examples:
+                VAL000-Missing-Field-Value:
+                  $ref: '#/components/examples/VAL000-Missing-Field-Value'
+                VAL000-Bad-Format:
+                  $ref: '#/components/examples/VAL000-Bad-Format'
+                VAL000-Unknown-Field-Value:
+                  $ref: '#/components/examples/VAL000-Unknown-Field-Value'
+                VAL000-Field-Value-Length-TooShort:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooShort'
+                VAL000-Field-Value-Length-TooLong:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooLong'
+                VAL000-Field-Value-TooSmall:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooSmall'
+                VAL000-Field-Value-TooBig:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooBig'
+                VAL000-Field-Value-TooEarly:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooEarly'
+                VAL000-Field-Value-TooLate:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooLate'
+                VAL000-Field-Value-NotEnoughElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-NotEnoughElements'
+                VAL000-Field-Value-TooManyElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooManyElements'
+        "404":
+          description: Resource Not Found
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                NFD001-Not-Found:
+                  $ref: '#/components/examples/NFD001-Not-Found'
+        "502":
+          description: Bad Gateway
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS002-Bad-Gateway-Error:
+                  $ref: '#/components/examples/SYS002-Bad-Gateway-Error'
+        "500":
+          description: Internal Server Error
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS000-Internal-Server-Error:
+                  $ref: '#/components/examples/SYS000-Internal-Server-Error'
+        "503":
+          description: Service Unavailable
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS001-Service-Unavailable:
+                  $ref: '#/components/examples/SYS001-Service-Unavailable'
+        "422":
+          description: Unprocessable Entity
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                APP000-Unprocessable-Entity:
+                  $ref: '#/components/examples/APP000-Unprocessable-Entity'
+  /appointments/{id}:
+    get:
+      summary: gets an existing appointment
+      parameters:
+      - name: id
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+      - name: Correlation-ID
+        in: header
+        description: Guid used for journey tracking
+        required: false
+        schema:
+          type: string
+        example: 123e4567-e89b-12d3-a456-42665544000
+      responses:
+        "200":
+          description: retrieved an existing appointment
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              style: simple
+              explode: false
+              schema:
+                type: string
+              example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AppointmentDetails'
+              examples:
+                getAppointment:
+                  $ref: '#/components/examples/Existing-Appointment-Example'
+                GetCityFibreAppointment:
+                  $ref: '#/components/examples/GetCityFibreAppointment'
+        "403":
+          description: User does not have permission to access the requested resource
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SEC001-Forbidden:
+                  $ref: '#/components/examples/SEC001-Forbidden'
+        "400":
+          description: Invalid input, object invalid
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTValidationError'
+              examples:
+                VAL000-Missing-Field-Value:
+                  $ref: '#/components/examples/VAL000-Missing-Field-Value'
+                VAL000-Bad-Format:
+                  $ref: '#/components/examples/VAL000-Bad-Format'
+                VAL000-Unknown-Field-Value:
+                  $ref: '#/components/examples/VAL000-Unknown-Field-Value'
+                VAL000-Field-Value-Length-TooShort:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooShort'
+                VAL000-Field-Value-Length-TooLong:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooLong'
+                VAL000-Field-Value-TooSmall:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooSmall'
+                VAL000-Field-Value-TooBig:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooBig'
+                VAL000-Field-Value-TooEarly:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooEarly'
+                VAL000-Field-Value-TooLate:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooLate'
+                VAL000-Field-Value-NotEnoughElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-NotEnoughElements'
+                VAL000-Field-Value-TooManyElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooManyElements'
+        "404":
+          description: Resource Not Found
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                NFD001-Not-Found:
+                  $ref: '#/components/examples/NFD001-Not-Found'
+        "502":
+          description: Bad Gateway
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS002-Bad-Gateway-Error:
+                  $ref: '#/components/examples/SYS002-Bad-Gateway-Error'
+        "500":
+          description: Internal Server Error
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS000-Internal-Server-Error:
+                  $ref: '#/components/examples/SYS000-Internal-Server-Error'
+        "503":
+          description: Service Unavailable
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS001-Service-Unavailable:
+                  $ref: '#/components/examples/SYS001-Service-Unavailable'
+  /available-appointments/search-by-location:
+    post:
+      summary: Gets list of available appointments
+      description: Gets list of available appointments
+      operationId: getAvailableAppointment
+      parameters:
+      - name: Correlation-ID
+        in: header
+        description: Guid used for journey tracking
+        required: false
+        schema:
+          type: string
+        example: 123e4567-e89b-12d3-a456-42665544000
+      requestBody:
+        $ref: '#/components/requestBodies/Get-AvailableAppointments'
+      responses:
+        "200":
+          description: available appointments
+          content:
+            application/ion+json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+              examples:
+                openreachAvailableAppointments:
+                  $ref: '#/components/examples/Openreach-Available-Appointments-Example'
+                cityfibreAvailableAppointments:
+                  $ref: '#/components/examples/Cityfibre-Available-Appointments-Example'
+        "403":
+          description: User does not have permission to access the requested resource
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SEC001-Forbidden:
+                  $ref: '#/components/examples/SEC001-Forbidden'
+        "400":
+          description: Invalid input, object invalid
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTValidationError'
+              examples:
+                VAL000-Missing-Field-Value:
+                  $ref: '#/components/examples/VAL000-Missing-Field-Value'
+                VAL000-Bad-Format:
+                  $ref: '#/components/examples/VAL000-Bad-Format'
+                VAL000-Unknown-Field-Value:
+                  $ref: '#/components/examples/VAL000-Unknown-Field-Value'
+                VAL000-Field-Value-Length-TooShort:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooShort'
+                VAL000-Field-Value-Length-TooLong:
+                  $ref: '#/components/examples/VAL000-Field-Value-Length-TooLong'
+                VAL000-Field-Value-TooSmall:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooSmall'
+                VAL000-Field-Value-TooBig:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooBig'
+                VAL000-Field-Value-TooEarly:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooEarly'
+                VAL000-Field-Value-TooLate:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooLate'
+                VAL000-Field-Value-NotEnoughElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-NotEnoughElements'
+                VAL000-Field-Value-TooManyElements:
+                  $ref: '#/components/examples/VAL000-Field-Value-TooManyElements'
+        "404":
+          description: Resource Not Found
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                NFD001-Not-Found:
+                  $ref: '#/components/examples/NFD001-Not-Found'
+        "502":
+          description: Bad Gateway
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS002-Bad-Gateway-Error:
+                  $ref: '#/components/examples/SYS002-Bad-Gateway-Error'
+        "500":
+          description: Internal Server Error
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS000-Internal-Server-Error:
+                  $ref: '#/components/examples/SYS000-Internal-Server-Error'
+        "503":
+          description: Service Unavailable
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                SYS001-Service-Unavailable:
+                  $ref: '#/components/examples/SYS001-Service-Unavailable'
+        "422":
+          description: Unprocessable Entity
+          headers:
+            Content-Type:
+              description: Media Type of the body
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TTError'
+              examples:
+                APP000-Unprocessable-Entity:
+                  $ref: '#/components/examples/APP000-Unprocessable-Entity'
+components:
+  schemas:
+    AppointmentDetails:
+      required:
+      - appointmentCharacteristic
+      - appointmentSpecification
+      - id
+      - locationCharacteristic
+      - locationSpecification
+      - serviceSpecification
+      - supplierAppointmentId
+      - workflowSpecification
+      allOf:
+      - $ref: '#/components/schemas/AppointmentRef'
+      - type: object
+        properties:
+          supplierAppointmentId:
+            type: string
+      - $ref: '#/components/schemas/AppointmentItem'
+      - type: object
+        properties:
+          serviceSpecification:
+            $ref: '#/components/schemas/SpecificationRef'
+          workflowSpecification:
+            $ref: '#/components/schemas/WorkflowSpecification'
+          lastModified:
+            type: string
+            format: date-time
+    AppointmentRef:
+      type: object
+      properties:
+        id:
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+          description: Identifier of the export job
+        href:
+          type: string
+          description: Reference of the export job
+          format: uri
+    AppointmentItem:
+      type: object
+      properties:
+        externalId:
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+          description: Client's Reference Number
+        relatedParty:
+          $ref: '#/components/schemas/RelatedParty'
+        appointmentSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        appointmentCharacteristic:
+          $ref: '#/components/schemas/CharacteristicValueArray'
+        locationSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        locationCharacteristic:
+          $ref: '#/components/schemas/CharacteristicValueArray'
+    RelatedParty:
+      properties:
+        id:
+          maxLength: 50
+          minLength: 0
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+        name:
+          maxLength: 50
+          minLength: 0
+          pattern: ^[a-zA-Z 0-9 \- \\ _ \/]{0,50}$
+          type: string
+        role:
+          maxLength: 50
+          minLength: 0
+          pattern: ^[a-zA-Z 0-9 \- \\ _ \/]{0,50}$
+          type: string
+          description: related object type here
+    SpecificationRef:
+      required:
+      - id
+      allOf:
+      - $ref: '#/components/schemas/TMFResource'
+      - type: object
+        properties:
+          name:
+            maxLength: 256
+            pattern: ^[a-zA-Z 0-9]{0,256}$
+            type: string
+          '@referredType':
+            type: string
+            description: The actual type of the target instance when needed for disambiguation.
+    TMFResource:
+      allOf:
+      - $ref: '#/components/schemas/TMFBase'
+      - type: object
+        properties:
+          id:
+            pattern: ^[0-9]$
+            type: integer
+            description: Unique Identifier
+          href:
+            type: string
+            description: Reference of the export job
+            format: uri
+    TMFBase:
+      type: object
+      properties:
+        '@baseType':
+          type: string
+          description: When sub-classing, this defines the super-class
+        '@schemaLocation':
+          type: string
+          description: A URI to a JSON-Schema file that defines additional attributes and relationships
+          format: uri
+        '@type':
+          type: string
+          description: When sub-classing, this defines the sub-class Extensible name
+    CharacteristicValueArray:
+      allOf:
+      - $ref: '#/components/schemas/Characteristic'
+      - type: array
+        items:
+          required:
+          - name
+          - value
+          type: object
+          properties:
+            value:
+              type: array
+              items:
+                required:
+                - value
+                type: object
+                properties:
+                  value:
+                    type: string
+    Characteristic:
+      type: array
+      items:
+        $ref: '#/components/schemas/Characteristic_inner'
+    WorkflowSpecification:
+      required:
+      - id
+      allOf:
+      - $ref: '#/components/schemas/Specification'
+      - required:
+        - downstreamSpeed
+        - throughputSpeedCategory
+        - throughputSpeeds
+        type: object
+        properties:
+          isServiceAvailablilityWorkflow:
+            type: boolean
+          characteristics:
+            type: array
+            items:
+              $ref: '#/components/schemas/TTCharacteristic'
+          locationSpecification:
+            type: array
+            items:
+              allOf:
+              - $ref: '#/components/schemas/SpecificationRef'
+              - type: object
+                properties:
+                  appointmentSpecification:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SpecificationRef'
+    Specification:
+      required:
+      - id
+      allOf:
+      - $ref: '#/components/schemas/TMFResource'
+      - type: object
+        properties:
+          name:
+            maxLength: 60
+            minLength: 1
+            pattern: ^[a-zA-Z]$
+            type: string
+          description:
+            maxLength: 512
+            pattern: ^[a-zA-Z]$
+            type: string
+          lifecycleStatus:
+            maxLength: 60
+            minLength: 1
+            pattern: ^[a-zA-Z]$
+            type: string
+          lastModified:
+            type: string
+            format: date-time
+    TTCharacteristic:
+      allOf:
+      - $ref: '#/components/schemas/SpecCharacteristic'
+      - required:
+        - lastModified
+        - mandatory
+        - maxCardinality
+        - name
+        - valueType
+        type: object
+        properties:
+          isConfigurable:
+            type: boolean
+          mandatory:
+            type: boolean
+          defaultValue:
+            maxLength: 60
+            minLength: 1
+            type: string
+          isInventoryData:
+            type: boolean
+    SpecCharacteristic:
+      description: TMF - CharacteristicSpecification
+      allOf:
+      - $ref: '#/components/schemas/TMFBase'
+      - required:
+        - id
+        - name
+        - valueType
+        type: object
+        properties:
+          id:
+            pattern: ^[0-9]$
+            type: integer
+            description: Unique ID for the characteristic
+          name:
+            maxLength: 60
+            minLength: 1
+            pattern: ^[a-zA-Z]$
+            type: string
+          description:
+            maxLength: 512
+            pattern: ^[a-zA-Z]$
+            type: string
+          valueType:
+            maxLength: 60
+            minLength: 1
+            pattern: ^[a-zA-Z]$
+            type: string
+          minCardinality:
+            pattern: ^[0-9]$
+            type: integer
+          maxCardinality:
+            pattern: ^[0-9]$
+            type: integer
+          minValue:
+            type: integer
+          maxValue:
+            type: integer
+          minLength:
+            pattern: ^[0-9]$
+            type: integer
+          maxLength:
+            pattern: ^[0-9]$
+            type: integer
+          regEx:
+            maxLength: 512
+            minLength: 1
+            type: string
+          characteristicValue:
+            type: array
+            items:
+              $ref: '#/components/schemas/CharacteristicValue'
+          characteristicGroup:
+            $ref: '#/components/schemas/CharacteristicSpecificationGroup'
+          lastModified:
+            type: string
+            format: date-time
+    CharacteristicValue:
+      description: TMF - CharacteristicValueSpecification
+      allOf:
+      - $ref: '#/components/schemas/TMFBase'
+      - required:
+        - value
+        type: object
+        properties:
+          value:
+            maxLength: 512
+            minLength: 1
+            type: string
+          isDefault:
+            type: boolean
+          lastModified:
+            type: string
+            format: date-time
+    CharacteristicSpecificationGroup:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: Unique ID for the group
+        name:
+          maxLength: 60
+          pattern: ^[a-zA-Z]$
+          type: string
+    TTError:
+      required:
+      - correlationId
+      - error
+      type: object
+      properties:
+        correlationId:
+          type: string
+        error:
+          $ref: '#/components/schemas/Error'
+      example:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SYS000
+          reason: Internal-Server-Error
+          message: An Internal Service is currently unavailable please retry the request. If the problem continues please contact your system administrator
+    Error:
+      required:
+      - code
+      - reason
+      type: object
+      properties:
+        code:
+          type: string
+        reason:
+          type: string
+        message:
+          type: string
+    TTValidationError:
+      required:
+      - correlationId
+      - error
+      type: object
+      properties:
+        correlationId:
+          type: string
+        error:
+          $ref: '#/components/schemas/ValidationError'
+      example:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+            message: Missing required field dateOfBirth
+            path: $.dateOfBirth
+    ValidationError:
+      required:
+      - code
+      - reason
+      - validationErrors
+      type: object
+      properties:
+        code:
+          type: string
+        reason:
+          type: string
+        message:
+          type: string
+        validationErrors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ValidationErrorItem'
+    ValidationErrorItem:
+      required:
+      - message
+      - path
+      type: object
+      properties:
+        message:
+          type: string
+        path:
+          type: string
+    TTCollection:
+      required:
+      - href
+      - rel
+      - value
+      type: object
+      properties:
+        href:
+          type: string
+        rel:
+          type: array
+          items:
+            type: string
+        value:
+          type: array
+          items:
+            type: object
+    AvailableAppointment:
+      required:
+      - appointments
+      - supplier
+      allOf:
+      - $ref: '#/components/schemas/SpecificationRef'
+      - type: object
+        properties:
+          name:
+            type: string
+          supplier:
+            $ref: '#/components/schemas/Supplier'
+          appointments:
+            type: array
+            items:
+              $ref: '#/components/schemas/AvailableAppointment_appointments'
+    Supplier:
+      type: object
+      properties:
+        id:
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+        name:
+          maxLength: 60
+          minLength: 1
+          pattern: ^[a-zA-Z]$
+          type: string
+    Appointment:
+      required:
+      - appointmentCharacteristic
+      - appointmentSpecification
+      - id
+      - locationCharacteristic
+      - locationSpecification
+      - serviceSpecification
+      - workflowSpecification
+      type: object
+      properties:
+        serviceSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        workflowSpecification:
+          $ref: '#/components/schemas/WorkflowSpecification'
+      allOf:
+      - $ref: '#/components/schemas/AppointmentItem'
+    GetAvailableAppointment:
+      required:
+      - appointmentFromDate
+      - appointmentSpecification
+      - locationCharacteristic
+      - locationSpecification
+      - serviceSpecification
+      - workflowSpecification
+      type: object
+      properties:
+        externalId:
+          pattern: ^[a-zA-Z 0-9]$
+          type: string
+          description: Client's Reference Number
+        appointmentSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        serviceSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        workflowSpecification:
+          $ref: '#/components/schemas/WorkflowSpecification'
+        locationSpecification:
+          $ref: '#/components/schemas/SpecificationRef'
+        locationCharacteristic:
+          $ref: '#/components/schemas/CharacteristicValueArray'
+        appointmentFromDate:
+          pattern: ^\d\d\d\d-(0?[1-9]|1[0-2])-(0?[1-9]|[12][0-9]|3[01])
+          type: string
+          format: date
+    inline_response_200:
+      allOf:
+      - $ref: '#/components/schemas/TTCollection'
+      - type: object
+        properties:
+          value:
+            type: array
+            items:
+              $ref: '#/components/schemas/AvailableAppointment'
+    Characteristic_inner:
+      required:
+      - name
+      type: object
+      properties:
+        name:
+          type: string
+    AvailableAppointment_appointments:
+      type: object
+      properties:
+        appointmentCharacteristic:
+          $ref: '#/components/schemas/CharacteristicValueArray'
+  responses:
+    Appointment-Created:
+      description: appointment created
+      headers:
+        Location:
+          description: Contains a direct link to the newly created appointment
+          style: simple
+          explode: false
+          schema:
+            type: string
+        Content-Type:
+          description: Media Type of the body
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AppointmentDetails'
+          examples:
+            newAppointmentResponse:
+              $ref: '#/components/examples/New-Appointment-Response-Example'
+            newAppointmentCityFibreFTTPResponse:
+              $ref: '#/components/examples/New-Appointment-Response-CityFibre-FTTP-Example'
+    Existing-Appointment:
+      description: retrieved an existing appointment
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          style: simple
+          explode: false
+          schema:
+            type: string
+          example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AppointmentDetails'
+          examples:
+            getAppointment:
+              $ref: '#/components/examples/Existing-Appointment-Example'
+            GetCityFibreAppointment:
+              $ref: '#/components/examples/GetCityFibreAppointment'
+    Available-Appointments:
+      description: available appointments
+      content:
+        application/ion+json:
+          schema:
+            $ref: '#/components/schemas/inline_response_200'
+          examples:
+            openreachAvailableAppointments:
+              $ref: '#/components/examples/Openreach-Available-Appointments-Example'
+            cityfibreAvailableAppointments:
+              $ref: '#/components/examples/Cityfibre-Available-Appointments-Example'
+    Unauthorized:
+      description: User is not authorized
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            SEC000-Unauthorized:
+              $ref: '#/components/examples/SEC000-Unauthorized'
+    Forbidden:
+      description: User does not have permission to access the requested resource
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            SEC001-Forbidden:
+              $ref: '#/components/examples/SEC001-Forbidden'
+    Bad-Request:
+      description: Invalid input, object invalid
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTValidationError'
+          examples:
+            VAL000-Missing-Field-Value:
+              $ref: '#/components/examples/VAL000-Missing-Field-Value'
+            VAL000-Bad-Format:
+              $ref: '#/components/examples/VAL000-Bad-Format'
+            VAL000-Unknown-Field-Value:
+              $ref: '#/components/examples/VAL000-Unknown-Field-Value'
+            VAL000-Field-Value-Length-TooShort:
+              $ref: '#/components/examples/VAL000-Field-Value-Length-TooShort'
+            VAL000-Field-Value-Length-TooLong:
+              $ref: '#/components/examples/VAL000-Field-Value-Length-TooLong'
+            VAL000-Field-Value-TooSmall:
+              $ref: '#/components/examples/VAL000-Field-Value-TooSmall'
+            VAL000-Field-Value-TooBig:
+              $ref: '#/components/examples/VAL000-Field-Value-TooBig'
+            VAL000-Field-Value-TooEarly:
+              $ref: '#/components/examples/VAL000-Field-Value-TooEarly'
+            VAL000-Field-Value-TooLate:
+              $ref: '#/components/examples/VAL000-Field-Value-TooLate'
+            VAL000-Field-Value-NotEnoughElements:
+              $ref: '#/components/examples/VAL000-Field-Value-NotEnoughElements'
+            VAL000-Field-Value-TooManyElements:
+              $ref: '#/components/examples/VAL000-Field-Value-TooManyElements'
+    Not-Found:
+      description: Resource Not Found
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            NFD001-Not-Found:
+              $ref: '#/components/examples/NFD001-Not-Found'
+    Bad-Gateway:
+      description: Bad Gateway
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            SYS002-Bad-Gateway-Error:
+              $ref: '#/components/examples/SYS002-Bad-Gateway-Error'
+    Internal-Server-Error:
+      description: Internal Server Error
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            SYS000-Internal-Server-Error:
+              $ref: '#/components/examples/SYS000-Internal-Server-Error'
+    Service-Unavailable:
+      description: Service Unavailable
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            SYS001-Service-Unavailable:
+              $ref: '#/components/examples/SYS001-Service-Unavailable'
+    Unprocessable-Entity:
+      description: Unprocessable Entity
+      headers:
+        Content-Type:
+          description: Media Type of the body
+          schema:
+            type: string
+            example: application/json
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TTError'
+          examples:
+            APP000-Unprocessable-Entity:
+              $ref: '#/components/examples/APP000-Unprocessable-Entity'
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        pattern: ^[a-zA-Z 0-9]$
+        type: string
+    Correlation-ID:
+      name: Correlation-ID
+      in: header
+      description: Guid used for journey tracking
+      required: false
+      schema:
+        type: string
+      example: 123e4567-e89b-12d3-a456-42665544000
+  examples:
+    New-Appointment-Example:
+      value:
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          id: "1"
+          name: Openreach FTTP Provide Standard Appointment
+        appointmentCharacteristic:
+        - name: appointmentDate
+          value:
+          - value: 2022-07-01
+        - name: appointmentTimeSlot
+          value:
+          - value: AM
+        - name: appointmentStartTime
+          value:
+          - value: 8:00
+        - name: appointmentEndTime
+          value:
+          - value: 12:59
+        locationSpecification:
+          id: "01"
+          name: GALK
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: LV
+        - name: GALK
+          value:
+          - value: A90000519494
+        serviceSpecification:
+          id: "01"
+          name: Openreach FTTP All 80/20 Mbps
+        workflowSpecification:
+          id: "1"
+          name: ProvideNew
+    New-Appointment-SoGEA-Example:
+      value:
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          id: "04"
+          name: Openreach SoGEA Standard Appointment
+        appointmentCharacteristic:
+        - name: appointmentDate
+          value:
+          - value: 2020-01-15
+        - name: appointmentTimeslot
+          value:
+          - value: AM
+        - name: appointmentStartTime
+          value:
+          - value: 8:00
+        - name: appointmentEndTime
+          value:
+          - value: 12:59
+        - name: siteVisitReason
+          value:
+          - value: Standard
+        locationSpecification:
+          id: "01"
+          name: GALK
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: AA
+        - name: GALK
+          value:
+          - value: "123456"
+        serviceSpecification:
+          id: "06"
+          name: Openreach SoGEA 40/80 MBPS
+        workflowSpecification:
+          id: "01"
+          name: provideNew
+    New-Appointment-CityFibre-FTTP-Example:
+      value:
+        externalId: "12"
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          id: 6
+        appointmentCharacteristic:
+        - name: appointmentDate
+          value:
+          - value: 2022-09-05
+        - name: appointmentTimeSlot
+          value:
+          - value: PM
+        - name: appointmentStartTime
+          value:
+          - value: 13:00
+        - name: appointmentEndTime
+          value:
+          - value: 18:00
+        locationSpecification:
+          id: 2
+        locationCharacteristic:
+        - name: UPRN
+          value:
+          - value: "232000000094"
+        serviceSpecification:
+          id: 67
+        workflowSpecification:
+          id: "1"
+    New-Appointment-Response-Example:
+      value:
+        supplierAppointmentId: 0062E4BFR
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          '@referredType': AppointmentSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        appointmentCharacteristic:
+        - name: appointmentDate
+          value:
+          - value: 2022-07-01
+        - name: appointmentTimeSlot
+          value:
+          - value: AM
+        - name: appointmentStartTime
+          value:
+          - value: 08:00
+        - name: appointmentEndTime
+          value:
+          - value: 12:59
+        - name: appointmentReservationValidUntil
+          value:
+          - value: 2022-06-11T14:41:00
+        - name: earliestAvailableAppointmentDate
+          value:
+          - value: 2022-06-11T08:00:00
+        locationSpecification:
+          '@referredType': LocationSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: LV
+        - name: GALK
+          value:
+          - value: A90000519494
+        serviceSpecification:
+          '@referredType': AccessServiceSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        workflowSpecification:
+          isServiceAvailabilityWorkflow: false
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-service-catalog/2.0.0#/components/schemas/WorkflowSpecification
+          lastModified: 0001-01-01T00:00:00
+          '@baseType': Specification
+          '@type': WorkflowSpecification
+          id: 1
+        lastModified: 2022-06-10T13:41:00.6273774Z
+        href: http://10.99.235.21/appointing/v1/appointments/3358
+        id: 3358
+    New-Appointment-Response-CityFibre-FTTP-Example:
+      value:
+        supplierAppointmentId: "36"
+        externalId: "12"
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          '@referredType': AppointmentSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 6
+        appointmentCharacteristic:
+        - name: supplierId
+          value:
+          - value: CITYFIBRE
+        - name: appointmentDate
+          value:
+          - value: 2022-09-05
+        - name: appointmentStartTime
+          value:
+          - value: 14:00
+        - name: appointmentEndTime
+          value:
+          - value: 19:00
+        - name: appointmentTimeSlot
+          value:
+          - value: PM
+        - name: appointmentReservationValidUntil
+          value:
+          - value: 2022-08-17T17:46:24.493Z
+        locationSpecification:
+          '@referredType': LocationSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 2
+        locationCharacteristic:
+        - name: UPRN
+          value:
+          - value: "232000000094"
+        serviceSpecification:
+          '@referredType': AccessServiceSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 67
+        workflowSpecification:
+          isServiceAvailabilityWorkflow: false
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-service-catalog/2.0.0#/components/schemas/WorkflowSpecification
+          lastModified: 0001-01-01T00:00:00
+          '@baseType': Specification
+          '@type': WorkflowSpecification
+          id: 1
+        lastModified: 2022-08-17T13:46:24.9087653Z
+        href: http://AWAPI10001/Appointing/v1/appointments/5095
+        id: 5095
+    Existing-Appointment-Example:
+      value:
+        supplierAppointmentId: 005E35EFR
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          '@referredType': AppointmentSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        appointmentCharacteristic:
+        - name: appointmentDate
+          value:
+          - value: 2022-04-28
+        - name: appointmentTimeSlot
+          value:
+          - value: AM
+        - name: appointmentStartTime
+          value:
+          - value: 08:00
+        - name: appointmentEndTime
+          value:
+          - value: 12:59
+        - name: appointmentReservationValidUntil
+          value:
+          - value: 2022-04-09T07:44:49
+        - name: earliestAvailableAppointmentDate
+          value:
+          - value: 2022-04-08T08:00:00
+        locationSpecification:
+          '@referredType': LocationSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: LV
+        - name: GALK
+          value:
+          - value: A90000518796
+        serviceSpecification:
+          '@referredType': AccessServiceSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 1
+        workflowSpecification:
+          isServiceAvailabilityWorkflow: false
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-service-catalog/2.0.0#/components/schemas/WorkflowSpecification
+          lastModified: 0001-01-01T00:00:00
+          '@baseType': Specification
+          '@type': WorkflowSpecification
+          id: 1
+        lastModified: 2022-04-08T07:43:13.463
+        href: http://10.99.235.21/appointing/v1/appointments/1000
+        id: 1000
+    GetCityFibreAppointment:
+      value:
+        supplierAppointmentId: "52"
+        relatedParty:
+          id: "569"
+          name: CPW Cobol
+          role: RequestingAgent
+        appointmentSpecification:
+          '@referredType': AppointmentSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 6
+        appointmentCharacteristic:
+        - name: supplierId
+          value:
+          - value: CITYFIBRE
+        - name: appointmentDate
+          value:
+          - value: 2022-09-05
+        - name: appointmentStartTime
+          value:
+          - value: 14:00
+        - name: appointmentEndTime
+          value:
+          - value: 19:00
+        - name: appointmentTimeSlot
+          value:
+          - value: PM
+        - name: appointmentReservationValidUntil
+          value:
+          - value: 2022-08-18T17:54:00.579Z
+        locationSpecification:
+          '@referredType': LocationSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 2
+        locationCharacteristic:
+        - name: UPRN
+          value:
+          - value: "232000000094"
+        serviceSpecification:
+          '@referredType': AccessServiceSpecification
+          '@baseType': TMFResource
+          '@type': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/domain-tmf-base/2.0.0#/components/schemas/SpecificationRef
+          id: 67
+        workflowSpecification:
+          isServiceAvailabilityWorkflow: false
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-service-catalog/2.0.0#/components/schemas/WorkflowSpecification
+          lastModified: 0001-01-01T00:00:00
+          '@baseType': Specification
+          '@type': WorkflowSpecification
+          id: 1
+        lastModified: 2022-08-18T13:54:01.447
+        href: http://AWAPI10001/Appointing/v1/appointments/5123
+        id: 5123
+    Openreach-Available-Appointments-Example:
+      value:
+        value:
+        - supplier:
+            id: 1
+            name: OpenReach
+          appointments:
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-11
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-11
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-12
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-12
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-13
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-13
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-14
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-14
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-15
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-15
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-16
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-16
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-17
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-17
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-18
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-18
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-19
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-19
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-20
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-20
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-21
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-21
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-22
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-22
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-23
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-23
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-24
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-24
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-25
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-25
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-26
+            - name: AppointmentTimeslot
+              value:
+              - value: AM
+            - name: AppointmentStartTime
+              value:
+              - value: 08:00
+            - name: AppointmentEndTime
+              value:
+              - value: 12:59
+          - appointmentCharacteristic:
+            - name: AppointmentDate
+              value:
+              - value: 2022-06-26
+            - name: AppointmentTimeslot
+              value:
+              - value: PM
+            - name: AppointmentStartTime
+              value:
+              - value: 13:00
+            - name: AppointmentEndTime
+              value:
+              - value: 18:00
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-appointment/2.0.0#/components/schemas/AvailableAppointment
+          '@referredType': AppointmentSpecification
+          name: Openreach FTTP Provide Standard Appointment
+          '@baseType': SpecificationRef
+          '@type': AvailableAppointment
+          id: 1
+        href: http://10.99.235.21/appointing/v1/available-appointments/search-by-location
+        rel:
+        - collection
+    Cityfibre-Available-Appointments-Example:
+      value:
+        value:
+        - supplier:
+            id: "2"
+            name: CITYFIBRE
+          appointments:
+          - appointmentCharactaristic:
+            - name: appointmentDate
+              value:
+              - value: 2022-08-30
+            - name: appointmentStartTime
+              value:
+              - value: 13:00
+            - name: appointmentEndTime
+              value:
+              - value: 18:00
+            - name: appointmentTimeslot
+              value:
+              - value: PM
+          - appointmentCharactaristic:
+            - name: appointmentDate
+              value:
+              - value: 2022-08-30
+            - name: appointmentStartTime
+              value:
+              - value: 08:00
+            - name: appointmentEndTime
+              value:
+              - value: 13:00
+            - name: appointmentTimeslot
+              value:
+              - value: AM
+          '@href': http://10.99.235.21/appointing/v1/available-appointments/search-by-location
+          rel:
+          - collection
+          '@basetype': SpecificationRef
+          '@schemaLocation': https://app.swaggerhub.com/domains/TalkTalkGroup/oss-domain-appointment/2.0.0#/components/schemas/AvailableAppointment
+          '@type': AvailableAppointment
+          '@referredType': AppointmentSpecification
+          id: "6"
+          name: CityFibre FTTP Provide Flexible Appointment
+    Get-Appointment-Example:
+      value:
+        appointmentSpecification:
+          id: "01"
+          name: Openreach FTTP Provide Standard Appointment
+        serviceSpecification:
+          id: "04"
+          name: Openreach FTTP All 80/20 Mbps
+        workflowSpecification:
+          id: "1"
+          name: ProvideNew
+        locationSpecification:
+          id: "01"
+          name: GALK
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: LV
+    Get-Appointment-SoGEA-Example:
+      value:
+        appointmentSpecification:
+          id: "04"
+          name: Openreach SoGEA Standard Appointment
+        serviceSpecification:
+          id: "06"
+          name: Openreach SoGEA 40/80 MBPS
+        workflowSpecification:
+          id: "01"
+          name: provideNew
+        locationSpecification:
+          id: "01"
+          name: GALK
+        appointmentCharacteristic:
+        - name: siteVisitReason
+          value:
+          - value: Standard
+        locationCharacteristic:
+        - name: DC
+          value:
+          - value: AA
+        - name: GALK
+          value:
+          - value: "123456"
+        appointmentFromDate: 15-10-2021
+    Get-Appointment-CityFibre-FTTP-Example:
+      value:
+        appointmentSpecification:
+          id: "6"
+        serviceSpecification:
+          id: "67"
+        workflowSpecification:
+          id: "1"
+        locationSpecification:
+          id: "2"
+        locationCharacteristic:
+        - name: UPRN
+          value:
+          - value: "232000000094"
+        appointmentFromDate: 2022-08-15
+    SEC000-Unauthorized:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SEC000
+          reason: Unauthorized
+          message: User is not authorized
+    SEC001-Forbidden:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SEC001
+          reason: Forbidden
+          message: User does not have permission to access the requested resource
+    VAL000-Missing-Field-Value:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: The dateOfBirth field is required.
+            path: $.dateOfBirth
+    VAL000-Bad-Format:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: Invalid format specified for field firstName
+            path: $.firstName
+    VAL000-Unknown-Field-Value:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: Invalid value specified for field countryOfBirth
+            path: $.countryOfBirth
+    VAL000-Field-Value-Length-TooShort:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: occupation does not meet the minimum length requirement
+            path: $.occupation
+    VAL000-Field-Value-Length-TooLong:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: occupation exceeds the maximum length requirement
+            path: $.occupation
+    VAL000-Field-Value-TooSmall:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: age does not meet the minimum value requirement
+            path: $.age
+    VAL000-Field-Value-TooBig:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: age exceeds the maximum value requirement
+            path: $.age
+    VAL000-Field-Value-TooEarly:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: dateOfBirth does not meet the minimum date requirements
+            path: $.employees[0].dateOfBirth
+    VAL000-Field-Value-TooLate:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: established exceeds the maximum date requirements
+            path: $.established
+    VAL000-Field-Value-NotEnoughElements:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: employees does not meet the minimum required number of elements
+            path: $.employees
+    VAL000-Field-Value-TooManyElements:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: VAL000
+          reason: Invalid-Request
+          message: Please review the validation errors for more information
+          validationErrors:
+          - message: employees exceeds the maximum number of allowed elements
+            path: $.employees
+    NFD001-Not-Found:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: NFD001
+          reason: Not-Found
+          message: Resource Not Found
+    SYS002-Bad-Gateway-Error:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SYS002
+          reason: Bad-Gateway
+          message: The server was acting as a gateway or proxy and received an invalid response from the server
+    SYS000-Internal-Server-Error:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SYS000
+          reason: Internal-Server-Error
+          message: A problem as occured performing your request, please contact your system administrator
+    SYS001-Service-Unavailable:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: SYS001
+          reason: Service-Unavailable
+          message: An Internal Service is currently unavailable please retry the request. If the problem continues please contact your system administrator
+    APP000-Unprocessable-Entity:
+      value:
+        correlationId: 411a1635-16b6-47ac-b6da-21002b81be71
+        error:
+          code: APP000
+          reason: Unprocessable-Entity
+          message: Request could not be processed
+  requestBodies:
+    New-Appointment:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Appointment'
+          examples:
+            newAppointment:
+              $ref: '#/components/examples/New-Appointment-Example'
+            newAppointment SoGEA:
+              $ref: '#/components/examples/New-Appointment-SoGEA-Example'
+            newAppointment CityFibre FTTP:
+              $ref: '#/components/examples/New-Appointment-CityFibre-FTTP-Example'
+    Get-AvailableAppointments:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GetAvailableAppointment'
+          examples:
+            getAvailableAppointment:
+              $ref: '#/components/examples/Get-Appointment-Example'
+            getAvailableAppointment SoGEA:
+              $ref: '#/components/examples/Get-Appointment-SoGEA-Example'
+            getAvailableAppointment CityFibre FTTP:
+              $ref: '#/components/examples/Get-Appointment-CityFibre-FTTP-Example'
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
