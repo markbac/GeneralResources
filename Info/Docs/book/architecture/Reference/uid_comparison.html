@@ -1,0 +1,357 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Uid Comparison - Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../Product/Architecture/HLD/hld.html"><strong aria-hidden="true">1.</strong> Hld</a></li><li class="chapter-item "><a href="../../Product/Architecture/adrs/adr-template.html"><strong aria-hidden="true">2.</strong> Adr Template</a></li><li class="chapter-item "><a href="../../Product/Architecture/rfcs/rfc-template.html"><strong aria-hidden="true">3.</strong> Rfc Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/acceptance_criteria_template.html"><strong aria-hidden="true">4.</strong> Acceptance Criteria Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/sprint_goal_template.html"><strong aria-hidden="true">5.</strong> Sprint Goal Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/user_story_template.html"><strong aria-hidden="true">6.</strong> User Story Template</a></li><li class="chapter-item "><a href="../../architecture/Explanation/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">7.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Explanation/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">8.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Explanation/what_is_solution_architecture.html"><strong aria-hidden="true">9.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/HowTo/api-doc.html"><strong aria-hidden="true">10.</strong> Api Doc</a></li><li class="chapter-item "><a href="../../architecture/Reference/10-architecture-patterns-to-know.html"><strong aria-hidden="true">11.</strong> Architecture Patterns to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">12.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/23-fundamental-principles-in-sw-arch.html"><strong aria-hidden="true">13.</strong> Fundamental Principles in Sw Arch</a></li><li class="chapter-item "><a href="../../architecture/Reference/7-architecture-design-patterns.html"><strong aria-hidden="true">14.</strong> Architecture Design Patterns</a></li><li class="chapter-item "><a href="../../architecture/Reference/Git-branching.html"><strong aria-hidden="true">15.</strong> Git Branching</a></li><li class="chapter-item "><a href="../../architecture/Reference/The-important-architecturla-patterns-you-need-to-know.html"><strong aria-hidden="true">16.</strong> The Important Architecturla Patterns You Need to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">17.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeImplementation.html"><strong aria-hidden="true">18.</strong> codeImplementation</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeReview.html"><strong aria-hidden="true">19.</strong> codeReview</a></li><li class="chapter-item "><a href="../../architecture/Reference/debugging.html"><strong aria-hidden="true">20.</strong> Debugging</a></li><li class="chapter-item "><a href="../../architecture/Reference/defects.html"><strong aria-hidden="true">21.</strong> Defects</a></li><li class="chapter-item "><a href="../../architecture/Reference/dod.html"><strong aria-hidden="true">22.</strong> Dod</a></li><li class="chapter-item "><a href="../../architecture/Reference/dor.html"><strong aria-hidden="true">23.</strong> Dor</a></li><li class="chapter-item "><a href="../../architecture/Reference/git_branching_strategy.html"><strong aria-hidden="true">24.</strong> Git Branching Strategy</a></li><li class="chapter-item "><a href="../../architecture/Reference/habits_of_great_software_engineers.html"><strong aria-hidden="true">25.</strong> Habits of Great Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/microservices-checklist.html"><strong aria-hidden="true">26.</strong> Microservices Checklist</a></li><li class="chapter-item "><a href="../../architecture/Reference/naming-conventions.html"><strong aria-hidden="true">27.</strong> Naming Conventions</a></li><li class="chapter-item "><a href="../../architecture/Reference/pragmatic.html"><strong aria-hidden="true">28.</strong> Pragmatic</a></li><li class="chapter-item "><a href="../../architecture/Reference/throughput_and_latency.html"><strong aria-hidden="true">29.</strong> Throughput and Latency</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid.html"><strong aria-hidden="true">30.</strong> Uid</a></li><li class="chapter-item expanded "><a href="../../architecture/Reference/uid_comparison.html" class="active"><strong aria-hidden="true">31.</strong> Uid Comparison</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-MACH.html"><strong aria-hidden="true">32.</strong> What Is MACH</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-the-C4-model.html"><strong aria-hidden="true">33.</strong> What Is the C4 Model</a></li><li class="chapter-item "><a href="../../architecture/Reference/what_is_solution_architecture.html"><strong aria-hidden="true">34.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/adr/decision_record_template.html"><strong aria-hidden="true">35.</strong> Decision Record Template</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/index.html"><strong aria-hidden="true">36.</strong> Readme</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/SOLID.html"><strong aria-hidden="true">37.</strong> Solid</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/design-docs.html"><strong aria-hidden="true">38.</strong> Design Docs</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/john_lewis_principles.html"><strong aria-hidden="true">39.</strong> John Lewis Principles</a></li><li class="chapter-item "><a href="../../architecture/architecture_decision_framework.html"><strong aria-hidden="true">40.</strong> Architecture Decision Framework</a></li><li class="chapter-item "><a href="../../architecture/scaling_the_practice_of_architecture.html"><strong aria-hidden="true">41.</strong> Scaling the Practice of Architecture</a></li><li class="chapter-item "><a href="../../architecture/structurizr/adrs/0001-record-architecture-decisions.html"><strong aria-hidden="true">42.</strong> Record Architecture Decisions</a></li><li class="chapter-item "><a href="../../architecture/structurizr/docs/0001-design.html"><strong aria-hidden="true">43.</strong> Design</a></li><li class="chapter-item "><a href="../../checklists/architectureChecklist.html"><strong aria-hidden="true">44.</strong> architectureChecklist</a></li><li class="chapter-item "><a href="../../checklists/designChecklist.html"><strong aria-hidden="true">45.</strong> designChecklist</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="globally-unique-identifier-a-fair-comparison"><a class="header" href="#globally-unique-identifier-a-fair-comparison">Globally Unique Identifier a fair comparison</a></h1>
+<p><img src="image-56.png" alt="Alt text" /></p>
+<p>The idea behind this article is to share the little I learned about GUID implementations and provide education to others.</p>
+<p><em>Disclaimer: Although I carry good security foundations, I am not a cryptography expert, please take this data with a grain of salt and build your own opinions.</em></p>
+<h1 id="why-do-you-need-a-guid"><a class="header" href="#why-do-you-need-a-guid">Why do you need a GUID?</a></h1>
+<p>GUID (Globally Unique Identifier) are generators for identifiers typically used as primary keys in databases. GUID solve problems typically inherent to three tiers architectures, more precisely:</p>
+<ol>
+<li><strong>Scalability</strong> — growing hardware vertically has its limits, soon or later multiple instances are required to sustain the load. Centralized id generators have a significant (negative) impact on performance. GUID typically allow distributing generators across multiple instances.</li>
+<li><strong>Resilience</strong> — the ability to run multiple instances of a generator is a great way to improve its availablity and avoid a single point of failure.</li>
+<li><strong>Security</strong> — sequences are trivial to predict, in a distributed world different sources of entropy are used to guarantee uniqueness via a random, difficult to predict (long) string.</li>
+</ol>
+<h1 id="how-are-guid-different-from-db-sequences"><a class="header" href="#how-are-guid-different-from-db-sequences">How are GUID different from DB SEQUENCES?</a></h1>
+<p><em>Sequences is a RDBMS centric solution to ease primary key generation.</em></p>
+<p><img src="image-57.png" alt="Alt text" /></p>
+<p>Sequences vs GUID</p>
+<p>Sequence were great for a single database supporting an internal application to local users. Nowadays, OLTP data is secured, distributed, scalable and exposed to the world. These is still place for them in a DWH or other data OLAP storages.</p>
+<p><em>Since this article is about GUID I wont’ extend more on this topic, I added a great article —</em> <a href="https://infosecwriteups.com/how-this-easy-vulnerability-resulted-in-a-20-000-bug-bounty-from-gitlab-d9dc9312c10a"><em>The hidden dangers of numerical IDs</em></a></p>
+<h1 id="what-are-the-categories-of-guid"><a class="header" href="#what-are-the-categories-of-guid">What are the categories of GUID?</a></h1>
+<p>There are mainly two categories of GUIDs: <strong>Opaque</strong> and <strong>time-based</strong>. Time based GUID trade a few bits of entropy to encode a date, they are therefore more efficient to index at the cost of a shorter randomness range.</p>
+<p><img src="image-58.png" alt="Alt text" /></p>
+<p>Opaque vs Time-based GUID</p>
+<h1 id="features-benefits--shortcomings"><a class="header" href="#features-benefits--shortcomings">Features, Benefits &amp; Shortcomings</a></h1>
+<p>The table below provides a comprehensive comparison between the major GUID implementations.</p>
+<p><img src="image-55.png" alt="Alt text" /></p>
+<p>GUID Comparison table, <em>Please</em> [<em>click on this link for the full version</em>](.\GUID Comaprison.oda)</p>
+<h1 id="benchmark"><a class="header" href="#benchmark">Benchmark</a></h1>
+<p><em>Disclaimer, these benchmark are performed against a given architecture (JavaScript/Arm), different implementations/runtimes will likely give different results.</em></p>
+<pre><code>Platform info:  
+\==============  
+  Darwin 22.2.0 arm64  
+  Node.JS: 18.12.1  
+  V8: 10.2.154.15\-node.12  
+  CPU: Apple M1 Pro × 8  
+  Memory: 16 GB  
+​  
+Running &quot;GUID Benchmark&quot; suite...  
+Progress: 100%  
+​  
+uuid v1:  
+  4 460 889 ops/s, ±0.57%   | 63.99% slower  
+​  
+uuid v4:  
+  8 870 032 ops/s, ±0.54%   | 28.41% slower  
+​  
+uuid v7:  
+  443 205 ops/s, ±0.82%     | 96.42% slower  
+​  
+nanoid:  
+  5 300 343 ops/s, ±0.48%   | 57.22% slower  
+​  
+cuid:  
+  347 037 ops/s, ±1.15%     | 97.2% slower  
+​  
+cuid2:  
+  60 490 ops/s, ±0.52%       | slowest, 99.51% slower  
+​  
+ulid (monotonic):  
+  12 389 427 ops/s, ±0.64%   | fastest  
+​  
+xid:  
+  3 417 174 ops/s, ±0.41%   | 72.42% slower  
+​  
+ksuid:  
+  532 223 ops/s, ±1.02%     | 95.7% slower  
+​  
+Finished 9 cases!  
+Fastest: ulid (monotonic)  
+Slowest: cuid2
+</code></pre>
+<p><img src="image-54.png" alt="Alt text" /></p>
+<h1 id="thoughts-beyond-theory"><a class="header" href="#thoughts-beyond-theory">Thoughts beyond theory</a></h1>
+<p><em>At this point you should have a pretty good idea of the different implementations and how they compare. Let us add some context...</em></p>
+<h2 id="are-csprng-implementations-broken"><a class="header" href="#are-csprng-implementations-broken">Are CSPRNG implementations broken?</a></h2>
+<p>Some were, others are, mostly in (old) browsers.</p>
+<p>Remember that, even if ID generation takes place <strong>server side,</strong> where implementations are more stable and uniform: <strong>you must be vigilant</strong>. <a href="https://v8.dev/blog/math-random">Here</a> is a security post on the topic regarding NodeJS (2015).</p>
+<h2 id="is-randomness-a-pledge-for-security"><a class="header" href="#is-randomness-a-pledge-for-security">Is Randomness a pledge for security?</a></h2>
+<p>Machines run algorithms that approximate randomness by selecting algorithms and trusted entropy sources. A cryptographically secure pseudo-random number generator (CSPRNG) is a algorithm with properties that make it suitable for use in cryptography. On Linux for instance, the kernel gathers noisy data from various devices and transfers them to an internal pool of entropy.</p>
+<p>Unfortunate, not all cryptography stacks are equal. For instance, old versions of CSPRNG are famous for their poor implementations in JavaScript or PHP. Algorithms such as SHA1 also proved to be unsecured but are still used today in some GUID generators.</p>
+<p>While ensuring that a GUID generator is cryptography certified is important, <strong>an ID is nothing in view of a proper security architecture.</strong></p>
+<h2 id="what-are-the-odds-of-a-collisions"><a class="header" href="#what-are-the-odds-of-a-collisions">What are the odds of a collisions?</a></h2>
+<p>The answer depends on the use case and the specifics of a GUID implementation</p>
+<p>With that said, the advertised Math is probably not a good reflection of reality: In an application, a GUID is used to create a multitude of different entities. These entities by definition do not overlap with one another and are therefore in their own <em>space</em>, further reducing the chances of collisions.</p>
+<h2 id="is-there-a-risk-to-leak-the-id-generation-date"><a class="header" href="#is-there-a-risk-to-leak-the-id-generation-date">Is there a risk to leak the id generation date?</a></h2>
+<p>It all depends on <em>requirements</em>.</p>
+<p><strong>From a legal standpoint</strong>, some will argue that the ID generation date is PII data. While this classification could not be validated, a lawyer friend of mine found the argument difficult to defend in a court without considering the complete architecture.</p>
+<p><strong>From a security standpoint</strong>, very unlikely but it depends on your use case. Zendesk recently wrote <a href="https://zendesk.engineering/how-probable-are-collisions-with-ulids-monotonic-option-d604d3ed2de">an article on the topic</a>, recommended.</p>
+<h2 id="is-there-a-way-to-mitigate-security-and-performance"><a class="header" href="#is-there-a-way-to-mitigate-security-and-performance">Is there a way to mitigate security and performance?</a></h2>
+<p>There are designs which leverage different GUID implementations where they best fit. For instance, it is common in cloud database nowadays to provide an out of the box time-based guid. if this implementation is not sufficient to satisfy security requirements, the notion of internal and external id can be implemented on entities.</p>
+<p><img src="image-59.png" alt="Alt text" /></p>
+<h2 id="is-generation-performance-a-key-factor"><a class="header" href="#is-generation-performance-a-key-factor">Is generation performance a key factor?</a></h2>
+<p>In complete honesty, it’s probably not. The fact is, in terms of pseudo-random generation, <strong>velocity is generally not a factor of security.</strong> Besides even the slowest implementation still generates ids at 60000 ops/s on a single machine.</p>
+<h1 id="how-to-choose"><a class="header" href="#how-to-choose">How to choose?</a></h1>
+<p>With so many dimensions, what are the points to consider?</p>
+<ol>
+<li><strong>entropy length</strong> — this has direct impact on collisions and predictability, I would recommend avoiding anything with an entropy length &lt; 62 bits unless you understand what you are doing.</li>
+<li><strong>random generator quality</strong> — not all random generators are made equal, ensure the implementation uses a cryptography secure random. <a href="https://thenextweb.com/news/google-chromes-javascript-engine-finally-returns-actual-random-numbers">Do not trust!</a> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=552749">again DO NOT trust!</a></li>
+<li><strong>scalability</strong> — with so many options available, I would recommend an implementation which can scale horizontally.</li>
+</ol>
+<p>The remaining decision points are specific to your requirements.</p>
+<p>When ids are stored in a RDBMS database, I had successes with ULID and UUIDv7, for transient ids typically stored in memory or in the browser, I would recommend nanoid.</p>
+<h1 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h1>
+<p>We reached the end of this article. We learned that picking the right GUID flavor depends entirely on your requirements. You should be vigilent to the constraints of your specific use case, the data being leaked (if any), the CSPRNG implementation it uses or if you plan to store it as a primary key.</p>
+<p>If you are still stuck on the UUID vs Sequence as primary key, I added an excellent article in the appendix sections below. In the end it’s (Security, Scalability &amp; Resilience) vs Performance.</p>
+<h1 id="appendix"><a class="header" href="#appendix">Appendix</a></h1>
+<h2 id="articles-of-interests"><a class="header" href="#articles-of-interests">Articles of interests</a></h2>
+<ul>
+<li><a href="https://darkghosthunter.medium.com/laravel-you-can-now-use-uuid-and-ulid-4ce9d3792fcb#:~:text=While%20an%20ULID%20compatible%20with,for%20your%20database%2C%20be%20prepared.">From UUID to ULID, be prepared</a></li>
+<li><a href="https://www.ietf.org/archive/id/draft-peabody-dispatch-new-uuid-format-04.html#name-uuid-version-6">New UUID formats</a></li>
+<li><a href="https://github.com/paralleldrive/cuid2">CUID2</a></li>
+<li><a href="https://brandur.org/nanoglyphs/026-ids">Identity Crisis: Sequence v. UUID as Primary Key</a></li>
+<li><a href="https://infosecwriteups.com/how-this-easy-vulnerability-resulted-in-a-20-000-bug-bounty-from-gitlab-d9dc9312c10a">The hidden dangers of numerical IDs</a></li>
+</ul>
+<h2 id="definitions"><a class="header" href="#definitions"><em>Definitions</em></a></h2>
+<p><em>This section helps clarify some of the terms used in this document.</em></p>
+<p>Collisions</p>
+<p>A hash collision is a random match in hash values that occurs when a hashing algorithm produces the same hash value for two distinct pieces of data.</p>
+<p>Coordination</p>
+<p>The communication between the different elements of a complex activity so as to enable them to work together effectively.</p>
+<p>Entropy</p>
+<p>In Cryptography, refers to the randomness collected by a system for use in algorithms that require random seeds. (jargon word for “randomness”)</p>
+<p>Monotonic</p>
+<p>A monotonic generator ensures ids are always sorted in order. This term is particularly relevant to date based guid generators which are based on time. For a given instance, at instant T, the next id should always be sorted.</p>
+<p>Opaque</p>
+<p>An opaque identifier is one that doesn’t expose its inner details or structure.</p>
+<p>Pagination</p>
+<p>Pagination is a process that is used to divide a large data into smaller discrete pages. Commonly used in customer facing applications, pagination requires the notion of pointers on the dataset.</p>
+<p>Predictable</p>
+<p>A random number generator is predictable if, after observing some of its “random” output, we can make accurate predictions about what “random values” are coming up next.</p>
+<p>Randomness</p>
+<p>Randomness (entropy) is the cornerstone of cryptography. The more random the numbers, the more secure the cryptographic system. The challenge then, becomes one of generating true randomness.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../architecture/Reference/uid.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../architecture/Reference/what-is-MACH.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../architecture/Reference/uid.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../architecture/Reference/what-is-MACH.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

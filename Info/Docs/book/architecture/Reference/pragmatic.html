@@ -1,0 +1,522 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pragmatic - Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../Product/Architecture/HLD/hld.html"><strong aria-hidden="true">1.</strong> Hld</a></li><li class="chapter-item "><a href="../../Product/Architecture/adrs/adr-template.html"><strong aria-hidden="true">2.</strong> Adr Template</a></li><li class="chapter-item "><a href="../../Product/Architecture/rfcs/rfc-template.html"><strong aria-hidden="true">3.</strong> Rfc Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/acceptance_criteria_template.html"><strong aria-hidden="true">4.</strong> Acceptance Criteria Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/sprint_goal_template.html"><strong aria-hidden="true">5.</strong> Sprint Goal Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/user_story_template.html"><strong aria-hidden="true">6.</strong> User Story Template</a></li><li class="chapter-item "><a href="../../architecture/Explanation/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">7.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Explanation/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">8.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Explanation/what_is_solution_architecture.html"><strong aria-hidden="true">9.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/HowTo/api-doc.html"><strong aria-hidden="true">10.</strong> Api Doc</a></li><li class="chapter-item "><a href="../../architecture/Reference/10-architecture-patterns-to-know.html"><strong aria-hidden="true">11.</strong> Architecture Patterns to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">12.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/23-fundamental-principles-in-sw-arch.html"><strong aria-hidden="true">13.</strong> Fundamental Principles in Sw Arch</a></li><li class="chapter-item "><a href="../../architecture/Reference/7-architecture-design-patterns.html"><strong aria-hidden="true">14.</strong> Architecture Design Patterns</a></li><li class="chapter-item "><a href="../../architecture/Reference/Git-branching.html"><strong aria-hidden="true">15.</strong> Git Branching</a></li><li class="chapter-item "><a href="../../architecture/Reference/The-important-architecturla-patterns-you-need-to-know.html"><strong aria-hidden="true">16.</strong> The Important Architecturla Patterns You Need to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">17.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeImplementation.html"><strong aria-hidden="true">18.</strong> codeImplementation</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeReview.html"><strong aria-hidden="true">19.</strong> codeReview</a></li><li class="chapter-item "><a href="../../architecture/Reference/debugging.html"><strong aria-hidden="true">20.</strong> Debugging</a></li><li class="chapter-item "><a href="../../architecture/Reference/defects.html"><strong aria-hidden="true">21.</strong> Defects</a></li><li class="chapter-item "><a href="../../architecture/Reference/dod.html"><strong aria-hidden="true">22.</strong> Dod</a></li><li class="chapter-item "><a href="../../architecture/Reference/dor.html"><strong aria-hidden="true">23.</strong> Dor</a></li><li class="chapter-item "><a href="../../architecture/Reference/git_branching_strategy.html"><strong aria-hidden="true">24.</strong> Git Branching Strategy</a></li><li class="chapter-item "><a href="../../architecture/Reference/habits_of_great_software_engineers.html"><strong aria-hidden="true">25.</strong> Habits of Great Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/microservices-checklist.html"><strong aria-hidden="true">26.</strong> Microservices Checklist</a></li><li class="chapter-item "><a href="../../architecture/Reference/naming-conventions.html"><strong aria-hidden="true">27.</strong> Naming Conventions</a></li><li class="chapter-item expanded "><a href="../../architecture/Reference/pragmatic.html" class="active"><strong aria-hidden="true">28.</strong> Pragmatic</a></li><li class="chapter-item "><a href="../../architecture/Reference/throughput_and_latency.html"><strong aria-hidden="true">29.</strong> Throughput and Latency</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid.html"><strong aria-hidden="true">30.</strong> Uid</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid_comparison.html"><strong aria-hidden="true">31.</strong> Uid Comparison</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-MACH.html"><strong aria-hidden="true">32.</strong> What Is MACH</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-the-C4-model.html"><strong aria-hidden="true">33.</strong> What Is the C4 Model</a></li><li class="chapter-item "><a href="../../architecture/Reference/what_is_solution_architecture.html"><strong aria-hidden="true">34.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/adr/decision_record_template.html"><strong aria-hidden="true">35.</strong> Decision Record Template</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/index.html"><strong aria-hidden="true">36.</strong> Readme</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/SOLID.html"><strong aria-hidden="true">37.</strong> Solid</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/design-docs.html"><strong aria-hidden="true">38.</strong> Design Docs</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/john_lewis_principles.html"><strong aria-hidden="true">39.</strong> John Lewis Principles</a></li><li class="chapter-item "><a href="../../architecture/architecture_decision_framework.html"><strong aria-hidden="true">40.</strong> Architecture Decision Framework</a></li><li class="chapter-item "><a href="../../architecture/scaling_the_practice_of_architecture.html"><strong aria-hidden="true">41.</strong> Scaling the Practice of Architecture</a></li><li class="chapter-item "><a href="../../architecture/structurizr/adrs/0001-record-architecture-decisions.html"><strong aria-hidden="true">42.</strong> Record Architecture Decisions</a></li><li class="chapter-item "><a href="../../architecture/structurizr/docs/0001-design.html"><strong aria-hidden="true">43.</strong> Design</a></li><li class="chapter-item "><a href="../../checklists/architectureChecklist.html"><strong aria-hidden="true">44.</strong> architectureChecklist</a></li><li class="chapter-item "><a href="../../checklists/designChecklist.html"><strong aria-hidden="true">45.</strong> designChecklist</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="the-pragmatic-programmer-quick-reference-guide"><a class="header" href="#the-pragmatic-programmer-quick-reference-guide">The Pragmatic Programmer Quick Reference Guide</a></h1>
+<p>This page summarizes the tips and checklists found in <em>The Pragmatic
+Programmer</em>.</p>
+<p><strong>Care About Your Craft</strong></p>
+<p>Why spend your life developing software unless you care about doing it
+well?</p>
+<p><strong>Think! About Your Work</strong></p>
+<p>Turn off the autopilot and take control. Constantly critique and
+appraise your work.</p>
+<p><strong>Provide Options, Don't Make Lame Excuses</strong></p>
+<p>Instead of excuses, provide options. Don't say it can't be done;
+explain what can be done.</p>
+<p><strong>Don't Live with Broken Windows</strong></p>
+<p>Fix bad designs, wrong decisions, and poor code when you see them.</p>
+<p><strong>Be a Catalyst for Change</strong></p>
+<p>You can't force change on people. Instead, show them how the future
+might be and help them participate in creating it.</p>
+<p><strong>Remember the Big Picture</strong></p>
+<p>Don't get so engrossed in the details that you forget to check what's
+happening around you.</p>
+<p><strong>Make Quality a Requirements Issue</strong></p>
+<p>Involve your users in determining the project's real quality
+requirements.</p>
+<p><strong>Invest Regularly in Your Knowledge Portfolio</strong> Make learning a habit.</p>
+<p><strong>Critically Analyze What You Read and Hear</strong></p>
+<p>Don't be swayed by vendors, media hype, or dogma. Analyze information
+in terms of you and your project.</p>
+<p><strong>It's Both What You Say and the Way You Say It</strong></p>
+<p>There's no point in having great ideas if you don't communicate them
+effectively.</p>
+<p><strong>DRY--Don't Repeat Yourself</strong></p>
+<p>Every piece of knowledge must have a single, unambiguous, authoritative
+representation within a system.</p>
+<p><strong>Make It Easy to Reuse</strong></p>
+<p>If it's easy to reuse, people will. Create an environment that supports
+reuse.</p>
+<p><strong>Eliminate Effects Between Unrelated Things</strong></p>
+<p>Design components that are self-contained. independent, and have a
+single, well-defined purpose.</p>
+<p><strong>There Are No Final Decisions</strong></p>
+<p>No decision is cast in stone. Instead, consider each as being written in
+the sand at the beach, and plan for change.</p>
+<p><strong>Use Tracer Bullets to Find the Target</strong></p>
+<p>Tracer bullets let you home in on your target by trying things and
+seeing how close they land.</p>
+<p><strong>Prototype to Learn</strong></p>
+<p>Prototyping is a learning experience. Its value lies not in the code you
+produce, but in the lessons you learn.</p>
+<p><strong>Program Close to the Problem Domain</strong> Design and code in your user's
+language.</p>
+<p><strong>Estimate to Avoid Surprises</strong></p>
+<p>Estimate before you start. You'll spot potential problems up front.</p>
+<p><strong>Iterate the Schedule with the Code</strong></p>
+<p>Use experience you gain as you implement to refine the project time
+scales.</p>
+<p><strong>Keep Knowledge in Plain Text</strong></p>
+<p>Plain text won't become obsolete. It helps leverage your work and
+simplifies debugging and testing.</p>
+<p><strong>Use the Power of Command Shells</strong></p>
+<p>Use the shell when graphical user interfaces don't cut it.</p>
+<p><strong>Use a Single Editor Well</strong></p>
+<p>The editor should be an extension of your hand; make sure your editor is
+configurable, extensible, and programmable.</p>
+<p><strong>Always Use Source Code Control</strong></p>
+<p>Source code control is a time machine for your work---you can go back.</p>
+<p><strong>Fix the Problem, Not the Blame</strong></p>
+<p>It doesn't really matter whether the bug is your fault or someone
+else's---it is still your problem, and it still needs to be fixed.</p>
+<p><strong>Don't Panic When Debugging</strong></p>
+<p>Take a deep breath and THINK! about what could be causing the bug.</p>
+<p><strong>&quot;select&quot; Isn't Broken.</strong></p>
+<p>It is rare to find a bug in the OS or the compiler, or even a
+third-party product or library. The bug is most likely in the
+application.</p>
+<p><strong>Don't Assume It---Prove It</strong></p>
+<p>Prove your assumptions in the actual environment-- with real data and
+boundary conditions.</p>
+<p><strong>Learn a Text Manipulation Language.</strong></p>
+<p>You spend a large part of each day working with text. Why not have the
+computer do some of it for you?</p>
+<p><strong>Write Code That Writes Code</strong></p>
+<p>Code generators increase your productivity and help avoid duplication.</p>
+<p><strong>You Can't Write Perfect Software</strong></p>
+<p>Software can't be perfect. Protect your code and users from the
+inevitable errors.</p>
+<p><strong>Design with Contracts</strong></p>
+<p>Use contracts to document and verify that code does no more and no less
+than it claims to do.</p>
+<p><strong>Crash Early</strong></p>
+<p>A dead program normally does a lot less damage than a crippled one.</p>
+<p><strong>Use Assertions to Prevent the Impossible</strong></p>
+<p>Assertions validate your assumptions. Use them to protect your code from
+an uncertain world.</p>
+<p><strong>Use Exceptions for Exceptional Problems</strong></p>
+<p>Exceptions can suffer from all the readability and maintainability
+problems of classic spaghetti code. Reserve exceptions for exceptional
+things.</p>
+<p><strong>Finish What You Start</strong></p>
+<p>Where possible, the routine or object that allocates a resource should
+be responsible for deallocating it.</p>
+<p><strong>Minimize Coupling Between Modules</strong></p>
+<p>Avoid coupling by writing &quot;shy&quot; code and applying the Law of Demeter.</p>
+<p><strong>Configure, Don't Integrate</strong></p>
+<p>Implement technology choices for an application as configuration
+options, not through integration or engineering.</p>
+<p><strong>Put Abstractions in Code, Details in Metadata</strong></p>
+<p>Program for the general case, and put the specifics outside the compiled
+code base.</p>
+<p><strong>Analyze Workflow to Improve Concurrency</strong> Exploit concurrency in your
+user's workflow.</p>
+<p><strong>Design Using Services</strong></p>
+<p>Design in terms of services---independent, concurrent objects behind
+well-defined, consistent interfaces.</p>
+<p><strong>Always Design for Concurrency</strong></p>
+<p>Allow for concurrency, and you'll design cleaner interfaces with fewer
+assumptions.</p>
+<p><strong>Separate Views from Models</strong></p>
+<p>Gain flexibility at low cost by designing your application in terms of
+models and views.</p>
+<p><strong>Use Blackboards to Coordinate Workflow</strong></p>
+<p>Use blackboards to coordinate disparate facts and agents, while
+maintaining independence and isolation among participants.</p>
+<p><strong>Don't Program by Coincidence</strong></p>
+<p>Rely only on reliable things. Beware of accidental complexity, and
+don't confuse a happy coincidence with a purposeful plan.</p>
+<p><strong>Estimate the Order of Your Algorithms</strong></p>
+<p>Get a feel for how long things are likely to take before you write code.</p>
+<p><strong>Test Your Estimates</strong></p>
+<p>Mathematical analysis of algorithms doesn't tell you everything. Try
+timing your code in its target environment.</p>
+<p><strong>Refactor Early, Refactor Often</strong></p>
+<p>Just as you might weed and rearrange a garden, rewrite, rework, and
+re-architect code when it needs it. Fix the root of the problem.</p>
+<p><strong>Design to Test</strong></p>
+<p>Start thinking about testing before you write a line of code.</p>
+<p><strong>Test Your Software, or Your Users Will</strong></p>
+<p>Test ruthlessly. Don't make your users find bugs for you.</p>
+<p><strong>Don't Use Wizard Code You Don't Understand</strong></p>
+<p>Wizards can generate reams of code. Make sure you understand all of it
+before you incorporate it into your project.</p>
+<p><strong>Don't Gather Requirements--Dig for Them</strong></p>
+<p>Requirements rarely lie on the surface. They're buried deep beneath
+layers of assumptions, misconceptions, and politics.</p>
+<p><strong>Workwith a User to Think Like a User</strong></p>
+<p>It's the best way to gain insight into how the system will really be
+used.</p>
+<p><strong>Abstractions Live Longer than Details</strong></p>
+<p>Invest in the abstraction, not the implementation. Abstractions can
+survive the barrage of changes from different implementations and new
+technologies.</p>
+<p><strong>Use a Project Glossary</strong></p>
+<p>Create and maintain a single source of all the specific terms and
+vocabulary for a project.</p>
+<p><strong>Don't Think Outside the Box--Find the Box</strong></p>
+<p>When faced with an impossible problem, identify the real constraints.
+Ask yourself: &quot;Does it have to be done this way? Does it have to be
+done at all?&quot;</p>
+<p><strong>Start When You're Ready.</strong></p>
+<p>You've been building experience all your life. Don't ignore niggling
+doubts.</p>
+<p><strong>Some Things Are Better Done than Described</strong></p>
+<p>Don't fall into the specification spiral---at some point you need to
+start coding.</p>
+<p><strong>Don't Be a Slave to Formal Methods.</strong></p>
+<p>Don't blindly adopt any technique without putting it into the context
+of your development practices and capabilities.</p>
+<p><strong>Costly Tools Don't Produce Better Designs</strong></p>
+<p>Beware of vendor hype, industry dogma, and the aura of the price tag.
+Judge tools on their merits.</p>
+<p><strong>Organize Teams Around Functionality</strong></p>
+<p>Don't separate designers from coders, testers from data modelers. Build
+teams the way you build code.</p>
+<p><strong>Don't Use Manual Procedures</strong></p>
+<p>A shell script or batch file will execute the same instructions, in the
+same order, time after time.</p>
+<p><strong>Test Early. Test Often. Test Automatically</strong></p>
+<p>Tests that run with every build are much more effective than test plans
+that sit on a shelf.</p>
+<p><strong>Coding Ain't Done 'Til All the Tests Run</strong> 'Nuff said.</p>
+<p><strong>Use Saboteurs to Test Your Testing</strong></p>
+<p>Introduce bugs on purpose in a separate copy of the source to verify
+that testing will catch them.</p>
+<p><strong>Test State Coverage, Not Code Coverage</strong></p>
+<p>Identify and test significant program states. Just testing lines of code
+isn't enough.</p>
+<p><strong>Find Bugs Once</strong></p>
+<p>Once a human tester finds a bug, it should be the last time a human
+tester finds that bug. Automatic tests should check for it from then on.</p>
+<p><strong>English is Just a Programming Language</strong></p>
+<p>Write documents as you would write code: honor the DRY principle, use
+metadata, MVC, automatic generation, and so on.</p>
+<p><strong>Build Documentation In, Don't Bolt It On</strong></p>
+<p>Documentation created separately from code is less likely to be correct
+and up to date.</p>
+<p><strong>Gently Exceed Your Users' Expectations</strong></p>
+<p>Come to understand your users' expectations, then deliver just that
+little bit more.</p>
+<p><strong>Sign Your Work</strong></p>
+<p>Craftsmen of an earlier age were proud to sign their work. You should
+be, too.</p>
+<p><strong>Languages To Learn</strong></p>
+<p>Tired of C, C++, and Java? Try CLOS, Dylan, Eiffel, Objective C, Prolog,
+Smalltalk, or TOM. Each of these languages has different capabilities
+and a different &quot;flavor.&quot; Try a small project at home using one or
+more of them.</p>
+<p><strong>The WISDOM Acrostic</strong></p>
+<p><strong>W</strong>hat do you want them to learn?</p>
+<p>What <strong>i</strong>s their interest in what you've got to say?</p>
+<p>How <strong>s</strong>ophisticated are they?</p>
+<p>How much <strong>d</strong>etail do they want?</p>
+<p>Whom do you want to <strong>o</strong>wn the information?</p>
+<p>How can you <strong>m</strong>otivate them to listen to you?</p>
+<p><strong>How to Maintain Orthogonality</strong></p>
+<blockquote>
+<p>Design independent, well-defined components.</p>
+<p>Keep your code decoupled.</p>
+<p>Avoid global data.</p>
+<p>Refactor similar functions.</p>
+</blockquote>
+<p><strong>Things to prototype</strong></p>
+<blockquote>
+<p>Architecture</p>
+<p>New functionality in an existing system</p>
+<p>Structure or contents of external data</p>
+<p>Third-party tools or components Performance issues</p>
+<p>User interface design</p>
+</blockquote>
+<p><strong>Architectural Questions</strong></p>
+<blockquote>
+<p>Are responsibilities well defined?</p>
+<p>Are the collaborations well defined?</p>
+<p>Is coupling minimized?</p>
+<p>Can you identify potential duplication?</p>
+<p>Are interface definitions and constraints acceptable? Can modules
+access needed data---when needed?</p>
+</blockquote>
+<p><strong>Debugging Checklist</strong></p>
+<blockquote>
+<p>Is the problem being reported a direct result of the underlying bug,
+or merely a symptom?</p>
+<p>Is the bug really in the compiler? Is it in the OS? Or is it in your
+code?</p>
+<p>If you explained this problem in detail to a coworker, what would you
+say?</p>
+<p>If the suspect code passes its unit tests, are the tests complete
+enough? What happens if you run the unit test with this data? Do the
+conditions that caused this bug exist anywhere else in the system?</p>
+</blockquote>
+<p><strong>Law of Demeter for Functions</strong></p>
+<p>An object's method should call only methods belonging to:</p>
+<blockquote>
+<p>Itself</p>
+<p>Any parameters passed in</p>
+<p>Objects it creates</p>
+<p>Component objects</p>
+</blockquote>
+<p><strong>How to Program Deliberately</strong></p>
+<blockquote>
+<p>Stay aware of what you're doing.</p>
+<p>Don't code blindfolded.</p>
+<p>Proceed from a plan.</p>
+<p>Rely only on reliable things.</p>
+<p>Document your assumptions.</p>
+<p>Test assumptions as well as code.</p>
+<p>Prioritize your effort.</p>
+<p>Don't be a slave to history.</p>
+</blockquote>
+<p><strong>When to Refactor</strong></p>
+<blockquote>
+<p>You discover a violation of the DRY principle.</p>
+<p>You find things that could be more orthogonal.</p>
+<p>Your knowledge improves.</p>
+<p>The requirements evolve.</p>
+<p>You need to improve performance.</p>
+</blockquote>
+<p><strong>Cutting the Gordian Knot</strong></p>
+<p>When solving <em>impossible</em> problems, ask yourself:</p>
+<blockquote>
+<p>Is there an easier way?</p>
+<p>Am I solving the right problem?</p>
+<p>Why is this a problem?</p>
+<p>What makes it hard?</p>
+<p>Do I have to do it this way?</p>
+<p>Does it have to be done at all?</p>
+</blockquote>
+<p><strong>Aspects of Testing</strong></p>
+<blockquote>
+<p>Unit testing</p>
+<p>Integration testing</p>
+<p>Validation and verification</p>
+<p>Resource exhaustion, errors, and recovery</p>
+<p>Performance testing</p>
+<p>Usability testing</p>
+<p>Testing the tests themselves</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../architecture/Reference/naming-conventions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../architecture/Reference/throughput_and_latency.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../architecture/Reference/naming-conventions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../architecture/Reference/throughput_and_latency.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

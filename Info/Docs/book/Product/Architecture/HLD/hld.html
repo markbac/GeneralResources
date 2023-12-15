@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hld - Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../../../Product/Architecture/HLD/hld.html" class="active"><strong aria-hidden="true">1.</strong> Hld</a></li><li class="chapter-item "><a href="../../../Product/Architecture/adrs/adr-template.html"><strong aria-hidden="true">2.</strong> Adr Template</a></li><li class="chapter-item "><a href="../../../Product/Architecture/rfcs/rfc-template.html"><strong aria-hidden="true">3.</strong> Rfc Template</a></li><li class="chapter-item "><a href="../../../Product/Scrum/acceptance_criteria_template.html"><strong aria-hidden="true">4.</strong> Acceptance Criteria Template</a></li><li class="chapter-item "><a href="../../../Product/Scrum/sprint_goal_template.html"><strong aria-hidden="true">5.</strong> Sprint Goal Template</a></li><li class="chapter-item "><a href="../../../Product/Scrum/user_story_template.html"><strong aria-hidden="true">6.</strong> User Story Template</a></li><li class="chapter-item "><a href="../../../architecture/Explanation/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">7.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../../architecture/Explanation/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">8.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../../architecture/Explanation/what_is_solution_architecture.html"><strong aria-hidden="true">9.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../../architecture/HowTo/api-doc.html"><strong aria-hidden="true">10.</strong> Api Doc</a></li><li class="chapter-item "><a href="../../../architecture/Reference/10-architecture-patterns-to-know.html"><strong aria-hidden="true">11.</strong> Architecture Patterns to Know</a></li><li class="chapter-item "><a href="../../../architecture/Reference/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">12.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../../architecture/Reference/23-fundamental-principles-in-sw-arch.html"><strong aria-hidden="true">13.</strong> Fundamental Principles in Sw Arch</a></li><li class="chapter-item "><a href="../../../architecture/Reference/7-architecture-design-patterns.html"><strong aria-hidden="true">14.</strong> Architecture Design Patterns</a></li><li class="chapter-item "><a href="../../../architecture/Reference/Git-branching.html"><strong aria-hidden="true">15.</strong> Git Branching</a></li><li class="chapter-item "><a href="../../../architecture/Reference/The-important-architecturla-patterns-you-need-to-know.html"><strong aria-hidden="true">16.</strong> The Important Architecturla Patterns You Need to Know</a></li><li class="chapter-item "><a href="../../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">17.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../../architecture/Reference/codeImplementation.html"><strong aria-hidden="true">18.</strong> codeImplementation</a></li><li class="chapter-item "><a href="../../../architecture/Reference/codeReview.html"><strong aria-hidden="true">19.</strong> codeReview</a></li><li class="chapter-item "><a href="../../../architecture/Reference/debugging.html"><strong aria-hidden="true">20.</strong> Debugging</a></li><li class="chapter-item "><a href="../../../architecture/Reference/defects.html"><strong aria-hidden="true">21.</strong> Defects</a></li><li class="chapter-item "><a href="../../../architecture/Reference/dod.html"><strong aria-hidden="true">22.</strong> Dod</a></li><li class="chapter-item "><a href="../../../architecture/Reference/dor.html"><strong aria-hidden="true">23.</strong> Dor</a></li><li class="chapter-item "><a href="../../../architecture/Reference/git_branching_strategy.html"><strong aria-hidden="true">24.</strong> Git Branching Strategy</a></li><li class="chapter-item "><a href="../../../architecture/Reference/habits_of_great_software_engineers.html"><strong aria-hidden="true">25.</strong> Habits of Great Software Engineers</a></li><li class="chapter-item "><a href="../../../architecture/Reference/microservices-checklist.html"><strong aria-hidden="true">26.</strong> Microservices Checklist</a></li><li class="chapter-item "><a href="../../../architecture/Reference/naming-conventions.html"><strong aria-hidden="true">27.</strong> Naming Conventions</a></li><li class="chapter-item "><a href="../../../architecture/Reference/pragmatic.html"><strong aria-hidden="true">28.</strong> Pragmatic</a></li><li class="chapter-item "><a href="../../../architecture/Reference/throughput_and_latency.html"><strong aria-hidden="true">29.</strong> Throughput and Latency</a></li><li class="chapter-item "><a href="../../../architecture/Reference/uid.html"><strong aria-hidden="true">30.</strong> Uid</a></li><li class="chapter-item "><a href="../../../architecture/Reference/uid_comparison.html"><strong aria-hidden="true">31.</strong> Uid Comparison</a></li><li class="chapter-item "><a href="../../../architecture/Reference/what-is-MACH.html"><strong aria-hidden="true">32.</strong> What Is MACH</a></li><li class="chapter-item "><a href="../../../architecture/Reference/what-is-the-C4-model.html"><strong aria-hidden="true">33.</strong> What Is the C4 Model</a></li><li class="chapter-item "><a href="../../../architecture/Reference/what_is_solution_architecture.html"><strong aria-hidden="true">34.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../../architecture/adr/decision_record_template.html"><strong aria-hidden="true">35.</strong> Decision Record Template</a></li><li class="chapter-item "><a href="../../../architecture/architectural_principles/index.html"><strong aria-hidden="true">36.</strong> Readme</a></li><li class="chapter-item "><a href="../../../architecture/architectural_principles/SOLID.html"><strong aria-hidden="true">37.</strong> Solid</a></li><li class="chapter-item "><a href="../../../architecture/architectural_principles/design-docs.html"><strong aria-hidden="true">38.</strong> Design Docs</a></li><li class="chapter-item "><a href="../../../architecture/architectural_principles/john_lewis_principles.html"><strong aria-hidden="true">39.</strong> John Lewis Principles</a></li><li class="chapter-item "><a href="../../../architecture/architecture_decision_framework.html"><strong aria-hidden="true">40.</strong> Architecture Decision Framework</a></li><li class="chapter-item "><a href="../../../architecture/scaling_the_practice_of_architecture.html"><strong aria-hidden="true">41.</strong> Scaling the Practice of Architecture</a></li><li class="chapter-item "><a href="../../../architecture/structurizr/adrs/0001-record-architecture-decisions.html"><strong aria-hidden="true">42.</strong> Record Architecture Decisions</a></li><li class="chapter-item "><a href="../../../architecture/structurizr/docs/0001-design.html"><strong aria-hidden="true">43.</strong> Design</a></li><li class="chapter-item "><a href="../../../checklists/architectureChecklist.html"><strong aria-hidden="true">44.</strong> architectureChecklist</a></li><li class="chapter-item "><a href="../../../checklists/designChecklist.html"><strong aria-hidden="true">45.</strong> designChecklist</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="hld"><a class="header" href="#hld">HLD</a></h1>
+<h2 id="what-is-a-hld"><a class="header" href="#what-is-a-hld">What is a HLD?</a></h2>
+<p><img src="image-4.png" alt="Alt text" /></p>
+<p>HLD is the big picture of the solution. The purpose of HLD is to provide a common understanding of the system’s architecture among all stakeholders. This helps to ensure that everyone is on the same page and that the system is developed in a consistent manner. HLD also helps to identify potential risks and challenges early on, so that they can be addressed before they become major problems</p>
+<h2 id="next-is-how-how-to-write-a-good-hld"><a class="header" href="#next-is-how-how-to-write-a-good-hld">Next is “HOW”. How to write a good HLD?</a></h2>
+<p>The key to writing a good HLD is to write it in the form a story, a story so good that the reader is engaged with its plot, the backstories of the characters and is on the edge of his/her seat with every plot twist(Okey we don’t have to go as far as adding plot twists). The idea is to keep the keep the design simple to understand, easy to follow and clear about assumptions and tradeoffs. So naturally the first step is knowing your audience. A good HLD should be able to communicate your thoughts to your expected audience.</p>
+<p>Hence a general pattern to follow is</p>
+<ul>
+<li><strong>Context</strong> — Scope out and clearly define the objective and context of problem you are solving.</li>
+<li><strong>Design Overview</strong>—State the requirements of the solution with additional context like assumptions, back of the envelope calculation of number of users, size of data, etc.</li>
+<li><strong>Detailed Design</strong> — This contains your actual design of the solution.</li>
+<li><strong>Alternatives considered</strong> — This helps you convey comparison between tradeoffs. This is good place to focus of potential bottlenecks with each alternative.</li>
+<li><strong>Quality Attributes</strong> — Shed light on property of the system like security, Reliability, Data Integrity, Privacy, Scalability, Latency, etc.</li>
+<li><strong>Operations</strong> — Plan for maintenance of code like the monitoring, alerting and logging strategy.</li>
+</ul>
+<p>Find below a template which you can refer and follow. Based on your audience, not all sections will apply to your HLD. Use your judgement to delete a section and introduce new ones. Have fun!</p>
+<h2 id="context"><a class="header" href="#context">Context</a></h2>
+<h3 id="objective"><a class="header" href="#objective">Objective</a></h3>
+<p>In one of two sentences, describe at high level what you are solving using this design. This section should not describe the problem (use “Background”) or propose a solution(use “Design”), not should it got into implementation details like stating list of requirements and features.</p>
+<h3 id="background"><a class="header" href="#background">Background</a></h3>
+<p>Provide context for an unfamiliar reader to understand the proposal. In a crisp way cover what the problem is, why it is important to solve the problem and the historical context as appropriate. If the background requires a large write up or the reason to for solving the problem becomes verbose, separate docs like PRDs should be created first and linked here. Note: this is background, do not write about your design or ideas to solve the problem here.</p>
+<h2 id="design"><a class="header" href="#design">Design</a></h2>
+<h3 id="overview"><a class="header" href="#overview">Overview</a></h3>
+<p>This contains high level overview of your design. Should be understandable by a non-engineer not working on the project. Diagrams can be especially useful to quickly convey the shape of the solution. This is going to be the trailer of your story, so keep it clean and concise.</p>
+<h3 id="functional-requirements"><a class="header" href="#functional-requirements">Functional Requirements</a></h3>
+<p>Describe in brief the various aspects of the problem space like<br />
+1. What will the users do<br />
+2. Where are users based out of geographically<br />
+3. Which platforms, like mobile/web/physical would the users be using.</p>
+<h3 id="capacity-estimates"><a class="header" href="#capacity-estimates">Capacity Estimates</a></h3>
+<p>Calculate approximates for the key data points. You can use below calculation for reference.<br />
+<strong>Active Users</strong> — 2 Billion(B) Daily Active Users(DAU), 3B Monthly Active Users(MAU) — Approximate FB traffic estimate<br />
+<strong>Read vs Write</strong> — 100:1<br />
+<strong>Queries Per Second</strong> —<br />
+Reads — (2B DAU)*(100Read)/(24*60*60) — 2.4M req/sec<br />
+Writes — (2B DAU)*(1Write)/(24*60*60) — 24k req/sec<br />
+<strong>Storage</strong> — (Assuming for 5 years)<br />
+No of objects — (2B DAU)*(5Y*12M*30D) — 3.6 Trillion(T)<br />
+Each Object Size — ~ 500 bytes<br />
+Total Object size — 3.6T*500 bytes — 1.8 PB<br />
+<strong>Throughput</strong> —<br />
+Reads — (2.4M QPS)*(500bytes) — 1200 MB/s<br />
+Writes — (24K QPS)*(500bytes) — 12 MB/s<br />
+Cache — Following 80–20 rule. 20 % users would use 80% of objs) — (1200 MB/s)*(60m*60s)*(0.2) — 864 GB per hour<br />
+<strong>Number of Instances required</strong> —<br />
+Application Services —<br />
+Assuming 100 MB/s per instance as bottleneck— (1200MBps/100MBps)=12<br />
+Database —<br />
+Assuming 10 TB per instance as bottleneck— 1.8PB/10TB= 180<br />
+Assuming 50 MBps disk throughput per instance as bottleneck — 1200MB/s/50 MB/s= 24<br />
+Caching — Assuming each instance offers 32 GB — 864/64 = 14</p>
+<h3 id="interfaces"><a class="header" href="#interfaces">Interfaces</a></h3>
+<p>List out key interaction points between user and your system. Typically this has your API details like request and response parameters at a high level.</p>
+<h3 id="data-model"><a class="header" href="#data-model">Data Model</a></h3>
+<p>This describes key entities of your solution. This space usually helps you to decide till which granularity do you want to break down your entities</p>
+<h2 id="detailed-design"><a class="header" href="#detailed-design">Detailed Design</a></h2>
+<h3 id="details"><a class="header" href="#details">Details</a></h3>
+<p>Get into the detail of the design. Diagrams are best way to express the thought process here. You can start by drawing out the components( which has one or more Data Models identified in earlier section) and connecting them to each other(This is usually called “<a href="https://en.wikipedia.org/wiki/Component_diagram">Component Diagram</a>” and shows high level overview of how components are placed and interact with each others and users of the system).</p>
+<p>Optionally, based on complexity of the proposal, you can have multiple types of diagrams like the <a href="https://en.wikipedia.org/wiki/Sequence_diagram">Sequence Diagram</a> (Good for representing a solution with cross-section of multiple use-cases across components and actors), <a href="https://en.wikipedia.org/wiki/Activity_diagram">Activity Diagram</a>(Helpful in representing how multiple components can be clubbed together), <a href="https://en.wikipedia.org/wiki/Deployment_diagram">Deployment Diagram</a>(If you want to get to lower level details), etc. Please choose diagrams which best explain your solution as every problem statement, and every solution is different.</p>
+<h3 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h3>
+<p>Discuss your dependencies on other components and services. The fall-back plan when they’re unavailable for a period of time? Which services<br />
+must be running for your job to start up?<br />
+Are you introducing any cycles, such as blocking on a service that can’t run if your jobs aren’t already up?</p>
+<p><img src="image-3.png" alt="Alt text" /></p>
+<h3 id="migrations"><a class="header" href="#migrations">Migrations</a></h3>
+<p>Describe any data or system migrations which might be needed. Incomplete migrations hurt a system in the long run; they add<br />
+enormous complexity, hurt reliability, and make programming unpleasant. If existing systems must be turned down to achieve the proposed design, describe how that transition will happen. “How do we get there from here?” is difficult, but often overlooked.</p>
+<h3 id="technical-debt"><a class="header" href="#technical-debt">Technical debt</a></h3>
+<p>Things to consider</p>
+<ol>
+<li>Is there known technical debt incurred by implementing this design?</li>
+<li>Is there a risk associated with technical debt (e.g., deprecation of underlying technologies) incurred by implementing this design?</li>
+<li>How will technical debt identified during the execution of this design be tracked and followed up with?</li>
+<li>Are there libraries or code paths that would be deprecated? If so, what is the plan to migrate the usage to the new piece.</li>
+<li>Are there libraries or code paths that would be obsolete? When will they be deleted?</li>
+<li>Are there any servers that could be turned down? If so, please document the turndown process.</li>
+</ol>
+<p><img src="image-2.png" alt="Alt text" /></p>
+<h3 id="potential-patents"><a class="header" href="#potential-patents">Potential patents</a></h3>
+<p>Are there potentially patentable inventions in the project?<br />
+The work may be patentable if the design:<br />
+● Provides for something not otherwise commercially available.<br />
+● Does something better/faster/cheaper than what currently exists.<br />
+● Addresses an unresolved need.</p>
+<h2 id="alternatives-considered"><a class="header" href="#alternatives-considered">Alternatives considered</a></h2>
+<p>Clearly list the other potential approaches to meeting the objective that you considered and why the current proposal was ultimately selected. In the rare cases where requirements or system constraints only allow for one possible high-level approach, that should be highlighted here and alternatives to specific details should still be discussed in-line in the detailed design section.<br />
+An effective strategy is to compare dimensions of the solution space and how they vary across alternatives, such as latency, data staleness, cpu cost, engineering investment, etc. A color-coded table explaining favorability in that dimension and how important it is from green through yellow, orange and red quickly conveys the rationale to a reader, though this is just<br />
+one possible approach to explain the trade-offs. For example:</p>
+<p><img src="image-1.png" alt="Alt text" /></p>
+<h2 id="quality-attributes"><a class="header" href="#quality-attributes">Quality attributes</a></h2>
+<h3 id="security"><a class="header" href="#security">Security</a></h3>
+<p>Think about potential attacks on your system and describe the counter-measures you have in-place to prevent or mitigate each<br />
+attack. For each attack describe the worst case impact it would have. Also, list any known vulnerabilities or potentially insecure dependencies. If<br />
+somehow your application doesn’t have security considerations, explicitly state so and why.</p>
+<p>Please consider attacks from a variety of sources, including both external and internal risks. When evaluating insider risk, include both insider risk from your co-employees as well as insider risk for customers (e.g. for enterprise products, employees of an enterprise; for consumer products,<br />
+family members or friends of customers)</p>
+<h3 id="reliability"><a class="header" href="#reliability">Reliability</a></h3>
+<p>Discuss handling of local data loss, transient errors (e.g., temporary outages) and how they affect your system. Bear in mind that reliability issues with your dependencies can often cause reliability issues for your system.</p>
+<p>What do you use that inherently provides reliability and redundancy for data? What do you use that requires data to be backed up? How is the data backed up? How is it restored? What happens between the time data is lost and the time it’s restored? In the case of a partial loss, can you keep serving and can you restore only missing portions of your backups to your serving datastore?</p>
+<p>What are the costs of replicating your data?</p>
+<h3 id="data-integrity"><a class="header" href="#data-integrity">Data integrity</a></h3>
+<p>Discuss how you will detect, provision for and recover from data corruption and loss.</p>
+<p>How will you find out about data corruption or loss in your datastores? What sources of data loss are detected? (User error, application bug, storage platform bug, site/replica disaster.)</p>
+<p>How long will it take to notice each of these types of losses? What is your plan to recover from each of these types of losses?</p>
+<h3 id="privacy"><a class="header" href="#privacy">Privacy</a></h3>
+<p>Does your solution cover privacy standards in place? Is the customer PII protected by sufficient firewalls and encryptions? Are your private keys sufficiently protected?</p>
+<h3 id="scalability"><a class="header" href="#scalability">Scalability</a></h3>
+<p>How does your system scale? Consider both data size increase (if applicable) and traffic increase (if applicable).</p>
+<p>Please consider the current machine situation: adding more machines might take much longer than you think or might not happen during the lifetime of your project. What initial resources will you need? Plan early and carefully. Also, general machine utilization is a concern, using<br />
+more resources than you need will block expansion of your service.</p>
+<h3 id="latency"><a class="header" href="#latency">Latency</a></h3>
+<p>This section can be skipped if you are not designing a server on a human facing path. What latency do you need/expect? In particular, make sure you understand the bottlenecks of the pieces you’re reusing. All services should define latency targets.</p>
+<h3 id="testability"><a class="header" href="#testability">Testability</a></h3>
+<p>Specify the test plan. What are the sub-units of your system that will be independently testable?</p>
+<p>How do you plan to test them? For example,</p>
+<ul>
+<li>Build a test harness around it that simulates its environment</li>
+<li><em>Generate random/carefully controlled input data</em></li>
+<li>Compare with golden results/maintain state in the test harness</li>
+</ul>
+<p>Are you tests run automatically by the CI/CD pipelines</p>
+<p>What load can your server handle, and how will you verify that value?</p>
+<p>If there are changes envisaged in your future work, would your tests verify the base functionality? If some of your tests cannot be easily automated, how will you document the needed special procedures?</p>
+<p>Consider the external systems your system depends on</p>
+<ul>
+<li>How fast will your unit test cycle run?</li>
+<li>What test infrastructure (e.g. test doubles) from external systems will you use?</li>
+<li>Does the external system have a test instance for integration testing?</li>
+<li>Do you need any tests that run outside of the standard unit test cycle (e.g. presubmit, postsubmit, or release)?<br />
+Consider future systems that will depend on yours. What test facilities (e.g. test doubles, local instances for exploratory integration tests) will you provide so that they can run integration tests?</li>
+</ul>
+<p><img src="image.png" alt="Alt text" /></p>
+<p>Why you should have a good test!</p>
+<h2 id="operations"><a class="header" href="#operations">Operations</a></h2>
+<h3 id="slas"><a class="header" href="#slas">SLAs</a></h3>
+<p>If your application makes any service level guarantees, what mechanisms are in place for auditing, monitoring, etc.? And how can you guarantee the stated level of reliability?</p>
+<h3 id="monitoring--alerting"><a class="header" href="#monitoring--alerting">Monitoring &amp; alerting</a></h3>
+<p>Is there a mechanism for monitoring and alerting for the running system. Is there an oncall and escalation metrics?</p>
+<h3 id="logging-plan"><a class="header" href="#logging-plan">Logging plan</a></h3>
+<p>All systems must log information at various levels for the log analysis system to collect and analyze. Log information allows us to understand system user behavior and system related business metrics. In this section, describe the information that you are going to log.</p>
+<h3 id="rollback-strategy"><a class="header" href="#rollback-strategy">Rollback strategy</a></h3>
+<p>In order to improve incident management response, which will result in reduced time to mitigate issues, teams should document and test their ability to rollback major change surfaces. This includes, but is not limited to:</p>
+<ul>
+<li>Documenting the overall rollback strategy;</li>
+<li>Identifying surface areas which are not able to be rolled back and defining a fix-forward strategy.</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="../../../Product/Architecture/adrs/adr-template.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="../../../Product/Architecture/adrs/adr-template.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../elasticlunr.min.js"></script>
+        <script src="../../../mark.min.js"></script>
+        <script src="../../../searcher.js"></script>
+
+        <script src="../../../clipboard.min.js"></script>
+        <script src="../../../highlight.js"></script>
+        <script src="../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

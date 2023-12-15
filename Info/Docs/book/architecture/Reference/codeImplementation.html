@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>codeImplementation - Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../Product/Architecture/HLD/hld.html"><strong aria-hidden="true">1.</strong> Hld</a></li><li class="chapter-item "><a href="../../Product/Architecture/adrs/adr-template.html"><strong aria-hidden="true">2.</strong> Adr Template</a></li><li class="chapter-item "><a href="../../Product/Architecture/rfcs/rfc-template.html"><strong aria-hidden="true">3.</strong> Rfc Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/acceptance_criteria_template.html"><strong aria-hidden="true">4.</strong> Acceptance Criteria Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/sprint_goal_template.html"><strong aria-hidden="true">5.</strong> Sprint Goal Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/user_story_template.html"><strong aria-hidden="true">6.</strong> User Story Template</a></li><li class="chapter-item "><a href="../../architecture/Explanation/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">7.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Explanation/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">8.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Explanation/what_is_solution_architecture.html"><strong aria-hidden="true">9.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/HowTo/api-doc.html"><strong aria-hidden="true">10.</strong> Api Doc</a></li><li class="chapter-item "><a href="../../architecture/Reference/10-architecture-patterns-to-know.html"><strong aria-hidden="true">11.</strong> Architecture Patterns to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">12.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/23-fundamental-principles-in-sw-arch.html"><strong aria-hidden="true">13.</strong> Fundamental Principles in Sw Arch</a></li><li class="chapter-item "><a href="../../architecture/Reference/7-architecture-design-patterns.html"><strong aria-hidden="true">14.</strong> Architecture Design Patterns</a></li><li class="chapter-item "><a href="../../architecture/Reference/Git-branching.html"><strong aria-hidden="true">15.</strong> Git Branching</a></li><li class="chapter-item "><a href="../../architecture/Reference/The-important-architecturla-patterns-you-need-to-know.html"><strong aria-hidden="true">16.</strong> The Important Architecturla Patterns You Need to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">17.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item expanded "><a href="../../architecture/Reference/codeImplementation.html" class="active"><strong aria-hidden="true">18.</strong> codeImplementation</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeReview.html"><strong aria-hidden="true">19.</strong> codeReview</a></li><li class="chapter-item "><a href="../../architecture/Reference/debugging.html"><strong aria-hidden="true">20.</strong> Debugging</a></li><li class="chapter-item "><a href="../../architecture/Reference/defects.html"><strong aria-hidden="true">21.</strong> Defects</a></li><li class="chapter-item "><a href="../../architecture/Reference/dod.html"><strong aria-hidden="true">22.</strong> Dod</a></li><li class="chapter-item "><a href="../../architecture/Reference/dor.html"><strong aria-hidden="true">23.</strong> Dor</a></li><li class="chapter-item "><a href="../../architecture/Reference/git_branching_strategy.html"><strong aria-hidden="true">24.</strong> Git Branching Strategy</a></li><li class="chapter-item "><a href="../../architecture/Reference/habits_of_great_software_engineers.html"><strong aria-hidden="true">25.</strong> Habits of Great Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/microservices-checklist.html"><strong aria-hidden="true">26.</strong> Microservices Checklist</a></li><li class="chapter-item "><a href="../../architecture/Reference/naming-conventions.html"><strong aria-hidden="true">27.</strong> Naming Conventions</a></li><li class="chapter-item "><a href="../../architecture/Reference/pragmatic.html"><strong aria-hidden="true">28.</strong> Pragmatic</a></li><li class="chapter-item "><a href="../../architecture/Reference/throughput_and_latency.html"><strong aria-hidden="true">29.</strong> Throughput and Latency</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid.html"><strong aria-hidden="true">30.</strong> Uid</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid_comparison.html"><strong aria-hidden="true">31.</strong> Uid Comparison</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-MACH.html"><strong aria-hidden="true">32.</strong> What Is MACH</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-the-C4-model.html"><strong aria-hidden="true">33.</strong> What Is the C4 Model</a></li><li class="chapter-item "><a href="../../architecture/Reference/what_is_solution_architecture.html"><strong aria-hidden="true">34.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/adr/decision_record_template.html"><strong aria-hidden="true">35.</strong> Decision Record Template</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/index.html"><strong aria-hidden="true">36.</strong> Readme</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/SOLID.html"><strong aria-hidden="true">37.</strong> Solid</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/design-docs.html"><strong aria-hidden="true">38.</strong> Design Docs</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/john_lewis_principles.html"><strong aria-hidden="true">39.</strong> John Lewis Principles</a></li><li class="chapter-item "><a href="../../architecture/architecture_decision_framework.html"><strong aria-hidden="true">40.</strong> Architecture Decision Framework</a></li><li class="chapter-item "><a href="../../architecture/scaling_the_practice_of_architecture.html"><strong aria-hidden="true">41.</strong> Scaling the Practice of Architecture</a></li><li class="chapter-item "><a href="../../architecture/structurizr/adrs/0001-record-architecture-decisions.html"><strong aria-hidden="true">42.</strong> Record Architecture Decisions</a></li><li class="chapter-item "><a href="../../architecture/structurizr/docs/0001-design.html"><strong aria-hidden="true">43.</strong> Design</a></li><li class="chapter-item "><a href="../../checklists/architectureChecklist.html"><strong aria-hidden="true">44.</strong> architectureChecklist</a></li><li class="chapter-item "><a href="../../checklists/designChecklist.html"><strong aria-hidden="true">45.</strong> designChecklist</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="code---general-implementation"><a class="header" href="#code---general-implementation">Code - General Implementation</a></h1>
+<h2 id="before-you-begin"><a class="header" href="#before-you-begin">Before You Begin</a></h2>
+<ul>
+<li>CDG-1      Do you understand the design you are about to construct?</li>
+<li>CDG-2      Does the design provide an appropriate level of detail for coding to begin?</li>
+<li>CDG-3      Is the design to be implemented straightforward and feasible, or should it be revisited before attempting to construct it?</li>
+<li>CDG-4      Do you understand the language and technology well enough to implement the design?</li>
+</ul>
+<h2 id="general"><a class="header" href="#general">General</a></h2>
+<ul>
+<li>CDG-5      Is the code written in terms of the problem domain as much as possible rather than in terms of computer-science or programming language structures?</li>
+<li>CDG-6      Is the code traceable to upstream design and requirements artifacts?</li>
+<li>CDG-7      Does the code have documented test cases and/or unit tests as defined by the project?</li>
+<li>CDG-8      Does the code adhere to the designated coding standard?</li>
+<li>CDG-9      Does the code adhere to designated coding styles and / or templates?</li>
+<li>CDG-10   Does the code compile with no warnings from the compiler?</li>
+</ul>
+<h2 id="understandability"><a class="header" href="#understandability">Understandability</a></h2>
+<ul>
+<li>CDG-11   Does the code read from top to bottom?</li>
+<li>CDG-12   Are implementation details hidden as much as possible?</li>
+<li>CDG-13   Is the code straightforward and does it avoid &quot;cleverness&quot;?</li>
+<li>CDG-14   Has tricky code been rewritten rather than commented?</li>
+<li>CDG-15   Do you thoroughly understand your code?</li>
+<li>CDG-16   Is it easy to understand?</li>
+</ul>
+<h2 id="performance"><a class="header" href="#performance">Performance</a></h2>
+<ul>
+<li>CDG-17   Are the affects of resource constraints on the technology and operational environment understood and within the bounds of the performance requirements?</li>
+<li>CDG-18   Are the affects of system load on the technology and operational environment understood and within the bounds of the performance requirements?</li>
+<li>CDG-19   Is the expected priority of efficient or highly optimized code clear for various areas of the system?</li>
+<li>CDG-20   Has profiling support been planned for areas of the code at risk for performance issues?</li>
+</ul>
+<h2 id="assertions-and-tracing"><a class="header" href="#assertions-and-tracing">Assertions and Tracing</a></h2>
+<ul>
+<li>CDG-21   Are assertions used to document assumptions?</li>
+<li>CDG-22   Are assertions used to aid debugging?</li>
+<li>CDG-23   Are tracing statements used to document events and aid debugging?</li>
+<li>CDG-24   Assertions are not being used to handle errors that should be handled in the code?</li>
+</ul>
+<h2 id="error-handling"><a class="header" href="#error-handling">Error Handling</a></h2>
+<ul>
+<li>CDG-25   Is it easy to differentiate between nominal path processing and error processing?</li>
+<li>CDG-26   Are error conditions handled appropriately as per the requirements and design? (i.e., the level of robustness in detecting and responding to errors matches the needs of the system: not too little and not too much).</li>
+<li>CDG-27   When attempting recovery from error conditions, are assumptions reasonable?</li>
+</ul>
+<h2 id="code-changes"><a class="header" href="#code-changes">Code Changes</a></h2>
+<ul>
+<li>CDG-28   Is the change part of a systematic change strategy?</li>
+<li>CDG-29   Has the change been reviewed as thoroughly as initial development would be?</li>
+<li>CDG-30   Does the change enhance the program's internal quality rather than degrading it?</li>
+<li>CDG-31   Have you improved the system's modularity by breaking routines into smaller routines, when possible?</li>
+<li>CDG-32   Have you improved the programming style--variable names, routine names, formatting, comments, and so on?</li>
+<li>CDG-33   If changes cause you to look for ways to share code, have you considered putting the shared code at a higher level as well as considered putting it at a lower level?</li>
+<li>CDG-34   Does this change make the next change easier?</li>
+</ul>
+<h2 id="layout"><a class="header" href="#layout">Layout</a></h2>
+<ul>
+<li>CDG-35   Does the program's layout show its logical structure?</li>
+<li>CDG-36   Is formatting done primarily to illuminate the logical structure of the code?</li>
+<li>CDG-37   Is the formatting scheme used consistently?</li>
+<li>CDG-38   Are related statements grouped together?</li>
+<li>CDG-39   Are blank lines used to separate code elements including functions, control sequences, related blocks of code, etc?</li>
+<li>CDG-40   Does the formatting scheme result in code that's easy to maintain?</li>
+<li>CDG-41   Does the formatting scheme improve code readability?</li>
+<li>CDG-42   Have relatively independent groups of statements been moved into their own routines?</li>
+<li>CDG-43   Are references to variables as close together as possible, both in total live time and from each reference to a variable to the next?</li>
+</ul>
+<h2 id="individual-statements"><a class="header" href="#individual-statements">Individual Statements</a></h2>
+<ul>
+<li>CDG-44   Are continuation lines indented sensibly?</li>
+<li>CDG-45   Are groups of related statements aligned?</li>
+<li>CDG-46   Are groups of unrelated statements unaligned?</li>
+<li>CDG-47   Does each line contain one statement?</li>
+<li>CDG-48   Is each statement written without side effects?</li>
+<li>CDG-49   Are data declarations aligned?</li>
+<li>CDG-50   Is there one data declaration per line?</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../architecture/Reference/codeReview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../architecture/Reference/codeReview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Naming Conventions - Documentation</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../Product/Architecture/HLD/hld.html"><strong aria-hidden="true">1.</strong> Hld</a></li><li class="chapter-item "><a href="../../Product/Architecture/adrs/adr-template.html"><strong aria-hidden="true">2.</strong> Adr Template</a></li><li class="chapter-item "><a href="../../Product/Architecture/rfcs/rfc-template.html"><strong aria-hidden="true">3.</strong> Rfc Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/acceptance_criteria_template.html"><strong aria-hidden="true">4.</strong> Acceptance Criteria Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/sprint_goal_template.html"><strong aria-hidden="true">5.</strong> Sprint Goal Template</a></li><li class="chapter-item "><a href="../../Product/Scrum/user_story_template.html"><strong aria-hidden="true">6.</strong> User Story Template</a></li><li class="chapter-item "><a href="../../architecture/Explanation/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">7.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Explanation/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">8.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Explanation/what_is_solution_architecture.html"><strong aria-hidden="true">9.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/HowTo/api-doc.html"><strong aria-hidden="true">10.</strong> Api Doc</a></li><li class="chapter-item "><a href="../../architecture/Reference/10-architecture-patterns-to-know.html"><strong aria-hidden="true">11.</strong> Architecture Patterns to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/12_software_architecture_styles-software_engineers_should_know.html"><strong aria-hidden="true">12.</strong> Software Architecture Styles Software Engineers Should Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/23-fundamental-principles-in-sw-arch.html"><strong aria-hidden="true">13.</strong> Fundamental Principles in Sw Arch</a></li><li class="chapter-item "><a href="../../architecture/Reference/7-architecture-design-patterns.html"><strong aria-hidden="true">14.</strong> Architecture Design Patterns</a></li><li class="chapter-item "><a href="../../architecture/Reference/Git-branching.html"><strong aria-hidden="true">15.</strong> Git Branching</a></li><li class="chapter-item "><a href="../../architecture/Reference/The-important-architecturla-patterns-you-need-to-know.html"><strong aria-hidden="true">16.</strong> The Important Architecturla Patterns You Need to Know</a></li><li class="chapter-item "><a href="../../architecture/Reference/best-practices-when-documenting-your-code-for-software-engineers.html"><strong aria-hidden="true">17.</strong> Best Practices When Documenting Your Code for Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeImplementation.html"><strong aria-hidden="true">18.</strong> codeImplementation</a></li><li class="chapter-item "><a href="../../architecture/Reference/codeReview.html"><strong aria-hidden="true">19.</strong> codeReview</a></li><li class="chapter-item "><a href="../../architecture/Reference/debugging.html"><strong aria-hidden="true">20.</strong> Debugging</a></li><li class="chapter-item "><a href="../../architecture/Reference/defects.html"><strong aria-hidden="true">21.</strong> Defects</a></li><li class="chapter-item "><a href="../../architecture/Reference/dod.html"><strong aria-hidden="true">22.</strong> Dod</a></li><li class="chapter-item "><a href="../../architecture/Reference/dor.html"><strong aria-hidden="true">23.</strong> Dor</a></li><li class="chapter-item "><a href="../../architecture/Reference/git_branching_strategy.html"><strong aria-hidden="true">24.</strong> Git Branching Strategy</a></li><li class="chapter-item "><a href="../../architecture/Reference/habits_of_great_software_engineers.html"><strong aria-hidden="true">25.</strong> Habits of Great Software Engineers</a></li><li class="chapter-item "><a href="../../architecture/Reference/microservices-checklist.html"><strong aria-hidden="true">26.</strong> Microservices Checklist</a></li><li class="chapter-item expanded "><a href="../../architecture/Reference/naming-conventions.html" class="active"><strong aria-hidden="true">27.</strong> Naming Conventions</a></li><li class="chapter-item "><a href="../../architecture/Reference/pragmatic.html"><strong aria-hidden="true">28.</strong> Pragmatic</a></li><li class="chapter-item "><a href="../../architecture/Reference/throughput_and_latency.html"><strong aria-hidden="true">29.</strong> Throughput and Latency</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid.html"><strong aria-hidden="true">30.</strong> Uid</a></li><li class="chapter-item "><a href="../../architecture/Reference/uid_comparison.html"><strong aria-hidden="true">31.</strong> Uid Comparison</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-MACH.html"><strong aria-hidden="true">32.</strong> What Is MACH</a></li><li class="chapter-item "><a href="../../architecture/Reference/what-is-the-C4-model.html"><strong aria-hidden="true">33.</strong> What Is the C4 Model</a></li><li class="chapter-item "><a href="../../architecture/Reference/what_is_solution_architecture.html"><strong aria-hidden="true">34.</strong> What Is Solution Architecture</a></li><li class="chapter-item "><a href="../../architecture/adr/decision_record_template.html"><strong aria-hidden="true">35.</strong> Decision Record Template</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/index.html"><strong aria-hidden="true">36.</strong> Readme</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/SOLID.html"><strong aria-hidden="true">37.</strong> Solid</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/design-docs.html"><strong aria-hidden="true">38.</strong> Design Docs</a></li><li class="chapter-item "><a href="../../architecture/architectural_principles/john_lewis_principles.html"><strong aria-hidden="true">39.</strong> John Lewis Principles</a></li><li class="chapter-item "><a href="../../architecture/architecture_decision_framework.html"><strong aria-hidden="true">40.</strong> Architecture Decision Framework</a></li><li class="chapter-item "><a href="../../architecture/scaling_the_practice_of_architecture.html"><strong aria-hidden="true">41.</strong> Scaling the Practice of Architecture</a></li><li class="chapter-item "><a href="../../architecture/structurizr/adrs/0001-record-architecture-decisions.html"><strong aria-hidden="true">42.</strong> Record Architecture Decisions</a></li><li class="chapter-item "><a href="../../architecture/structurizr/docs/0001-design.html"><strong aria-hidden="true">43.</strong> Design</a></li><li class="chapter-item "><a href="../../checklists/architectureChecklist.html"><strong aria-hidden="true">44.</strong> architectureChecklist</a></li><li class="chapter-item "><a href="../../checklists/designChecklist.html"><strong aria-hidden="true">45.</strong> designChecklist</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="cloud-naming-convention"><a class="header" href="#cloud-naming-convention">Cloud Naming Convention</a></h1>
+<p>Consistent naming strategy is important and should be an essential part of any cloud effort. Sadly it's often overlooked. It might seem like a luxury when you run a few &quot;pet&quot; servers, but it quickly becomes critical as the number of managed resources grows. It is the first step in achieving even basic levels of consistency and prerequisite to establishing any sort of cloud governance.</p>
+<p>After reading this article, you'll hopefully know how to get from:</p>
+<pre><code>
+$ gcloud container clusters list\
+    --format 'value(name)'
+k8s-cluster
+k8s-cluster
+k8s-cluster
+k8s-cluster
+
+</code></pre>
+<p>to something like:</p>
+<pre><code>
+$ gcloud container clusters list\
+    --format 'value(name)'
+ste-blog-p-kcl-euwe4-primary
+ste-webshop-d-kcl-euwe4-primary
+ste-webshop-p-kcl-euwe4-primary
+ste-webshop-p-kcl-usce1-primary
+
+</code></pre>
+<p>The latter will quickly tell us what type of resources are we dealing with, to which project and environment they belong, where are they located and whether they're functionally equivalent to each other.</p>
+<h2 id="benefits"><a class="header" href="#benefits">Benefits</a></h2>
+<p>Consistent and descriptive naming of resources has many benefits:</p>
+<ul>
+<li>Indicates the role and ownership of a resource.</li>
+<li>Helps formalize expectations and promote consistency within an infrastructure.</li>
+<li>Prevents name clashes when resource names must be unique.</li>
+<li>Makes resources easier to locate.</li>
+<li>Reduces effort to understand code and allows developers to focus on more important aspects than arguing over naming standards.</li>
+<li>Allows to sort and filter resources quickly.</li>
+<li>Is a prerequisite for establishing any successful cloud governance and automated policy evaluation or enforcement.<br />
+I'm not quite sure when I first came across this quote, but it since became one of my favourites. Martin Fowler <a href="https://martinfowler.com/bliki/TwoHardThings.html">attributes it to Phil Karlton</a>.</li>
+</ul>
+<blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things.</p>
+<p>Phil Karlton</p>
+</blockquote>
+<h2 id="main-properties"><a class="header" href="#main-properties">Main Properties</a></h2>
+<p>Good naming convention must provide clarity and work in both directions:</p>
+<ul>
+<li>Clearly define how newly created resources should be named.</li>
+<li>Identify and indicate the purpose and ownership of existing resources.</li>
+</ul>
+<p>We'll focus on how a naming convention for cloud-level resources should look like. GCP is used in our examples, but the concepts and strategies are generic and can be easily adapted to other cloud providers.</p>
+<h2 id="naming-restrictions"><a class="header" href="#naming-restrictions">Naming Restrictions</a></h2>
+<p>When designing your naming convention, you should take into account limitations imposed by the cloud provider. Each resource comes with a set of naming restrictions. The rule of thumb is to keep it short and simple (use only letters and numbers for individual components, keep <code>-</code> as separator).</p>
+<p>GCP limits name length for most of the resources to 62 or 63 characters, Project IDs are limited to 30. Resources must have unique names, either globally or within a given scope. Some resources have additional constraints to take into consideration (e.g. GCP Projects can't be immediately deleted).</p>
+<h2 id="global-naming-pattern"><a class="header" href="#global-naming-pattern">Global Naming Pattern</a></h2>
+<p>First we establish naming pattern that all directly managed resources should follow - Global Naming Pattern.</p>
+<p><strong><code>[prefix]-[project]-[env]-[resource]-[location]-[description]-[suffix]</code></strong></p>
+<div class="table-wrapper"><table><thead><tr><th>Component</th><th>Description</th><th>Req.</th><th>Constraints</th></tr></thead><tbody>
+<tr><td><strong><code>prefix</code></strong></td><td>Fixed prefix</td><td>✔</td><td>len 3, fixed</td></tr>
+<tr><td><strong><code>project</code></strong></td><td>Project name</td><td>✔</td><td>len 4-10, a-z0-9</td></tr>
+<tr><td><strong><code>env</code></strong> .</td><td>Environment</td><td>✔</td><td>len 1, a-z, enum</td></tr>
+<tr><td><strong><code>resource</code></strong></td><td>Resource type</td><td>✔</td><td>len 3, a-z, enum</td></tr>
+<tr><td><strong><code>location</code></strong></td><td>Resource location</td><td>✗</td><td>len 1-6, a-z0-9</td></tr>
+<tr><td><strong><code>description</code></strong></td><td>Additional description</td><td>✗</td><td>len 1-20, a-z0-9</td></tr>
+<tr><td><strong><code>suffix</code></strong></td><td>Random suffix</td><td>✗</td><td>len 4, a-z0-9</td></tr>
+</tbody></table>
+</div>
+<p>Let's go over the individual components more in detail.</p>
+<h3 id="fixed-prefix"><a class="header" href="#fixed-prefix">Fixed Prefix</a></h3>
+<p>This is a fixed value prefix used for all resources. Typically some form of abbreviation for your organization name.</p>
+<ul>
+<li><code>ste</code> for Stepan</li>
+<li><code>ggl</code> for Google</li>
+</ul>
+<h3 id="project-name"><a class="header" href="#project-name">Project Name</a></h3>
+<p>This is different from a GCP Project. Typically one Project will have multiple GCP Projects.We're using flat hierarchy and Project serves as the main mechanism of organizing resources into groups. I like using flat hierarchy as it's very universal and flexible to fit pretty much any organizational structure. You might consider replacing this with some other form of group (e.g. team, product), but in my experience it never quite works in the long term.</p>
+<ul>
+<li><code>blog</code> for blog project</li>
+<li><code>webshop</code> for web shop project</li>
+</ul>
+<h3 id="environment"><a class="header" href="#environment">Environment</a></h3>
+<p>Resources belong to deployment environments. It's beneficial to establish a common set of names used across your organization.</p>
+<ul>
+<li><code>d</code> for development</li>
+<li><code>s</code> for staging</li>
+<li><code>p</code> for production</li>
+</ul>
+<h3 id="resource-type"><a class="header" href="#resource-type">Resource Type</a></h3>
+<p>I've tried various mechanisms over the time to construct the abbreviation for resources - most consistent results are achieved if the names are based on the API resource names.Abbreviation of the given resource type. In GCP I tend to use three letters.</p>
+<p>For larger and more frequently used APIs (e.g. Compute, Kubernetes) first letter stands for the API and the remaining two for the resource type. For APIs with fewer resources, it's the other way around. I know this is not a completely deterministic rule, but this will always be a compromise to it short and usable.</p>
+<ul>
+<li><code>cin</code> - Compute Engine VM Instance</li>
+<li><code>cig</code> - Compute Engine VM Instance Group</li>
+<li><code>kcl</code> - Kubernetes Engine Cluster</li>
+<li><code>bqd</code> - BigQuery Dataset</li>
+</ul>
+<h3 id="resource-location"><a class="header" href="#resource-location">Resource Location</a></h3>
+<p>Location is required when there's a possibility to create a given resource in different locations.</p>
+<ul>
+<li>
+<p><strong>Regional</strong> - five letter acronym (two letters for the continent, two for cardinal directions, 1 digit)</p>
+</li>
+<li>
+<p><strong>Zonal</strong> - six letters - Regional + zone</p>
+</li>
+<li>
+<p><strong>Global</strong> - <code>g</code></p>
+</li>
+<li>
+<p><strong>Multi- and Dual-regional</strong> - follow GCP's own naming (two letters for multi and 4 letters for dual-regional)</p>
+</li>
+<li>
+<p><code>euwe1</code> - europe-west1 region</p>
+</li>
+<li>
+<p><code>nane1</code> - northamerica-northeast1 region</p>
+</li>
+<li>
+<p><code>euwe1a</code> - europe-west1 region, zone a</p>
+</li>
+<li>
+<p><code>eu</code> - Europe multi-region</p>
+</li>
+<li>
+<p><code>eur4</code> - europe-north1 and europe-west4 dual-region</p>
+</li>
+</ul>
+<h3 id="additional-description"><a class="header" href="#additional-description">Additional Description</a></h3>
+<p>A description used to distinguish between resources of the same type but different roles. For example a group of servers with a different purpose - <code>frontend</code> and <code>backend</code>. This should not be used to differentiate between multiple instances of the same purpose resource, use <code>suffix</code> instead.</p>
+<p>It's also beneficial to agree on generic keywords used for description, when there is no better, more specific, term available. This avoids many different names like <code>main</code>, <code>core</code>, <code>common</code>, <code>this</code> and similar. Often good strategy is to use the Latin ordinal sequence, i.e. <code>primary</code>, <code>secondary</code>, <code>tertiary</code>, etc.</p>
+<ul>
+<li><code>frontend</code></li>
+<li><code>backend</code></li>
+<li><code>kafka</code></li>
+</ul>
+<h3 id="random-suffix"><a class="header" href="#random-suffix">Random Suffix</a></h3>
+<p>I typically use a 2-byte number represented in hexadecimal form</p>
+<ul>
+<li>
+<p>good for readability and easily generated with Terraform <code>random_id</code> resource. Use Suffix to differentiate resource from its peers when there are multiple instances, or when there's a requirement for uniqueness.</p>
+</li>
+<li>
+<p><code>a49f</code></p>
+</li>
+</ul>
+<h3 id="examples"><a class="header" href="#examples">Examples</a></h3>
+<p>Let's go over several full examples of how resources should be named based on the above established pattern.</p>
+<p>All the examples use prefix <code>ste</code> and belong to Production (<code>p</code>) environment of project <code>blog</code>.</p>
+<ul>
+<li>Set of functionally equivalent Compute Instances
+<ul>
+<li><code>ste-blog-p-cin-euwe1a-nginx-408f</code></li>
+<li><code>ste-blog-p-cin-euwe1a-nginx-c338</code></li>
+<li><code>ste-blog-p-cin-euwe1a-nginx-d7aa</code></li>
+</ul>
+</li>
+<li>VPC (Network) and Subnet
+<ul>
+<li><code>ste-blog-p-cne-primary</code></li>
+<li><code>ste-blog-p-csn-euwe1-primary</code></li>
+</ul>
+</li>
+<li>GKE Regional Cluster and Node Pool
+<ul>
+<li><code>ste-blog-p-kcl-usce1-primary</code></li>
+<li><code>ste-blog-p-knp-usce1-primary-cbe7</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="gcp-projects"><a class="header" href="#gcp-projects">GCP Projects</a></h2>
+<p>Projects (and Folders) are considered resource containers for the purpose of this naming convention and therefore omit the <code>resource</code> part of the name.</p>
+<p>You can notice GCP does this by default for projects created via console - e.g. <code>rapid-depot-253717</code>.Project IDs in GCP have to be globally unique and cannot be deleted immediately. This is unfortunate for automation, as you can't create a project with the same name right after it has been deleted. And that's why we include the unique random suffix part.</p>
+<p><em>Folders</em>: We don't use GCP folders to organize projects. I generally believe that keeping it simple and flat is beneficial more often than not. However, if you want to further structure your resources, consider adding an additional component to your naming pattern, such as <code>[org_group]</code>. Folders can then follow <code>[prefix]-[org-group]</code> pattern.GCP also allows configuring Project Name. I recommend to set this to the same value as Project ID and forget about it. For all the practical purposes you'll reference the Projects by their IDs.</p>
+<p>GCP Projects will therefore be named following the <code>[prefix]-[project]-[env]-[suffix]</code> pattern.</p>
+<ul>
+<li><code>ste-blog-p-a8d6</code></li>
+<li><code>abc-research-d-ab45</code></li>
+</ul>
+<p><a href="https://xkcd.com/910/">xkcd - Permanence</a> by Randall Munroe<a href="https://stepan.wtf/cloud-naming-convention/#66ec467cfa84e7c7ceea8e9bd57df35b-lightbox"><img src="https://stepan.wtf/imgs/cloud-naming-convention-xkcd.png" alt="" /></a></p>
+<h2 id="exceptions"><a class="header" href="#exceptions">Exceptions</a></h2>
+<p>There will always be exceptions where it's not possible to follow the Global Naming Pattern (for example resource does not allow <code>-</code> in the name) or when it simply doesn't make sense. A subset of the full pattern should be used if possible and all exceptions documented.</p>
+<h3 id="service-accounts"><a class="header" href="#service-accounts">Service Accounts</a></h3>
+<p>Service accounts follow the <code>[resource]-[description]</code> pattern only, as the project is already included in the part after <code>@</code> and therefore there's no need to repeat that bit,</p>
+<ul>
+<li><code>svc-frontend@ste-blog-p-a8d6.iam.gserviceaccount.com</code></li>
+</ul>
+<h3 id="iam-and-groups"><a class="header" href="#iam-and-groups">IAM and Groups</a></h3>
+<p>This is a complex topic, perhaps for another article, but you should establish a naming convention for groups and a strategy on how to assign permissions. As a rule of thumb, never assign permissions directly to individuals, but to groups only.</p>
+<h2 id="labelling-resources"><a class="header" href="#labelling-resources">Labelling Resources</a></h2>
+<p>You should also cover the use of labels (or tags). A good one is to add information to further categorize your resources, such as <code>cost-center</code>. Labels are also helpful in situations when you can't manage resource names directly, but you can manage a set of labels that is propagated to the child resources (e.g. GKE Cluster labels or Instance Groups).</p>
+<p>Do not duplicate information already contained in your naming convention (such as <code>project</code>) or create large numbers of unique labels with information that can be obtained from the objects themselves (such as <code>creationTimestamp</code>).</p>
+<h2 id="dns"><a class="header" href="#dns">DNS</a></h2>
+<p>DNS naming convention across your infrastructure is again a larger topic, but you should definitely have one. A simple strategy can be creating a subdomain for each GCP project in the <code>[project]-[env].&lt;common_dns_domain&gt;</code> form. DNS records created for given resources should then follow the <code>[resource]-[resource_location]-[description]-[suffix]</code> part of the Global Naming pattern and therefore mirror the resource name.</p>
+<p>This allows for easy subdomain delegation to individual GCP projects.</p>
+<ul>
+<li>DNS record for VM with name <code>ste-blog-p-cin-euwe1b-frontend-a6bc</code> would be <code>cin-euwe1b-frontend-a6bc.blog-p.stepan.wtf</code></li>
+</ul>
+<h2 id="summary"><a class="header" href="#summary">Summary</a></h2>
+<p>You should establish a consistent naming convention as one of the first things when you start using cloud or on a new project. It's one of those things that are really easy to do in the beginning, but much more difficult to fix later on. And you'll benefit from it every day.</p>
+<p>The key to success with naming conventions is establishing them early on and ruthlessly following across your entire infrastructure. Automation helps a lot.</p>
+<p>As usual, there's no silver bullet and the actual naming convention should always be tailored to your environment. The main point is having one! And I hope this post gives you a head start.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../architecture/Reference/microservices-checklist.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../architecture/Reference/pragmatic.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../architecture/Reference/microservices-checklist.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../architecture/Reference/pragmatic.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

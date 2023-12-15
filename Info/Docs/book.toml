@@ -1,0 +1,18 @@
+[book]
+authors = ["Mark Bacon"]
+language = "en"
+multilingual = false
+src = "Documentation_structure"
+title = "Documentation"
+
+
+[build]
+create-missing = true
+
+#use as mdbook preprocessor
+#[preprocessor.auto-gen-summary]
+#first-line-as-link-text = true # indicate mdbook to make the first line(default the file name) of markdown file as the link text in SUMMARY.md 
+
+[output.html.fold]
+enable = true
+level = 0
