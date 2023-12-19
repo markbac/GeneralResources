@@ -54,3 +54,8 @@ jobs:
         run: cargo install mdbook-codeblocks
       - name: Build book
         run: cd Info/Docs; mdbook build
+      # share between different jobs
+      - uses: actions/upload-artifact@v3
+        with:
+          name: book
+          path: Info/Doc/book/
