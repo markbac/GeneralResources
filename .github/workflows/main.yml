@@ -32,3 +32,5 @@ jobs:
         run: mdbook-admonish --version
       - name: Show katex version
         run: mdbook-katex --version
+      - name: Build book
+        run: cd Info/Docs; mdbook build
