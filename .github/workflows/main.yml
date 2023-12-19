@@ -1,4 +1,4 @@
-name: Setup mdBook wth plugins (version)
+name: Setup mdBook with plugins (latest)
 on:
   push:
     branches:
@@ -11,20 +11,13 @@ jobs:
       - uses: jontze/action-mdbook@v3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
-          # Optional Plugins have to be enabled with a version
-          mdbook-version: "~0.3.0" # Use a semver compatible string
+          # Optional Plugins have to be enabled
           use-linkcheck: true
-          linkcheck-version: "~0.7.0"
           use-mermaid: true
-          mermaid-version: "~0.8.0"
           use-toc: true
-          toc-version: "~0.7.0"
           use-opengh: true
-          opengh-version: "~2.0.0"
           use-admonish: true
-          admonish-version: "~1.8.0"
           use-katex: true
-          akatex-version: "~0.2.17"
       - name: Show mdbook version
         run: mdbook --version
       - name: Show linkchecker version
