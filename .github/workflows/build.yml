@@ -58,4 +58,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: book
-          path: Info/Doc/book/
+          path: Info/Docs/book/
