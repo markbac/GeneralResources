@@ -18,6 +18,20 @@ jobs:
           use-opengh: true
           use-admonish: true
           use-katex: true
+      - uses: actions/checkout@v2
+      - name: Install latest nightly
+        uses: actions-rs/toolchain@v1
+        with:
+            toolchain: nightly
+            override: true
+            components: rustfmt, clippy
+      # `cargo check` command here will use installed `nightly`
+      # as it is set as an "override" for current directory
+
+      - name: Run cargo check
+        uses: actions-rs/cargo@v1
+        with:
+          command: check
       - name: Show mdbook version
         run: mdbook --version
       - name: Show linkchecker version
@@ -35,8 +49,6 @@ jobs:
       - name: install rust and cargo
         run: curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh -y
       - name: install Codeblocks
-        run: cargo install mdbook-codeblocks
-      - name: install mdbook-catppuccin
         run: cargo install mdbook-catppuccin
       - name: Build book
         run: cd Info/Docs; mdbook build
