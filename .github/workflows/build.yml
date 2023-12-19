@@ -1,4 +1,4 @@
-name: Setup mdBook and build Info/Docs/book and save artifact
+name: Mdbook build
 on:
   push:
     branches:
