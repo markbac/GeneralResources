@@ -33,7 +33,7 @@ jobs:
       - name: Show katex version
         run: mdbook-katex --version
       - name: install rust and cargo
-        run: curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+        run: curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh -y
       - name: install Codeblocks
         run: cargo install mdbook-codeblocks
       - name: install mdbook-catppuccin
