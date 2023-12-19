@@ -1,1 +1,0 @@
-# Architecture Patterns to Know

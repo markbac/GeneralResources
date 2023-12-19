@@ -7,7 +7,6 @@ title = "Documentation"
 
 
 [build]
-create-missing = true
 build-dir = "book"                # the directory where the output is placed
 
 [output.html]

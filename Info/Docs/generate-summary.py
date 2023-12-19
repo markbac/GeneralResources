@@ -113,6 +113,6 @@ def generate_summary_markdown(directory, output_file):
 
 
 if __name__ == '__main__':
-    directory = 'Documentation_structure'
+    directory = '.'
     output_file = 'SUMMARY.md'
     generate_summary_markdown(directory, output_file)

@@ -1,1 +1,0 @@
-# What Is Solution Architecture

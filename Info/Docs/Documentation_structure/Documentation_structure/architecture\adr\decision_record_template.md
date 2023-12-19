@@ -1,1 +1,0 @@
-# Decision Record Template
