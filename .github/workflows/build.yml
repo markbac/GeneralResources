@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' 
       - uses: jontze/action-mdbook@v3
         with:
           token: ${{secrets.GITHUB_TOKEN}}
@@ -52,6 +55,8 @@ jobs:
         run: cargo install mdbook-catppuccin
       - name: install Codeblocks
         run: cargo install mdbook-codeblocks
+      - name: Build SUMMARY.md
+        run: cd Info/Docs/Documentation_structure; python3 generate-summary.py
       - name: Build book
         run: cd Info/Docs; mdbook build
       # share between different jobs
