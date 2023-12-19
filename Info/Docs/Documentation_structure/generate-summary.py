@@ -23,7 +23,9 @@ def generate_summary_markdown(directory, output_file):
         # Initialize the main description variable outside the conditional statement
         main_description = None
 
-        for root, _, files in os.walk(directory):
+        for root, dirs, files in os.walk(directory):
+            print ('root',root,'dirs',dirs,'files',files)
+            dirs.sort()
             
             # Skip hidden directories by filtering out directories that start with '.'
             #if not any(subdirectory.startswith('.') for subdirectory in root.split('/')):
@@ -57,8 +59,7 @@ def generate_summary_markdown(directory, output_file):
                 if any(filename.endswith(".md")  for filename in files):
                     # There is at least one .md file in the list, so enter the for loop
                     
-                    sorted_files = sorted(files)
-                    for filename in sorted_files:
+                    for filename in sorted(files):
                         if not filename.endswith('.md'):
                             continue
                         
