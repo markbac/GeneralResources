@@ -28,13 +28,6 @@ jobs:
             toolchain: nightly
             override: true
             components: rustfmt, clippy
-      # `cargo check` command here will use installed `nightly`
-      # as it is set as an "override" for current directory
-
-      #- name: Run cargo check
-      #  uses: actions-rs/cargo@v1
-      #  with:
-      #    command: check
       - name: Show mdbook version
         run: mdbook --version
       - name: Show linkchecker version
@@ -49,18 +42,20 @@ jobs:
         run: mdbook-admonish --version
       - name: Show katex version
         run: mdbook-katex --version
-      #- name: install rust and cargo
-      #  run: curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh -y
       - name: install catppuccin
         run: cargo install mdbook-catppuccin
-      - name: install Codeblocks
+      - name: install mdbook-codeblocks
         run: cargo install mdbook-codeblocks
+      - name: install mdbook-indexing
+        run: cargo install mdbook-indexing
+      - name: install mdbook-pdf
+        run: cargo install mdbook-pdf
       - name: Build SUMMARY.md
-        run: cd Info/Docs/Documentation_structure; python3 generate-summary.py
+        run: cd GitHub_Pages/Documentation_structure; python3 generate-summary.py
       - name: Build book
-        run: cd Info/Docs; mdbook build
+        run: cd GitHub_Pages; mdbook build
       # share between different jobs
       - uses: actions/upload-artifact@v3
         with:
           name: book
-          path: Info/Docs/book/
+          path: GitHub_Pages/book/
