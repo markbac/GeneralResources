@@ -1,0 +1,23 @@
+
+
+- SPI - serial peripheral interface
+- I2C
+- 1-wire
+- USB
+- Thunderbolt
+- SATA
+- RS-232
+- RS-422
+- RS-485
+- RS-423
+- Modbus
+- EEbus
+- Thread
+- Matter
+- TRL - test readiness level
+- memory map layout (e.g for a c program) ![Alt text](image.png)
+- Java card
+- rpipins 
+- Harvard Architecture
+- Von Neumann Architecture
+- 

@@ -38,6 +38,7 @@
   - [Examples](#examples)
     - [API's](#apis-1)
   - [Products](#products)
+  - [Embedded](#embedded)
   - [IOT](#iot)
     - [MQTT](#mqtt)
     - [MQTT IoT](#mqtt-iot)
@@ -245,6 +246,10 @@ See PlantUML and Mermaid
 - [LoweConex](https://www.loweconex.com/net-zero-solutions/energy-reduction-via-iot/)
 - [Unified Data Platform - LoweConex](https://www.loweconex.com/unified-data-platform/)
 - [Sky Centrics](https://skycentrics.com/)
+
+## Embedded
+
+- [Embedded-Engineering Roadmap](https://github.com/m3y54m/Embedded-Engineering-Roadmap?tab=readme-ov-file)
 
 ## IOT
 
