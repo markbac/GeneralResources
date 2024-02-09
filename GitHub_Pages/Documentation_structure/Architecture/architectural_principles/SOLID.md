@@ -30,3 +30,5 @@ Clients should not depend on interfaces they do not use. This means you should d
 5. 𝗗𝗲𝗽𝗲𝗻𝗱𝗲𝗻𝗰𝘆 𝗜𝗻𝘃𝗲𝗿𝘀𝗶𝗼𝗻 𝗣𝗿𝗶𝗻𝗰𝗶𝗽𝗹𝗲 (𝗗𝗜𝗣)
 
 High-level modules should not depend on low-level modules. Both should depend on abstractions. Design your software so high-level modules depend on abstractions rather than concrete implementations.
+
+![](media/20240209085721.png)
