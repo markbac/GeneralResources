@@ -2,7 +2,7 @@
 
 This checkilst is from the book "best kept secrets of peer code review" [Amazon link](https://www.amazon.co.uk/Best-Kept-Secrets-Peer-Review/dp/1599160676)
 
-You can also find a digital version is you search "smartbear code review book"
+You can also find a digital version if you search "smartbear code review book"
 
 ## Checklist 
 
