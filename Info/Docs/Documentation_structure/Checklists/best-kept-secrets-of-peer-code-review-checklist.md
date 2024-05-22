@@ -23,7 +23,7 @@ You can also find a digital version is you search "smartbear code review book"
 15. Error Handling: Invalid parameter values are handled properly early in the subroutine.
 16. Error Handling: Error values of null pointers from subroutine invocations are checked.
 17. Error Handling: Error handlers clean up state and resources no matter where an error occurs.
-18. Error Handling: Memory is released, resources are closed, and reference counters are managed under both error and nonerror conditions.
+18. Error Handling: Memory is released, resources are closed, and reference counters are managed under both error and non error conditions.
 19. Thread Safety: Global variables are protected by locks or locking subroutines.
 20. Thread Safety: Objects accessed by multiple threads are accessed only through a lock.
 21. Thread Safety: Locks must be acquired and released in the right order to prevent deadlocks, even in error-handling code.
